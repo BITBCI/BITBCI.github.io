@@ -307,6 +307,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = 'mengzhen';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请添加微信“BCIRobot”获取密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -478,7 +491,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    161
+                    6
                 </div>
                 
 
@@ -508,11 +521,18 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="问题描述：当我们日常办公的时候可能会忽略掉字体版权问题，在我们电脑中安装的绝大多数字体均不是免费字体，如果用于商用可能会存在法律风险。"><a href="#问题描述：当我们日常办公的时候可能会忽略掉字体版权问题，在我们电脑中安装的绝大多数字体均不是免费字体，如果用于商用可能会存在法律风险。" class="headerlink" title="问题描述：当我们日常办公的时候可能会忽略掉字体版权问题，在我们电脑中安装的绝大多数字体均不是免费字体，如果用于商用可能会存在法律风险。"></a>问题描述：当我们日常办公的时候可能会忽略掉字体版权问题，在我们电脑中安装的绝大多数字体均不是免费字体，如果用于商用可能会存在法律风险。</h2><p><img src="/../../images/%E5%AD%97%E4%BD%93.png" alt="电脑中安装的绝大多数字体均不是免费字体"></p>
-<p>图中的查询结果是通过<a target="_blank" rel="noopener" href="https://fonts.safe.360.cn/">360查字体-查版权，免纠纷</a>查询得到。</p>
-<p>同时，电脑中少数的几个免费字体并不怎好看。</p>
-<h2 id="解决办法：两款-免费商用字体-，分别是-思源黑体-和-阿里巴巴普惠体。"><a href="#解决办法：两款-免费商用字体-，分别是-思源黑体-和-阿里巴巴普惠体。" class="headerlink" title="解决办法：两款 免费商用字体 ，分别是 思源黑体 和 阿里巴巴普惠体。"></a>解决办法：两款 <strong>免费商用字体</strong> ，分别是 <strong>思源黑体</strong> 和 <strong>阿里巴巴普惠体</strong>。</h2><p>可在以下网站查询下载：<a target="_blank" rel="noopener" href="https://www.100font.com/">100font.com - 免费字体下载 - 免费商用字体下载网站</a></p>
-
+                <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="b29a6d5b1151e4ed0a6ee976f6febc024a4efc64f04fd3e113d87027e18fe86f">2238bf892bbfcf78876cec25c645656f851979c1fccd407c378193d05aea417d453615e575918d28e4e2f6725bf91fc91adfc6d42d824aacbf974790240328ab9f0c5a241e918193c13c46679469d760272b071211e9ef9d2644eff70f0a3c4eaee21cdf58e6ce0be869b85af82e639806b7736ee357729d4d317c325a4a3fcc3b9c2d7a697acdd68e9a5a34d6c1260be6ea3b2b051a449c15486e4005512a51524fdbf52fcafa7229ddc42ac491a8b7a85ae94aad58e3d7231d6f104837017ff7ceef26cb577871b115bb2d407f4862e2006ba546131e2741cdc6ae1328ca5e0d5dc806c24cfe40c0428ef54a17d0e749d431459ed0d336dfdbcf991d2cbce8c7ebd7f22f0b2fab10c550e9b060fd1dce73e3720cd22475e4ffc6f28bb5c1f38abd3c32563080f869cacac66f6222aae42dc3e8be01c96c37ee72336c73b1f285be07818947cf968c1ea82cba2de3b99ff73cbc1551cc9d69fce3b0461b52f828227f5fccc274e409be1e1851723a88d1a58da2cf63135051606a79407833a8a7714a8c83681b86a661ee47ad85066fbf54c6fe3c71f4bc4684f0682d79c9c8e75b9b6bc34008f61533e423196c174d7f1584dbb677189b8d6e490af965fed044eedd8b711e64738ca9ad962c39374a4a2c438002913bdbd57580ea6158970849701c28cd8b0863d4246f55b17515008ed597acad501fb1846e7d668821eb2a36cf44b8f68f551637aac11bc27a9e458f76bda534c3523ab42793aa7589c3d475e1c51914c99e11fb011cb100fd8188d05394d1deb803d6486bd3722d67ee6d9b2a458cb0c77c9b3c79f9066c4174b7d21f926717c92f5f95af58648a2bb150860fbed0270b419b088b0200480fc24596882643ab3b13366182a0f9be9244c994b2592de3255d2ced8107d6111d1004532c13d35ab4ce70c4d22174f08856bd50d054bf803ca50ec8fc5d4c58b4d0da10f1cd4c0145614c388818e59defdb1fffb7941a4cfb421d03b62a3099536f1980d56be3a46e8530f5cf57afddfd7ec7d21f6310d71d4aacc649c389d7fe29c44793d310713ac053311f4e38999fdddbe522a4b2ea0b2fafa296788513f40c9664c68cc4c2b7553e271757daad412cf1913623fcbcb2d201f769b824def7fb3fe64b8acbc26d277cbf507dd80785c404d40144a97e1e5bae29089fd66ccffa818b6bb33c499a4d36bad74aec024803eaf06de8b58283f52a5e25f2033a8450821c2e0aa301dda6ed3445c7b2632ad47236fa333c7edf571ff507a639197edf505669e28f1c302d87a81477e5606130e7edfa30cc532b5b32aced75df74dad67b1f32007bd9577ebf66a541b65c82c141f08af032e6c31c8cad7839be97c000f81a3929cc221262a8fda05bd3c83cb9c258f5a9707cef0a82f89c0cfc8d71ea9e7ac5ed8fc03dd4bb3747480ac59e3939d1650b5014a9545b2b00c7156e4384eed31130add26e7ca442ef121f6cec9679db1e892ea4776b63393c7b727d31cbd14952ea1d0af15d2871fc70092f05c42e9d3c590bfbb2790b1c54757a6c4790240cdae145570baab1b2df6ddcd4c4ce9e901e104d734c6826753469f9cbd163a6adb6bee5d26400458eb94ff08a76982d51b14ee8c2199a2d275c06399979d66880da0383c9f9e3dad01cc5ad1fa1efe88833053af7cb256c71674e83d706fcd0bddc03338cbf092ad26786e1f6d1b4dccee88c4b652f4d271068aa04ccebc068099dd05efcc1019bdb67cc3017e808e8a108ceb5cb97a5be0886d0ece32bb4cf429efb70fa20dd056dfa3bd86b34b4da23691bb5b021baee3f0fe9c4e5d6da3363666f76fb98b99edb1d3828c6f83ffc29825a142298394fd3e07870847dcc9335c115d01da9d938278f6899b75e5b58543f819b64e74d1dee0508994938bbc42b3ef22ddeccae3e08b293c38df942898a48d077ae305dcbf78dc15e346c34950e7178be2d07059f60c42d360995a45372dd987b276d373fc500de147eedf58e19ad12283d30ca31f2c6964c404d9b2c0af86f5d1251b58eee45ed4649646ee6afb5df42abbddb081b41f8ab1d91232be9ff398add1576cf9dbfbeba9f49a62be5f8cb16097b2ea48a4ed81a597dfd125b8603300fcb69ece1d0677b36a4e6e657db346513583e5ff73ac75fd6d9f1aed479c30e911181f9de0c9e6bd26515e7c38e291d738af76305fdb9785df2a3fe727a2804a7777857c0affeb5c9ff4f32f39124b857fadb8bcd437a3b78a09b2a1f02cc7859f1c9c797440b2847178fc786a2c0b8fc44804434963cec37739994442c50fbf02fff8fa4873feafed08c4ec1f7841e4f8996ebe6973e06ef4859885b75490645786e6f1b6ed7a919f222e667ce887a26ddec9f3d6366758d974cfe85e9f0988aa3381339c51da95b2c610d46e38280fd5be6803c45c5a7eee9dfb53f7ac5c0239a051b406bbf590bfd2b2178d2ff98d941bb46c07b6def2f54c9e589bb7414601322d13ae2d1a8ebd3405a41c5f6cc893c0dc7248195ef2c21c9f71e64efe6a5bc32c19a16d7d166631f0459352960423f913e28d6305b6e4064d8b69ba3f0a8cfeccc4a07fb02ed08ac94db22cd9f1bcf4de7b97f3d78189cde32</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
                 
             </div>
             <hr/>
@@ -646,7 +666,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Here's something encrypted, password is required to continue reading.
                         
                     </div>
                     <div class="publish-info">
@@ -932,7 +952,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6.7k</span>&nbsp;字
+                class="white-color">2.6k</span>&nbsp;字
             
             
             
