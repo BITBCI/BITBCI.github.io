@@ -587,11 +587,11 @@
 <h2 id="4-公式"><a href="#4-公式" class="headerlink" title="4 公式"></a>4 公式</h2><ul>
 <li>首先需要在主题里面的 <code>_config.yml</code> 中开启数学公式支持：</li>
 </ul>
-<pre class="language-yml" data-language="yml"><code class="language-yml"># 是否激活mathjax数学公式，这是全局配置，但文章仍然不会都开启mathjax渲染，
-# 考虑到mathjax加载比较耗时，你还需要在需要渲染的文章的Front-matter中再加上&#96;mathjax: true&#96;才行.
-mathjax:
-  enable: true
-  cdn: https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;mathjax&#x2F;2.7.5&#x2F;MathJax.js?config&#x3D;TeX-AMS-MML_HTMLorMML</code></pre>
+<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 是否激活mathjax数学公式，这是全局配置，但文章仍然不会都开启mathjax渲染，</span>
+<span class="token comment"># 考虑到mathjax加载比较耗时，你还需要在需要渲染的文章的Front-matter中再加上`mathjax: true`才行.</span>
+<span class="token key atrule">mathjax</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">cdn</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//cdn.bootcss.com/mathjax/2.7.5/MathJax.js<span class="token punctuation">?</span>config=TeX<span class="token punctuation">-</span>AMS<span class="token punctuation">-</span>MML_HTMLorMML</code></pre>
 
 <ul>
 <li>之后，需要在每篇文章的MD文件中开启<code>mathjax: true</code>title: Hexo中使用的MarkDown(GFM)语法</li>
