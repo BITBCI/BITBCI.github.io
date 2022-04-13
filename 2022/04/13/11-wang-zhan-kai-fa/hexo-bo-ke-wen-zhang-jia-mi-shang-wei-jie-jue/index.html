@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo中使用的MarkDown(GFM)语法, 哈哈哈哈哈">
+    <meta name="keywords" content="Hexo博客文章加密（尚未解决）, 哈哈哈哈哈">
     <meta name="description" content="虎年大吉">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo中使用的MarkDown(GFM)语法 | BITBCI</title>
+    <title>Hexo博客文章加密（尚未解决） | BITBCI</title>
     <link rel="icon" type="image/png" href="/logo-200x200.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo中使用的MarkDown(GFM)语法</h1>
+                    <h1 class="description center-align post-title">Hexo博客文章加密（尚未解决）</h1>
                 </div>
             </div>
         </div>
@@ -435,12 +435,8 @@
                                 <span class="chip bg-color">Hexo</span>
                             </a>
                         
-                            <a href="/tags/MarkDown/">
-                                <span class="chip bg-color">MarkDown</span>
-                            </a>
-                        
-                            <a href="/tags/GFM/">
-                                <span class="chip bg-color">GFM</span>
+                            <a href="/tags/%E5%8A%A0%E5%AF%86/">
+                                <span class="chip bg-color">加密</span>
                             </a>
                         
                     </div>
@@ -482,14 +478,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    617
+                    82
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -512,111 +508,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-语法介绍"><a href="#1-语法介绍" class="headerlink" title="1 语法介绍"></a>1 语法介绍</h2><ul>
-<li>Markdown是一种轻量级标记语言，允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档。</li>
-<li>Hexo下使用的MarkDown语法为Github中的GFM，风格简洁美观。但是GFM 的MarkDown语法和标准的MarkDown稍有不同，使用过程中需要注意一些。</li>
-<li>GFM（GitHub Flavored Markdown）语法是除了标准的Markdown语法外最被广泛使用的另一种版本Markdown语法，基于CommonMark。</li>
-</ul>
-<h2 id="2-语法元素"><a href="#2-语法元素" class="headerlink" title="2 语法元素"></a>2 语法元素</h2><table>
-<thead>
-<tr>
-<th>功能</th>
-<th>组成元素</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>换行</td>
-<td><code>一个回车</code></td>
-<td></td>
-</tr>
-<tr>
-<td>分段</td>
-<td><code>二个回车</code></td>
-<td></td>
-</tr>
-<tr>
-<td>标题</td>
-<td><code># ~ ######</code></td>
-<td>#号的个数表示几级标题，即表示一级标题到六级标题</td>
-</tr>
-<tr>
-<td>强调</td>
-<td><code>**文字** ， __文字__ ， _文字_ ， *文字* ， ~~文字~~</code></td>
-<td></td>
-</tr>
-<tr>
-<td>斜体</td>
-<td><code>*文字*</code></td>
-<td></td>
-</tr>
-<tr>
-<td>分割线</td>
-<td><code>***, ___</code></td>
-<td></td>
-</tr>
-<tr>
-<td>区块</td>
-<td><code>&gt; </code></td>
-<td>注意后面紧跟个空格，<code>两个回车</code>结束引用</td>
-</tr>
-<tr>
-<td>表格</td>
-<td><code>- 和 分割行和列</code> ， <code>: 控制对其方式</code></td>
-<td><del>使用<code>冒号</code>定义对齐方式，使用<code>-</code>的长度定义表格宽度</del></td>
-</tr>
-<tr>
-<td>代码块</td>
-<td><code>`代码内容`</code>或 <code>```代码内容```</code></td>
-<td></td>
-</tr>
-<tr>
-<td>链接</td>
-<td><code>[文字](链接地址)</code></td>
-<td></td>
-</tr>
-<tr>
-<td>图片</td>
-<td><code>![图片说明](图片地址)</code></td>
-<td>地址可以是本地路劲，也可以是网络地址</td>
-</tr>
-<tr>
-<td>列表</td>
-<td><code>* ， + ， - ， 1.</code>，选其中之一</td>
-<td>注意后面紧跟个空格</td>
-</tr>
-<tr>
-<td>公式</td>
-<td><code>独行公式 $$ x=y+1 $$， 单行公式 $ x=y+1 $</code></td>
-<td>注意后面紧跟个空格或者换行</td>
-</tr>
-</tbody></table>
-<h2 id="3-高级用法"><a href="#3-高级用法" class="headerlink" title="3 高级用法"></a>3 高级用法</h2><ul>
-<li>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-advance.html">Markdown 高级技巧 | 菜鸟教程 (runoob.com)</a></li>
-<li>目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，<br>如：</li>
-</ul>
-<pre class="language-markdown" data-language="markdown"><code class="language-markdown">使用<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Ctrl<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Alt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Del<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>重启电脑</code></pre>
-
-<h2 id="4-公式"><a href="#4-公式" class="headerlink" title="4 公式"></a>4 公式</h2><ul>
-<li>首先需要在主题里面的 <code>_config.yml</code> 中开启数学公式支持：</li>
-</ul>
-<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 是否激活mathjax数学公式，这是全局配置，但文章仍然不会都开启mathjax渲染，</span>
-<span class="token comment"># 考虑到mathjax加载比较耗时，你还需要在需要渲染的文章的Front-matter中再加上`mathjax: true`才行.</span>
-<span class="token key atrule">mathjax</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">cdn</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//cdn.bootcss.com/mathjax/2.7.5/MathJax.js<span class="token punctuation">?</span>config=TeX<span class="token punctuation">-</span>AMS<span class="token punctuation">-</span>MML_HTMLorMML</code></pre>
-
-<ul>
-<li>之后，需要在每篇文章的MD文件中开启<code>mathjax: true</code>title: Hexo中使用的MarkDown(GFM)语法</li>
-</ul>
-<pre class="language-markdown" data-language="markdown"><code class="language-markdown">title: Hexo中使用的MarkDown(GFM)语法
-mathjax: true</code></pre>
-
-<p>效果如下：</p>
-<p>$$<br>\int_{0}^\infty{f(x)dx}<br>$$</p>
-<p>$$<br>x&#x3D;y +1<br>$$</p>
-<p>$ x&#x3D;y+1 $</p>
-<p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35988761">Hexo构建blog时渲染LaTeX数学公式的问题 - 知乎 (zhihu.com)</a></p>
+                <h2 id="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"><a href="#目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。" class="headerlink" title="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"></a>目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。</h2><p>参考资料：</p>
+<ol>
+<li><code>matery</code>主题自带的加密方法<br><a target="_blank" rel="noopener" href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-4">Hexo博客主题之hexo-theme-matery的介绍 | 闪烁之狐 (blinkfox.com)</a></li>
+<li><code>hexo-blog-encrypt</code>插件加密方法<br><a target="_blank" rel="noopener" href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt&#x2F;ReadMe.zh.md at master · D0n9X1n&#x2F;hexo-blog-encrypt (github.com)</a></li>
+</ol>
 
                 
             </div>
@@ -643,7 +539,7 @@ mathjax: true</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bitbci.github.io/2022/04/13/11-wang-zhan-kai-fa/hexo-zhong-shi-yong-de-markdown-gfm-yu-fa/">https://bitbci.github.io/2022/04/13/11-wang-zhan-kai-fa/hexo-zhong-shi-yong-de-markdown-gfm-yu-fa/</a>
+                    <a href="https://bitbci.github.io/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/">https://bitbci.github.io/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -685,12 +581,8 @@ mathjax: true</code></pre>
                                     <span class="chip bg-color">Hexo</span>
                                 </a>
                             
-                                <a href="/tags/MarkDown/">
-                                    <span class="chip bg-color">MarkDown</span>
-                                </a>
-                            
-                                <a href="/tags/GFM/">
-                                    <span class="chip bg-color">GFM</span>
+                                <a href="/tags/%E5%8A%A0%E5%AF%86/">
+                                    <span class="chip bg-color">加密</span>
                                 </a>
                             
                         </div>
@@ -734,17 +626,18 @@ mathjax: true</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/13/ban-gong-ji-qiao/wei-dian-nao-an-zhuang-mian-fei-shang-yong-zi-ti/">
+                <a href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="为电脑安装免费商用字体">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hexo博客文章加密（尚未解决）">
                         
-                        <span class="card-title">为电脑安装免费商用字体</span>
+                        <span class="card-title">Hexo博客文章加密（尚未解决）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -754,34 +647,35 @@ mathjax: true</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8A%9E%E5%85%AC%E6%8A%80%E5%B7%A7/" class="post-category">
-                                    办公技巧
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/Hexo%E5%BB%BA%E7%AB%99/" class="post-category">
+                                    Hexo建站
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%85%8D%E8%B4%B9%E5%95%86%E7%94%A8%E5%AD%97%E4%BD%93/">
-                        <span class="chip bg-color">免费商用字体</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
-                    <a href="/tags/%E5%8A%9E%E5%85%AC%E6%8A%80%E5%B7%A7/">
-                        <span class="chip bg-color">办公技巧</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%89%88%E6%9D%83%E9%97%AE%E9%A2%98/">
-                        <span class="chip bg-color">版权问题</span>
+                    <a href="/tags/%E5%8A%A0%E5%AF%86/">
+                        <span class="chip bg-color">加密</span>
                     </a>
                     
                 </div>
@@ -795,13 +689,13 @@ mathjax: true</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/12/11-wang-zhan-kai-fa/hexo-da-jian-de-bo-ke-zhi-xian-shi-wen-zi-bu-xian-shi-zhu-ti-yu-tu-pian/">
+                <a href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Hexo搭建的博客只显示文字，不显示主题与图片">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Hexo主题Matery的介绍与相关配置">
                         
-                        <span class="card-title">Hexo搭建的博客只显示文字，不显示主题与图片</span>
+                        <span class="card-title">Hexo主题Matery的介绍与相关配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -812,7 +706,7 @@ mathjax: true</code></pre>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-13
                             </span>
                         <span class="publish-author">
                             
@@ -837,8 +731,8 @@ mathjax: true</code></pre>
                         <span class="chip bg-color">Hexo</span>
                     </a>
                     
-                    <a href="/tags/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
-                        <span class="chip bg-color">解决办法</span>
+                    <a href="/tags/matery/">
+                        <span class="chip bg-color">matery</span>
                     </a>
                     
                 </div>
@@ -1006,13 +900,6 @@ mathjax: true</code></pre>
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 
