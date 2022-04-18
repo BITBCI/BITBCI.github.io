@@ -24,9 +24,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 数值积分 </tag>
+            
+            <tag> Python </tag>
             
             <tag> Scipy </tag>
             
@@ -37,11 +37,11 @@
     
     
     <entry>
-      <title>三种开发静态网站的框架Jekyll、Hugo、Hexo</title>
-      <link href="/2022/04/13/11-wang-zhan-kai-fa/san-chong-kai-fa-jing-tai-wang-zhan-de-kuang-jia-jekyll-hugo-hexo/"/>
-      <url>/2022/04/13/11-wang-zhan-kai-fa/san-chong-kai-fa-jing-tai-wang-zhan-de-kuang-jia-jekyll-hugo-hexo/</url>
+      <title>五种开发网站的框架Jekyll、Hugo、Hexo</title>
+      <link href="/2022/04/13/11-wang-zhan-kai-fa/wu-chong-kai-fa-wang-zhan-de-kuang-jia-jekyll-hugo-hexo/"/>
+      <url>/2022/04/13/11-wang-zhan-kai-fa/wu-chong-kai-fa-wang-zhan-de-kuang-jia-jekyll-hugo-hexo/</url>
       
-        <content type="html"><![CDATA[<h2 id="三种开发静态网站的框架——Jekyll、Hugo、Hexo"><a href="#三种开发静态网站的框架——Jekyll、Hugo、Hexo" class="headerlink" title="三种开发静态网站的框架——Jekyll、Hugo、Hexo"></a>三种开发静态网站的框架——Jekyll、Hugo、Hexo</h2><h3 id="1、Jekyll"><a href="#1、Jekyll" class="headerlink" title="1、Jekyll"></a><strong>1、Jekyll</strong></h3><ul><li>jekyll是一个简单的免费的Blog生成工具，类似WordPress。但是和WordPress又有很大的不同，原因是jekyll只是一个生成静态网页的工具，不需要数据库支持。但是可以配合第三方服务,例如Disqus。最关键的是jekyll可以免费部署在Github上，而且可以绑定自己的域名。</li><li>Github原生态支持。</li></ul><h3 id="2、Hugo"><a href="#2、Hugo" class="headerlink" title="2、Hugo"></a><strong>2、Hugo</strong></h3><ul><li>Hugo 是 Go 编写的静态网站生成器，速度快，易用，可配置。Hugo 有一个内容和模板目录，把他们渲染到完全的 HTML 网站。</li><li>Hugo 依赖于 Markdown 文件，元数据字体 。用户可以从任意的目录中运行 Hugo，支持共享主机和其他系统。</li><li>Hugo 只需要几分之一秒就可以渲染一个经典的中型网站，最好网站的每个部分渲染只需 1 毫秒。</li><li>中文官网：<a href="https://www.gohugo.cn/">Hugo 是世界上最快的网站搭建框架 | Hugo 中文网 (gohugo.cn)</a></li><li>备注：Hugo上面公司主题较多，可用于公司建站。链接为：</li><li><a href="https://themes.gohugo.io/tags/company/">company | Hugo Themes (gohugo.io)</a></li></ul><h3 id="3、Hexo"><a href="#3、Hexo" class="headerlink" title="3、Hexo"></a>3、<strong>Hexo</strong></h3><p>基于JS的静态网站生成器，使用MD编写。</p><p>中文官网：<a href="https://hexo.io/zh-cn/">Hexo</a></p><h3 id="4、三者对比"><a href="#4、三者对比" class="headerlink" title="4、三者对比"></a><strong>4、三者对比</strong></h3><table><thead><tr><th></th><th>Hexo</th><th>Jekyll</th><th>Huge</th></tr></thead><tbody><tr><td>入门难度</td><td>最简单</td><td>一般</td><td>一般</td></tr><tr><td>主题数量</td><td>非常多</td><td>没有官方主题列表</td><td>公司主题较多</td></tr><tr><td>开发语言</td><td>JavaScript</td><td>Ruby</td><td>Go</td></tr><tr><td>运行环境</td><td>nodejs</td><td>bundler</td><td>Chocolatey</td></tr><tr><td>优势</td><td>主题多，生态全</td><td>Github.com 原生支持</td><td>运行速度最快</td></tr><tr><td>博客语言</td><td>Markdown</td><td>Markdown（或 Textile）、Liquid 和 HTML &amp; CSS</td><td>MD</td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<h2 id="三种开发静态网站的框架——Jekyll、Hugo、Hexo"><a href="#三种开发静态网站的框架——Jekyll、Hugo、Hexo" class="headerlink" title="三种开发静态网站的框架——Jekyll、Hugo、Hexo"></a>三种开发静态网站的框架——Jekyll、Hugo、Hexo</h2><h3 id="1、Jekyll"><a href="#1、Jekyll" class="headerlink" title="1、Jekyll"></a><strong>1、Jekyll</strong></h3><ul><li>jekyll是一个简单的免费的Blog生成工具，类似WordPress。但是和WordPress又有很大的不同，原因是jekyll只是一个生成静态网页的工具，不需要数据库支持。但是可以配合第三方服务,例如Disqus。最关键的是jekyll可以免费部署在Github上，而且可以绑定自己的域名。</li><li>Github原生态支持。</li></ul><h4 id="Jekyll企业主题"><a href="#Jekyll企业主题" class="headerlink" title="Jekyll企业主题"></a>Jekyll企业主题</h4><p>（1）gbrgacademy</p><p>源码：<a href="https://github.com/kotp/gbrgacademy.github.io">https://github.com/kotp/gbrgacademy.github.io</a><br>浏览：<a href="https://gbrgacademy.com/">https://gbrgacademy.com/</a></p><p>（2）belkirk</p><p><strong>不是手机端自适应的</strong><br>源码：<a href="https://github.com/forestryio-templates/belkirk-jekyll-demo">https://github.com/forestryio-templates/belkirk-jekyll-demo</a><br>浏览：<a href="https://forestryio-templates.github.io/belkirk-jekyll-demo/">https://forestryio-templates.github.io/belkirk-jekyll-demo/</a></p><p>（3） azimuth</p><p>源码：<a href="https://github.com/stackbithq/stackbit-theme-azimuth">https://github.com/stackbithq/stackbit-theme-azimuth</a><br>浏览：<a href="https://themes.stackbit.com/demos/azimuth">https://themes.stackbit.com/demos/azimuth</a></p><p>（4） Planty电子商务主题</p><p>源码：<a href="https://github.com/snipcart/stackbit-theme-planty">https://github.com/snipcart/stackbit-theme-planty</a><br>浏览：<a href="https://stackbit-theme-planty.netlify.com/">https://stackbit-theme-planty.netlify.com/</a></p><h3 id="2、Hugo"><a href="#2、Hugo" class="headerlink" title="2、Hugo"></a><strong>2、Hugo</strong></h3><ul><li>Hugo 是 Go 编写的静态网站生成器，速度快，易用，可配置。Hugo 有一个内容和模板目录，把他们渲染到完全的 HTML 网站。</li><li>Hugo 依赖于 Markdown 文件，元数据字体 。用户可以从任意的目录中运行 Hugo，支持共享主机和其他系统。</li><li>Hugo 只需要几分之一秒就可以渲染一个经典的中型网站，最好网站的每个部分渲染只需 1 毫秒。</li><li>中文官网：<a href="https://www.gohugo.cn/">Hugo 是世界上最快的网站搭建框架 | Hugo 中文网 (gohugo.cn)</a></li><li>备注：Hugo上面公司主题较多，可用于公司建站。链接为：</li><li><a href="https://themes.gohugo.io/tags/company/">company | Hugo Themes (gohugo.io)</a></li></ul><h3 id="3、Hexo"><a href="#3、Hexo" class="headerlink" title="3、Hexo"></a>3、<strong>Hexo</strong></h3><p>基于JS的静态网站生成器，使用MD编写。</p><p>中文官网：<a href="https://hexo.io/zh-cn/">Hexo</a></p><h3 id="4、框架对比"><a href="#4、框架对比" class="headerlink" title="4、框架对比"></a><strong>4、框架对比</strong></h3><table><thead><tr><th></th><th>Hexo</th><th>Jekyll</th><th>Huge</th><th>Pelican</th><th>WordPress</th></tr></thead><tbody><tr><td>入门难度</td><td>最简单</td><td>一般</td><td>一般</td><td>简单</td><td>较难</td></tr><tr><td>主题数量</td><td>非常多</td><td>没有官方主题列表</td><td>公司主题较多</td><td></td><td></td></tr><tr><td>开发语言</td><td>JavaScript</td><td>Ruby</td><td>Go</td><td>Pyhon</td><td>PHP</td></tr><tr><td>运行环境</td><td>nodejs</td><td>bundler</td><td>Chocolatey</td><td></td><td></td></tr><tr><td>优势</td><td>主题多，生态全</td><td>Github原生支持</td><td>运行速度最快</td><td></td><td>开发动态网站</td></tr><tr><td>博客语言</td><td>Markdown</td><td>MD（或 Textile）</td><td>MD</td><td></td><td></td></tr></tbody></table>]]></content>
       
       
       <categories>
@@ -58,35 +58,6 @@
             <tag> Hexo </tag>
             
             <tag> 网站开发 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hexo博客文章加密（尚未解决）</title>
-      <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/"/>
-      <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/</url>
-      
-        <content type="html"><![CDATA[<h2 id="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"><a href="#目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。" class="headerlink" title="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"></a>目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。</h2><p>参考资料：</p><ol><li><code>matery</code>主题自带的加密方法<br><a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-4">Hexo博客主题之hexo-theme-matery的介绍 | 闪烁之狐 (blinkfox.com)</a></li><li><code>hexo-blog-encrypt</code>插件加密方法<br><a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt&#x2F;ReadMe.zh.md at master · D0n9X1n&#x2F;hexo-blog-encrypt (github.com)</a></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 前端 </category>
-          
-          <category> Hexo建站 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> 加密 </tag>
             
         </tags>
       
@@ -116,6 +87,35 @@
             <tag> Hexo </tag>
             
             <tag> matery </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo博客文章加密（尚未解决）</title>
+      <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/"/>
+      <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/</url>
+      
+        <content type="html"><![CDATA[<h2 id="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"><a href="#目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。" class="headerlink" title="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"></a>目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。</h2><p>参考资料：</p><ol><li><code>matery</code>主题自带的加密方法<br><a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-4">Hexo博客主题之hexo-theme-matery的介绍 | 闪烁之狐 (blinkfox.com)</a></li><li><code>hexo-blog-encrypt</code>插件加密方法<br><a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt&#x2F;ReadMe.zh.md at master · D0n9X1n&#x2F;hexo-blog-encrypt (github.com)</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> Hexo建站 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 加密 </tag>
             
         </tags>
       
@@ -304,9 +304,9 @@
       
         <tags>
             
-            <tag> 傅里叶变换 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 傅里叶变换 </tag>
             
         </tags>
       
