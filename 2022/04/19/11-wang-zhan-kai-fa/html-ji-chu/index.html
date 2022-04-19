@@ -474,14 +474,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    647
+                    526
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -504,72 +504,126 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="标题-head"><a href="#标题-head" class="headerlink" title="标题(head)"></a>标题(head)</h2><pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;h1&gt;第一段&lt;&#x2F;h1&gt;
-&lt;h2&gt;第二段&lt;&#x2F;h2&gt;
-&lt;h3&gt;第三段&lt;&#x2F;h3&gt;</code></pre>
+                <pre class="line-numbers language-html" data-language="html"><code class="language-html">
+## 标题(head)
 
-<h2 id="段落-paragraph"><a href="#段落-paragraph" class="headerlink" title="段落(paragraph)"></a>段落(paragraph)</h2><p>浏览器会自动地在段落的前后添加空行。</p>
-<pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;p&gt;duanluan&lt;&#x2F;p&gt;</code></pre>
+```html
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>第一段<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>第二段<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span>第三段<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">></span></span>
+```
 
-<h2 id="链接-anchor锚点"><a href="#链接-anchor锚点" class="headerlink" title="链接(anchor锚点)"></a>链接(anchor锚点)</h2><pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;a href&#x3D;&quot;www.baidu.com&quot;&gt;百度&lt;&#x2F;a&gt;</code></pre>
+## 段落(paragraph)
+浏览器会自动地在段落的前后添加空行。
 
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>加载图片是需要时间的，所以慎用图片。</p>
-<pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;img src&#x3D;&quot;source&#x2F;images&#x2F;b站嵌入代码.png&quot; alt&#x3D;&quot;图片&quot;&gt;</code></pre>
+```html
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>duanluan<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+```
 
-<h2 id="换行-barter-rabbet"><a href="#换行-barter-rabbet" class="headerlink" title="换行(barter rabbet)"></a>换行(barter rabbet)</h2><p>HTML 代码中的所有连续的空行（换行）也被显示为一个空格。</p>
-<pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;br&gt;</code></pre>
+## 链接(anchor锚点)
 
-<h2 id="水平线-horizon-rabbet"><a href="#水平线-horizon-rabbet" class="headerlink" title="水平线(horizon rabbet)"></a>水平线(horizon rabbet)</h2><pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;hr&gt;</code></pre>
+```html
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>www.baidu.com<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>百度<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+```
 
-<h2 id="注释-快捷键为ctrl-x2F"><a href="#注释-快捷键为ctrl-x2F" class="headerlink" title="注释(快捷键为ctrl+&#x2F;)"></a>注释(快捷键为ctrl+&#x2F;)</h2><pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;!--这是注释--&gt;</code></pre>
+## 图片
+加载图片是需要时间的，所以慎用图片。
+```html
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>source/images/b站嵌入代码.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>图片<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+```
 
-<h2 id="文本格式化标签"><a href="#文本格式化标签" class="headerlink" title="文本格式化标签"></a>文本格式化标签</h2><pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;b&gt;加粗(bold)&lt;&#x2F;b&gt;
-&lt;i&gt;斜体(italic)&lt;&#x2F;i&gt;
-&lt;stro&gt;强调(strong)&lt;&#x2F;stro&gt;
-&lt;em&gt;强调&lt;&#x2F;em&gt;
-&lt;sub&gt;下标&lt;&#x2F;sub&gt; &lt;sup&gt;上标&lt;&#x2F;sup&gt;
-&lt;ins&gt;下划线&lt;&#x2F;ins&gt;
-&lt;del&gt;删除字&lt;&#x2F;del&gt;
-&lt;small&gt;小号字&lt;&#x2F;small&gt;
-&lt;big&gt;大号字&lt;&#x2F;big&gt;</code></pre>
+## 换行(barter rabbet)
+HTML 代码中的所有连续的空行（换行）也被显示为一个空格。
 
-<h2 id="计算机输出标签"><a href="#计算机输出标签" class="headerlink" title="计算机输出标签"></a>计算机输出标签</h2><pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;code&gt;print(&quot;hello world&quot;)&lt;&#x2F;code&gt;</code></pre>
+```html
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+```
 
-<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><p>CSS 是在 HTML 4 开始使用的,是为了更好的渲染HTML元素而引入的.<br>CSS 可以通过以下方式添加到HTML中:</p>
-<ul>
-<li>内联样式- 在HTML元素中使用”style” 属性</li>
-</ul>
-<h3 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h3><pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;body style&#x3D;&quot;background-color:yellow;&quot;&gt;
-&lt;h2 style&#x3D;&quot;background-color:red;&quot;&gt;这是一个标题&lt;&#x2F;h2&gt;
-&lt;p style&#x3D;&quot;background-color:green;&quot;&gt;这是一个段落。&lt;&#x2F;p&gt;
-&lt;&#x2F;body&gt;</code></pre>
+## 水平线(horizon rabbet)
 
-<h3 id="字体-字体颜色-，字体大小"><a href="#字体-字体颜色-，字体大小" class="headerlink" title="字体, 字体颜色 ，字体大小"></a>字体, 字体颜色 ，字体大小</h3><pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;h1 style&#x3D;&quot;font-family:verdana;&quot;&gt;一个标题&lt;&#x2F;h1&gt;
-&lt;p style&#x3D;&quot;font-family:arial;color:red;font-size:20px;&quot;&gt;一个段落。&lt;&#x2F;p&gt;</code></pre>
+```html
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">></span></span>
+```
 
-<h3 id="文本对齐方式"><a href="#文本对齐方式" class="headerlink" title="文本对齐方式"></a>文本对齐方式</h3><pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;h1 style&#x3D;&quot;text-align:center;&quot;&gt;居中对齐的标题&lt;&#x2F;h1&gt;
-&lt;p&gt;这是一个段落。&lt;&#x2F;p&gt;</code></pre>
+## 注释(快捷键为ctrl+/)
 
-<ul>
-<li><p>内部样式表 -在HTML文档头部 <head> 区域使用<style> 元素 来包含CSS</p>
-<pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;head&gt;
-&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;
-body &#123;background-color:yellow;&#125;
-p &#123;color:blue;&#125;
-&lt;&#x2F;style&gt;
-&lt;&#x2F;head&gt;</code></pre>
-</li>
-<li><p>外部引用 - 使用外部 CSS 文件</p>
-<pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;head&gt;
-&lt;link rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css&quot; href&#x3D;&quot;mystyle.css&quot;&gt;
-&lt;&#x2F;head&gt;</code></pre></li>
-</ul>
-<h2 id="分区-div"><a href="#分区-div" class="headerlink" title="分区(div)"></a>分区(div)</h2><pre class="language-angular2html" data-language="angular2html"><code class="language-angular2html">&lt;div style&#x3D;&quot;color:#0000FF&quot;&gt;
-  &lt;h3&gt;这是一个在 div 元素中的标题。&lt;&#x2F;h3&gt;
-  &lt;p&gt;这是一个在 div 元素中的文本。&lt;&#x2F;p&gt;
-&lt;&#x2F;div&gt;</code></pre>
+```html
+<span class="token comment">&lt;!--这是注释--></span>
+```
 
+## 文本格式化标签
 
+```html
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>加粗(bold)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">></span></span>斜体(italic)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stro</span><span class="token punctuation">></span></span>强调(strong)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>stro</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">></span></span>强调<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sub</span><span class="token punctuation">></span></span>下标<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sub</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sup</span><span class="token punctuation">></span></span>上标<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sup</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ins</span><span class="token punctuation">></span></span>下划线<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ins</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>del</span><span class="token punctuation">></span></span>删除字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>del</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span><span class="token punctuation">></span></span>小号字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>big</span><span class="token punctuation">></span></span>大号字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>big</span><span class="token punctuation">></span></span>
+```
+
+## 计算机输出标签
+
+```html
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">></span></span>print("hello world")<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span>
+```
+
+## CSS
+CSS 是在 HTML 4 开始使用的,是为了更好的渲染HTML元素而引入的.
+CSS 可以通过以下方式添加到HTML中:
+
+* 内联样式- 在HTML元素中使用"style" 属性
+
+### 背景颜色
+```html
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">background-color</span><span class="token punctuation">:</span>yellow<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">background-color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>这是一个标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">background-color</span><span class="token punctuation">:</span>green<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>这是一个段落。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+```
+
+### 字体, 字体颜色 ，字体大小
+```html
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">font-family</span><span class="token punctuation">:</span>verdana<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>一个标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">font-family</span><span class="token punctuation">:</span>arial<span class="token punctuation">;</span><span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span><span class="token property">font-size</span><span class="token punctuation">:</span>20px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>一个段落。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+```
+
+### 文本对齐方式
+```html
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">text-align</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>居中对齐的标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>这是一个段落。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+```
+
+* 内部样式表 -在HTML文档头部 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span> 区域使用<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css"> <span class="token selector">元素 来包含CSS
+
+```html
+&lt;head>
+&lt;style type="text/css">
+body</span> <span class="token punctuation">&#123;</span><span class="token property">background-color</span><span class="token punctuation">:</span>yellow<span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
+<span class="token selector">p</span> <span class="token punctuation">&#123;</span><span class="token property">color</span><span class="token punctuation">:</span>blue<span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+```
+
+* 外部引用 - 使用外部 CSS 文件
+
+```html
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mystyle.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+```
+
+## 分区(div)
+```python
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">color</span><span class="token punctuation">:</span>#0000FF</span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span>这是一个在 div 元素中的标题。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>这是一个在 div 元素中的文本。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+```
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -975,7 +1029,7 @@ p &#123;color:blue;&#125;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">8.7k</span>&nbsp;字
+                class="white-color">8.6k</span>&nbsp;字
             
             
             
