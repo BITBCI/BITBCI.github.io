@@ -475,12 +475,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Python/">
-                                <span class="chip bg-color">Python</span>
-                            </a>
-                        
                             <a href="/tags/%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/">
                                 <span class="chip bg-color">控制算法</span>
+                            </a>
+                        
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
                             </a>
                         
                             <a href="/tags/PID/">
@@ -515,7 +515,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-04
+                    2022-05-06
                 </div>
                 
 
@@ -552,12 +552,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="PID控制算法及Python实现"><a href="#PID控制算法及Python实现" class="headerlink" title="PID控制算法及Python实现"></a>PID控制算法及Python实现</h2><h3 id="1、PID算法简介"><a href="#1、PID算法简介" class="headerlink" title="1、PID算法简介"></a>1、PID算法简介</h3><p>在控制领域，PID算法是应用最广泛的算法之一。<br>PID，就是“比例（proportional）、积分（integral）、微分（derivative）”，是一种很常见的控制算法。<br>常用于需要将某一个物理量“保持稳定”的场合（比如维持平衡，稳定温度、转速等）。<br><img src="/../../images/12-%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/PID%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95%E5%8F%8APython%E5%AE%9E%E7%8E%B0-1.png" alt="摘自网络"></p>
+                <h2 id="PID控制算法及Python实现"><a href="#PID控制算法及Python实现" class="headerlink" title="PID控制算法及Python实现"></a>PID控制算法及Python实现</h2><h3 id="1、PID算法简介"><a href="#1、PID算法简介" class="headerlink" title="1、PID算法简介"></a>1、PID算法简介</h3><p>在控制领域，PID算法是应用最广泛的算法之一。<br>PID，就是“比例（proportional）、积分（integral）、微分（derivative）”，是一种很常见的控制算法。<br>常用于需要将某一个物理量“保持稳定”的场合（比如维持平衡，稳定温度、转速等）。<br><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/PID%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95%E5%8F%8APython%E5%AE%9E%E7%8E%B0-1.png" alt="摘自网络"></p>
 <p>PID算法的公式为：<br><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable displaystyle="true" columnalign="right center left" columnspacing="0 thickmathspace" rowspacing="3pt"><mtr><mtd><mi>u</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mtd><mtd><mi></mi><mo>&#x3D;</mo></mtd><mtd><msub><mi>K</mi><mrow><mi>p</mi></mrow></msub><mi>err</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>+</mo><msub><mi>K</mi><mrow><mi>i</mi></mrow></msub><mo data-mjx-texclass="OP">∫</mo><mi>err</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mi>d</mi><mi>t</mi><mo>+</mo><msub><mi>K</mi><mrow><mi>d</mi></mrow></msub><mfrac><mrow><mi>derr</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mtd></mtr></mtable></math><br>对其进行离散化：<br><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable columnspacing="1em" rowspacing="4pt"><mtr><mtd><mi>u</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>&#x3D;</mo><msub><mi>K</mi><mrow><mi>p</mi></mrow></msub><mi>err</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>+</mo><msub><mi>K</mi><mrow><mi>i</mi></mrow></msub><munderover><mo data-mjx-texclass="OP">∑</mo><mrow><mi>k</mi><mo>&#x3D;</mo><mn>0</mn></mrow><mrow><mi>n</mi></mrow></munderover><mi>err</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo><mo>+</mo><msub><mi>K</mi><mrow><mi>d</mi></mrow></msub><mo stretchy="false">(</mo><mi>err</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>−</mo><mi>err</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd></mtr></mtable></math></p>
 <h4 id="（1）P-比例部分"><a href="#（1）P-比例部分" class="headerlink" title="（1）P - 比例部分"></a>（1）P - 比例部分</h4><p>比例环节的作用是对偏差瞬间作出反应。偏差一旦产生控制器立即产生控制作用，使控制量向减少偏差的方向变化。<br>控制作用的强弱取决于比例系数Kp，比例系数Kp越大，控制作用越强，则过渡过程越快，控制过程的静态偏差也就越小；<br>但是Kp越大，也越容易产生振荡， 破坏系统的稳定性。<br>故而，比例系数Kp选择必须恰当，才能过渡时间少，静差小而又稳定的效果。</p>
 <h4 id="（2）I-积分部分"><a href="#（2）I-积分部分" class="headerlink" title="（2）I - 积分部分"></a>（2）I - 积分部分</h4><p>从积分部分的数学表达式可以知道，只要存在偏差，则它的控制作用就不断的增加；<br>只有在偏差e(t)＝0时， 它的积分才能是一个常数，控制作用才是一个不会增加的常数。<br>可见，积分部分可以消除系统的偏差。</p>
 <h4 id="（3）D-微分部分"><a href="#（3）D-微分部分" class="headerlink" title="（3）D - 微分部分"></a>（3）D - 微分部分</h4><p>实际的控制系统除了希望消除静态误差外，还要求加快调节过程。<br>在偏差出现的瞬间，或在偏差变化的瞬间，不但要对偏差量做出立即响应（比例环节的作用），而且要根据偏差的变化趋势预先给出适当的纠正。为了实现这一作用，可在 PI 控制器的基础上加入微分环节，形成 PID 控制器。<br>我们需要一个控制作用，让被控制的物理量的“变化速度”趋于0，即类似于“阻尼”的作用。</p>
-<p><img src="/../../images/12-%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/PID%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95%E5%8F%8APython%E5%AE%9E%E7%8E%B0-2.gif" alt="三个参数的作用（摘自网络）"></p>
+<p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/PID%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95%E5%8F%8APython%E5%AE%9E%E7%8E%B0-2.gif" alt="三个参数的作用（摘自网络）"></p>
 <h3 id="2、PID算法原理"><a href="#2、PID算法原理" class="headerlink" title="2、PID算法原理"></a>2、PID算法原理</h3><p>PID算法的原理详见下面UP主的视频：</p>
 <iframe class="bilibili" src="//player.bilibili.com/player.html?aid=932232790&bvid=BV1zM4y157pk&cid=386822797&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
@@ -645,8 +645,8 @@ ActualValue_list <span class="token operator">=</span> <span class="token punctu
 plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>ActualValue_list<span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 
-<p><img src="/../../images/12-%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/PID%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95%E5%8F%8APython%E5%AE%9E%E7%8E%B0-3.png" alt="位置式"></p>
-<p><img src="/../../images/12-%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/PID%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95%E5%8F%8APython%E5%AE%9E%E7%8E%B0-4.png" alt="增量式"></p>
+<p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/PID%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95%E5%8F%8APython%E5%AE%9E%E7%8E%B0-3.png" alt="位置式"></p>
+<p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/PID%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95%E5%8F%8APython%E5%AE%9E%E7%8E%B0-4.png" alt="增量式"></p>
 <h3 id="4、常见语言的PID实现"><a href="#4、常见语言的PID实现" class="headerlink" title="4、常见语言的PID实现"></a>4、常见语言的PID实现</h3><p><a target="_blank" rel="noopener" href="https://github.com/m-lundberg/simple-pid">Python实现</a></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/saxbophone/pid">C实现</a></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/Philmod/node-pid-controller">Javascript实现</a></p>
@@ -680,7 +680,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bitbci.github.io/2022/05/04/12-kong-zhi-suan-fa/pid-kong-zhi-suan-fa-ji-python-shi-xian/">https://bitbci.github.io/2022/05/04/12-kong-zhi-suan-fa/pid-kong-zhi-suan-fa-ji-python-shi-xian/</a>
+                    <a href="https://bitbci.github.io/2022/05/04/12-xiang-mu-kai-fa/pid-kong-zhi-suan-fa-ji-python-shi-xian/">https://bitbci.github.io/2022/05/04/12-xiang-mu-kai-fa/pid-kong-zhi-suan-fa-ji-python-shi-xian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -718,12 +718,12 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Python/">
-                                    <span class="chip bg-color">Python</span>
-                                </a>
-                            
                                 <a href="/tags/%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/">
                                     <span class="chip bg-color">控制算法</span>
+                                </a>
+                            
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
                                 </a>
                             
                                 <a href="/tags/PID/">
@@ -771,18 +771,17 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/05/04/12-kong-zhi-suan-fa/pid-kong-zhi-suan-fa-ji-python-shi-xian/">
+                <a href="/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-python-xiang-mu-wen-dang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="PID控制算法及Python实现">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="使用sphinx自动Python项目文档">
                         
-                        <span class="card-title">PID控制算法及Python实现</span>
+                        <span class="card-title">使用sphinx自动Python项目文档</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -792,35 +791,26 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-06
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/" class="post-category">
-                                    控制算法
+                            <a href="/categories/Python%E5%BC%80%E5%8F%91/" class="post-category">
+                                    Python开发
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/Python/">
                         <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">控制算法</span>
-                    </a>
-                    
-                    <a href="/tags/PID/">
-                        <span class="chip bg-color">PID</span>
                     </a>
                     
                 </div>
@@ -1066,7 +1056,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20.6k</span>&nbsp;字
+                class="white-color">21.5k</span>&nbsp;字
             
             
             
