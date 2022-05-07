@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="使用sphinx自动Python项目文档, 哈哈哈哈哈">
+    <meta name="keywords" content="脑电设备的并口通信及实时数据获取, 哈哈哈哈哈">
     <meta name="description" content="虎年大吉">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>使用sphinx自动Python项目文档 | BITBCI</title>
+    <title>脑电设备的并口通信及实时数据获取 | BITBCI</title>
     <link rel="icon" type="image/png" href="/logo-200x200.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -359,7 +359,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">使用sphinx自动Python项目文档</h1>
+                    <h1 class="description center-align post-title">脑电设备的并口通信及实时数据获取</h1>
                 </div>
             </div>
         </div>
@@ -479,6 +479,10 @@
                                 <span class="chip bg-color">Python</span>
                             </a>
                         
+                            <a href="/tags/%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1/">
+                                <span class="chip bg-color">并口通信</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -487,8 +491,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Python%E5%BC%80%E5%8F%91/" class="post-category">
-                                Python开发
+                            <a href="/categories/%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1/" class="post-category">
+                                并口通信
+                            </a>
+                        
+                            <a href="/categories/%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1/Python/" class="post-category">
+                                Python
                             </a>
                         
                     </div>
@@ -500,28 +508,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-06
+                    2022-05-07
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-06
+                    2022-05-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    487
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -544,24 +552,45 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="使用sphinx自动Python项目文档"><a href="#使用sphinx自动Python项目文档" class="headerlink" title="使用sphinx自动Python项目文档"></a>使用sphinx自动Python项目文档</h2><h3 id="一、sphinx简介"><a href="#一、sphinx简介" class="headerlink" title="一、sphinx简介"></a>一、sphinx简介</h3><p>Sphinx能够轻易地创建智慧和优雅的文档，出自Georg Brandl之手，在BSD许可证下授权。<br>它能够把一组 reStructuredText 格式的文件转换成各种输出格式，而且自动地生成交叉引用，生成目录等。<br>也就是说，如果有一个目录，里面包含一堆reST格式的文档（可能子目录里面也同样存在reST格式的文档），<br>Sphinx能够生成一个漂亮的组织结构以及便于浏览和导航的HTML 文件（这些文件在其他的文件夹中）。<br>当然对于同样的来源文件（reST格式），它也能够生成一个能够被编译（生成）PDF版本的LaTeX格式的文件。</p>
-<h3 id="二、rst文件"><a href="#二、rst文件" class="headerlink" title="二、rst文件"></a>二、rst文件</h3><p>rst(ReStructuredText) 是一种用于文本数据的文件格式，主要作为 Python 编程语言技术文档的描述语言。<br>其旨在为 Python 创建一组类似于 Java 的 Javadoc的功能说明文档；<br>Docutils 可以从从 Python 程序中提取注释和信息，并将它们格式化为各种形式的程序文档，rst就是其中的一种。</p>
-<p>rst一般组织在python源文件的doc&#x2F;docs目录下，可以通过sphinx工具将rst文件转化为html文件易于阅读。<br>sphinx可以通过pip进行安装，可执行文件在python安装目录下的Scripts。<br>安装过Anaconda的sphinx已经安装，可以直接打开Anaconda的命令行执行。</p>
-<h3 id="三、安装sphinx-Window"><a href="#三、安装sphinx-Window" class="headerlink" title="三、安装sphinx(Window)"></a>三、安装sphinx(Window)</h3><pre class="language-terminal" data-language="terminal"><code class="language-terminal">pip install sphinx
-pip install sphinx_rtd_them</code></pre>
-
-<h3 id="四、生成文档"><a href="#四、生成文档" class="headerlink" title="四、生成文档"></a>四、生成文档</h3><pre class="language-terminal" data-language="terminal"><code class="language-terminal">sphinx-build -b html docs build
-# 进入源文件目录（docs的上级目录），docs是rst所在的文件夹
-# build是输出html的目录</code></pre>
-
-<h3 id="五、使用make-bat批处理文件"><a href="#五、使用make-bat批处理文件" class="headerlink" title="五、使用make.bat批处理文件"></a>五、使用make.bat批处理文件</h3><h4 id="1、配置conf-py文件"><a href="#1、配置conf-py文件" class="headerlink" title="1、配置conf.py文件"></a>1、配置conf.py文件</h4><p>主要修改的参数如下：</p>
-<pre class="language-terminal" data-language="terminal"><code class="language-terminal">sys.path.append(os.path.relpath(&#39;..&#39;))
-# 此处采用的是相对路径，就是项目相对于doc的位置</code></pre>
-
-<h4 id="2、执行-make-bat-html"><a href="#2、执行-make-bat-html" class="headerlink" title="2、执行 .\make.bat html"></a>2、执行 .\make.bat html</h4><pre class="language-terminal" data-language="terminal"><code class="language-terminal">.\make.bat html</code></pre>
-
-
-
+                <h2 id="脑电设备的并口通信及实时数据获取"><a href="#脑电设备的并口通信及实时数据获取" class="headerlink" title="脑电设备的并口通信及实时数据获取"></a>脑电设备的并口通信及实时数据获取</h2><h3 id="一、并口简介"><a href="#一、并口简介" class="headerlink" title="一、并口简介"></a>一、并口简介</h3><ul>
+<li>本教程中的并口通信是在BP设备上实现的，完全符合BP设备的操作。<br>但是NeuroScan等其他脑电设备大都也采用并口通信，因此也具备一定的普适性。</li>
+<li>早期，并口、串口广泛应用于电脑中，但是近些年已经逐渐被淘汰。<br><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E8%84%91%E7%94%B5%E8%AE%BE%E5%A4%87%E7%9A%84%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1%E5%8F%8A%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96-1.jpg"></li>
+<li>但是，出于毫秒级的高时间精度要求，实验设备（比如脑电、磁共振、TMS等等）往往需要连接串口或并口。<br>这是由于USB设备无法保证时间精度（使用USB转换的串口并口通常会有上百毫秒的延迟）。</li>
+</ul>
+<p>（1）第一种情况，台式机主板具有插针</p>
+<p>只需要购买拓展线即可，比如“25孔并口＋9针串口 扩展线&#x2F;挡板(DB25 DB9)主板打印机接口25孔LPT”。</p>
+<p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E8%84%91%E7%94%B5%E8%AE%BE%E5%A4%87%E7%9A%84%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1%E5%8F%8A%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96-5.jpg"></p>
+<p>（2）第二种情况，台式机主板没有插针，但是有PCIe拓展接口</p>
+<p>可通过购买PCIe拓展板来拓展主板上的串口并口。</p>
+<p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E8%84%91%E7%94%B5%E8%AE%BE%E5%A4%87%E7%9A%84%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1%E5%8F%8A%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96-2.gif"><br><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E8%84%91%E7%94%B5%E8%AE%BE%E5%A4%87%E7%9A%84%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1%E5%8F%8A%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96-3.jpg"><br><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E8%84%91%E7%94%B5%E8%AE%BE%E5%A4%87%E7%9A%84%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1%E5%8F%8A%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96-4.gif"></p>
+<p>主板BIOS默认LPT端口为禁用，只要进主板的BIOS里设置启用即可。</p>
+<h3 id="二、安装驱动"><a href="#二、安装驱动" class="headerlink" title="二、安装驱动"></a>二、安装驱动</h3><ul>
+<li>并口驱动为小众驱动，当前大多数驱动软件（比如鲁大师）中并不能找到适配的驱动。<br>可以多找几个驱动软件试一试，比如驱动人生（测试电脑在驱动人生中找到了适配的驱动）、驱动精灵等。</li>
+<li>在淘宝购买PCIe拓展卡的时候也可以问卖家索要一下专门的驱动。</li>
+<li>驱动安装成功后，找到并口地址，记下来。</li>
+</ul>
+<p>在下文中用到的P.Out32(0xC100, label)中的第一个参数需要修改为并口的端口号，比如对于下面这台电脑就应该修改为3FF0（并口地址）。</p>
+<p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E8%84%91%E7%94%B5%E8%AE%BE%E5%A4%87%E7%9A%84%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1%E5%8F%8A%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96-6.png"></p>
+<p>硬件mark的发送需要调用动态链接库inpoutx64.dll（很明显这是一个64位电脑所使用的动态链接库），我们需要将该动态链接库与我们的函数放在同名文件夹，或者存储在C:\Windows\System32（某些电脑需要存储在这里才能调用）。</p>
+<h3 id="三、使用Python实现实时采集"><a href="#三、使用Python实现实时采集" class="headerlink" title="三、使用Python实现实时采集"></a>三、使用Python实现实时采集</h3><h4 id="（1）脑电实验中如何打mark？"><a href="#（1）脑电实验中如何打mark？" class="headerlink" title="（1）脑电实验中如何打mark？"></a>（1）脑电实验中如何打mark？</h4><p>Mark分为软件mark与硬件mark。</p>
+<ul>
+<li>软件mark: 软件mark就比较简单了，我们可以通过如下的代码块进行添加，只需要在需要打mark得地方调用该函数即可，label可以是字符串，整型。（我们将软件mark的函数加入到了脑电数据采集的类中，可以方便的调用。）</li>
+<li>硬件mark: 首先你所使用的脑电设备需要支持硬件mark，大多脑电采集设备硬件mark是通过并口发送的（比如BP， NeuroScan等），因此我们在这里只对并口mark进行讲解，有关串口mark可以自行上网搜索，实现较为容易。我们首先需要将硬件mark通过并口发送到脑电设备上，代码如下图所示，我们只需要方便的调用。在结束采集的时候需要调用一次collect_all_hard_mark函数来收集所有的硬件mark。</li>
+</ul>
+<h4 id="（2）在线采集的过程中，如何收集脑电数据与mark数据？"><a href="#（2）在线采集的过程中，如何收集脑电数据与mark数据？" class="headerlink" title="（2）在线采集的过程中，如何收集脑电数据与mark数据？"></a>（2）在线采集的过程中，如何收集脑电数据与mark数据？</h4><ul>
+<li>首先，为了便于调试，也便于手头没有脑电采集设备的同学进行学习，我们需要产生一个模拟脑电数据流，同时产生一个模拟的Mark流。关于如何使用pylsl发送数据，这部分我们在之前的教程中已经提及，此处不再重复。</li>
+<li>发送脑电数据与mark数据的代码存储在SendData_test.py中，运行此代码即可。</li>
+<li>接下来我们需要进行操作，来接收脑电数据以及mark，这部分代码均存储在mne_record_data.py中。</li>
+<li>核心代码为RecordData这个类，我们所需要的功能（比如硬件mark，软件mark，数据记录等）均在该类中，作为该类的一个操作方法，可以方便的进行调用。</li>
+<li>那么，我们如何使用RecordData这个类来进行数据采集呢？</li>
+<li>第一步：记录被试信息：使用被试信息作为记录文件的文件名</li>
+<li>第二步：数据采集：初始化RecordData类，创建一个线程，进行数据采集。在这部分，我们需要修改的参数有采样率sfreq，通道信息ch_names。</li>
+<li>第三步：打mark。软件mark使用add_soft_mark(‘soft_1’)，硬件mark使用send_hard_mark(2)。</li>
+<li>注意：在硬件mark在最后需要调用一下collect_all_hard_mark()这个操作方法。</li>
+<li>第四步：结束采集</li>
+<li>第五步：数据可视化</li>
+</ul>
+<h3 id="四、相关驱动及代码文件"><a href="#四、相关驱动及代码文件" class="headerlink" title="四、相关驱动及代码文件"></a>四、相关驱动及代码文件</h3><p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1rGlbmygIWQ1X7Gmag0sQuA?pwd=l5q0">https://pan.baidu.com/s/1rGlbmygIWQ1X7Gmag0sQuA?pwd=l5q0</a><br>提取码：l5q0<br>–来自百度网盘超级会员V4的分享</p>
 
                 
             </div>
@@ -588,7 +617,7 @@ pip install sphinx_rtd_them</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bitbci.github.io/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-python-xiang-mu-wen-dang/">https://bitbci.github.io/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-python-xiang-mu-wen-dang/</a>
+                    <a href="https://bitbci.github.io/2022/05/07/12-xiang-mu-kai-fa/nao-dian-she-bei-de-bing-kou-tong-xin-ji-shi-shi-shu-ju-huo-qu/">https://bitbci.github.io/2022/05/07/12-xiang-mu-kai-fa/nao-dian-she-bei-de-bing-kou-tong-xin-ji-shi-shi-shu-ju-huo-qu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -628,6 +657,10 @@ pip install sphinx_rtd_them</code></pre>
                             
                                 <a href="/tags/Python/">
                                     <span class="chip bg-color">Python</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1/">
+                                    <span class="chip bg-color">并口通信</span>
                                 </a>
                             
                         </div>
@@ -671,17 +704,18 @@ pip install sphinx_rtd_them</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/05/06/12-xiang-mu-kai-fa/psychopy-de-an-zhuang-yu-shi-yong/">
+                <a href="/2022/05/07/12-xiang-mu-kai-fa/nao-dian-she-bei-de-bing-kou-tong-xin-ji-shi-shi-shu-ju-huo-qu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Psychopy的安装与使用">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="脑电设备的并口通信及实时数据获取">
                         
-                        <span class="card-title">Psychopy的安装与使用</span>
+                        <span class="card-title">脑电设备的并口通信及实时数据获取</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -691,34 +725,35 @@ pip install sphinx_rtd_them</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" class="post-category">
-                                    项目开发
+                            <a href="/categories/%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1/" class="post-category">
+                                    并口通信
                                 </a>
                             
-                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/Psychopy/" class="post-category">
-                                    Psychopy
+                            <a href="/categories/%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">项目开发</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/Psychopy/">
-                        <span class="chip bg-color">Psychopy</span>
+                    <a href="/tags/%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1/">
+                        <span class="chip bg-color">并口通信</span>
                     </a>
                     
                 </div>
@@ -732,13 +767,13 @@ pip install sphinx_rtd_them</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/04/12-xiang-mu-kai-fa/pid-kong-zhi-suan-fa-ji-python-shi-xian/">
+                <a href="/2022/05/06/jjj/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="PID控制算法及Python实现">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="uuuu">
                         
-                        <span class="card-title">PID控制算法及Python实现</span>
+                        <span class="card-title">uuuu</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -749,14 +784,22 @@ pip install sphinx_rtd_them</code></pre>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/" class="post-category">
-                                    控制算法
+                            <a href="/categories/%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86/" class="post-category">
+                                    数值积分
+                                </a>
+                            
+                            <a href="/categories/%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            <a href="/categories/%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86/Python/Scipy/" class="post-category">
+                                    Scipy
                                 </a>
                             
                             
@@ -766,16 +809,16 @@ pip install sphinx_rtd_them</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">控制算法</span>
+                    <a href="/tags/%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86/">
+                        <span class="chip bg-color">数值积分</span>
                     </a>
                     
                     <a href="/tags/Python/">
                         <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/PID/">
-                        <span class="chip bg-color">PID</span>
+                    <a href="/tags/Scipy/">
+                        <span class="chip bg-color">Scipy</span>
                     </a>
                     
                 </div>
@@ -961,7 +1004,7 @@ pip install sphinx_rtd_them</code></pre>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.5k</span>&nbsp;字
+                class="white-color">22.7k</span>&nbsp;字
             
             
             
