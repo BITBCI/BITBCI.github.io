@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Python中常用的图形交互程序制作库及其对比</title>
+      <link href="/2022/05/08/4-python-kai-fa/python-zhong-chang-yong-de-tu-xing-jiao-hu-cheng-xu-zhi-zuo-ku-ji-qi-dui-bi/"/>
+      <url>/2022/05/08/4-python-kai-fa/python-zhong-chang-yong-de-tu-xing-jiao-hu-cheng-xu-zhi-zuo-ku-ji-qi-dui-bi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Python中常用的图形交互程序制作库及其对比"><a href="#Python中常用的图形交互程序制作库及其对比" class="headerlink" title="Python中常用的图形交互程序制作库及其对比"></a>Python中常用的图形交互程序制作库及其对比</h2><h3 id="一、底层框架"><a href="#一、底层框架" class="headerlink" title="一、底层框架"></a>一、底层框架</h3><h4 id="（1）OpenGL"><a href="#（1）OpenGL" class="headerlink" title="（1）OpenGL"></a>（1）OpenGL</h4><ul><li><strong>OpenGL</strong>是由SGI公司1992年7月发布，是一款基于桌面操作系统、功能强大、调用方便的底层 <strong>3D图形库</strong> 。 它是 <strong>与硬件无关的软件接口</strong> ， 可以在windows&#x2F;Linux&#x2F;Unix 之间移植。</li><li>OpenGL主要是为了实现3D特效而来，系统需要这样的特性时，目前是有XGL这样的东西将X的需求交给OPENGL来渲染，最终输出，所以要渲染全景视频就要用到OpenGL。</li></ul><h4 id="（2）OpenGL-ES（EGL）"><a href="#（2）OpenGL-ES（EGL）" class="headerlink" title="（2）OpenGL ES（EGL）"></a>（2）OpenGL ES（EGL）</h4><ul><li>针对嵌入式设备图形开发的标准 OpenGL ES, 是 OpenGL的一个子集。 OpenGL ES是一种独立的平台无关的三维图形开发库，在各种语言下进行主框架开发并结合应用,使用OpenGL ES函数可以开发出三维游戏。</li></ul><h4 id="（3）SDL"><a href="#（3）SDL" class="headerlink" title="（3）SDL"></a>（3）SDL</h4><ul><li>SDL（Simple DirectMedia Layer）旨在通过OpenGL和Direct3D提供对音频，键盘，鼠标，操纵杆和图形硬件的低级访问。</li><li>开源协议：GNU</li></ul><h4 id="（4）DirectX"><a href="#（4）DirectX" class="headerlink" title="（4）DirectX"></a>（4）DirectX</h4><ul><li>DirectX（Direct eXtension，简称DX）是由微软公司创建的多媒体编程接口。由C++编程语言实现，遵循COM。被广泛使用于Microsoft<br>Windows、Microsoft XBOX、Microsoft XBOX 360和Microsoft XBOX<br>ONE电子游戏开发，并且只能支持这些平台。<br>DirectX是为了与OpenGL竞争而推出的。</li></ul><h3 id="二、底层框架的区别"><a href="#二、底层框架的区别" class="headerlink" title="二、底层框架的区别"></a>二、底层框架的区别</h3><h4 id="（1）OpenGL和DirectX的区别"><a href="#（1）OpenGL和DirectX的区别" class="headerlink" title="（1）OpenGL和DirectX的区别"></a>（1）OpenGL和DirectX的区别</h4><ul><li>在技术方面，OpenGL具有较强的可移植性，而DirectX只能用于<br>windows操作系统，它是基于windows操作系统平台的应用程序接口。OpenGL只是图形函数库，是专业的3D程序接口，OpenGL被设计为只有输出，因此只提供渲染功能。核心API没有窗口系统，音频，打印等其他输入设备的概念。也正是因为这样的设计，允许它渲染的代码完全独立于运行的操作系统，允许跨平台开发。</li><li>DirectX是微软公司开发的用途广泛的API，它提供了一整套多媒体接口方案，尤其在3D图形方面的表现突出。</li><li>在硬件通信方面，DirectX是程序能够轻松确定计算机的硬件性能，然后设置与之匹配的程序参数。该程序使得多媒体软件程序能够在基于windows的具有DirectX兼容硬件与驱动程序的计算机上运行，同时确保多媒体程序能够充分急用高性能硬件。</li><li>OpenGL是一个与硬件无关的软件接口，可在任何平台上运行，与DirectX能设置与硬件匹配的程序参数相比，要逊色一些。目前，硬件开发商正在加强对它的支持。</li><li>在应用方面，在专业高端绘图领域，OpenGL仍然是不能被取代的主角，在包含CAD，内容创作，能源，娱乐，游戏开发，及虚拟现实等行业领域中，OpenGL得到广泛的应用。DirectX适合于多媒体，娱乐，及时3D动画等广泛和实用的3D图形计算，在基于windows平台上的游戏开发中，它占领了大部分的市场。</li></ul><h4 id="（2）SDL与OpenGL的区别"><a href="#（2）SDL与OpenGL的区别" class="headerlink" title="（2）SDL与OpenGL的区别"></a>（2）SDL与OpenGL的区别</h4><ul><li>SDL是一个主要处理2D的，可能在处理3D一些的时候使用OpenGL，所以它加入了OpenGL的支持，不能算是SDL内置了OpenGL，只能说是SDL内部加入了接口封装了OPENGL，你可以使用也可以不使用。</li><li>SDL使用OpenGL作为需要在某些平台上进行硬件渲染的内容的硬件渲染器。 如果您拥有这样的平台，则OpenGL是底层的API，SDL是其基础。SDL处理输入，窗口创建，图像加载以及OpenGL无法处理的其他一些功能。</li><li>关于旋转图形的示例：使用OpenGL（即硬件加速）比使用SDL本身（即在CPU上）更好，因为它通常是计算密集型的（特别是如果您有很多位图来旋转每一帧， 您希望效果平滑）。现在很多游戏里面，都采用 SDL+OpenGL ES 的模式来绘制3D界面。 可以让SDL使用OpenGL ES的函数接口来渲染3D。</li><li>SDL 做的工作就是用X11创建窗口，用EGL创建Surface并绑定，最后就可以用OpenGL或者GLES去render。SDL下的Direct3D, OpenGL, gdi是同类型的，用于render。</li></ul><h3 id="三、常用开发Python库"><a href="#三、常用开发Python库" class="headerlink" title="三、常用开发Python库"></a>三、常用开发Python库</h3><h4 id="（1）pyopengl"><a href="#（1）pyopengl" class="headerlink" title="（1）pyopengl"></a>（1）pyopengl</h4><ul><li>主要用途：二维图形开发、三维图形开发</li><li>简要介绍：顾名思义，基于OpenGL开发，调用OpenGL实现图形交互功能。<br>PyOpenGL是OpenGL的python封装。<br>用于渲染2D、3D矢量图形的跨语言、跨平台的应用程序编程接口，由美国硅图公司（SGI）于1992年6月30日发布。该接口通常用于与图形处理单元交互，以实现硬件加速。OpenGL常用于CAD、虚拟现实、科学可视化程序和电子游戏开发。</li><li>开源协议：不清楚</li></ul><h4 id="（2）pyglet"><a href="#（2）pyglet" class="headerlink" title="（2）pyglet"></a>（2）pyglet</h4><ul><li>主要用途：二维游戏开发</li><li>简要介绍：跨平台的Python窗口和多媒体库，用于开发游戏和其他视觉丰富的应用程序。它支持窗口化，用户界面事件处理，操纵杆，OpenGL图形，加载图像和视频以及播放声音和音乐。<em>pyglet</em>适用于Windows，OS X和Linux。</li><li>优势：对于2D游戏，pyglet更简介。因为不需要编写游戏循环，不用担心速度，时间和响应速度。Pyglet是一个框架，已经有了mainloop，不能改变mainloop，看不到mainloop是如何工作的。</li><li>开源协议：BSD</li></ul><h4 id="3-pygame"><a href="#3-pygame" class="headerlink" title="(3)pygame"></a>(3)pygame</h4><ul><li>主要用途：二维游戏开发</li><li>简要介绍：基于SDL开发，可以运行在许多平台和操作系统上。通过使用pygame模块，可以控制游戏的逻辑和图形，而无需担心处理视频和音频所需的后端复杂性。</li><li>开源协议：GNU</li></ul><h4 id="（4）Panda3D"><a href="#（4）Panda3D" class="headerlink" title="（4）Panda3D"></a>（4）Panda3D</h4><ul><li>主要用途：三维游戏开发</li><li>简要介绍：一个3D渲染和游戏开发库需要调用OpenGL，底层使用C++实现。</li><li>开源协议：FreeBSD，即便是将制作的游戏商业化也是不需要支付费用的。</li></ul><p>参考：</p><p><a href="https://blog.csdn.net/qq_43541062/article/details/112852510">FFmpeg与OpenGL与SDL</a></p><p><a href="https://blog.csdn.net/yupu56/article/details/81355090">OpenGL和DirectX</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用Latex实现数学公式的高效编辑</title>
       <link href="/2022/05/08/shi-yong-latex-shi-xian-shu-xue-gong-shi-de-gao-xiao-bian-ji/"/>
       <url>/2022/05/08/shi-yong-latex-shi-xian-shu-xue-gong-shi-de-gao-xiao-bian-ji/</url>
@@ -172,35 +185,6 @@
     
     
     <entry>
-      <title>Window平台在虚拟机VMware中配置Ubuntu20（后续完善）</title>
-      <link href="/2022/05/03/9-ban-gong-ji-qiao/window-ping-tai-zai-xu-ni-ji-vmware-zhong-pei-zhi-ubuntu20/"/>
-      <url>/2022/05/03/9-ban-gong-ji-qiao/window-ping-tai-zai-xu-ni-ji-vmware-zhong-pei-zhi-ubuntu20/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Window平台在虚拟机VMware中配置Ubuntu20（后续完善）"><a href="#Window平台在虚拟机VMware中配置Ubuntu20（后续完善）" class="headerlink" title="Window平台在虚拟机VMware中配置Ubuntu20（后续完善）"></a>Window平台在虚拟机VMware中配置Ubuntu20（后续完善）</h2><h3 id="1、Vmware安装"><a href="#1、Vmware安装" class="headerlink" title="1、Vmware安装"></a>1、Vmware安装</h3><h3 id="2、ubuntu官网下载"><a href="#2、ubuntu官网下载" class="headerlink" title="2、ubuntu官网下载"></a>2、ubuntu官网下载</h3><h3 id="3、注意安装路径"><a href="#3、注意安装路径" class="headerlink" title="3、注意安装路径"></a>3、注意安装路径</h3><h3 id="4、配置硬件参数"><a href="#4、配置硬件参数" class="headerlink" title="4、配置硬件参数"></a>4、配置硬件参数</h3><h3 id="5、修改ubuntu软件源（在设置中）"><a href="#5、修改ubuntu软件源（在设置中）" class="headerlink" title="5、修改ubuntu软件源（在设置中）"></a>5、修改ubuntu软件源（在设置中）</h3><h3 id="6、修改系统语言为中文（在设置中），但是文件夹名称不要改成中文"><a href="#6、修改系统语言为中文（在设置中），但是文件夹名称不要改成中文" class="headerlink" title="6、修改系统语言为中文（在设置中），但是文件夹名称不要改成中文"></a>6、修改系统语言为中文（在设置中），但是文件夹名称不要改成中文</h3><h3 id="7、安装VMware-Tools，支持文件（只能是小文件）与文本复制"><a href="#7、安装VMware-Tools，支持文件（只能是小文件）与文本复制" class="headerlink" title="7、安装VMware Tools，支持文件（只能是小文件）与文本复制"></a>7、安装VMware Tools，支持文件（只能是小文件）与文本复制</h3><h3 id="8、支持USB设备"><a href="#8、支持USB设备" class="headerlink" title="8、支持USB设备"></a>8、支持USB设备</h3><ul><li>修改系统配置文件<br><img src="/../../images/9-%E5%8A%9E%E5%85%AC%E6%8A%80%E5%B7%A7/Window%E5%B9%B3%E5%8F%B0%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BAVMware%E4%B8%AD%E9%85%8D%E7%BD%AEUbuntu20%EF%BC%88%E5%90%8E%E7%BB%AD%E5%AE%8C%E5%96%84%EF%BC%89-1.png"></li><li>然后找到这个文件，原来是FALSE, 把它改成TRUE ,就可以了，记得保存，<br><img src="/../../images/9-%E5%8A%9E%E5%85%AC%E6%8A%80%E5%B7%A7/Window%E5%B9%B3%E5%8F%B0%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BAVMware%E4%B8%AD%E9%85%8D%E7%BD%AEUbuntu20%EF%BC%88%E5%90%8E%E7%BB%AD%E5%AE%8C%E5%96%84%EF%BC%89-2.png"></li></ul><h3 id="9、配置Python"><a href="#9、配置Python" class="headerlink" title="9、配置Python"></a>9、配置Python</h3><ul><li>查看Python路径：</li></ul><pre class="language-terminal" data-language="terminal"><code class="language-terminal">whereis python3</code></pre><ul><li>配置pip：</li></ul><pre class="language-terminal" data-language="terminal"><code class="language-terminal">pip install pip -Upip config set global.index-url https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simplepip config set global.trusted-host &#x3D; pypi.tuna.tsinghua.edu.cn</code></pre><h3 id="10、配置Pycharm"><a href="#10、配置Pycharm" class="headerlink" title="10、配置Pycharm"></a>10、配置Pycharm</h3><p>设置Pycharm的桌面快捷方式</p><h4 id="（1）找到pycharm-sh的安装目录"><a href="#（1）找到pycharm-sh的安装目录" class="headerlink" title="（1）找到pycharm.sh的安装目录"></a>（1）找到pycharm.sh的安装目录</h4><p>&#x2F;pycharm&#x2F;bin</p><h4 id="（2）进入如下目录"><a href="#（2）进入如下目录" class="headerlink" title="（2）进入如下目录"></a>（2）进入如下目录</h4><p><code>/usr/share/applications</code><br>创建快捷方式脚本</p><pre class="language-terminal" data-language="terminal"><code class="language-terminal">sudo gedit &#x2F;usr&#x2F;share&#x2F;applications&#x2F;pycharm.desktop</code></pre><p>将如下内容复制到上面打开的文件：</p><pre class="language-none"><code class="language-none">[Desktop Entry]Type&#x3D;ApplicationName&#x3D;PycharmGenericName&#x3D;Pycharm3Comment&#x3D;Pycharm3:The Python IDEExec&#x3D;&quot;&#x2F;修改为对应目录&#x2F;bin&#x2F;pycharm.sh&quot; %fIcon&#x3D;&#x2F;修改为对应目录&#x2F;bin&#x2F;pycharm.pngTerminal&#x3D;pycharmCategories&#x3D;Pycharm;</code></pre><h4 id="（3）添加可执行权限"><a href="#（3）添加可执行权限" class="headerlink" title="（3）添加可执行权限"></a>（3）添加可执行权限</h4><pre class="language-terminal" data-language="terminal"><code class="language-terminal">sudo chmod +x &#x2F;usr&#x2F;share&#x2F;applications&#x2F;pycharm.desktop</code></pre><h3 id="11、配置Anaconda"><a href="#11、配置Anaconda" class="headerlink" title="11、配置Anaconda"></a>11、配置Anaconda</h3><p>修改镜像源</p><h3 id="备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为："><a href="#备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为：" class="headerlink" title="备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为："></a>备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为：</h3><p>后续待补充</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 办公技巧 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> VMware </tag>
-            
-            <tag> 办公技巧 </tag>
-            
-            <tag> Ubuntu20 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>如何将要Win10电脑升级到Win11</title>
       <link href="/2022/05/03/9-ban-gong-ji-qiao/ru-he-jiang-yao-win10-dian-nao-sheng-ji-dao-win11/"/>
       <url>/2022/05/03/9-ban-gong-ji-qiao/ru-he-jiang-yao-win10-dian-nao-sheng-ji-dao-win11/</url>
@@ -220,6 +204,35 @@
             <tag> Win11 </tag>
             
             <tag> 办公技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Window平台在虚拟机VMware中配置Ubuntu20（后续完善）</title>
+      <link href="/2022/05/03/9-ban-gong-ji-qiao/window-ping-tai-zai-xu-ni-ji-vmware-zhong-pei-zhi-ubuntu20/"/>
+      <url>/2022/05/03/9-ban-gong-ji-qiao/window-ping-tai-zai-xu-ni-ji-vmware-zhong-pei-zhi-ubuntu20/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Window平台在虚拟机VMware中配置Ubuntu20（后续完善）"><a href="#Window平台在虚拟机VMware中配置Ubuntu20（后续完善）" class="headerlink" title="Window平台在虚拟机VMware中配置Ubuntu20（后续完善）"></a>Window平台在虚拟机VMware中配置Ubuntu20（后续完善）</h2><h3 id="1、Vmware安装"><a href="#1、Vmware安装" class="headerlink" title="1、Vmware安装"></a>1、Vmware安装</h3><h3 id="2、ubuntu官网下载"><a href="#2、ubuntu官网下载" class="headerlink" title="2、ubuntu官网下载"></a>2、ubuntu官网下载</h3><h3 id="3、注意安装路径"><a href="#3、注意安装路径" class="headerlink" title="3、注意安装路径"></a>3、注意安装路径</h3><h3 id="4、配置硬件参数"><a href="#4、配置硬件参数" class="headerlink" title="4、配置硬件参数"></a>4、配置硬件参数</h3><h3 id="5、修改ubuntu软件源（在设置中）"><a href="#5、修改ubuntu软件源（在设置中）" class="headerlink" title="5、修改ubuntu软件源（在设置中）"></a>5、修改ubuntu软件源（在设置中）</h3><h3 id="6、修改系统语言为中文（在设置中），但是文件夹名称不要改成中文"><a href="#6、修改系统语言为中文（在设置中），但是文件夹名称不要改成中文" class="headerlink" title="6、修改系统语言为中文（在设置中），但是文件夹名称不要改成中文"></a>6、修改系统语言为中文（在设置中），但是文件夹名称不要改成中文</h3><h3 id="7、安装VMware-Tools，支持文件（只能是小文件）与文本复制"><a href="#7、安装VMware-Tools，支持文件（只能是小文件）与文本复制" class="headerlink" title="7、安装VMware Tools，支持文件（只能是小文件）与文本复制"></a>7、安装VMware Tools，支持文件（只能是小文件）与文本复制</h3><h3 id="8、支持USB设备"><a href="#8、支持USB设备" class="headerlink" title="8、支持USB设备"></a>8、支持USB设备</h3><ul><li>修改系统配置文件<br><img src="/../../images/9-%E5%8A%9E%E5%85%AC%E6%8A%80%E5%B7%A7/Window%E5%B9%B3%E5%8F%B0%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BAVMware%E4%B8%AD%E9%85%8D%E7%BD%AEUbuntu20%EF%BC%88%E5%90%8E%E7%BB%AD%E5%AE%8C%E5%96%84%EF%BC%89-1.png"></li><li>然后找到这个文件，原来是FALSE, 把它改成TRUE ,就可以了，记得保存，<br><img src="/../../images/9-%E5%8A%9E%E5%85%AC%E6%8A%80%E5%B7%A7/Window%E5%B9%B3%E5%8F%B0%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BAVMware%E4%B8%AD%E9%85%8D%E7%BD%AEUbuntu20%EF%BC%88%E5%90%8E%E7%BB%AD%E5%AE%8C%E5%96%84%EF%BC%89-2.png"></li></ul><h3 id="9、配置Python"><a href="#9、配置Python" class="headerlink" title="9、配置Python"></a>9、配置Python</h3><ul><li>查看Python路径：</li></ul><pre class="language-terminal" data-language="terminal"><code class="language-terminal">whereis python3</code></pre><ul><li>配置pip：</li></ul><pre class="language-terminal" data-language="terminal"><code class="language-terminal">pip install pip -Upip config set global.index-url https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simplepip config set global.trusted-host &#x3D; pypi.tuna.tsinghua.edu.cn</code></pre><h3 id="10、配置Pycharm"><a href="#10、配置Pycharm" class="headerlink" title="10、配置Pycharm"></a>10、配置Pycharm</h3><p>设置Pycharm的桌面快捷方式</p><h4 id="（1）找到pycharm-sh的安装目录"><a href="#（1）找到pycharm-sh的安装目录" class="headerlink" title="（1）找到pycharm.sh的安装目录"></a>（1）找到pycharm.sh的安装目录</h4><p>&#x2F;pycharm&#x2F;bin</p><h4 id="（2）进入如下目录"><a href="#（2）进入如下目录" class="headerlink" title="（2）进入如下目录"></a>（2）进入如下目录</h4><p><code>/usr/share/applications</code><br>创建快捷方式脚本</p><pre class="language-terminal" data-language="terminal"><code class="language-terminal">sudo gedit &#x2F;usr&#x2F;share&#x2F;applications&#x2F;pycharm.desktop</code></pre><p>将如下内容复制到上面打开的文件：</p><pre class="language-none"><code class="language-none">[Desktop Entry]Type&#x3D;ApplicationName&#x3D;PycharmGenericName&#x3D;Pycharm3Comment&#x3D;Pycharm3:The Python IDEExec&#x3D;&quot;&#x2F;修改为对应目录&#x2F;bin&#x2F;pycharm.sh&quot; %fIcon&#x3D;&#x2F;修改为对应目录&#x2F;bin&#x2F;pycharm.pngTerminal&#x3D;pycharmCategories&#x3D;Pycharm;</code></pre><h4 id="（3）添加可执行权限"><a href="#（3）添加可执行权限" class="headerlink" title="（3）添加可执行权限"></a>（3）添加可执行权限</h4><pre class="language-terminal" data-language="terminal"><code class="language-terminal">sudo chmod +x &#x2F;usr&#x2F;share&#x2F;applications&#x2F;pycharm.desktop</code></pre><h3 id="11、配置Anaconda"><a href="#11、配置Anaconda" class="headerlink" title="11、配置Anaconda"></a>11、配置Anaconda</h3><p>修改镜像源</p><h3 id="备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为："><a href="#备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为：" class="headerlink" title="备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为："></a>备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为：</h3><p>后续待补充</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 办公技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 办公技巧 </tag>
+            
+            <tag> VMware </tag>
+            
+            <tag> Ubuntu20 </tag>
             
         </tags>
       
@@ -391,27 +404,6 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——P300ERP有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/</url>
-      
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>本赛题基于P300电位脑-机接口数据，测试不同算法的识别性能。并根据测试数据中的正确率(Accuracy)和信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激界面由当前字符和36个字符组成的字符矩阵组成。本实验中，我们将代表当前字符编号的时间标签称为“大标签”，将代表字符矩阵行列编号的时间标签称为“小标签”。<br>每个试次中被试注视一个字符，以大标签作为起始，大标签出现后1s字符矩阵开始以行或列为单位随机地闪烁，每行&#x2F;列闪烁时长175ms，闪烁开始时刻出现代表当前闪烁行&#x2F;列编号的小标签，所有行和列闪烁一次称为一轮(共12行&#x2F;列)，每个字符6轮，总计72个小标签。即每个试次的时长为1+0.175126&#x3D;13.6秒。<br>大标签：包含26个字母和10个数字，共36种。在训练数据集中，字符与大标签的对应关系如下表，在测试数据集中，大标签统一为“100”，需要参赛者根据识别算法，计算出正确的大标签并报告。</p><p>小标签：包含6行6列，共12种，由数字1到12表示。其中数字1到6代表第1至6列，数字7到12代表第1至6行。<br>特别说明的是，每个字符的最后一个（第72个）小标签闪烁之后475ms，下一个字符的大标签刺激就会出现；即如果使用最后一个小标签的数据，可能需要截取到下一个字符的大标签出现之后的信息，需要参赛人员注意。报告超时的说明，具体见算法规范部分。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含5个字符的刺激试次。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的标签信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx">https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx</a><br>提取码：6btx<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开源数据集 </category>
-          
-          <category> 脑机接口 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2019年脑机接口大赛——SSVEP干电极有训练数据集</title>
       <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/"/>
       <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/</url>
@@ -433,11 +425,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>随着机器学习思想的火热传播，通过数据预先训练被认为是一种有效提高系统性能的方法。本赛题基于稳态视觉诱发电位脑-机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续3.5-4.5s，开始0.5s为目标提示阶段，屏幕中会出现一个红块提示目标位置并持续0.5s。之后3-4s为刺激阶段，刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。</p><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。</p><p>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。</p><p>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。</p><p>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。</p><p>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug">https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug</a><br>提取码：i3ug<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -454,11 +446,32 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——P300ERP有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>本赛题基于P300电位脑-机接口数据，测试不同算法的识别性能。并根据测试数据中的正确率(Accuracy)和信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激界面由当前字符和36个字符组成的字符矩阵组成。本实验中，我们将代表当前字符编号的时间标签称为“大标签”，将代表字符矩阵行列编号的时间标签称为“小标签”。<br>每个试次中被试注视一个字符，以大标签作为起始，大标签出现后1s字符矩阵开始以行或列为单位随机地闪烁，每行&#x2F;列闪烁时长175ms，闪烁开始时刻出现代表当前闪烁行&#x2F;列编号的小标签，所有行和列闪烁一次称为一轮(共12行&#x2F;列)，每个字符6轮，总计72个小标签。即每个试次的时长为1+0.175126&#x3D;13.6秒。<br>大标签：包含26个字母和10个数字，共36种。在训练数据集中，字符与大标签的对应关系如下表，在测试数据集中，大标签统一为“100”，需要参赛者根据识别算法，计算出正确的大标签并报告。</p><p>小标签：包含6行6列，共12种，由数字1到12表示。其中数字1到6代表第1至6列，数字7到12代表第1至6行。<br>特别说明的是，每个字符的最后一个（第72个）小标签闪烁之后475ms，下一个字符的大标签刺激就会出现；即如果使用最后一个小标签的数据，可能需要截取到下一个字符的大标签出现之后的信息，需要参赛人员注意。报告超时的说明，具体见算法规范部分。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含5个字符的刺激试次。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的标签信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx">https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx</a><br>提取码：6btx<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开源数据集 </category>
+          
+          <category> 脑机接口 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2019年脑机接口大赛——SSVEP有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>随着机器学习思想的火热传播，通过数据预先训练被认为是一种有效提高系统性能的方法。本赛题基于稳态视觉诱发电位脑-机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续3.5-4.5s，开始0.5s为目标提示阶段，屏幕中会出现一个红块提示目标位置并持续0.5s。之后3-4s为刺激阶段，刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。</p><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。</p><p>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。</p><p>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。</p><p>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。</p><p>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug">https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug</a><br>提取码：i3ug<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -517,27 +530,6 @@
     
     
     <entry>
-      <title>MI-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于运动想象的BCI（Motor Imagery BCI, MI-BCI）是BCI的主要范式之一，通过检测识别用户MI产生的EEG来判断用户意图，进而实现人脑与外部设备之间的直接通信与控制。用户在运动想象的过程中，大脑皮层会产生两种变化明显的节律信号，分别是8-15Hz的Mu节律信号和 18-24Hz 的Beta节律信号。同时，大脑皮层对侧运动感觉区的脑电节律能量会明显降低，而同侧运动感觉区的脑电节律能量增大，这种现象称为事件相关去同步（Event Related Desynchronization，ERD）&#x2F;事件相关同步（Event Related Synchronization，ERS）。<br>并且不同部位的躯体运动想象与该躯体对应的感觉运动皮层 ERD&#x2F;ERS 现象有关，即 ERD&#x2F;ERS 现象有空间分布的特性。正是因为运动想象脑电信号空间分布的特性，构成了解码运动想象思维信号的生理基础，采用合适的特征提取算法就可以较好地识别患者的运动意图。<br>下图展示了对某位被试运动想象产生的脑电信号，选择 8-15Hz 和 18-24Hz 的频带范围作为 ERD&#x2F;ERS 特定频带，分别计算出的 C3、C4 通道脑电数据的左手和右手的想象能量。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>下图展示了某位受试在进行运动想象时，用32导电极帽采集的各通道的部分脑电数据。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-4.png"><br>典型算法</p><p>PSD（功率谱估计）<br>功率谱估计是脑电信号频域分析的典型方法之一，把幅度随时间变化的脑电信号变换为脑电功率随频率变化的谱图，从而可以直观地观察到脑电节律的分布与变化情况。经典功率谱估计是在较长的数据中截取一段有限长的数据做分析，根据截取的样本估计出整体的功率谱。基本思想就是把一长度为N的数据分成L段，每段M个数据，分段数据先于窗函数W(n)相乘，分别计算出每一段的功率谱，最后叠加求取平均值作为最终功率谱估计。<br>算法过程：使用Cz、C3和C4这3个导联的数据，通过Cz消除C3、C4的相关性，以8-15Hz频段C3、C4导联的功率谱差值作为特征向量，并结合LDA进行分类。<br>用Welch功率谱密度估计法对C3和C4的EEG数据进行平均功率谱分析，分别得到进行左手MI的EEG平均功率谱和进行右手MI的EEG平均功率谱。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"></p><p>参考文献<br>Herman P, Prasad G, Mcginnity T M, et al. Comparative Analysis of Spectral Approaches to Feature Extraction for EEG-Based Motor Imagery Classification[J]. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2008, 16(4):317-326.</p><p>LDA<br>LDA的目标是训练一个超平面，然后依据选定的类来划分信息，一般是选定两类来进行分类。基本原理如下图所示。向量组取决于超平面的交叉，方向由向量组确定。通过寻找预测两类源的最优值以及减小类内的修正就可以找到超平面。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-6.png"><br>其中，假设是维特征向量，，相应的基向量为，则线性判别函数的一般形式为：</p><p>其中，是权向量（也称投影矩阵），是阈值，是分类器的输出。</p><p>参考文献<br>Keirn Z A, Aunon J I. A new mode of communication between man and his surroundings[J]. IEEE Transactions on Biomedical Engineering, 1990, 37(12):1209-1214.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开源数据集 </category>
-          
-          <category> 脑机接口 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>P300-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
       <link href="/2022/04/20/kai-yuan-shu-ju-ji/p300-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
       <url>/2022/04/20/kai-yuan-shu-ju-ji/p300-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
@@ -564,6 +556,27 @@
       <url>/2022/04/20/kai-yuan-shu-ju-ji/ssvep-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
       
         <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于稳态视觉诱发电位的BCI系统是目前最常用的头皮脑电BCI系统之一，该系统以稳态视觉诱发电位（Steady-state visual evoked potentials, SSVEP）作为目标信号。SSVEP是一种通过向受试者呈现以一定频率快速闪烁的刺激块，在头皮上记录到的与刺激频率倍频相同的稳态脑电响应。<br>下图展示了给某位受试呈现了以12Hz闪烁的刺激块时受试者脑电的频域和时域特性。在频域中，我们可以清楚地观察到在12,24,36和48Hz，也就是刺激频率的1倍频，2倍频，3倍频和4倍频处有明显的峰值，而在时域上也可以看到稳定的周期响应。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br>SSVEP BCI进行目标识别的原理简单地来说就是检测脑电信号中是否存在某些特定的频率成分。2002年，清华大学团队设计了一个控制光标二维移动的BCI系统，4个闪烁块按照不同频率闪烁，每个闪烁块编码不同的命令（上下左右），当用户希望控制光标向上，只需要注视对应的闪烁块（假设闪烁频率为12Hz），从而诱发对应频率的SSVEP信号，如果系统检测到12Hz的SSVEP响应，则判断用户在注视向上的光标，从而给出反馈。</p><p>几种典型算法</p><p>由于SSVEP具有显著的频域特征，在早年的SSVEP-BCI研究中，多采用基于功率谱方法（PSD）对信号进行检测，以下述参考文献为例，研究者对采集到的脑电数据进行频谱分析，通过提取频域能量峰值所在的频率点来对目标进行识别。但这种方法易受噪声干扰，性能有限，近年来越来越多的研究者将SSVEP的时域信息纳入到了分析中来。<br>参考文献<br>Ming Cheng, Xiaorong Gao, Shangkai Gao, Dingfeng Xu，Design and Implementation of a Brain-Computer Interface with High Transfer Rates. IEEE Transaction on Biomedical Engineering，VOL. 49, NO. 10, p1181－1186, 2002</p><p>CCA（典型相关分析）<br>CCA是一种度量两组信号之间线性相关性的多元统计方法，在SSVEP-BCI中取得了广泛的应用。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>CCA的目标是找到两个线性组合WX和WY，使得原有的多通道信号x1,x2,…,xn和y1,y2,…,yn相关系数最大。在实际应用时，x1,x2,…,xn为多通道的脑电信号，y1,y2,…,yn为参考信号，即刺激频率的倍频对应的正余弦波。对一段待分类的脑电数据来说，可以计算其与多个参考信号的典型相关系数，比较这些典型相关系数的大小，得到最大相关系数的参考信号对应的频率即为刺激频率。<br>参考文献<br>Bin G, Gao X, Yan Z, Hong B, Gao S: An online multi-channel SSVEP-based brain-computer interface using a canonical correlation analysis method. J Neural Eng; 2009 Aug;6(4):046002</p><p>Template-based CCA<br>上面所述的CCA方法采用正余弦信号作为参考信号，并未充分利用脑电本身的信息，于是出现了Template-based CCA 这一方法，它的基本思想和计算流程和传统CCA方法完全一样，差异在于，Template-based CCA 将之前记录的，已知刺激频率的脑电数据的叠平均信号作为模板，来估计空域滤波器，相较于传统CCA，叠平均得到的模板和空域滤波器可以更好的反映受试者的脑电特异性，因此具有更好的性能。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-4.png"><br>参考文献<br>Bin, G., Gao, X., Wang, Y., Li, Y., Hong, B., &amp; Gao, S. (2011). A high-speed BCI based on code modulation VEP. Journal of Neural Engineering, 8(2).</p><p>Filter-bank CCA</p><p>为了有效地利用SSVEP的基频和谐波信息，从而进一步提高识别精度，下述参考文献提出了基于滤波器组的典型相关分析方法（filter-bank CCA）。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"><br>该方法分为三步，首先是进行滤波器组分析，简单地说即是将脑电数据滤波到不同子带；然后是对每一个子带的数据做CCA得到典型相关系数；最后，通过将各个频带数据的典型相关系数进行加权求和，取和不同参考信号得到的加权和的最大值对应的频率为识别目标。<br>参考文献<br>Chen, X., Wang, Y., Gao, S., Jung, T., &amp; Gao, X. (2015). Filter bank canonical correlation analysis for implementing a high-speed SSVEP-based brain–computer interface. Journal of Neural Engineering, 12(4).</p><p>任务相关成分分析（Task-related Component Analysis, TRCA）<br>TRCA的主要思想是寻找一个线性组合，使得原始数据中与事件相关的频率成分在多次试验的可重复性最大，该方法在SSVEP目标识别中取得了很好的效果。<br>TRCA方法的具体实现方法如下。首先假设存在两种源信号：1）任务相关信号s(t); 2)任务无关信号 n(t)。因此，检测到的多通道EEG信号的线性模式可以表述为：<br>, j &#x3D; 1, 2, … , （3-1）<br>其中，j是通道编号，和是将原信号投影到EEG信号的系数。需要解决的问题是如何从观察信号的线性组合中恢复出任务相关信号。的线性组合可以表示为：<br>（3-2）<br>我们可以通过最大化试次之间协方差的方式求解这个问题。假设第h个试次的EEG信号和预测的任务相关成分分别为和，h &#x3D; 1,2, … ,。对应的时间范围是。这里，是每个任务试次的长度。而第和个试次之间的协方差可以被写作：<br>（3-3）<br>各个试次之间可能的组合可以表示为：</p><pre class="language-none"><code class="language-none">（3-4）其中，矩阵可以被写作：（3-5）为了得到有限个解，的方差被限制为：（3-5）因此，我们可以把求解转化成以下问题：（3-7）</code></pre><p>其中，可以通过求解矩阵特征值的方式获得。</p><p>参考文献<br>Nakanishi, M., Wang, Y., Chen, X., Wang, Y., Gao, X., &amp; Jung, T. (2018). Enhancing Detection of SSVEPs for a High-Speed Brain Speller Using Task-Related Component Analysis. IEEE Transactions on Biomedical Engineering, 65(1), 104-112.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开源数据集 </category>
+          
+          <category> 脑机接口 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MI-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于运动想象的BCI（Motor Imagery BCI, MI-BCI）是BCI的主要范式之一，通过检测识别用户MI产生的EEG来判断用户意图，进而实现人脑与外部设备之间的直接通信与控制。用户在运动想象的过程中，大脑皮层会产生两种变化明显的节律信号，分别是8-15Hz的Mu节律信号和 18-24Hz 的Beta节律信号。同时，大脑皮层对侧运动感觉区的脑电节律能量会明显降低，而同侧运动感觉区的脑电节律能量增大，这种现象称为事件相关去同步（Event Related Desynchronization，ERD）&#x2F;事件相关同步（Event Related Synchronization，ERS）。<br>并且不同部位的躯体运动想象与该躯体对应的感觉运动皮层 ERD&#x2F;ERS 现象有关，即 ERD&#x2F;ERS 现象有空间分布的特性。正是因为运动想象脑电信号空间分布的特性，构成了解码运动想象思维信号的生理基础，采用合适的特征提取算法就可以较好地识别患者的运动意图。<br>下图展示了对某位被试运动想象产生的脑电信号，选择 8-15Hz 和 18-24Hz 的频带范围作为 ERD&#x2F;ERS 特定频带，分别计算出的 C3、C4 通道脑电数据的左手和右手的想象能量。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>下图展示了某位受试在进行运动想象时，用32导电极帽采集的各通道的部分脑电数据。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-4.png"><br>典型算法</p><p>PSD（功率谱估计）<br>功率谱估计是脑电信号频域分析的典型方法之一，把幅度随时间变化的脑电信号变换为脑电功率随频率变化的谱图，从而可以直观地观察到脑电节律的分布与变化情况。经典功率谱估计是在较长的数据中截取一段有限长的数据做分析，根据截取的样本估计出整体的功率谱。基本思想就是把一长度为N的数据分成L段，每段M个数据，分段数据先于窗函数W(n)相乘，分别计算出每一段的功率谱，最后叠加求取平均值作为最终功率谱估计。<br>算法过程：使用Cz、C3和C4这3个导联的数据，通过Cz消除C3、C4的相关性，以8-15Hz频段C3、C4导联的功率谱差值作为特征向量，并结合LDA进行分类。<br>用Welch功率谱密度估计法对C3和C4的EEG数据进行平均功率谱分析，分别得到进行左手MI的EEG平均功率谱和进行右手MI的EEG平均功率谱。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"></p><p>参考文献<br>Herman P, Prasad G, Mcginnity T M, et al. Comparative Analysis of Spectral Approaches to Feature Extraction for EEG-Based Motor Imagery Classification[J]. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2008, 16(4):317-326.</p><p>LDA<br>LDA的目标是训练一个超平面，然后依据选定的类来划分信息，一般是选定两类来进行分类。基本原理如下图所示。向量组取决于超平面的交叉，方向由向量组确定。通过寻找预测两类源的最优值以及减小类内的修正就可以找到超平面。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-6.png"><br>其中，假设是维特征向量，，相应的基向量为，则线性判别函数的一般形式为：</p><p>其中，是权向量（也称投影矩阵），是阈值，是分类器的输出。</p><p>参考文献<br>Keirn Z A, Aunon J I. A new mode of communication between man and his surroundings[J]. IEEE Transactions on Biomedical Engineering, 1990, 37(12):1209-1214.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -669,35 +682,6 @@
     
     
     <entry>
-      <title>Hexo博客文章加密（尚未解决）</title>
-      <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/"/>
-      <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/</url>
-      
-        <content type="html"><![CDATA[<h2 id="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"><a href="#目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。" class="headerlink" title="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"></a>目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。</h2><p>参考资料：</p><ol><li><code>matery</code>主题自带的加密方法<br><a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-4">Hexo博客主题之hexo-theme-matery的介绍 | 闪烁之狐 (blinkfox.com)</a></li><li><code>hexo-blog-encrypt</code>插件加密方法<br><a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt&#x2F;ReadMe.zh.md at master · D0n9X1n&#x2F;hexo-blog-encrypt (github.com)</a></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 前端 </category>
-          
-          <category> Hexo建站 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> 加密 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hexo主题Matery的介绍与相关配置</title>
       <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/"/>
       <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</url>
@@ -727,6 +711,35 @@
     
     
     <entry>
+      <title>Hexo博客文章加密（尚未解决）</title>
+      <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/"/>
+      <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/</url>
+      
+        <content type="html"><![CDATA[<h2 id="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"><a href="#目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。" class="headerlink" title="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"></a>目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。</h2><p>参考资料：</p><ol><li><code>matery</code>主题自带的加密方法<br><a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-4">Hexo博客主题之hexo-theme-matery的介绍 | 闪烁之狐 (blinkfox.com)</a></li><li><code>hexo-blog-encrypt</code>插件加密方法<br><a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt&#x2F;ReadMe.zh.md at master · D0n9X1n&#x2F;hexo-blog-encrypt (github.com)</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> Hexo建站 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 加密 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>为电脑安装免费商用字体</title>
       <link href="/2022/04/13/9-ban-gong-ji-qiao/wei-dian-nao-an-zhuang-mian-fei-shang-yong-zi-ti/"/>
       <url>/2022/04/13/9-ban-gong-ji-qiao/wei-dian-nao-an-zhuang-mian-fei-shang-yong-zi-ti/</url>
@@ -743,9 +756,9 @@
       
         <tags>
             
-            <tag> 办公技巧 </tag>
-            
             <tag> 免费商用字体 </tag>
+            
+            <tag> 办公技巧 </tag>
             
             <tag> 版权问题 </tag>
             
