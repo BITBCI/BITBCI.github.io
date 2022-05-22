@@ -511,21 +511,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-17
+                    2022-05-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -573,6 +573,21 @@
 <p>3、自定义数据存储位置</p>
 <p><img src="/../../images/8-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6Zotero%E7%9A%84%E4%BD%BF%E7%94%A8-3.jpg"></p>
 <p>4、新建组文件夹与子文件夹</p>
+<h3 id="三、设置云共享盘"><a href="#三、设置云共享盘" class="headerlink" title="三、设置云共享盘"></a>三、设置云共享盘</h3><p>1、取消文件同步选项</p>
+<p><img src="/../../images/8-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6Zotero%E7%9A%84%E4%BD%BF%E7%94%A8-1.jpg"></p>
+<p>2、设置根目录与数据存储位置</p>
+<ul>
+<li><p>根目录为Zotero文件夹的绝对位置，其他文件均以该路径作为相对路径。<br>将根目录设置为WPS同步盘路径下就可以通过WPS网盘实现同步。</p>
+</li>
+<li><p>数据存储位置保存的是文献信息，占用空间较小，可以选择默认。</p>
+</li>
+</ul>
+<p><img src="/../../images/8-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6Zotero%E7%9A%84%E4%BD%BF%E7%94%A8-8.jpg"></p>
+<p>3、创建软链接（快捷方式）</p>
+<p>以管理员身份打开cmd，输入以下代码：<br>代码文件需要根据具体情况修改路径。</p>
+<pre class="language-terminal" data-language="terminal"><code class="language-terminal">mklink &#x2F;J &quot;C:\Users\bitli\Zotero\storage&quot; &quot;D:\Zotero存储空间\storage&quot;</code></pre>
+
+<p><img src="/../../images/8-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6Zotero%E7%9A%84%E4%BD%BF%E7%94%A8-9.jpg"></p>
 <h3 id="三、添加SCI-HUB下载源"><a href="#三、添加SCI-HUB下载源" class="headerlink" title="三、添加SCI-HUB下载源"></a>三、添加SCI-HUB下载源</h3><p>Zotero默认的下载源为Unpaywall，里面能找到的PDF文件并不多，因此需要配置一下下载源。</p>
 <p>首选项-&gt;高级-&gt;设置编辑器，搜索<code>extensions.zotero.findPDFs.resolvers</code>，如下图所示：</p>
 <p><img src="/../../images/8-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6Zotero%E7%9A%84%E4%BD%BF%E7%94%A8-5.jpg"></p>
@@ -602,12 +617,16 @@
 <h3 id="四、安装插件"><a href="#四、安装插件" class="headerlink" title="四、安装插件"></a>四、安装插件</h3><p>为Zotero安装一些常用插件，可以提高工作效率。<br>Zotero 官方维护了一个插件列表，大多数已有的插件都被索引到了。<br>插件下载地址为：<a target="_blank" rel="noopener" href="https://www.zotero.org/support/plugins">plugins [Zotero Documentation]</a></p>
 <p>插件安装方式：点击工具-&gt;插件，将下载好的.xpi插件拖入对话框进行安装。安装后需要重启“Restart now”插件才会生效。</p>
 <ol>
-<li>ZotFile<br>自动重命名，移动PDF并将其附加到Zotero项目，将PDF从Zotero库同步到您的（移动）PDF阅读器（例如iPad，Android平板电脑等）并从PDF文件中提取注释。</li>
+<li><p>ZotFile<br>自动重命名，移动PDF并将其附加到Zotero项目，将PDF从Zotero库同步到您的（移动）PDF阅读器（例如iPad，Android平板电脑等）并从PDF文件中提取注释。</p>
+</li>
+<li><p>Zotero IF 插件<br>显示中科院分区和影响因子（JCR IF 只针对 SCI 期刊论文）。<br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/e5qJVzLwAiHWjHkc2oHwjw">Zotero IF v1.1.0 </a><br>在本文最后的百度云玩网盘链接中下载xpi插件，将其安装到Zotero中。<br>重启软件。<br>调出“馆藏目录”和“索取号”，分别对应中科院分区和影响因子（JCR IF 只针对 SCI 期刊论文）。</p>
+</li>
 </ol>
-<p>2、Zotero IF 插件<br>显示中科院分区和影响因子（JCR IF 只针对 SCI 期刊论文）。<br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/e5qJVzLwAiHWjHkc2oHwjw">Zotero IF v1.1.0 </a><br>在本文最后的百度云玩网盘链接中下载xpi插件，将其安装到Zotero中。<br>重启软件。<br>调出“馆藏目录”和“索取号”，分别对应中科院分区和影响因子（JCR IF 只针对 SCI 期刊论文）。</p>
 <p><img src="/../../images/8-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6Zotero%E7%9A%84%E4%BD%BF%E7%94%A8-6.jpg"></p>
 <p>之后选中要查询的论文（可多选）右击“Update If(s)”即可更新。</p>
-<p>2、Markdown Here</p>
+<ol start="3">
+<li>Markdown Here</li>
+</ol>
 <h3 id="五、配置云同步"><a href="#五、配置云同步" class="headerlink" title="五、配置云同步"></a>五、配置云同步</h3><p>可以使用坚果云、百度云等方法配置云同步。</p>
 <h3 id="六、其他文献管理软件"><a href="#六、其他文献管理软件" class="headerlink" title="六、其他文献管理软件"></a>六、其他文献管理软件</h3><h4 id="1、NoteExpress-文献管理软件"><a href="#1、NoteExpress-文献管理软件" class="headerlink" title="1、NoteExpress(文献管理软件)"></a>1、NoteExpress(文献管理软件)</h4><p>国产文献管理软件</p>
 <h4 id="2、Endnote"><a href="#2、Endnote" class="headerlink" title="2、Endnote"></a>2、Endnote</h4><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/125652934">Endnote文献插入和格式修改 - 知乎 (zhihu.com)</a></p>
@@ -1011,7 +1030,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">27.7k</span>&nbsp;字
+                class="white-color">29.6k</span>&nbsp;字
             
             
             
