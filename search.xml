@@ -4,11 +4,24 @@
   
     
     <entry>
+      <title>三维绘图软件Blender的基本使用</title>
+      <link href="/2022/05/30/16-jian-ji-she-ji/san-wei-hui-tu-ruan-jian-blender-de-ji-ben-shi-yong/"/>
+      <url>/2022/05/30/16-jian-ji-she-ji/san-wei-hui-tu-ruan-jian-blender-de-ji-ben-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<h2 id="三维绘图软件Blender的基本使用"><a href="#三维绘图软件Blender的基本使用" class="headerlink" title="三维绘图软件Blender的基本使用"></a>三维绘图软件Blender的基本使用</h2><h3 id="一、Blender简介"><a href="#一、Blender简介" class="headerlink" title="一、Blender简介"></a>一、Blender简介</h3><p>Blender是一款免费开源三维图形图像软件，提供从建模、动画、材质、渲染、到音频处理、视频剪辑等一系列动画短片制作解决方案。<br>优点：</p><ol><li>轻量级</li><li>与Python交互</li><li>跨平台（Windows、MacOS、Linux）</li></ol><h3 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h3><p>有两种版本提供下载，一种是安装包，一种是绿色免安装版。<br><a href="https://www.blendercn.org/downloadme">Blender下载和汉化 – Blender中国社区 (blendercn.org)</a></p><h3 id="三、建模流程"><a href="#三、建模流程" class="headerlink" title="三、建模流程"></a>三、建模流程</h3><ol><li>搭建模型</li><li>设置物体材质</li><li>设置摄像头</li><li>设置灯光</li></ol><h3 id="四、基本建模操作"><a href="#四、基本建模操作" class="headerlink" title="四、基本建模操作"></a>四、基本建模操作</h3><ol><li>视图操作</li></ol><table><thead><tr><th>命令</th><th>功能</th></tr></thead><tbody><tr><td>鼠标中键盘与Ctrl、Shift、Alt的组合</td><td>视图变换</td></tr><tr><td>Ctrl+Alt+Q</td><td>显示三视图</td></tr><tr><td>、~</td><td>选择各种视图</td></tr><tr><td>Shift+Z</td><td>线框和实体的转换</td></tr><tr><td>Tab</td><td>变换编辑模式与物体模式</td></tr></tbody></table><ol start="2"><li>物体模式</li></ol><table><thead><tr><th>一级命令</th><th>二级命令</th><th>功能</th></tr></thead><tbody><tr><td>Shift+A</td><td></td><td>弹出实体创建菜单</td></tr><tr><td>G</td><td></td><td>移动</td></tr><tr><td></td><td>X</td><td>X轴平移</td></tr><tr><td></td><td>Y</td><td>Y轴平移</td></tr><tr><td></td><td>Z</td><td>Z轴平移</td></tr><tr><td></td><td>1（输入数值）</td><td>移动1（输入的数值）个单位</td></tr><tr><td>S</td><td></td><td>缩放</td></tr><tr><td></td><td>X</td><td>X轴缩放</td></tr><tr><td></td><td>Y</td><td>Y轴缩放</td></tr><tr><td></td><td>Z</td><td>Z轴缩放</td></tr><tr><td></td><td>2（输入数值）</td><td>缩放2（输入的数值）倍</td></tr><tr><td>R</td><td></td><td>旋转</td></tr><tr><td></td><td>X</td><td>X轴旋转</td></tr><tr><td></td><td>Y</td><td>Y轴旋转</td></tr><tr><td></td><td>Z</td><td>Z轴旋转</td></tr><tr><td></td><td>30（输入数值）</td><td>旋转30（输入数值）度</td></tr><tr><td>Shift+D</td><td></td><td>复制</td></tr><tr><td>Alt+D</td><td></td><td>复制且二者同属一个实体</td></tr><tr><td>Ctrl+J</td><td></td><td>将孤立的物体合并</td></tr></tbody></table><ol start="3"><li>编辑模式</li></ol><table><thead><tr><th>命令</th><th>功能</th></tr></thead><tbody><tr><td>Ctrl</td><td>对齐到网格线</td></tr><tr><td>Shift</td><td>缓慢移动</td></tr><tr><td>1</td><td>点</td></tr><tr><td>2</td><td>线</td></tr><tr><td>3</td><td>面</td></tr><tr><td>E</td><td>挤出</td></tr><tr><td>I</td><td>内插面</td></tr><tr><td>Ctrl+B</td><td>倒角，以内插面的形式倒角</td></tr><tr><td>Ctrl+R</td><td>环切</td></tr><tr><td>Ctrl+Shift+R、Ctrl+B</td><td>对称环切</td></tr></tbody></table><h3 id="五、设置摄像头参数"><a href="#五、设置摄像头参数" class="headerlink" title="五、设置摄像头参数"></a>五、设置摄像头参数</h3><p>焦距：200mm<br>快捷键0：进入相机视野<br>输出属性：调整分辨率<br>摄像机-&gt;视图-&gt;锁定视图方位</p><h3 id="六、添加物体材质"><a href="#六、添加物体材质" class="headerlink" title="六、添加物体材质"></a>六、添加物体材质</h3><p>未完待续</p><h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><p><a href="https://www.bilibili.com/video/BV1GL411w75W?p=3">零基础新手还不知道怎么自学Blender? ？ 最新3.0的blender中文小房子入门案例流程它来了~_哔哩哔哩_bilibili</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>强化学习与常用环境</title>
       <link href="/2022/05/22/12-xiang-mu-kai-fa/qiang-hua-xue-xi-yu-chang-yong-huan-jing/"/>
       <url>/2022/05/22/12-xiang-mu-kai-fa/qiang-hua-xue-xi-yu-chang-yong-huan-jing/</url>
       
-        <content type="html"><![CDATA[<h2 id="强化学习与常用环境"><a href="#强化学习与常用环境" class="headerlink" title="强化学习与常用环境"></a>强化学习与常用环境</h2><h3 id="一、强化学习"><a href="#一、强化学习" class="headerlink" title="一、强化学习"></a>一、强化学习</h3><p>强化学习（Reinforcement Learning, RL），又称再励学习、评价学习或增强学习，是机器学习的范式和方法论之一，用于描述和解决智能体（agent）在与环境的交互过程中通过学习策略以达成回报最大化或实现特定目标的问题。<br>强化学习是机器学习领域之一（与监督学习、无监督学习并列，不存在包含关系。），受到行为心理学的启发，主要关注智能体如何在环境中采取不同的行动，以最大限度地提高累积奖励。</p><p>强化学习主要由智能体（Agent）、环境（Environment）、状态（State）、动作（Action）、奖励（Reward）组成。智能体执行了某个动作后，环境将会转换到一个新的状态，对于该新的状态环境会给出奖励信号（正奖励或者负奖励）。随后，智能体根据新的状态和环境反馈的奖励，按照一定的策略执行新的动作。上述过程为智能体和环境通过状态、动作、奖励进行交互的方式。</p><p>强化学习应用主要包括AI游戏（如Atari），推荐系统，机器人控制（如Ng无人机飞行）。</p><p>智能体通过强化学习，可以知道自己在什么状态下，应该采取什么样的动作使得自身获得最大奖励。由于智能体与环境的交互方式与人类与环境的交互方式类似，可以认为强化学习是一套通用的学习框架，可用来解决通用人工智能的问题。因此强化学习也被称为通用人工智能的机器学习方法。</p><p>比如Alpha Go与AlphaGo Zero均是基于深度强化学习所言发的，在弱监督信息下通过”Trial and error”来自我学习。</p><p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83-1.jpg"></p><h3 id="二、机器学习、深度学习和强化学习的关系和区别"><a href="#二、机器学习、深度学习和强化学习的关系和区别" class="headerlink" title="二、机器学习、深度学习和强化学习的关系和区别"></a>二、机器学习、深度学习和强化学习的关系和区别</h3><p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83-2.png"></p><h3 id="二、实验场景"><a href="#二、实验场景" class="headerlink" title="二、实验场景"></a>二、实验场景</h3><p>近些年来，随着深度强化学习（DRL）变得越来越热门，各种深度强化学习研究平台也变得越来越多。<br>这些实验场景有：简单的toy场景、3D迷宫、第一人称射击游戏、即时策略类游戏和复杂机器人控制场景等。</p><table><thead><tr><th>名称</th><th>简介</th><th>研发机构</th><th>语言</th><th>平台</th><th>官方介绍</th></tr></thead><tbody><tr><td>MuJoCo</td><td>用于机器人控制优化</td><td>OpenAI</td><td>Python</td><td></td><td></td></tr><tr><td>OpenAI Gym</td><td>研究强化学习算法的<strong>toolkit</strong>，实验场景包括：经典的Cart-Pole, Mountain-Car到Atar，Go，MuJoCo</td><td>OpenAI</td><td></td><td></td><td>官方网站为<a href="https://gym.openai.com/%EF%BC%8C%E6%BA%90%E7%A0%81%E4%BD%8D%E4%BA%8Ehttps://github.com/openai/gym">https://gym.openai.com/，源码位于https://github.com/openai/gym</a></td></tr><tr><td>RLLib</td><td>研究强化学习算法的框架，OpenAI Gym支持更广泛的环境</td><td></td><td></td><td></td><td>官方网站为<a href="https://github.com/openai/rllab">https://github.com/openai/rllab</a></td></tr><tr><td>DeepMind Lab</td><td>3D迷宫场景强化学习平台</td><td>DeepMind</td><td></td><td></td><td>官方介绍<a href="https://deepmind.com/blog/open-sourcing-deepmind-lab/%E3%80%82%E8%AE%BA%E6%96%87">https://deepmind.com/blog/open-sourcing-deepmind-lab/。论文</a> <a href="https://arxiv.org/pdf/1612.03801.pdf%E3%80%82%E6%BA%90%E7%A0%81%E4%BD%8D%E4%BA%8Ehttps://github.com/deepmind/lab%E3%80%82">https://arxiv.org/pdf/1612.03801.pdf。源码位于https://github.com/deepmind/lab。</a></td></tr><tr><td>TORCS</td><td>跨平台的赛车游戏模拟器</td><td></td><td></td><td></td><td>官方网站：<a href="http://torcs.sourceforge.net/">http://torcs.sourceforge.net/</a></td></tr><tr><td>PySC2<strong>（</strong>StarCraft II<strong>）</strong></td><td>即时策略游戏</td><td></td><td></td><td></td><td></td></tr><tr><td>ViZDoom</td><td>提供了用<strong>AI</strong>玩毁灭战士游戏的环境</td><td></td><td>C++, Lua, Java, Python</td><td>Linux,Windows,Mac OS</td><td>官网 <strong>论文</strong> <strong>教程</strong></td></tr><tr><td>Roboschool</td><td>类似<strong>MuJoCo</strong>的场景，还有交互控制，及多智能体控制场景。</td><td></td><td>Python</td><td>Linux, Mac OS</td><td><a href="https://blog.openai.com/roboschool/" title="https://blog.openai.com/roboschool/">博客</a></td></tr><tr><td>Multi-Agent Particle Environment</td><td>多智能体粒子世界。主要用于多智能体场景下的<strong>DRL</strong>相关研究。</td><td></td><td>Python</td><td>Linux</td><td>论文 <strong>论文</strong></td></tr></tbody></table><h3 id="三、研究框架"><a href="#三、研究框架" class="headerlink" title="三、研究框架"></a>三、研究框架</h3><table><thead><tr><th>名称</th><th>简介</th><th>场景</th><th>语言</th><th>研发机构</th></tr></thead><tbody><tr><td>RLLib</td><td>研究强化学习算法的框架，OpenAI Gym支持更广泛的环境</td><td></td><td></td><td></td></tr><tr><td>OpenAI Baselines</td><td>OpenAI出的一些深度强化学习算法（DQN, PPO, TRPO, DDPG）的实现，基于TensorFlow和OpenAI Gym</td><td></td><td></td><td></td></tr><tr><td>TensorFlow Models</td><td>强化学习算法集</td><td>OpenAI Gym, MuJoCo</td><td>Python</td><td>Community</td></tr><tr><td>TensorFlow Agents</td><td>用于在<strong>TensorFlow</strong>中构建并行强化学习算法</td><td>OpenAI Gym</td><td>Python</td><td>Google</td></tr><tr><td>Universe&#x2F;universe-starter-agent</td><td>用于衡量和训练游戏中的<strong>AI</strong>的软件平台</td><td>Atari, CarPole，Flashgames，Browser task, etc.</td><td>Python</td><td>OpenAI</td></tr><tr><td>ELF</td><td>可以让多个游戏实例并行执行</td><td>MiniRTS, Atari, Go</td><td>Python</td><td>Facebook</td></tr><tr><td>Coach</td><td>基于<strong>Python</strong>语言的强化学习研究框架</td><td>OpenAI Gym, ViZDoom, Roboschool, GymExtensions, PyBullet</td><td>Python</td><td>Intel</td></tr><tr><td>Unity Machine Learning Agents</td><td>可以结合<strong>Unity Editor</strong>来创建自定义的强化学习实验场景</td><td>3D Balance Ball, GridWorld</td><td>Python</td><td>Unity</td></tr></tbody></table><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/u010743448/article/details/110197120">强化学习实验环境</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="强化学习与常用环境"><a href="#强化学习与常用环境" class="headerlink" title="强化学习与常用环境"></a>强化学习与常用环境</h2><h3 id="一、强化学习"><a href="#一、强化学习" class="headerlink" title="一、强化学习"></a>一、强化学习</h3><p>强化学习（Reinforcement Learning, RL），又称再励学习、评价学习或增强学习，是机器学习的范式和方法论之一，用于描述和解决智能体（agent）在与环境的交互过程中通过学习策略以达成回报最大化或实现特定目标的问题。<br>强化学习是机器学习领域之一（与监督学习、无监督学习并列，不存在包含关系。），受到行为心理学的启发，主要关注智能体如何在环境中采取不同的行动，以最大限度地提高累积奖励。</p><p>强化学习主要由智能体（Agent）、环境（Environment）、状态（State）、动作（Action）、奖励（Reward）组成。智能体执行了某个动作后，环境将会转换到一个新的状态，对于该新的状态环境会给出奖励信号（正奖励或者负奖励）。随后，智能体根据新的状态和环境反馈的奖励，按照一定的策略执行新的动作。上述过程为智能体和环境通过状态、动作、奖励进行交互的方式。</p><p>强化学习应用主要包括AI游戏（如Atari），推荐系统，机器人控制（如Ng无人机飞行）。</p><p>智能体通过强化学习，可以知道自己在什么状态下，应该采取什么样的动作使得自身获得最大奖励。由于智能体与环境的交互方式与人类与环境的交互方式类似，可以认为强化学习是一套通用的学习框架，可用来解决通用人工智能的问题。因此强化学习也被称为通用人工智能的机器学习方法。</p><p>比如Alpha Go与AlphaGo Zero均是基于深度强化学习所言发的，在弱监督信息下通过”Trial and error”来自我学习。</p><p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83-1.jpg"></p><h3 id="二、机器学习、深度学习和强化学习的关系和区别"><a href="#二、机器学习、深度学习和强化学习的关系和区别" class="headerlink" title="二、机器学习、深度学习和强化学习的关系和区别"></a>二、机器学习、深度学习和强化学习的关系和区别</h3><p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83-2.png"></p><h3 id="三、实验场景"><a href="#三、实验场景" class="headerlink" title="三、实验场景"></a>三、实验场景</h3><p>近些年来，随着深度强化学习（DRL）变得越来越热门，各种深度强化学习研究平台也变得越来越多。<br>这些实验场景有：简单的toy场景、3D迷宫、第一人称射击游戏、即时策略类游戏和复杂机器人控制场景等。</p><table><thead><tr><th>名称</th><th>简介</th><th>研发机构</th><th>语言</th><th>平台</th><th>官方介绍</th></tr></thead><tbody><tr><td>MuJoCo</td><td>用于机器人控制优化</td><td>OpenAI</td><td>Python</td><td></td><td></td></tr><tr><td>OpenAI Gym</td><td>研究强化学习算法的<strong>toolkit</strong>，实验场景包括：经典的Cart-Pole, Mountain-Car到Atar，Go，MuJoCo</td><td>OpenAI</td><td></td><td></td><td>官方网站为<a href="https://gym.openai.com/%EF%BC%8C%E6%BA%90%E7%A0%81%E4%BD%8D%E4%BA%8Ehttps://github.com/openai/gym">https://gym.openai.com/，源码位于https://github.com/openai/gym</a></td></tr><tr><td>RLLib</td><td>研究强化学习算法的框架，OpenAI Gym支持更广泛的环境</td><td></td><td></td><td></td><td>官方网站为<a href="https://github.com/openai/rllab">https://github.com/openai/rllab</a></td></tr><tr><td>DeepMind Lab</td><td>3D迷宫场景强化学习平台</td><td>DeepMind</td><td></td><td></td><td>官方介绍<a href="https://deepmind.com/blog/open-sourcing-deepmind-lab/%E3%80%82%E8%AE%BA%E6%96%87">https://deepmind.com/blog/open-sourcing-deepmind-lab/。论文</a> <a href="https://arxiv.org/pdf/1612.03801.pdf%E3%80%82%E6%BA%90%E7%A0%81%E4%BD%8D%E4%BA%8Ehttps://github.com/deepmind/lab%E3%80%82">https://arxiv.org/pdf/1612.03801.pdf。源码位于https://github.com/deepmind/lab。</a></td></tr><tr><td>TORCS</td><td>跨平台的赛车游戏模拟器</td><td></td><td></td><td></td><td>官方网站：<a href="http://torcs.sourceforge.net/">http://torcs.sourceforge.net/</a></td></tr><tr><td>PySC2<strong>（</strong>StarCraft II<strong>）</strong></td><td>即时策略游戏</td><td></td><td></td><td></td><td></td></tr><tr><td>ViZDoom</td><td>提供了用<strong>AI</strong>玩毁灭战士游戏的环境</td><td></td><td>C++, Lua, Java, Python</td><td>Linux,Windows,Mac OS</td><td>官网 <strong>论文</strong> <strong>教程</strong></td></tr><tr><td>Roboschool</td><td>类似<strong>MuJoCo</strong>的场景，还有交互控制，及多智能体控制场景。</td><td></td><td>Python</td><td>Linux, Mac OS</td><td><a href="https://blog.openai.com/roboschool/" title="https://blog.openai.com/roboschool/">博客</a></td></tr><tr><td>Multi-Agent Particle Environment</td><td>多智能体粒子世界。主要用于多智能体场景下的<strong>DRL</strong>相关研究。</td><td></td><td>Python</td><td>Linux</td><td>论文 <strong>论文</strong></td></tr></tbody></table><h3 id="四、研究框架"><a href="#四、研究框架" class="headerlink" title="四、研究框架"></a>四、研究框架</h3><table><thead><tr><th>名称</th><th>简介</th><th>场景</th><th>语言</th><th>研发机构</th></tr></thead><tbody><tr><td>RLLib</td><td>研究强化学习算法的框架，OpenAI Gym支持更广泛的环境</td><td></td><td></td><td></td></tr><tr><td>OpenAI Baselines</td><td>OpenAI出的一些深度强化学习算法（DQN, PPO, TRPO, DDPG）的实现，基于TensorFlow和OpenAI Gym</td><td></td><td></td><td></td></tr><tr><td>TensorFlow Models</td><td>强化学习算法集</td><td>OpenAI Gym, MuJoCo</td><td>Python</td><td>Community</td></tr><tr><td>TensorFlow Agents</td><td>用于在<strong>TensorFlow</strong>中构建并行强化学习算法</td><td>OpenAI Gym</td><td>Python</td><td>Google</td></tr><tr><td>Universe&#x2F;universe-starter-agent</td><td>用于衡量和训练游戏中的<strong>AI</strong>的软件平台</td><td>Atari, CarPole，Flashgames，Browser task, etc.</td><td>Python</td><td>OpenAI</td></tr><tr><td>ELF</td><td>可以让多个游戏实例并行执行</td><td>MiniRTS, Atari, Go</td><td>Python</td><td>Facebook</td></tr><tr><td>Coach</td><td>基于<strong>Python</strong>语言的强化学习研究框架</td><td>OpenAI Gym, ViZDoom, Roboschool, GymExtensions, PyBullet</td><td>Python</td><td>Intel</td></tr><tr><td>Unity Machine Learning Agents</td><td>可以结合<strong>Unity Editor</strong>来创建自定义的强化学习实验场景</td><td>3D Balance Ball, GridWorld</td><td>Python</td><td>Unity</td></tr></tbody></table><h3 id="五、经典框架"><a href="#五、经典框架" class="headerlink" title="五、经典框架"></a>五、经典框架</h3><h4 id="1、gym"><a href="#1、gym" class="headerlink" title="1、gym"></a>1、gym</h4><p>OpenAI 创建的 Gym 是开源的 Python 库，通过提供一个用于在学习算法和环境之间通信的标准 API 以及一组符合该 API 的标准环境，来开发和比较强化学习（DL）算法。</p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/u010743448/article/details/110197120">强化学习实验环境</a></p>]]></content>
       
       
       <categories>
@@ -348,9 +361,9 @@
       
         <tags>
             
-            <tag> 并口通信 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 并口通信 </tag>
             
         </tags>
       
@@ -386,33 +399,6 @@
     
     
     <entry>
-      <title>使用sphinx自动生成Python项目文档</title>
-      <link href="/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-sheng-cheng-python-xiang-mu-wen-dang/"/>
-      <url>/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-sheng-cheng-python-xiang-mu-wen-dang/</url>
-      
-        <content type="html"><![CDATA[<h2 id="使用sphinx自动Python项目文档"><a href="#使用sphinx自动Python项目文档" class="headerlink" title="使用sphinx自动Python项目文档"></a>使用sphinx自动Python项目文档</h2><h3 id="一、sphinx简介"><a href="#一、sphinx简介" class="headerlink" title="一、sphinx简介"></a>一、sphinx简介</h3><p>Sphinx能够轻易地创建智慧和优雅的文档，出自Georg Brandl之手，在BSD许可证下授权。<br>它能够把一组 reStructuredText 格式的文件转换成各种输出格式，而且自动地生成交叉引用，生成目录等。<br>也就是说，如果有一个目录，里面包含一堆reST格式的文档（可能子目录里面也同样存在reST格式的文档），<br>Sphinx能够生成一个漂亮的组织结构以及便于浏览和导航的HTML 文件（这些文件在其他的文件夹中）。<br>当然对于同样的来源文件（reST格式），它也能够生成一个能够被编译（生成）PDF版本的LaTeX格式的文件。</p><h3 id="二、rst文件"><a href="#二、rst文件" class="headerlink" title="二、rst文件"></a>二、rst文件</h3><p>rst(ReStructuredText) 是一种用于文本数据的文件格式，主要作为 Python 编程语言技术文档的描述语言。<br>其旨在为 Python 创建一组类似于 Java 的 Javadoc的功能说明文档；<br>Docutils 可以从从 Python 程序中提取注释和信息，并将它们格式化为各种形式的程序文档，rst就是其中的一种。</p><p>rst一般组织在python源文件的doc&#x2F;docs目录下，可以通过sphinx工具将rst文件转化为html文件易于阅读。<br>sphinx可以通过pip进行安装，可执行文件在python安装目录下的Scripts。<br>安装过Anaconda的sphinx已经安装，可以直接打开Anaconda的命令行执行。</p><h3 id="三、安装sphinx-Window"><a href="#三、安装sphinx-Window" class="headerlink" title="三、安装sphinx(Window)"></a>三、安装sphinx(Window)</h3><pre class="language-terminal" data-language="terminal"><code class="language-terminal">pip install sphinxpip install sphinx_rtd_them</code></pre><h3 id="四、生成文档"><a href="#四、生成文档" class="headerlink" title="四、生成文档"></a>四、生成文档</h3><pre class="language-terminal" data-language="terminal"><code class="language-terminal">sphinx-build -b html docs build# 进入源文件目录（docs的上级目录），docs是rst所在的文件夹# build是输出html的目录</code></pre><h3 id="五、使用make-bat批处理文件"><a href="#五、使用make-bat批处理文件" class="headerlink" title="五、使用make.bat批处理文件"></a>五、使用make.bat批处理文件</h3><h4 id="1、配置conf-py文件"><a href="#1、配置conf-py文件" class="headerlink" title="1、配置conf.py文件"></a>1、配置conf.py文件</h4><p>主要修改的参数如下：</p><pre class="language-terminal" data-language="terminal"><code class="language-terminal">sys.path.append(os.path.relpath(&#39;..&#39;))# 此处采用的是相对路径，就是项目相对于doc的位置</code></pre><h4 id="2、执行-make-bat-html"><a href="#2、执行-make-bat-html" class="headerlink" title="2、执行 .\make.bat html"></a>2、执行 .\make.bat html</h4><pre class="language-terminal" data-language="terminal"><code class="language-terminal">.\make.bat html</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Python开发 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Python开发 </tag>
-            
-            <tag> sphinx </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>傅里叶变换的本质与Python代码实现</title>
       <link href="/2022/05/06/4-python-kai-fa/fu-li-xie-bian-huan-de-ben-zhi-yu-python-dai-ma-shi-xian/"/>
       <url>/2022/05/06/4-python-kai-fa/fu-li-xie-bian-huan-de-ben-zhi-yu-python-dai-ma-shi-xian/</url>
@@ -440,6 +426,33 @@
     
     
     <entry>
+      <title>使用sphinx自动生成Python项目文档</title>
+      <link href="/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-sheng-cheng-python-xiang-mu-wen-dang/"/>
+      <url>/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-sheng-cheng-python-xiang-mu-wen-dang/</url>
+      
+        <content type="html"><![CDATA[<h2 id="使用sphinx自动Python项目文档"><a href="#使用sphinx自动Python项目文档" class="headerlink" title="使用sphinx自动Python项目文档"></a>使用sphinx自动Python项目文档</h2><h3 id="一、sphinx简介"><a href="#一、sphinx简介" class="headerlink" title="一、sphinx简介"></a>一、sphinx简介</h3><p>Sphinx能够轻易地创建智慧和优雅的文档，出自Georg Brandl之手，在BSD许可证下授权。<br>它能够把一组 reStructuredText 格式的文件转换成各种输出格式，而且自动地生成交叉引用，生成目录等。<br>也就是说，如果有一个目录，里面包含一堆reST格式的文档（可能子目录里面也同样存在reST格式的文档），<br>Sphinx能够生成一个漂亮的组织结构以及便于浏览和导航的HTML 文件（这些文件在其他的文件夹中）。<br>当然对于同样的来源文件（reST格式），它也能够生成一个能够被编译（生成）PDF版本的LaTeX格式的文件。</p><h3 id="二、rst文件"><a href="#二、rst文件" class="headerlink" title="二、rst文件"></a>二、rst文件</h3><p>rst(ReStructuredText) 是一种用于文本数据的文件格式，主要作为 Python 编程语言技术文档的描述语言。<br>其旨在为 Python 创建一组类似于 Java 的 Javadoc的功能说明文档；<br>Docutils 可以从从 Python 程序中提取注释和信息，并将它们格式化为各种形式的程序文档，rst就是其中的一种。</p><p>rst一般组织在python源文件的doc&#x2F;docs目录下，可以通过sphinx工具将rst文件转化为html文件易于阅读。<br>sphinx可以通过pip进行安装，可执行文件在python安装目录下的Scripts。<br>安装过Anaconda的sphinx已经安装，可以直接打开Anaconda的命令行执行。</p><h3 id="三、安装sphinx-Window"><a href="#三、安装sphinx-Window" class="headerlink" title="三、安装sphinx(Window)"></a>三、安装sphinx(Window)</h3><pre class="language-terminal" data-language="terminal"><code class="language-terminal">pip install sphinxpip install sphinx_rtd_them</code></pre><h3 id="四、生成文档"><a href="#四、生成文档" class="headerlink" title="四、生成文档"></a>四、生成文档</h3><pre class="language-terminal" data-language="terminal"><code class="language-terminal">sphinx-build -b html docs build# 进入源文件目录（docs的上级目录），docs是rst所在的文件夹# build是输出html的目录</code></pre><h3 id="五、使用make-bat批处理文件"><a href="#五、使用make-bat批处理文件" class="headerlink" title="五、使用make.bat批处理文件"></a>五、使用make.bat批处理文件</h3><h4 id="1、配置conf-py文件"><a href="#1、配置conf-py文件" class="headerlink" title="1、配置conf.py文件"></a>1、配置conf.py文件</h4><p>主要修改的参数如下：</p><pre class="language-terminal" data-language="terminal"><code class="language-terminal">sys.path.append(os.path.relpath(&#39;..&#39;))# 此处采用的是相对路径，就是项目相对于doc的位置</code></pre><h4 id="2、执行-make-bat-html"><a href="#2、执行-make-bat-html" class="headerlink" title="2、执行 .\make.bat html"></a>2、执行 .\make.bat html</h4><pre class="language-terminal" data-language="terminal"><code class="language-terminal">.\make.bat html</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python开发 </tag>
+            
+            <tag> sphinx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PID控制算法及Python实现</title>
       <link href="/2022/05/04/12-xiang-mu-kai-fa/pid-kong-zhi-suan-fa-ji-python-shi-xian/"/>
       <url>/2022/05/04/12-xiang-mu-kai-fa/pid-kong-zhi-suan-fa-ji-python-shi-xian/</url>
@@ -456,9 +469,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 控制算法 </tag>
+            
+            <tag> Python </tag>
             
             <tag> PID </tag>
             
@@ -496,33 +509,6 @@
     
     
     <entry>
-      <title>如何使用PS修复照片反光区域</title>
-      <link href="/2022/05/03/9-ban-gong-ji-qiao/psrepair/"/>
-      <url>/2022/05/03/9-ban-gong-ji-qiao/psrepair/</url>
-      
-        <content type="html"><![CDATA[<h1 id="如何使用PS修复照片反光区域"><a href="#如何使用PS修复照片反光区域" class="headerlink" title="如何使用PS修复照片反光区域"></a>如何使用PS修复照片反光区域</h1><iframe class="bilibili" src="//player.bilibili.com/player.html?aid=212464091&bvid=BV1xa411t7JK&cid=553318499&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
-      
-      
-      <categories>
-          
-          <category> 办公技巧 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> PS </tag>
-            
-            <tag> 办公技巧 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Window平台在虚拟机VMware中配置Ubuntu20（后续完善）</title>
       <link href="/2022/05/03/9-ban-gong-ji-qiao/window-ping-tai-zai-xu-ni-ji-vmware-zhong-pei-zhi-ubuntu20/"/>
       <url>/2022/05/03/9-ban-gong-ji-qiao/window-ping-tai-zai-xu-ni-ji-vmware-zhong-pei-zhi-ubuntu20/</url>
@@ -539,11 +525,38 @@
       
         <tags>
             
-            <tag> 办公技巧 </tag>
-            
             <tag> VMware </tag>
             
+            <tag> 办公技巧 </tag>
+            
             <tag> Ubuntu20 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何使用PS修复照片反光区域</title>
+      <link href="/2022/05/03/9-ban-gong-ji-qiao/psrepair/"/>
+      <url>/2022/05/03/9-ban-gong-ji-qiao/psrepair/</url>
+      
+        <content type="html"><![CDATA[<h1 id="如何使用PS修复照片反光区域"><a href="#如何使用PS修复照片反光区域" class="headerlink" title="如何使用PS修复照片反光区域"></a>如何使用PS修复照片反光区域</h1><iframe class="bilibili" src="//player.bilibili.com/player.html?aid=212464091&bvid=BV1xa411t7JK&cid=553318499&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
+      
+      
+      <categories>
+          
+          <category> 办公技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 办公技巧 </tag>
+            
+            <tag> PS </tag>
             
         </tags>
       
@@ -568,9 +581,9 @@
       
         <tags>
             
-            <tag> 办公技巧 </tag>
-            
             <tag> Win11 </tag>
+            
+            <tag> 办公技巧 </tag>
             
         </tags>
       
@@ -702,27 +715,6 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——P300ERP有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/</url>
-      
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>本赛题基于P300电位脑-机接口数据，测试不同算法的识别性能。并根据测试数据中的正确率(Accuracy)和信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激界面由当前字符和36个字符组成的字符矩阵组成。本实验中，我们将代表当前字符编号的时间标签称为“大标签”，将代表字符矩阵行列编号的时间标签称为“小标签”。<br>每个试次中被试注视一个字符，以大标签作为起始，大标签出现后1s字符矩阵开始以行或列为单位随机地闪烁，每行&#x2F;列闪烁时长175ms，闪烁开始时刻出现代表当前闪烁行&#x2F;列编号的小标签，所有行和列闪烁一次称为一轮(共12行&#x2F;列)，每个字符6轮，总计72个小标签。即每个试次的时长为1+0.175126&#x3D;13.6秒。<br>大标签：包含26个字母和10个数字，共36种。在训练数据集中，字符与大标签的对应关系如下表，在测试数据集中，大标签统一为“100”，需要参赛者根据识别算法，计算出正确的大标签并报告。</p><p>小标签：包含6行6列，共12种，由数字1到12表示。其中数字1到6代表第1至6列，数字7到12代表第1至6行。<br>特别说明的是，每个字符的最后一个（第72个）小标签闪烁之后475ms，下一个字符的大标签刺激就会出现；即如果使用最后一个小标签的数据，可能需要截取到下一个字符的大标签出现之后的信息，需要参赛人员注意。报告超时的说明，具体见算法规范部分。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含5个字符的刺激试次。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的标签信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx">https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx</a><br>提取码：6btx<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开源数据集 </category>
-          
-          <category> 脑机接口 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2019年脑机接口大赛——SSVEP干电极有训练数据集</title>
       <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/"/>
       <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/</url>
@@ -744,11 +736,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——P300ERP有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>本赛题基于P300电位脑-机接口数据，测试不同算法的识别性能。并根据测试数据中的正确率(Accuracy)和信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激界面由当前字符和36个字符组成的字符矩阵组成。本实验中，我们将代表当前字符编号的时间标签称为“大标签”，将代表字符矩阵行列编号的时间标签称为“小标签”。<br>每个试次中被试注视一个字符，以大标签作为起始，大标签出现后1s字符矩阵开始以行或列为单位随机地闪烁，每行&#x2F;列闪烁时长175ms，闪烁开始时刻出现代表当前闪烁行&#x2F;列编号的小标签，所有行和列闪烁一次称为一轮(共12行&#x2F;列)，每个字符6轮，总计72个小标签。即每个试次的时长为1+0.175126&#x3D;13.6秒。<br>大标签：包含26个字母和10个数字，共36种。在训练数据集中，字符与大标签的对应关系如下表，在测试数据集中，大标签统一为“100”，需要参赛者根据识别算法，计算出正确的大标签并报告。</p><p>小标签：包含6行6列，共12种，由数字1到12表示。其中数字1到6代表第1至6列，数字7到12代表第1至6行。<br>特别说明的是，每个字符的最后一个（第72个）小标签闪烁之后475ms，下一个字符的大标签刺激就会出现；即如果使用最后一个小标签的数据，可能需要截取到下一个字符的大标签出现之后的信息，需要参赛人员注意。报告超时的说明，具体见算法规范部分。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含5个字符的刺激试次。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的标签信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx">https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx</a><br>提取码：6btx<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -765,11 +757,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>随着机器学习思想的火热传播，通过数据预先训练被认为是一种有效提高系统性能的方法。本赛题基于稳态视觉诱发电位脑-机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续3.5-4.5s，开始0.5s为目标提示阶段，屏幕中会出现一个红块提示目标位置并持续0.5s。之后3-4s为刺激阶段，刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。</p><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。</p><p>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。</p><p>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。</p><p>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。</p><p>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug">https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug</a><br>提取码：i3ug<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -812,6 +804,27 @@
       <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/</url>
       
         <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>运动想象是一种自发可控的脑电行为，是更加自然、更加实用的人机接口方式，使用者仅仅通过“想象”即可实现控制。近些年，基于运动想象的脑机接口已经在医疗康复、军事、娱乐等方面发挥重要作用。本赛题希望通过更高的识别性能以帮助运动想象脑-机接口获得更为广泛的运用。<br>本赛题基于多类运动想象脑机接口的EEG数据，测试不同算法在有限训练数据条件下对运动想象脑电模式的识别性能，并根据多名受试者测试数据中的信息传输率（Information transfer rate，ITR）确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>本实验原始EEG数据由博睿康64导联设备采集（仅包含59个导联的脑电数据，60-64导联无效），采样率为1000Hz，数据统一进行50Hz陷波处理。一次完整实验为一个record，一名被试分3天完成多个record；实验数据以record为单位，每个record中均为连续采集EEG数据。每个record包含2个block（睁眼1min、闭眼1min）和5个session，session与session之间不少于1.5分钟的休息时间；每个session包括20*N个trial（每类运动想象任务20个trial，N：运动想象任务类别数，如N为2表示任务为左手运动想象和右手运动想象两类，如N为3表示任务为左手运动想象、右手运动想象、双脚运动想象三类），每个record过程如图1所示。 每个trial包含1.5s提示、4s运动想象任务、2s休息，事件标签开始于0时刻，如图2所示。以上不同任务相对应的标签信息如表1所示。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png" alt="单个trial运动想象流程图"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>同步有训练集运动想象赛题，提供训练集（每个被试的训练数据包含2个block{睁眼1min、闭眼1min}和3个运动想象任务session），训练集数据标识了事件时刻、事件类型等建模关键信息。<br>每个被试的测试数据和训练数据来自同一个record，通过被试ID与训练数据对应。每个被试对应两组测试数据，每组测试数据包含20*N个trial（三类每组60个，两类每组40个）。测试数据经数据模型封装后，由参赛者通过赛题框架接口调取。</p><p>BXXOOT 、BXXOOE 、TXXOOT 、TXXOOE, XX对应人员编号，OO对应数据编号，数据集按照题库中人员和数据编号统一命名，最终的取值，由专家组抽签得到。以上B0101T等仅做示范，比赛中可能出现B0801T等其他数据，参赛队员根据赛题给出的训练集对应建立模型即可。<br>B开头数据为二类数据，T开头数据为三类数据。B0101E.mat 等删除线数据集，比赛时通过系统获得。数据集由专家组抽签选取，部分数据（包括测试数据）将公开用于本地测试。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-5.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr">https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr</a><br>提取码：6qsr<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开源数据集 </category>
+          
+          <category> 脑机接口 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2019年脑机接口大赛——SSVEP有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>随着机器学习思想的火热传播，通过数据预先训练被认为是一种有效提高系统性能的方法。本赛题基于稳态视觉诱发电位脑-机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续3.5-4.5s，开始0.5s为目标提示阶段，屏幕中会出现一个红块提示目标位置并持续0.5s。之后3-4s为刺激阶段，刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。</p><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。</p><p>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。</p><p>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。</p><p>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。</p><p>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug">https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug</a><br>提取码：i3ug<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -976,35 +989,6 @@
     
     
     <entry>
-      <title>Hexo博客文章加密（尚未解决）</title>
-      <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/"/>
-      <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/</url>
-      
-        <content type="html"><![CDATA[<h2 id="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"><a href="#目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。" class="headerlink" title="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"></a>目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。</h2><p>参考资料：</p><ol><li><code>matery</code>主题自带的加密方法<br><a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-4">Hexo博客主题之hexo-theme-matery的介绍 | 闪烁之狐 (blinkfox.com)</a></li><li><code>hexo-blog-encrypt</code>插件加密方法<br><a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt&#x2F;ReadMe.zh.md at master · D0n9X1n&#x2F;hexo-blog-encrypt (github.com)</a></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 前端 </category>
-          
-          <category> Hexo建站 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> 加密 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hexo主题Matery的介绍与相关配置</title>
       <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/"/>
       <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</url>
@@ -1026,6 +1010,35 @@
             <tag> Hexo </tag>
             
             <tag> matery </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo博客文章加密（尚未解决）</title>
+      <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/"/>
+      <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/</url>
+      
+        <content type="html"><![CDATA[<h2 id="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"><a href="#目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。" class="headerlink" title="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"></a>目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。</h2><p>参考资料：</p><ol><li><code>matery</code>主题自带的加密方法<br><a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-4">Hexo博客主题之hexo-theme-matery的介绍 | 闪烁之狐 (blinkfox.com)</a></li><li><code>hexo-blog-encrypt</code>插件加密方法<br><a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt&#x2F;ReadMe.zh.md at master · D0n9X1n&#x2F;hexo-blog-encrypt (github.com)</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> Hexo建站 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 加密 </tag>
             
         </tags>
       
