@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>数字芯片IC设计的全流程</title>
+      <link href="/2023/02/20/12-xiang-mu-kai-fa/shu-zi-xin-pian-ic-she-ji-de-quan-liu-cheng/"/>
+      <url>/2023/02/20/12-xiang-mu-kai-fa/shu-zi-xin-pian-ic-she-ji-de-quan-liu-cheng/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数字芯片IC设计的全流程"><a href="#数字芯片IC设计的全流程" class="headerlink" title="数字芯片IC设计的全流程"></a>数字芯片IC设计的全流程</h2><h3 id="一、数字芯片与模拟芯片"><a href="#一、数字芯片与模拟芯片" class="headerlink" title="一、数字芯片与模拟芯片"></a>一、数字芯片与模拟芯片</h3><ul><li>数字芯片，也叫逻辑芯片，主要处理逻辑运算。这类芯片是为各种实际应用场景的数字化、智能化做的特殊定向设计，也就是所谓的ASIC，Application Specific Integrated Circuit。</li><li>如今芯片大都同时具有数字和模拟模块，一块芯片到底归属为哪类产品，没有绝对标准。一般来说，一片芯片上80%以上为数字部分，外部接口（比如USB、WIFI等）一般为模拟部分，内部Core（逻辑单元、CPU内核等）一般为数字部分。</li></ul><h3 id="二、数字芯片的开发过程"><a href="#二、数字芯片的开发过程" class="headerlink" title="二、数字芯片的开发过程"></a>二、数字芯片的开发过程</h3><p>一般可以分为如下步骤，如图1所示：</p><ol><li>明确具体芯片需求需求（制作工艺、速度、功耗等）后，由架构工程师设计架构，同时对架构进行仿真，得出芯片设计方案；</li><li>前端设计工程师根据芯片设计方案形成RTL代码（使用Verilog语言进行寄存器编程，前端验证工程师进行代码验证；</li><li>后端工程师将将RTL代码转化为门级网单，然后对门级网单进行布局布线，最后生成物理版图（GDSⅡ文件格式），DFT工程师对物理版图进行物理验证时序分析；</li><li>工厂根据物理版图在圆晶硅片上做出实际的电路，最后进行封装和测试就得到了芯片。</li></ol><p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E6%95%B0%E5%AD%97%E8%8A%AF%E7%89%87IC%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%A8%E6%B5%81%E7%A8%8B-1.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目开发 </category>
+          
+          <category> 数字IC </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 项目开发 </tag>
+            
+            <tag> 数字IC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>发明专利各模块的写作方法与模板</title>
       <link href="/2023/02/20/13-zhi-shi-chan-quan/fa-ming-zhuan-li-ge-mo-kuai-de-xie-zuo-fang-fa-yu-mo-ban/"/>
       <url>/2023/02/20/13-zhi-shi-chan-quan/fa-ming-zhuan-li-ge-mo-kuai-de-xie-zuo-fang-fa-yu-mo-ban/</url>
@@ -105,9 +134,9 @@
       
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> 驱动安装 </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
       
@@ -132,9 +161,9 @@
       
         <tags>
             
-            <tag> 桌面快捷方式 </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> 桌面快捷方式 </tag>
             
         </tags>
       
@@ -963,9 +992,9 @@
       
         <tags>
             
-            <tag> 并口通信 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 并口通信 </tag>
             
         </tags>
       
@@ -1071,9 +1100,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 控制算法 </tag>
+            
+            <tag> Python </tag>
             
             <tag> PID </tag>
             
@@ -1359,11 +1388,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——SSVEP有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>随着机器学习思想的火热传播，通过数据预先训练被认为是一种有效提高系统性能的方法。本赛题基于稳态视觉诱发电位脑-机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续3.5-4.5s，开始0.5s为目标提示阶段，屏幕中会出现一个红块提示目标位置并持续0.5s。之后3-4s为刺激阶段，刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。</p><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。</p><p>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。</p><p>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。</p><p>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。</p><p>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug">https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug</a><br>提取码：i3ug<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -1380,11 +1409,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>随着机器学习思想的火热传播，通过数据预先训练被认为是一种有效提高系统性能的方法。本赛题基于稳态视觉诱发电位脑-机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续3.5-4.5s，开始0.5s为目标提示阶段，屏幕中会出现一个红块提示目标位置并持续0.5s。之后3-4s为刺激阶段，刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。</p><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。</p><p>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。</p><p>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。</p><p>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。</p><p>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug">https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug</a><br>提取码：i3ug<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -1443,11 +1472,11 @@
     
     
     <entry>
-      <title>MI-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
+      <title>P300-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/p300-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/p300-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
       
-        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于运动想象的BCI（Motor Imagery BCI, MI-BCI）是BCI的主要范式之一，通过检测识别用户MI产生的EEG来判断用户意图，进而实现人脑与外部设备之间的直接通信与控制。用户在运动想象的过程中，大脑皮层会产生两种变化明显的节律信号，分别是8-15Hz的Mu节律信号和 18-24Hz 的Beta节律信号。同时，大脑皮层对侧运动感觉区的脑电节律能量会明显降低，而同侧运动感觉区的脑电节律能量增大，这种现象称为事件相关去同步（Event Related Desynchronization，ERD）&#x2F;事件相关同步（Event Related Synchronization，ERS）。<br>并且不同部位的躯体运动想象与该躯体对应的感觉运动皮层 ERD&#x2F;ERS 现象有关，即 ERD&#x2F;ERS 现象有空间分布的特性。正是因为运动想象脑电信号空间分布的特性，构成了解码运动想象思维信号的生理基础，采用合适的特征提取算法就可以较好地识别患者的运动意图。<br>下图展示了对某位被试运动想象产生的脑电信号，选择 8-15Hz 和 18-24Hz 的频带范围作为 ERD&#x2F;ERS 特定频带，分别计算出的 C3、C4 通道脑电数据的左手和右手的想象能量。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>下图展示了某位受试在进行运动想象时，用32导电极帽采集的各通道的部分脑电数据。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-4.png"><br>典型算法</p><p>PSD（功率谱估计）<br>功率谱估计是脑电信号频域分析的典型方法之一，把幅度随时间变化的脑电信号变换为脑电功率随频率变化的谱图，从而可以直观地观察到脑电节律的分布与变化情况。经典功率谱估计是在较长的数据中截取一段有限长的数据做分析，根据截取的样本估计出整体的功率谱。基本思想就是把一长度为N的数据分成L段，每段M个数据，分段数据先于窗函数W(n)相乘，分别计算出每一段的功率谱，最后叠加求取平均值作为最终功率谱估计。<br>算法过程：使用Cz、C3和C4这3个导联的数据，通过Cz消除C3、C4的相关性，以8-15Hz频段C3、C4导联的功率谱差值作为特征向量，并结合LDA进行分类。<br>用Welch功率谱密度估计法对C3和C4的EEG数据进行平均功率谱分析，分别得到进行左手MI的EEG平均功率谱和进行右手MI的EEG平均功率谱。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"></p><p>参考文献<br>Herman P, Prasad G, Mcginnity T M, et al. Comparative Analysis of Spectral Approaches to Feature Extraction for EEG-Based Motor Imagery Classification[J]. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2008, 16(4):317-326.</p><p>LDA<br>LDA的目标是训练一个超平面，然后依据选定的类来划分信息，一般是选定两类来进行分类。基本原理如下图所示。向量组取决于超平面的交叉，方向由向量组确定。通过寻找预测两类源的最优值以及减小类内的修正就可以找到超平面。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-6.png"><br>其中，假设是维特征向量，，相应的基向量为，则线性判别函数的一般形式为：</p><p>其中，是权向量（也称投影矩阵），是阈值，是分类器的输出。</p><p>参考文献<br>Keirn Z A, Aunon J I. A new mode of communication between man and his surroundings[J]. IEEE Transactions on Biomedical Engineering, 1990, 37(12):1209-1214.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于P300的BCI系统是目前最常用的头皮脑电BCI系统之一，该系统以ERP（event-related potential）中P300电位作为目标信号。P300电位是与大脑决策过程相关的ERP成分，反映着大脑对外界刺激的评价与分类过程。实验中，通常利用oddball范式诱发P300电位。从EEG上看，P300是在大脑接收目标刺激后大概250-500ms内出现的正向偏移电位。<br>下图展示了通过oddball范式为正常站立状态下受试者呈现Non-target(80%)和target(20%)视觉闪烁刺激时，在Pz导联处检测到的ERP时域波形图。在图中，我们可以清晰的看到：相较于Non-target，在target刺激呈现后400ms处出现明显的正向偏移电位，即P300电位，且顶叶脑区激活程度增强。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br>P300-BCI进行目标识别的原理简单来说就是基于oddball范式对刺激呈现进行时间编码，并检测每个时间间隔内脑电信号中是否出现P300诱发电位。如在1988年，Farwell和Donchin基于行列闪烁编码范式设计了6*6矩阵键盘（共36指令）的P300 speller系统中，通过确定诱发出P300的行闪烁和列闪烁时间定位目标指令，再基于检测到的目标指令，系统给出相应字符的输出。</p><p>几种典型算法<br>由于P300 BCI具有显著的时域特征，在目前的P300-BCI研究中，多采用基于检测P300诱发电位的出现与否对信号进行检测。根据脑电图特征判断P300诱发电位的存在与否，可以认为是一个具有判别函数的二元分类问题，其决策超平面定义为:<br>w⋅f (x) + b &#x3D; 0<br>其中x是特征向量f(⋅)是一个转换函数,w是一个分类的权重向量，b是偏差项。对于非线性可分离问题，f(⋅)可以表示将特征映射到更高维空间的核转换，以尝试创建线性可分集。对于线性方法, f (x) &#x3D; x。目前常用的解码算法都是通过解决w和b来实现的。<br>因为假设P300是针对n个行&#x2F;列之一的增强引出的，且P300响应对于行&#x2F;列刺激是不变的，所得到的分类被视为各行以及列的得分特征向量之和的最大值：</p><p>通过分别为目标和非目标刺激分配+1和-1的类标签，该设计选择与训练的超平面具有最大正距离的脑电响应。这理想地类似于选择强烈表示的由训练数据定义的特征P300的响应。预测字符位于矩阵中预测的行和列的交点处。因为等式（2）和（3）对于恒定偏置项b是不变的，所以不需要计算它。<br>参考文献<br>Krusienski D J , Sellers E W , Cabestaing F , et al. A comparison of classification techniques for the P300 speller[J]. Journal of Neural Engineering, 2006, 3(4):299.</p><p>LDA<br>线性判别分析（Linear Discriminant Analysis，LDA）是P300 speller中常用的典型分类方法，具有计算量低、分类效果良好等特点。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>LDA通过将高维样本数据投影至低维空间，保证样本数据在该空间中有最大类间距离和最小类内距离，其目标函数可表示为下式</p><p>其中，为类间散度矩阵，为类内散度矩阵。通过求解最大的个特征值和对应的个特征向量,得到投影矩阵；<br>参考文献<br>Blankertz B , Lemm S , Treder M , et al. Single-trial analysis and classification of ERP components — A tutorial[J]. Neuroimage, 2011, 56(2):814-825.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -1464,11 +1493,11 @@
     
     
     <entry>
-      <title>P300-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/p300-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/p300-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
+      <title>MI-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
       
-        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于P300的BCI系统是目前最常用的头皮脑电BCI系统之一，该系统以ERP（event-related potential）中P300电位作为目标信号。P300电位是与大脑决策过程相关的ERP成分，反映着大脑对外界刺激的评价与分类过程。实验中，通常利用oddball范式诱发P300电位。从EEG上看，P300是在大脑接收目标刺激后大概250-500ms内出现的正向偏移电位。<br>下图展示了通过oddball范式为正常站立状态下受试者呈现Non-target(80%)和target(20%)视觉闪烁刺激时，在Pz导联处检测到的ERP时域波形图。在图中，我们可以清晰的看到：相较于Non-target，在target刺激呈现后400ms处出现明显的正向偏移电位，即P300电位，且顶叶脑区激活程度增强。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br>P300-BCI进行目标识别的原理简单来说就是基于oddball范式对刺激呈现进行时间编码，并检测每个时间间隔内脑电信号中是否出现P300诱发电位。如在1988年，Farwell和Donchin基于行列闪烁编码范式设计了6*6矩阵键盘（共36指令）的P300 speller系统中，通过确定诱发出P300的行闪烁和列闪烁时间定位目标指令，再基于检测到的目标指令，系统给出相应字符的输出。</p><p>几种典型算法<br>由于P300 BCI具有显著的时域特征，在目前的P300-BCI研究中，多采用基于检测P300诱发电位的出现与否对信号进行检测。根据脑电图特征判断P300诱发电位的存在与否，可以认为是一个具有判别函数的二元分类问题，其决策超平面定义为:<br>w⋅f (x) + b &#x3D; 0<br>其中x是特征向量f(⋅)是一个转换函数,w是一个分类的权重向量，b是偏差项。对于非线性可分离问题，f(⋅)可以表示将特征映射到更高维空间的核转换，以尝试创建线性可分集。对于线性方法, f (x) &#x3D; x。目前常用的解码算法都是通过解决w和b来实现的。<br>因为假设P300是针对n个行&#x2F;列之一的增强引出的，且P300响应对于行&#x2F;列刺激是不变的，所得到的分类被视为各行以及列的得分特征向量之和的最大值：</p><p>通过分别为目标和非目标刺激分配+1和-1的类标签，该设计选择与训练的超平面具有最大正距离的脑电响应。这理想地类似于选择强烈表示的由训练数据定义的特征P300的响应。预测字符位于矩阵中预测的行和列的交点处。因为等式（2）和（3）对于恒定偏置项b是不变的，所以不需要计算它。<br>参考文献<br>Krusienski D J , Sellers E W , Cabestaing F , et al. A comparison of classification techniques for the P300 speller[J]. Journal of Neural Engineering, 2006, 3(4):299.</p><p>LDA<br>线性判别分析（Linear Discriminant Analysis，LDA）是P300 speller中常用的典型分类方法，具有计算量低、分类效果良好等特点。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>LDA通过将高维样本数据投影至低维空间，保证样本数据在该空间中有最大类间距离和最小类内距离，其目标函数可表示为下式</p><p>其中，为类间散度矩阵，为类内散度矩阵。通过求解最大的个特征值和对应的个特征向量,得到投影矩阵；<br>参考文献<br>Blankertz B , Lemm S , Treder M , et al. Single-trial analysis and classification of ERP components — A tutorial[J]. Neuroimage, 2011, 56(2):814-825.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于运动想象的BCI（Motor Imagery BCI, MI-BCI）是BCI的主要范式之一，通过检测识别用户MI产生的EEG来判断用户意图，进而实现人脑与外部设备之间的直接通信与控制。用户在运动想象的过程中，大脑皮层会产生两种变化明显的节律信号，分别是8-15Hz的Mu节律信号和 18-24Hz 的Beta节律信号。同时，大脑皮层对侧运动感觉区的脑电节律能量会明显降低，而同侧运动感觉区的脑电节律能量增大，这种现象称为事件相关去同步（Event Related Desynchronization，ERD）&#x2F;事件相关同步（Event Related Synchronization，ERS）。<br>并且不同部位的躯体运动想象与该躯体对应的感觉运动皮层 ERD&#x2F;ERS 现象有关，即 ERD&#x2F;ERS 现象有空间分布的特性。正是因为运动想象脑电信号空间分布的特性，构成了解码运动想象思维信号的生理基础，采用合适的特征提取算法就可以较好地识别患者的运动意图。<br>下图展示了对某位被试运动想象产生的脑电信号，选择 8-15Hz 和 18-24Hz 的频带范围作为 ERD&#x2F;ERS 特定频带，分别计算出的 C3、C4 通道脑电数据的左手和右手的想象能量。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>下图展示了某位受试在进行运动想象时，用32导电极帽采集的各通道的部分脑电数据。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-4.png"><br>典型算法</p><p>PSD（功率谱估计）<br>功率谱估计是脑电信号频域分析的典型方法之一，把幅度随时间变化的脑电信号变换为脑电功率随频率变化的谱图，从而可以直观地观察到脑电节律的分布与变化情况。经典功率谱估计是在较长的数据中截取一段有限长的数据做分析，根据截取的样本估计出整体的功率谱。基本思想就是把一长度为N的数据分成L段，每段M个数据，分段数据先于窗函数W(n)相乘，分别计算出每一段的功率谱，最后叠加求取平均值作为最终功率谱估计。<br>算法过程：使用Cz、C3和C4这3个导联的数据，通过Cz消除C3、C4的相关性，以8-15Hz频段C3、C4导联的功率谱差值作为特征向量，并结合LDA进行分类。<br>用Welch功率谱密度估计法对C3和C4的EEG数据进行平均功率谱分析，分别得到进行左手MI的EEG平均功率谱和进行右手MI的EEG平均功率谱。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"></p><p>参考文献<br>Herman P, Prasad G, Mcginnity T M, et al. Comparative Analysis of Spectral Approaches to Feature Extraction for EEG-Based Motor Imagery Classification[J]. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2008, 16(4):317-326.</p><p>LDA<br>LDA的目标是训练一个超平面，然后依据选定的类来划分信息，一般是选定两类来进行分类。基本原理如下图所示。向量组取决于超平面的交叉，方向由向量组确定。通过寻找预测两类源的最优值以及减小类内的修正就可以找到超平面。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-6.png"><br>其中，假设是维特征向量，，相应的基向量为，则线性判别函数的一般形式为：</p><p>其中，是权向量（也称投影矩阵），是阈值，是分类器的输出。</p><p>参考文献<br>Keirn Z A, Aunon J I. A new mode of communication between man and his surroundings[J]. IEEE Transactions on Biomedical Engineering, 1990, 37(12):1209-1214.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
