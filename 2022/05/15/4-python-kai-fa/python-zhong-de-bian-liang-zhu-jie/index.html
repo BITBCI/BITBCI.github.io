@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -540,27 +541,22 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="Python中的变量注解"><a href="#Python中的变量注解" class="headerlink" title="Python中的变量注解"></a>Python中的变量注解</h2><p>Python与C语言不同，不支持变量声明。<br>但是Python允许在定义函数时使用“注解”的形式来标注形参和返回值的类型。<br>不过，这种注解不会对形参进行任何约束和检查。<br>即便在调用的时候不满足约束条件，也不会报错。<br>如果在Pycharm编辑器中操作，则会高亮提醒。</p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> <span class="token operator">*</span>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> <span class="token operator">*</span>
 
 
-<span class="token keyword">def</span> <span class="token function">print_hello</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">float</span><span class="token punctuation">:</span>
+<span class="token keyword">def</span> <span class="token function">print_hello</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span> int <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> float<span class="token punctuation">:</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span>
     <span class="token keyword">return</span> <span class="token number">2.1</span>
 
-print_hello<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
-
-
-
+print_hello<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>

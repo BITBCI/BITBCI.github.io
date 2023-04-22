@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -540,9 +541,6 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
@@ -558,11 +556,11 @@
 <p><img src="/../../images/4-Python%E5%BC%80%E5%8F%91/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E6%9C%AC%E8%B4%A8%E4%B8%8EPython%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-1.png"></p>
 <p><img src="/../../images/4-Python%E5%BC%80%E5%8F%91/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E6%9C%AC%E8%B4%A8%E4%B8%8EPython%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-2.png"></p>
 <p>数字频率f与角频率ω之间的关系：</p>
-<pre class="language-python" data-language="python"><code class="language-python">ω <span class="token operator">=</span> f <span class="token operator">/</span> fs <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>pi</code></pre>
-
+<pre class="line-numbers language-python"><code class="language-python">ω <span class="token operator">=</span> f <span class="token operator">/</span> fs <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>pi
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>其中fs为采样率</p>
 <h2 id="二、离散傅里叶变换"><a href="#二、离散傅里叶变换" class="headerlink" title="二、离散傅里叶变换"></a>二、离散傅里叶变换</h2><p>该部分后续补充</p>
-<h2 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h2><pre class="language-python" data-language="python"><code class="language-python"><span class="token comment"># encoding:utf-8</span>
+<h2 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># encoding:utf-8</span>
 <span class="token triple-quoted-string string">"""
 __time__    : 2022/4/10 17:10
 __author__  : LIU SIYU
@@ -574,27 +572,27 @@ __address__ :Beijing Institute of Technology
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
 <span class="token keyword">from</span> matplotlib<span class="token punctuation">.</span>pylab <span class="token keyword">import</span> mpl
 
-mpl<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'SimHei'</span><span class="token punctuation">]</span>  <span class="token comment"># 显示中文</span>
-mpl<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'axes.unicode_minus'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">False</span>  <span class="token comment"># 显示负号</span>
+mpl<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'SimHei'</span><span class="token punctuation">]</span>  <span class="token comment" spellcheck="true"># 显示中文</span>
+mpl<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'axes.unicode_minus'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">False</span>  <span class="token comment" spellcheck="true"># 显示负号</span>
 
-<span class="token comment"># 采样点选择1400个，因为设置的信号频率分量最高为600赫兹，根据采样定理知采样频率要大于信号频率2倍，所以这里设置采样频率为1400赫兹（即一秒内有1400个采样点，一样意思的）</span>
-fs <span class="token operator">=</span> <span class="token number">1400</span>  <span class="token comment"># 信号采样率为fs，1400Hz</span>
+<span class="token comment" spellcheck="true"># 采样点选择1400个，因为设置的信号频率分量最高为600赫兹，根据采样定理知采样频率要大于信号频率2倍，所以这里设置采样频率为1400赫兹（即一秒内有1400个采样点，一样意思的）</span>
+fs <span class="token operator">=</span> <span class="token number">1400</span>  <span class="token comment" spellcheck="true"># 信号采样率为fs，1400Hz</span>
 x <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> fs<span class="token punctuation">)</span>
 
-<span class="token comment"># 设置需要采样的信号，频率分量有200，400和600</span>
+<span class="token comment" spellcheck="true"># 设置需要采样的信号，频率分量有200，400和600</span>
 y <span class="token operator">=</span> <span class="token number">7</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>pi <span class="token operator">*</span> <span class="token number">200</span> <span class="token operator">*</span> x<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">5</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>pi <span class="token operator">*</span> <span class="token number">400</span> <span class="token operator">*</span> x<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>pi <span class="token operator">*</span> <span class="token number">600</span> <span class="token operator">*</span> x<span class="token punctuation">)</span>
 
-fft_y <span class="token operator">=</span> fft<span class="token punctuation">(</span>y<span class="token punctuation">)</span>  <span class="token comment"># 快速傅里叶变换</span>
+fft_y <span class="token operator">=</span> fft<span class="token punctuation">(</span>y<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 快速傅里叶变换</span>
 
 N <span class="token operator">=</span> <span class="token number">1400</span>
-x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>N<span class="token punctuation">)</span>  <span class="token comment"># 频率个数</span>
-half_x <span class="token operator">=</span> x<span class="token punctuation">[</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>N <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment"># 取一半区间</span>
+x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>N<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 频率个数</span>
+half_x <span class="token operator">=</span> x<span class="token punctuation">[</span>range<span class="token punctuation">(</span>int<span class="token punctuation">(</span>N <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment" spellcheck="true"># 取一半区间</span>
 half_w <span class="token operator">=</span> half_x <span class="token operator">/</span> fs <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>pi<span class="token punctuation">)</span>
 
-abs_y <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">abs</span><span class="token punctuation">(</span>fft_y<span class="token punctuation">)</span>  <span class="token comment"># 取复数的绝对值，即复数的模(双边频谱)</span>
-angle_y <span class="token operator">=</span> np<span class="token punctuation">.</span>angle<span class="token punctuation">(</span>fft_y<span class="token punctuation">)</span>  <span class="token comment"># 取复数的角度</span>
-normalization_y <span class="token operator">=</span> abs_y <span class="token operator">/</span> N  <span class="token comment"># 归一化处理（双边频谱）</span>
-normalization_half_y <span class="token operator">=</span> normalization_y<span class="token punctuation">[</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>N <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment"># 由于对称性，只取一半区间（单边频谱）</span>
+abs_y <span class="token operator">=</span> np<span class="token punctuation">.</span>abs<span class="token punctuation">(</span>fft_y<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 取复数的绝对值，即复数的模(双边频谱)</span>
+angle_y <span class="token operator">=</span> np<span class="token punctuation">.</span>angle<span class="token punctuation">(</span>fft_y<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 取复数的角度</span>
+normalization_y <span class="token operator">=</span> abs_y <span class="token operator">/</span> N  <span class="token comment" spellcheck="true"># 归一化处理（双边频谱）</span>
+normalization_half_y <span class="token operator">=</span> normalization_y<span class="token punctuation">[</span>range<span class="token punctuation">(</span>int<span class="token punctuation">(</span>N <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment" spellcheck="true"># 由于对称性，只取一半区间（单边频谱）</span>
 
 plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">231</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
@@ -621,7 +619,7 @@ plt<span class="token punctuation">.</span>plot<span class="token punctuation">(
 plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'单边振幅谱(归一化)'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'blue'</span><span class="token punctuation">)</span>
 
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>

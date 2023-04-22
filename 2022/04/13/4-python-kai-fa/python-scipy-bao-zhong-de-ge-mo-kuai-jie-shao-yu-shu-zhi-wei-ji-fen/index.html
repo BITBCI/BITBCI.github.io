@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -544,9 +545,6 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
@@ -648,19 +646,19 @@
 <h2 id="2-连续函数求积分"><a href="#2-连续函数求积分" class="headerlink" title="2 连续函数求积分"></a>2 连续函数求积分</h2><h3 id="一重连续积分"><a href="#一重连续积分" class="headerlink" title="一重连续积分"></a>一重连续积分</h3><p>scipy.integrate中的<code>integrate.quad</code>函数</p>
 <p>$$<br>I(f)&#x3D;∫0π(sinx−cosx)dx</p>
 <p>$$</p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment"># 答案区</span>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 答案区</span>
 <span class="token keyword">import</span> math
 <span class="token keyword">from</span> scipy <span class="token keyword">import</span> integrate
 <span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">return</span> math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token operator">-</span>math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
 
 v<span class="token punctuation">,</span>err <span class="token operator">=</span> integrate<span class="token punctuation">.</span>quad<span class="token punctuation">(</span>f<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>math<span class="token punctuation">.</span>pi<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span></code></pre>
-
+<span class="token keyword">print</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="二重连续积分"><a href="#二重连续积分" class="headerlink" title="二重连续积分"></a>二重连续积分</h3><p>scipy.integrate中的<code>integrate.dblquad</code>函数</p>
 <p>$$<br>I(f(x,y))&#x3D;∫ab∫h(x)g(x)f(x,y)dxdy</p>
 <p>$$</p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment"># dblquad函数的第一个形参应是f(x,y)、第2、3、4、5分别是a、b、g(x)、h(x),也就是说dblquad函数的第4和5是一个函数</span>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># dblquad函数的第一个形参应是f(x,y)、第2、3、4、5分别是a、b、g(x)、h(x),也就是说dblquad函数的第4和5是一个函数</span>
 <span class="token keyword">from</span> scipy <span class="token keyword">import</span> integrate
 <span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 <span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -668,21 +666,21 @@ v<span class="token punctuation">,</span>err <span class="token operator">=</spa
 <span class="token keyword">def</span> <span class="token function">h</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">return</span> x
 v<span class="token punctuation">,</span> err <span class="token operator">=</span> integrate<span class="token punctuation">.</span>dblquad<span class="token punctuation">(</span>f<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> h<span class="token punctuation">)</span>
-<span class="token keyword">print</span> <span class="token punctuation">(</span>v<span class="token punctuation">)</span></code></pre>
-
+<span class="token keyword">print</span> <span class="token punctuation">(</span>v<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="3-离散函数求积分"><a href="#3-离散函数求积分" class="headerlink" title="3 离散函数求积分"></a>3 离散函数求积分</h2><p>trapz和cumtrapz均是用梯形法来计算数值积分,位于<code>scipy.integrate</code>中,使用方法如下：</p>
-<pre class="language-python" data-language="python"><code class="language-python">scipy<span class="token punctuation">.</span>integrate<span class="token punctuation">.</span>cumtrapz<span class="token punctuation">(</span>a<span class="token punctuation">,</span> self<span class="token punctuation">.</span>t<span class="token punctuation">,</span> initial<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span></code></pre>
-
+<pre class="line-numbers language-python"><code class="language-python">scipy<span class="token punctuation">.</span>integrate<span class="token punctuation">.</span>cumtrapz<span class="token punctuation">(</span>a<span class="token punctuation">,</span> self<span class="token punctuation">.</span>t<span class="token punctuation">,</span> initial<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><strong><code>trapz</code>和<code>cumtrapz</code>的区别</strong>：</p>
 <ul>
 <li><code>trapz</code>只是算出一个最后的结果即把y从t0到t100积分的值；</li>
 <li>而<code>cumtrapz</code>会把中间每一步的结果都算出来，即计算出y从t0到t0积分的值，从t0到t1积分的值，从t0到t2积分的值……直到最后结果。</li>
 </ul>
 <p><strong>求取一至三重积分的函数分别为</strong>：</p>
-<pre class="language-python" data-language="python"><code class="language-python">integrate<span class="token punctuation">.</span>quad<span class="token punctuation">(</span>func<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>args<span class="token punctuation">,</span>full_output<span class="token punctuation">)</span>
+<pre class="line-numbers language-python"><code class="language-python">integrate<span class="token punctuation">.</span>quad<span class="token punctuation">(</span>func<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>args<span class="token punctuation">,</span>full_output<span class="token punctuation">)</span>
 integrate<span class="token punctuation">.</span>dblquad<span class="token punctuation">(</span>func<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>gfun<span class="token punctuation">,</span>hfun<span class="token punctuation">,</span>args<span class="token punctuation">,</span>epsabs<span class="token punctuation">,</span>epsrel<span class="token punctuation">)</span>
-integrate<span class="token punctuation">.</span>tplquad<span class="token punctuation">(</span>func<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>gfun<span class="token punctuation">,</span>hfun<span class="token punctuation">,</span>qfun<span class="token punctuation">,</span>rfun<span class="token punctuation">,</span>args<span class="token punctuation">,</span>epsabs<span class="token punctuation">,</span>epsrel<span class="token punctuation">)</span></code></pre>
-
+integrate<span class="token punctuation">.</span>tplquad<span class="token punctuation">(</span>func<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>gfun<span class="token punctuation">,</span>hfun<span class="token punctuation">,</span>qfun<span class="token punctuation">,</span>rfun<span class="token punctuation">,</span>args<span class="token punctuation">,</span>epsabs<span class="token punctuation">,</span>epsrel<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>以三重积分为例。func为运算对象函数，形式为func(z,y,x)。a,b对应变量x的积分区域，gfun,hfun对应变量y的积分区域，依次类推。</p>
 <p><strong>注意</strong>：gfun,hfun等的形式应为函数，其中gfun,hfun是自变量为x的函数，qfun,rfun是自变量为x,y的函数。这些函数可以使用lambda函数进行定义，形式通常为：<br><code>lambda x,y:x*y</code><br>如果是常函数，则定义为：<br><code>lambda x:0</code><br><code>lambda x,y:1</code></p>
 <h2 id="4-求微分"><a href="#4-求微分" class="headerlink" title="4 求微分"></a>4 求微分</h2><ul>

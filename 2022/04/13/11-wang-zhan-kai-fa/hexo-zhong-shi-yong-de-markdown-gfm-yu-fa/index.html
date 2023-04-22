@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -548,9 +549,6 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
@@ -639,23 +637,23 @@
 <li>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-advance.html">Markdown 高级技巧 | 菜鸟教程 (runoob.com)</a></li>
 <li>目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，<br>如：</li>
 </ul>
-<pre class="language-markdown" data-language="markdown"><code class="language-markdown">使用<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Ctrl<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Alt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Del<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>重启电脑</code></pre>
-
+<pre class="line-numbers language-markdown"><code class="language-markdown">使用<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Ctrl<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Alt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Del<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span>重启电脑
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="4-公式"><a href="#4-公式" class="headerlink" title="4 公式"></a>4 公式</h2><ul>
 <li>首先需要在主题里面的 <code>_config.yml</code> 中开启数学公式支持：</li>
 </ul>
-<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 是否激活mathjax数学公式，这是全局配置，但文章仍然不会都开启mathjax渲染，</span>
-<span class="token comment"># 考虑到mathjax加载比较耗时，你还需要在需要渲染的文章的Front-matter中再加上`mathjax: true`才行.</span>
+<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 是否激活mathjax数学公式，这是全局配置，但文章仍然不会都开启mathjax渲染，</span>
+<span class="token comment" spellcheck="true"># 考虑到mathjax加载比较耗时，你还需要在需要渲染的文章的Front-matter中再加上`mathjax: true`才行.</span>
 <span class="token key atrule">mathjax</span><span class="token punctuation">:</span>
   <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">cdn</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//cdn.bootcss.com/mathjax/2.7.5/MathJax.js<span class="token punctuation">?</span>config=TeX<span class="token punctuation">-</span>AMS<span class="token punctuation">-</span>MML_HTMLorMML</code></pre>
-
+  <span class="token key atrule">cdn</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//cdn.bootcss.com/mathjax/2.7.5/MathJax.js<span class="token punctuation">?</span>config=TeX<span class="token punctuation">-</span>AMS<span class="token punctuation">-</span>MML_HTMLorMML
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>之后，需要在每篇文章的MD文件中开启<code>mathjax: true</code>title: Hexo中使用的MarkDown(GFM)语法</li>
 </ul>
-<pre class="language-markdown" data-language="markdown"><code class="language-markdown">title: Hexo中使用的MarkDown(GFM)语法
-mathjax: true</code></pre>
-
+<pre class="line-numbers language-markdown"><code class="language-markdown">title: Hexo中使用的MarkDown(GFM)语法
+mathjax: true
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>效果如下：</p>
 <p>$$<br>\int_{0}^\infty {f(x)dx}<br>$$</p>
 <p>$$<br>x&#x3D;y +1<br>$$</p>

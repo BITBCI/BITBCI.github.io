@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -518,7 +519,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    396
+                    384
                 </div>
                 
 
@@ -540,16 +541,13 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="Python中的内建模块builtins"><a href="#Python中的内建模块builtins" class="headerlink" title="Python中的内建模块builtins"></a>Python中的内建模块builtins</h2><h3 id="一、builtins简介"><a href="#一、builtins简介" class="headerlink" title="一、builtins简介"></a>一、builtins简介</h3><p>builtins是Python中的一个模块。该模块提供对Python的所有“内置”标识符的直接访问；<br>在Python解释器启动后，且没有执行程序员所写的任何代码前，Python会首先加载builtins模块到内存,然后把內建模块的命名空间导入到当前代码的global作用域中，然后我们就能直接使用內建函数。<br>在Python2.X版本中，内建模块被命名为__builtin__，而到了Python3.X版本中，却更名为builtins<br>如果想要向内建模块中添加一些功能，以便在任何模块中都能直接使用而不用再进行import，这时就可以导入builtins模块，在builtins模块的命名空间(即__dict__属性)中添加该功能。</p>
-<h3 id="二、实现方式"><a href="#二、实现方式" class="headerlink" title="二、实现方式"></a>二、实现方式</h3><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> builtins
+<h3 id="二、实现方式"><a href="#二、实现方式" class="headerlink" title="二、实现方式"></a>二、实现方式</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> builtins
 
 <span class="token keyword">class</span> <span class="token class-name">people</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -566,22 +564,22 @@
     lsy <span class="token operator">=</span> people<span class="token punctuation">(</span><span class="token punctuation">)</span>
     lsy<span class="token punctuation">.</span>msg<span class="token punctuation">(</span><span class="token punctuation">)</span>
     msg<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    msg_2<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-
+    msg_2<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="三、关于-builtins"><a href="#三、关于-builtins" class="headerlink" title="三、关于__builtins__"></a>三、关于<code>__builtins__</code></h3><p><strong>builtins</strong> 同时存在于python2和Python3,并且功能相同。它就是对内建模块一个引用.<br>在主模块__main__中: __builtins__是对内建模块本身的引用，即__builtins__完全等价于builtins，二者完全是一个东西，不分彼此.此时，__builtins__的类型是模块类型。<br>在非__main__模块中：__builtins__仅是对builtins.__dict__的引用，而非builtins本身。它在任何地方都可见。此时__builtins__的类型是字典。</p>
 <p>例程如下：</p>
-<pre class="language-main.py" data-language="main.py"><code class="language-main.py">import builtins
+<pre class="line-numbers language-main.py"><code class="language-main.py">import builtins
 from new_func import func
 
 print(type(builtins))
-func()</code></pre>
-
-<pre class="language-new_func.py" data-language="new_func.py"><code class="language-new_func.py">def func():
-    print(type(__builtins__))</code></pre>
-
-<pre class="language-输出信息" data-language="输出信息"><code class="language-输出信息">&lt;class &#39;module&#39;&gt;
-&lt;class &#39;dict&#39;&gt;</code></pre>
-
+func()
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-new_func.py"><code class="language-new_func.py">def func():
+    print(type(__builtins__))
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-输出信息"><code class="language-输出信息"><class 'module'>
+<class 'dict'>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>参考：</p>
 <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c9cf8a864668">python3 builtins和__builtins__</a></p>
 

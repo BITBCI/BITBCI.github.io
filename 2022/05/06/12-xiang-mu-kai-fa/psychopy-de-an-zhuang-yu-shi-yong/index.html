@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -540,9 +541,6 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
@@ -558,22 +556,23 @@
 <p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/Psychopy%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8-2.png"></p>
 <h3 id="三、作为Python包安装"><a href="#三、作为Python包安装" class="headerlink" title="三、作为Python包安装"></a>三、作为Python包安装</h3><p>官方推荐使用Python3.8的环境安装Psychopy，所以为了避免麻烦，最好使用官网推荐的Python版本。<br>其他Python版本可能存在不兼容问题。</p>
 <p>安装方法在官网也已经说过了，很简单，执行以下命令：</p>
-<pre class="language-terminal" data-language="terminal"><code class="language-terminal">pip install psychopy</code></pre>
-
+<pre class="line-numbers language-terminal"><code class="language-terminal">pip install psychopy
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>但是，由于电脑环境问题，这个安装往往会存在一些问题，可能是由于电脑没有编译软件，导致有些包无法安装。<br>比如出现以下报错：</p>
 <p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/Psychopy%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8-3.png"></p>
 <p>这是由于dukpy pocketsphinx pyWinhook安装失败导致的。</p>
 <p>我们可以在<a target="_blank" rel="noopener" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">Python Extension Packages for Windows - Christoph Gohlke (uci.edu)</a><br>下载编译好的Python包，然后切换到下载目录，使用pip进行安装。</p>
 <p>将这些包补足之后，再次执行：</p>
-<pre class="language-terminal" data-language="terminal"><code class="language-terminal">pip install psychopy</code></pre>
-
-<h3 id="四、第一个psychopy程序"><a href="#四、第一个psychopy程序" class="headerlink" title="四、第一个psychopy程序"></a>四、第一个psychopy程序</h3><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> psychopy <span class="token keyword">import</span> visual<span class="token punctuation">,</span> event
+<pre class="line-numbers language-terminal"><code class="language-terminal">pip install psychopy
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="四、第一个psychopy程序"><a href="#四、第一个psychopy程序" class="headerlink" title="四、第一个psychopy程序"></a>四、第一个psychopy程序</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> psychopy <span class="token keyword">import</span> visual<span class="token punctuation">,</span> event
 
 
 win <span class="token operator">=</span> visual<span class="token punctuation">.</span>Window<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">,</span> <span class="token number">768</span><span class="token punctuation">]</span><span class="token punctuation">,</span> fullscr<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
 msg <span class="token operator">=</span> visual<span class="token punctuation">.</span>TextStim<span class="token punctuation">(</span>win<span class="token punctuation">,</span> <span class="token string">'Hello World'</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'white'</span><span class="token punctuation">,</span> bold<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
 msg<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
-event<span class="token punctuation">.</span>waitKeys<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+event<span class="token punctuation">.</span>waitKeys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>

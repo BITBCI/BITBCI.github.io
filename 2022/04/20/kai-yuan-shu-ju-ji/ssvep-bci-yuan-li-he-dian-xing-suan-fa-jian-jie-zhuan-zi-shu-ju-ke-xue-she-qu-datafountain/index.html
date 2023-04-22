@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -536,9 +537,6 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
@@ -556,14 +554,14 @@
 <p>为了有效地利用SSVEP的基频和谐波信息，从而进一步提高识别精度，下述参考文献提出了基于滤波器组的典型相关分析方法（filter-bank CCA）。  </p>
 <p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"><br>该方法分为三步，首先是进行滤波器组分析，简单地说即是将脑电数据滤波到不同子带；然后是对每一个子带的数据做CCA得到典型相关系数；最后，通过将各个频带数据的典型相关系数进行加权求和，取和不同参考信号得到的加权和的最大值对应的频率为识别目标。<br>参考文献<br>Chen, X., Wang, Y., Gao, S., Jung, T., &amp; Gao, X. (2015). Filter bank canonical correlation analysis for implementing a high-speed SSVEP-based brain–computer interface. Journal of Neural Engineering, 12(4).</p>
 <p>任务相关成分分析（Task-related Component Analysis, TRCA）<br>TRCA的主要思想是寻找一个线性组合，使得原始数据中与事件相关的频率成分在多次试验的可重复性最大，该方法在SSVEP目标识别中取得了很好的效果。<br>TRCA方法的具体实现方法如下。首先假设存在两种源信号：1）任务相关信号s(t); 2)任务无关信号 n(t)。因此，检测到的多通道EEG信号的线性模式可以表述为：<br>, j &#x3D; 1, 2, … , （3-1）<br>其中，j是通道编号，和是将原信号投影到EEG信号的系数。需要解决的问题是如何从观察信号的线性组合中恢复出任务相关信号。的线性组合可以表示为：<br>（3-2）<br>我们可以通过最大化试次之间协方差的方式求解这个问题。假设第h个试次的EEG信号和预测的任务相关成分分别为和，h &#x3D; 1,2, … ,。对应的时间范围是。这里，是每个任务试次的长度。而第和个试次之间的协方差可以被写作：<br>（3-3）<br>各个试次之间可能的组合可以表示为：</p>
-<pre class="language-none"><code class="language-none">（3-4）
+<pre><code>（3-4）
 其中，矩阵可以被写作：
 （3-5）
 为了得到有限个解，的方差被限制为：
 （3-5）
 因此，我们可以把求解转化成以下问题：
-（3-7）</code></pre>
-
+（3-7）
+</code></pre>
 <p>其中，可以通过求解矩阵特征值的方式获得。</p>
 <p>参考文献<br>Nakanishi, M., Wang, Y., Chen, X., Wang, Y., Gao, X., &amp; Jung, T. (2018). Enhancing Detection of SSVEPs for a High-Speed Brain Speller Using Task-Related Component Analysis. IEEE Transactions on Biomedical Engineering, 65(1), 104-112.</p>
 <h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p>
@@ -684,13 +682,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/">
+                <a href="/2022/04/20/kai-yuan-shu-ju-ji/p300-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="MI-BCI-原理和典型算法简介——转自数据科学社区-DataFountain">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="P300-BCI-原理和典型算法简介——转自数据科学社区-DataFountain">
                         
-                        <span class="card-title">MI-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</span>
+                        <span class="card-title">P300-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -729,13 +727,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/20/kai-yuan-shu-ju-ji/p300-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/">
+                <a href="/2022/04/19/11-wang-zhan-kai-fa/html-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="P300-BCI-原理和典型算法简介——转自数据科学社区-DataFountain">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="HTML基础">
                         
-                        <span class="card-title">P300-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</span>
+                        <span class="card-title">HTML基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -746,23 +744,31 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/" class="post-category">
-                                    开源数据集
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
-                            <a href="/categories/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3/" class="post-category">
-                                    脑机接口
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/HTML/" class="post-category">
+                                    HTML
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/HTML/">
+                        <span class="chip bg-color">HTML</span>
+                    </a>
+                    
                 </div>
                 
             </div>

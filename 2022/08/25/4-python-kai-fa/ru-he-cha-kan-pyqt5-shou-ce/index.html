@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -540,9 +541,6 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
@@ -564,12 +562,13 @@
 <li>Signals：可以传递的信号</li>
 </ol>
 <p>通过查表，可以得到对于视频播放结束的信号传递可以这样来写：</p>
-<pre class="language-python" data-language="python"><code class="language-python">self<span class="token punctuation">.</span>player<span class="token punctuation">.</span>mediaStatusChanged<span class="token punctuation">[</span>QMediaPlayer<span class="token punctuation">.</span>MediaStatus<span class="token punctuation">]</span><span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>statusChanged<span class="token punctuation">)</span>
+<pre class="line-numbers language-python"><code class="language-python">self<span class="token punctuation">.</span>player<span class="token punctuation">.</span>mediaStatusChanged<span class="token punctuation">[</span>QMediaPlayer<span class="token punctuation">.</span>MediaStatus<span class="token punctuation">]</span><span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>statusChanged<span class="token punctuation">)</span>
 
 
 <span class="token keyword">def</span> <span class="token function">statusChanged</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> status<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> status <span class="token operator">==</span> QMediaPlayer<span class="token punctuation">.</span>EndOfMedia<span class="token punctuation">:</span>
-        self<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+        self<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>

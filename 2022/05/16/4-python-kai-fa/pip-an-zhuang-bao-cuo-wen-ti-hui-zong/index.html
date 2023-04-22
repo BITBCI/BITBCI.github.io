@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -518,7 +519,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    124
+                    101
                 </div>
                 
 
@@ -540,22 +541,20 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="pip安装报错问题汇总"><a href="#pip安装报错问题汇总" class="headerlink" title="pip安装报错问题汇总"></a>pip安装报错问题汇总</h2><h3 id="1、HTTPS安全性验证问题"><a href="#1、HTTPS安全性验证问题" class="headerlink" title="1、HTTPS安全性验证问题"></a>1、HTTPS安全性验证问题</h3><p>报错信息</p>
-<pre class="language-terminal" data-language="terminal"><code class="language-terminal">WARNING: Retrying (Retry(total&#x3D;4, connect&#x3D;None, read&#x3D;None, redirect&#x3D;None, status&#x3D;None)) 
-after connection broken by &#39;ProxyError(&#39;Cannot connect to proxy.&#39;, 
-NewConnectionError(&#39;&lt;pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x0000020A2A9C6F28&gt;: 
-    Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。</code></pre>
-
+<pre class="line-numbers language-terminal"><code class="language-terminal">WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) 
+after connection broken by 'ProxyError('Cannot connect to proxy.', 
+NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x0000020A2A9C6F28>: 
+    Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>解决办法<br>将下载源临时添加为trusted-host</p>
-<pre class="language-terminal" data-language="terminal"><code class="language-terminal">pip3 install torch torchvision torchaudio --extra-index-url https:&#x2F;&#x2F;download.pytorch.org&#x2F;whl&#x2F;cu113 --trusted-host download.pytorch.org</code></pre>
+<pre class="line-numbers language-terminal"><code class="language-terminal">pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113 --trusted-host download.pytorch.org
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
                 
             </div>

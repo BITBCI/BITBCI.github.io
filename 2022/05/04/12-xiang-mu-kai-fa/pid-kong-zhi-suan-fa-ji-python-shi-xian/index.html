@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -544,9 +545,6 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
@@ -566,25 +564,25 @@
 <p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable columnspacing="1em" rowspacing="4pt"><mtr><mtd><mi>u</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>&#x3D;</mo><mi>u</mi><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><msub><mi>K</mi><mrow><mi>p</mi></mrow></msub><mo stretchy="false">(</mo><mi>err</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>−</mo><mi>err</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>+</mo><msub><mi>K</mi><mrow><mi>i</mi></mrow></msub><mi>err</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>+</mo><msub><mi>K</mi><mrow><mi>d</mi></mrow></msub><mo stretchy="false">(</mo><mi>err</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>−</mo><mn>2</mn><mi>err</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><mi>err</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd></mtr></mtable></math></p>
 <h4 id="（2）增量式PID"><a href="#（2）增量式PID" class="headerlink" title="（2）增量式PID"></a>（2）增量式PID</h4><p>增量式PID的输出只与当前拍和前两拍的误差有关。<br>增量式PID控制输出的是控制量增量，并无积分作用，因此该方法适用于执行机构带积分部件的对象，如步进电机等。<br>由于增量式PID输出的是控制量增量，如果计算机出现故障，误动作影响较小，而执行机构本身有记忆功能，可仍保持原位，不会严重影响系统的工作</p>
 <p>公式推导：<br><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable columnspacing="1em" rowspacing="4pt"><mtr><mtd><mi>u</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>&#x3D;</mo><msub><mi>K</mi><mrow><mi>p</mi></mrow></msub><mi>e</mi><mi>r</mi><mi>r</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>+</mo><msub><mi>K</mi><mrow><mi>i</mi></mrow></msub><munder><mo data-mjx-texclass="OP">∑</mo><mrow><mi>i</mi><mo>&#x3D;</mo><mn>0</mn></mrow></munder><mi>e</mi><mi>r</mi><mi>r</mi><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo><mo>+</mo><msub><mi>K</mi><mrow><mi>d</mi></mrow></msub><mo stretchy="false">[</mo><mi>e</mi><mi>r</mi><mi>r</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>−</mo><mi>e</mi><mi>r</mi><mi>r</mi><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">]</mo></mtd></mtr></mtable></math></p>
-<h4 id="（3）代码实现"><a href="#（3）代码实现" class="headerlink" title="（3）代码实现"></a>（3）代码实现</h4><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> time
+<h4 id="（3）代码实现"><a href="#（3）代码实现" class="headerlink" title="（3）代码实现"></a>（3）代码实现</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> time
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-<span class="token comment"># from simple_pid import PID</span>
+<span class="token comment" spellcheck="true"># from simple_pid import PID</span>
 
-<span class="token comment"># 解决中文显示问题</span>
+<span class="token comment" spellcheck="true"># 解决中文显示问题</span>
 plt<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'SimHei'</span><span class="token punctuation">]</span>
 plt<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'axes.unicode_minus'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">False</span>
 
 
 <span class="token keyword">class</span> <span class="token class-name">MyPID</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> Kp<span class="token operator">=</span><span class="token number">1.2</span><span class="token punctuation">,</span> Ki<span class="token operator">=</span><span class="token number">1.</span><span class="token punctuation">,</span> Kd<span class="token operator">=</span><span class="token number">0.002</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        self<span class="token punctuation">.</span>Kp <span class="token operator">=</span> Kp  <span class="token comment"># 比例系数Proportional</span>
-        self<span class="token punctuation">.</span>Ki <span class="token operator">=</span> Ki  <span class="token comment"># 积分系数Integral</span>
-        self<span class="token punctuation">.</span>Kd <span class="token operator">=</span> Kd  <span class="token comment"># 微分系数Derivative</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> Kp<span class="token operator">=</span><span class="token number">1.2</span><span class="token punctuation">,</span> Ki<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> Kd<span class="token operator">=</span><span class="token number">0.002</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>Kp <span class="token operator">=</span> Kp  <span class="token comment" spellcheck="true"># 比例系数Proportional</span>
+        self<span class="token punctuation">.</span>Ki <span class="token operator">=</span> Ki  <span class="token comment" spellcheck="true"># 积分系数Integral</span>
+        self<span class="token punctuation">.</span>Kd <span class="token operator">=</span> Kd  <span class="token comment" spellcheck="true"># 微分系数Derivative</span>
 
-        self<span class="token punctuation">.</span>Ek <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># 当前误差 e(k)</span>
-        self<span class="token punctuation">.</span>Ek1 <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># 前一次误差 e(k - 1)</span>
-        self<span class="token punctuation">.</span>Ek2 <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># 再前一次误差 e(k - 2)</span>
-        self<span class="token punctuation">.</span>LocSum <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># 累计积分位置</span>
+        self<span class="token punctuation">.</span>Ek <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment" spellcheck="true"># 当前误差 e(k)</span>
+        self<span class="token punctuation">.</span>Ek1 <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment" spellcheck="true"># 前一次误差 e(k - 1)</span>
+        self<span class="token punctuation">.</span>Ek2 <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment" spellcheck="true"># 再前一次误差 e(k - 2)</span>
+        self<span class="token punctuation">.</span>LocSum <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment" spellcheck="true"># 累计积分位置</span>
 
     <span class="token keyword">def</span> <span class="token function">PIDLoc</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> SetValue<span class="token punctuation">,</span> ActualValue<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">'''
@@ -594,7 +592,7 @@ plt<span class="token punctuation">.</span>rcParams<span class="token punctuatio
         :return:PID位置
         '''</span>
         self<span class="token punctuation">.</span>Ek <span class="token operator">=</span> SetValue <span class="token operator">-</span> ActualValue
-        self<span class="token punctuation">.</span>LocSum <span class="token operator">+=</span> self<span class="token punctuation">.</span>Ek  <span class="token comment"># 累计误差</span>
+        self<span class="token punctuation">.</span>LocSum <span class="token operator">+=</span> self<span class="token punctuation">.</span>Ek  <span class="token comment" spellcheck="true"># 累计误差</span>
 
         PIDLoc <span class="token operator">=</span> self<span class="token punctuation">.</span>Kp <span class="token operator">*</span> self<span class="token punctuation">.</span>Ek <span class="token operator">+</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>Ki <span class="token operator">*</span> self<span class="token punctuation">.</span>LocSum<span class="token punctuation">)</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>Kd <span class="token operator">*</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>Ek1 <span class="token operator">-</span> self<span class="token punctuation">.</span>Ek<span class="token punctuation">)</span>
 
@@ -617,12 +615,12 @@ plt<span class="token punctuation">.</span>rcParams<span class="token punctuatio
         self<span class="token punctuation">.</span>Ek1 <span class="token operator">=</span> self<span class="token punctuation">.</span>Ek
         <span class="token keyword">return</span> PIDInc
 
-<span class="token comment"># 位置式</span>
+<span class="token comment" spellcheck="true"># 位置式</span>
 myPID <span class="token operator">=</span> MyPID<span class="token punctuation">(</span>Kp<span class="token operator">=</span><span class="token number">0.9</span><span class="token punctuation">,</span> Ki<span class="token operator">=</span><span class="token number">0.15</span><span class="token punctuation">,</span> Kd<span class="token operator">=</span><span class="token number">0.7</span><span class="token punctuation">)</span>
 SetValue <span class="token operator">=</span> <span class="token number">10</span>
 ActualValue <span class="token operator">=</span> <span class="token number">1</span>
 ActualValue_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     PIDLoc <span class="token operator">=</span> myPID<span class="token punctuation">.</span>PIDLoc<span class="token punctuation">(</span>SetValue<span class="token punctuation">,</span> ActualValue<span class="token punctuation">)</span>
     ActualValue <span class="token operator">=</span> PIDLoc
     <span class="token keyword">print</span><span class="token punctuation">(</span>ActualValue<span class="token punctuation">)</span>
@@ -631,20 +629,20 @@ ActualValue_list <span class="token operator">=</span> <span class="token punctu
 plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>ActualValue_list<span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-<span class="token comment"># 增量式</span>
+<span class="token comment" spellcheck="true"># 增量式</span>
 myPID <span class="token operator">=</span> MyPID<span class="token punctuation">(</span>Kp<span class="token operator">=</span><span class="token number">0.005</span><span class="token punctuation">,</span> Ki<span class="token operator">=</span><span class="token number">0.008</span><span class="token punctuation">,</span> Kd<span class="token operator">=</span><span class="token number">0.05</span><span class="token punctuation">)</span>
 SetValue <span class="token operator">=</span> <span class="token number">10</span>
 ActualValue <span class="token operator">=</span> <span class="token number">1</span>
 ActualValue_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     PIDInc <span class="token operator">=</span> myPID<span class="token punctuation">.</span>PIDInc<span class="token punctuation">(</span>SetValue<span class="token punctuation">,</span> ActualValue<span class="token punctuation">)</span>
     ActualValue <span class="token operator">+=</span> PIDInc
     <span class="token keyword">print</span><span class="token punctuation">(</span>ActualValue<span class="token punctuation">)</span>
     ActualValue_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ActualValue<span class="token punctuation">)</span>
 
 plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>ActualValue_list<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/PID%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95%E5%8F%8APython%E5%AE%9E%E7%8E%B0-3.png" alt="位置式"></p>
 <p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/PID%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95%E5%8F%8APython%E5%AE%9E%E7%8E%B0-4.png" alt="增量式"></p>
 <h3 id="4、常见语言的PID实现"><a href="#4、常见语言的PID实现" class="headerlink" title="4、常见语言的PID实现"></a>4、常见语言的PID实现</h3><p><a target="_blank" rel="noopener" href="https://github.com/m-lundberg/simple-pid">Python实现</a></p>

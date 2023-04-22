@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -540,9 +541,6 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
@@ -551,15 +549,15 @@
                 <h2 id="Python中使用struct处理二进制字节数据"><a href="#Python中使用struct处理二进制字节数据" class="headerlink" title="Python中使用struct处理二进制字节数据"></a>Python中使用struct处理二进制字节数据</h2><h3 id="一、struct简介"><a href="#一、struct简介" class="headerlink" title="一、struct简介"></a>一、<code>struct</code>简介</h3><p>Python没有专门处理字节的数据类型。<br>但由于<code>b&#39;str&#39;</code>可以表示字节，所以，字节数组＝二进制<code>str</code>。<br>而在C语言中，我们可以很方便地用<code>struct</code>、<code>union</code>来处理字节，以及字节和<code>int，float</code>的转换。</p>
 <p>在某些场合下，我们需要使用Python处理C语言中的结构体。比如存取文件，socket操作。<br>为了解决Python中的二进制解码问题，Python中提供了内建模块<code>struct</code>处理二进制(<code>pack</code>和<code>unpack</code>用法)<br>尽管Python不适合编写底层操作字节流的代码，但在对性能要求不高的地方，利用<code>struct</code>就方便多了。</p>
 <h3 id="二、常用方法"><a href="#二、常用方法" class="headerlink" title="二、常用方法"></a>二、常用方法</h3><p><code>struct</code>中有三个函数比较重要：</p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment"># 按照给定的格式(fmt)，把数据封装成字符串(实际上是类似于c结构体的字节流)</span>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 按照给定的格式(fmt)，把数据封装成字符串(实际上是类似于c结构体的字节流)</span>
 pack<span class="token punctuation">(</span>fmt<span class="token punctuation">,</span> v1<span class="token punctuation">,</span> v2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
 
-<span class="token comment"># 按照给定的格式(fmt)解析字节流string，返回解析出来的tuple</span>
+<span class="token comment" spellcheck="true"># 按照给定的格式(fmt)解析字节流string，返回解析出来的tuple</span>
 unpack<span class="token punctuation">(</span>fmt<span class="token punctuation">,</span> string<span class="token punctuation">)</span>
 
-<span class="token comment"># 计算给定的格式(fmt)占用多少字节的内存</span>
-calcsize<span class="token punctuation">(</span>fmt<span class="token punctuation">)</span></code></pre>
-
+<span class="token comment" spellcheck="true"># 计算给定的格式(fmt)占用多少字节的内存</span>
+calcsize<span class="token punctuation">(</span>fmt<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>fmt</code>中支持的格式为：</p>
 <table>
 <thead>
@@ -699,15 +697,15 @@ calcsize<span class="token punctuation">(</span>fmt<span class="token punctuatio
 </tr>
 </tbody></table>
 <h3 id="三、使用方法"><a href="#三、使用方法" class="headerlink" title="三、使用方法"></a>三、使用方法</h3><h4 id="1、打包-pack"><a href="#1、打包-pack" class="headerlink" title="1、打包(pack)"></a>1、打包(<code>pack</code>)</h4><p><code>struct</code>的<code>pack</code>函数把任意数据类型变成<code>bytes</code>。</p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> struct
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> struct
 struct<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token string">'>I'</span><span class="token punctuation">,</span> <span class="token number">10240099</span><span class="token punctuation">)</span>
-<span class="token comment">#  b'\x00\x9c@c'</span></code></pre>
-
+<span class="token comment" spellcheck="true">#  b'\x00\x9c@c'</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p><code>pack</code>的第一个参数<code>&#39;&gt;I&#39;</code>是处理指令， <code>&gt;</code>表示字节顺序是<code>big-endian</code>，也就是网络序，<code>I</code>表示4字节无符号整数。<br>后面的参数个数要和处理指令一致。</p>
 <h4 id="2、解包-unpack"><a href="#2、解包-unpack" class="headerlink" title="2、解包(unpack)"></a>2、解包(<code>unpack</code>)</h4><p><code>unpack</code>把<code>bytes</code>变成相应的数据类型。</p>
-<pre class="language-python" data-language="python"><code class="language-python">struct<span class="token punctuation">.</span>unpack<span class="token punctuation">(</span><span class="token string">'>IH'</span><span class="token punctuation">,</span> <span class="token string">b'\xf0\xf0\xf0\xf0\x80\x80'</span><span class="token punctuation">)</span>
-<span class="token comment">#  (4042322160, 32896)</span></code></pre>
-
+<pre class="line-numbers language-python"><code class="language-python">struct<span class="token punctuation">.</span>unpack<span class="token punctuation">(</span><span class="token string">'>IH'</span><span class="token punctuation">,</span> b<span class="token string">'\xf0\xf0\xf0\xf0\x80\x80'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#  (4042322160, 32896)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>根据<code>&gt;IH</code>的说明，后面的<code>bytes</code>依次变为<code>I</code>：4字节无符号整数和<code>H</code>：2字节无符号整数。</p>
 <h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a target="_blank" rel="noopener" href="https://www.jb51.net/article/199586.htm">Python使用struct处理二进制(pack和unpack用法)_python_脚本之家 (jb51.net)</a></p>
 

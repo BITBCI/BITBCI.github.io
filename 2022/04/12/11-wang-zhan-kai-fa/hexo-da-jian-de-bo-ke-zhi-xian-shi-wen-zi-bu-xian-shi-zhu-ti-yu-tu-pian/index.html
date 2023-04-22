@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -544,9 +545,6 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
@@ -556,19 +554,20 @@
 <h2 id="解决办法：修改-config-yml文件，修改方式如下："><a href="#解决办法：修改-config-yml文件，修改方式如下：" class="headerlink" title="解决办法：修改_config.yml文件，修改方式如下："></a>解决办法：修改_config.yml文件，修改方式如下：</h2><ul>
 <li>对于github Page:</li>
 </ul>
-<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//bitliusiyu.github.io
-<span class="token comment">#url: http://example.com</span></code></pre>
+<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//bitliusiyu.github.io
+<span class="token comment" spellcheck="true">#url: http://example.com</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <blockquote>
 <p>github仓库配置如下：<br><img src="/../../images/11-%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/github%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE.png" alt="github仓库配置"></p>
 </blockquote>
 <ul>
 <li>对于 gitee Page：</li>
 </ul>
-<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># URL，为了防止博客样式不对</span>
-<span class="token comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span>
+<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># URL，为了防止博客样式不对</span>
+<span class="token comment" spellcheck="true">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span>
 <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//gitee.com/BITBCI/bitbci
-<span class="token key atrule">root</span><span class="token punctuation">:</span> /bitbci/</code></pre>
-
+<span class="token key atrule">root</span><span class="token punctuation">:</span> /bitbci/
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>gitee仓库配置如下：<br><img src="/../../images/11-%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/gitee%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE.png" alt="gitee仓库配置"></p>
 </blockquote>

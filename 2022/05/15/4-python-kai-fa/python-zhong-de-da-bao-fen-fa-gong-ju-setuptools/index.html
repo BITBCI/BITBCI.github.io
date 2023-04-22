@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -518,7 +519,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    460
+                    434
                 </div>
                 
 
@@ -540,52 +541,49 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="Python中的打包分发工具setuptools"><a href="#Python中的打包分发工具setuptools" class="headerlink" title="Python中的打包分发工具setuptools"></a>Python中的打包分发工具setuptools</h2><h3 id="一、setuptools工具简介"><a href="#一、setuptools工具简介" class="headerlink" title="一、setuptools工具简介"></a>一、setuptools工具简介</h3><p>setuptools是Python distutils增强版的集合。<br>它可以帮助我们更简单的创建和分发Python包，尤其是拥有依赖关系的。<br>setuptools构建出来的wheel(.whl)可供其他人pip install和import。</p>
-<h3 id="二、构建方法"><a href="#二、构建方法" class="headerlink" title="二、构建方法"></a>二、构建方法</h3><h4 id="1、文件结构"><a href="#1、文件结构" class="headerlink" title="1、文件结构"></a>1、文件结构</h4><pre class="language-文件结构" data-language="文件结构"><code class="language-文件结构">.&#x2F;BCI
+<h3 id="二、构建方法"><a href="#二、构建方法" class="headerlink" title="二、构建方法"></a>二、构建方法</h3><h4 id="1、文件结构"><a href="#1、文件结构" class="headerlink" title="1、文件结构"></a>1、文件结构</h4><pre class="line-numbers language-文件结构"><code class="language-文件结构">./BCI
 ├── bci
 │   ├── ssvep.py
 │   └── __init__.py
 ├── LICENSE
 ├── Readme.md
 ├── setup.cfg
-└── setup.py</code></pre>
-
-<h4 id="2、文件内容"><a href="#2、文件内容" class="headerlink" title="2、文件内容"></a>2、文件内容</h4><pre class="language-文件内容" data-language="文件内容"><code class="language-文件内容"># setup.py；会自动读取setup.cfg中的设置
+└── setup.py
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="2、文件内容"><a href="#2、文件内容" class="headerlink" title="2、文件内容"></a>2、文件内容</h4><pre class="line-numbers language-文件内容"><code class="language-文件内容"># setup.py；会自动读取setup.cfg中的设置
 import setuptools
 setuptools.setup() # 也可有参调用，则会覆盖.cfg的对应条目
 
-# setup.cfg；所有条目见 https:&#x2F;&#x2F;setuptools.readthedocs.io&#x2F;en&#x2F;latest&#x2F;userguide&#x2F;declarative_config.html
+# setup.cfg；所有条目见 https://setuptools.readthedocs.io/en/latest/userguide/declarative_config.html
 [metadata]
-name &#x3D; bci
-version &#x3D; 1.0
-author &#x3D; xxx
-long_description &#x3D; file: Readme.md # 从文件中读取
-license &#x3D; MIT
-url &#x3D; https:&#x2F;&#x2F;github.com&#x2F;user&#x2F;repo
-classifiers &#x3D; # PyPI的分类，类似于标签，所有条目见 https:&#x2F;&#x2F;pypi.org&#x2F;pypi?%3Aaction&#x3D;list_classifiers
+name = bci
+version = 1.0
+author = xxx
+long_description = file: Readme.md # 从文件中读取
+license = MIT
+url = https://github.com/user/repo
+classifiers = # PyPI的分类，类似于标签，所有条目见 https://pypi.org/pypi?%3Aaction=list_classifiers
     Development Status :: 3 - Alpha
     Programming Language :: Python :: 3
 
 [options]
-packages &#x3D; find: # 自动搜索存在__init__.py的文件夹作为包
-install_requires &#x3D; # 依赖，pip安装时靠的就是这个而不是requirements.txt
+packages = find: # 自动搜索存在__init__.py的文件夹作为包
+install_requires = # 依赖，pip安装时靠的就是这个而不是requirements.txt
     requests
 
 # ssvep.py
 def ssvep():
-    print(&#39;ssvep&#39;)
+    print('ssvep')
 
 # __init__.py
-from .ssvep import ssvep</code></pre>
-
+from .ssvep import ssvep
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="3、安装"><a href="#3、安装" class="headerlink" title="3、安装"></a>3、安装</h4><p>运行setup.py文件即可。</p>
 <h3 id="三、制作wheel安装包"><a href="#三、制作wheel安装包" class="headerlink" title="三、制作wheel安装包"></a>三、制作wheel安装包</h3><p>wheel是python新的发行标准，旨在替代传统的egg，pip &gt;&#x3D;1.4的版本均支持wheel， 使用wheel作为python库的发行文件，有如下好处：</p>
 <ol>
