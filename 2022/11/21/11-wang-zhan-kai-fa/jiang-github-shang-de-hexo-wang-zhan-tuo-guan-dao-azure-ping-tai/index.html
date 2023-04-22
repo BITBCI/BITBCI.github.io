@@ -565,7 +565,7 @@
 <p>路径如下图所示。</p>
 <p><img src="/../../images/11-%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/%E5%B0%86github%E4%B8%8A%E7%9A%84Hexo%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1%E5%88%B0AzureWeb%E5%B9%B3%E5%8F%B0-4.png"></p>
 <p><code>github action</code> 文件内容如下：</p>
-<pre class="language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Azure Static Web Apps CI/CD
+<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Azure Static Web Apps CI/CD
 
 <span class="token key atrule">on</span><span class="token punctuation">:</span>
   <span class="token key atrule">push</span><span class="token punctuation">:</span>
@@ -593,7 +593,7 @@
           <span class="token key atrule">app_build_command</span><span class="token punctuation">:</span> <span class="token string">'npm run deploy'</span></code></pre>
 
 <p>将github仓库的链接配置在<code>_config.yml</code>文件中，如下：</p>
-<pre class="language-yml" data-language="yml"><code class="language-yml"><span class="token comment"># 上传到Azure平台</span>
+<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 上传到Azure平台</span>
 <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
   <span class="token key atrule">type</span><span class="token punctuation">:</span> git
   <span class="token key atrule">repo</span><span class="token punctuation">:</span> git@github.com<span class="token punctuation">:</span>bitbci/BrainCareAzureWeb.git
@@ -815,12 +815,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Ubuntu/">
-                        <span class="chip bg-color">Ubuntu</span>
-                    </a>
-                    
                     <a href="/tags/%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85/">
                         <span class="chip bg-color">驱动安装</span>
+                    </a>
+                    
+                    <a href="/tags/Ubuntu/">
+                        <span class="chip bg-color">Ubuntu</span>
                     </a>
                     
                 </div>
@@ -1006,7 +1006,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">38.9k</span>&nbsp;字
+                class="white-color">38.3k</span>&nbsp;字
             
             
             
