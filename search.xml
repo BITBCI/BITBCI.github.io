@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>优化类科研问题的解决方案</title>
+      <link href="/2023/04/22/2-ke-yan-lun-wen/you-hua-lei-ke-yan-wen-ti-de-jie-jue-fang-an/"/>
+      <url>/2023/04/22/2-ke-yan-lun-wen/you-hua-lei-ke-yan-wen-ti-de-jie-jue-fang-an/</url>
+      
+        <content type="html"><![CDATA[<h2 id="优化类科研问题的解决方案"><a href="#优化类科研问题的解决方案" class="headerlink" title="优化类科研问题的解决方案"></a>优化类科研问题的解决方案</h2><p>科研中很多问题可以抽象为优化问题，俗称为万物皆可优化。<br>本文以制造垃圾桶为例，介绍如何将实际问题抽象为优化问题，并且进行数学求解。</p><h3 id="一、优化问题"><a href="#一、优化问题" class="headerlink" title="一、优化问题"></a>一、优化问题</h3><p>需要制造一个能装100立方米学术垃圾的垃圾桶，要求尽量节约制造成本。补充：每平米垃圾桶造假为10元。</p><h3 id="二、数学建模"><a href="#二、数学建模" class="headerlink" title="二、数学建模"></a>二、数学建模</h3><ol><li><p>约束条件(constraint)<br>垃圾桶的长宽高分别可以表示为x，y，z，垃圾桶体积不能超过100立方米，且x，y，z均大于0<br><img src="/../../images/2-%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/%E4%BC%98%E5%8C%96%E7%B1%BB%E7%A7%91%E7%A0%94%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-1.png"></p><p>$$<br>\begin{array}{l}<br>{\rm{f(x,y,z) &#x3D; x<em>y</em>z &#x3D; 100}}\<br>{\rm{x,y,z &gt; 0}}<br>\end{array}<br>$$</p></li><li><p>目标函数(object&#x2F;cost function)<br>尽量节约制造成本(J)</p><p>$$<br>min J &#x3D; \min g(x,y,z) &#x3D; (2<em>x</em>y + 2<em>x</em>z + 2<em>y</em>z)*10<br>$$</p><p><img src="/../../images/2-%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/%E4%BC%98%E5%8C%96%E7%B1%BB%E7%A7%91%E7%A0%94%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-2.png"></p></li><li><p>问题求解<br>使用数学方法（拉格朗日、非线性规划、共轭梯度等）找到目标函数的极限（最小值）。<br>python中的<code>scipy.optimize</code>提供了解决优化问题的方案。</p></li></ol><p>补充说明：在解决实际问题的过程中，目标函数也可以多个，比如成本+效益+收益，也可以自己定义一些目标函数（即文章创新点）。</p><h3 id="三、编程求解"><a href="#三、编程求解" class="headerlink" title="三、编程求解"></a>三、编程求解</h3><p>要求解的最优化问题的形式如下：</p><p>$$<br>\begin{array}{l}<br>\min J &#x3D; \min g(x,y,z) &#x3D; (2<em>x</em>y + 2<em>x</em>z + 2<em>y</em>z)<em>10\<br>s.t.{\rm{  }}\<br>{\rm{f(x,y,z) &#x3D; x</em>y*z &#x3D; 100}}\<br>{\rm{x,y,z &gt; 0}}<br>\end{array}<br>$$</p><p>代码求解：</p><pre class="language-python3" data-language="python3"><code class="language-python3">from scipy.optimize import minimizeimport numpy as npe &#x3D; 1e-10  # 非常接近0的值fun &#x3D; lambda x: (2*x[0]*x[1]+2*x[0]*x[2]+2*x[1]*x[2])*10  # 约束函数constraint &#x3D; (&#123;&#39;type&#39;: &#39;eq&#39;, &#39;fun&#39;: lambda x: x[0] * x[1] * x[2] - 100&#125;,  # xyz&#x3D;100&#123;&#39;type&#39;: &#39;ineq&#39;, &#39;fun&#39;: lambda x: x[0] - e&#125;,  # x&gt;&#x3D;e，即 x &gt; 0&#123;&#39;type&#39;: &#39;ineq&#39;, &#39;fun&#39;: lambda x: x[1] - e&#125;,&#123;&#39;type&#39;: &#39;ineq&#39;, &#39;fun&#39;: lambda x: x[2] - e&#125;)x0 &#x3D; np.array((1.0, 1.0, 1.0))  # 设置初始值res &#x3D; minimize(fun, x0, method&#x3D;&#39;SLSQP&#39;, constraints&#x3D;constraint)print(&#39;最小值：&#39;, res.fun)print(&#39;最优解：&#39;, res.x)print(&#39;迭代终止是否成功：&#39;, res.success)print(&#39;迭代终止原因：&#39;, res.message)</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 科研论文 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 科研论文 </tag>
+            
+            <tag> 论文思路 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Blender建模流程</title>
       <link href="/2023/04/18/16-jian-ji-she-ji/blender-jian-mo-liu-cheng/"/>
       <url>/2023/04/18/16-jian-ji-she-ji/blender-jian-mo-liu-cheng/</url>
@@ -188,9 +215,9 @@
       
         <tags>
             
-            <tag> 驱动安装 </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> 驱动安装 </tag>
             
         </tags>
       
@@ -215,9 +242,9 @@
       
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> 桌面快捷方式 </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
       
@@ -1400,27 +1427,6 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——P300ERP有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/</url>
-      
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>本赛题基于P300电位脑-机接口数据，测试不同算法的识别性能。并根据测试数据中的正确率(Accuracy)和信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激界面由当前字符和36个字符组成的字符矩阵组成。本实验中，我们将代表当前字符编号的时间标签称为“大标签”，将代表字符矩阵行列编号的时间标签称为“小标签”。<br>每个试次中被试注视一个字符，以大标签作为起始，大标签出现后1s字符矩阵开始以行或列为单位随机地闪烁，每行&#x2F;列闪烁时长175ms，闪烁开始时刻出现代表当前闪烁行&#x2F;列编号的小标签，所有行和列闪烁一次称为一轮(共12行&#x2F;列)，每个字符6轮，总计72个小标签。即每个试次的时长为1+0.175126&#x3D;13.6秒。<br>大标签：包含26个字母和10个数字，共36种。在训练数据集中，字符与大标签的对应关系如下表，在测试数据集中，大标签统一为“100”，需要参赛者根据识别算法，计算出正确的大标签并报告。</p><p>小标签：包含6行6列，共12种，由数字1到12表示。其中数字1到6代表第1至6列，数字7到12代表第1至6行。<br>特别说明的是，每个字符的最后一个（第72个）小标签闪烁之后475ms，下一个字符的大标签刺激就会出现；即如果使用最后一个小标签的数据，可能需要截取到下一个字符的大标签出现之后的信息，需要参赛人员注意。报告超时的说明，具体见算法规范部分。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含5个字符的刺激试次。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的标签信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx">https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx</a><br>提取码：6btx<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开源数据集 </category>
-          
-          <category> 脑机接口 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2019年脑机接口大赛——SSVEP干电极有训练数据集</title>
       <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/"/>
       <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/</url>
@@ -1442,11 +1448,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——P300ERP有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>随着机器学习思想的火热传播，通过数据预先训练被认为是一种有效提高系统性能的方法。本赛题基于稳态视觉诱发电位脑-机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续3.5-4.5s，开始0.5s为目标提示阶段，屏幕中会出现一个红块提示目标位置并持续0.5s。之后3-4s为刺激阶段，刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。</p><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。</p><p>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。</p><p>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。</p><p>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。</p><p>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug">https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug</a><br>提取码：i3ug<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>本赛题基于P300电位脑-机接口数据，测试不同算法的识别性能。并根据测试数据中的正确率(Accuracy)和信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激界面由当前字符和36个字符组成的字符矩阵组成。本实验中，我们将代表当前字符编号的时间标签称为“大标签”，将代表字符矩阵行列编号的时间标签称为“小标签”。<br>每个试次中被试注视一个字符，以大标签作为起始，大标签出现后1s字符矩阵开始以行或列为单位随机地闪烁，每行&#x2F;列闪烁时长175ms，闪烁开始时刻出现代表当前闪烁行&#x2F;列编号的小标签，所有行和列闪烁一次称为一轮(共12行&#x2F;列)，每个字符6轮，总计72个小标签。即每个试次的时长为1+0.175126&#x3D;13.6秒。<br>大标签：包含26个字母和10个数字，共36种。在训练数据集中，字符与大标签的对应关系如下表，在测试数据集中，大标签统一为“100”，需要参赛者根据识别算法，计算出正确的大标签并报告。</p><p>小标签：包含6行6列，共12种，由数字1到12表示。其中数字1到6代表第1至6列，数字7到12代表第1至6行。<br>特别说明的是，每个字符的最后一个（第72个）小标签闪烁之后475ms，下一个字符的大标签刺激就会出现；即如果使用最后一个小标签的数据，可能需要截取到下一个字符的大标签出现之后的信息，需要参赛人员注意。报告超时的说明，具体见算法规范部分。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含5个字符的刺激试次。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的标签信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx">https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx</a><br>提取码：6btx<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -1505,11 +1511,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——运动想象有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——SSVEP有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>运动想象是一种自发可控的脑电行为，是更加自然、更加实用的人机接口方式，使用者仅仅通过“想象”即可实现控制。近些年，基于运动想象的脑机接口已经在医疗康复、军事、娱乐等方面发挥重要作用。本赛题希望通过更高的识别性能以帮助运动想象脑-机接口获得更为广泛的运用。<br>本赛题基于多类运动想象脑机接口的EEG数据，测试不同算法在有限训练数据条件下对运动想象脑电模式的识别性能，并根据多名受试者测试数据中的信息传输率（Information transfer rate，ITR）确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>本实验原始EEG数据由博睿康64导联设备采集（仅包含59个导联的脑电数据，60-64导联无效），采样率为1000Hz，数据统一进行50Hz陷波处理。一次完整实验为一个record，一名被试分3天完成多个record；实验数据以record为单位，每个record中均为连续采集EEG数据。每个record包含2个block（睁眼1min、闭眼1min）和5个session，session与session之间不少于1.5分钟的休息时间；每个session包括20*N个trial（每类运动想象任务20个trial，N：运动想象任务类别数，如N为2表示任务为左手运动想象和右手运动想象两类，如N为3表示任务为左手运动想象、右手运动想象、双脚运动想象三类），每个record过程如图1所示。 每个trial包含1.5s提示、4s运动想象任务、2s休息，事件标签开始于0时刻，如图2所示。以上不同任务相对应的标签信息如表1所示。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png" alt="单个trial运动想象流程图"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>同步有训练集运动想象赛题，提供训练集（每个被试的训练数据包含2个block{睁眼1min、闭眼1min}和3个运动想象任务session），训练集数据标识了事件时刻、事件类型等建模关键信息。<br>每个被试的测试数据和训练数据来自同一个record，通过被试ID与训练数据对应。每个被试对应两组测试数据，每组测试数据包含20*N个trial（三类每组60个，两类每组40个）。测试数据经数据模型封装后，由参赛者通过赛题框架接口调取。</p><p>BXXOOT 、BXXOOE 、TXXOOT 、TXXOOE, XX对应人员编号，OO对应数据编号，数据集按照题库中人员和数据编号统一命名，最终的取值，由专家组抽签得到。以上B0101T等仅做示范，比赛中可能出现B0801T等其他数据，参赛队员根据赛题给出的训练集对应建立模型即可。<br>B开头数据为二类数据，T开头数据为三类数据。B0101E.mat 等删除线数据集，比赛时通过系统获得。数据集由专家组抽签选取，部分数据（包括测试数据）将公开用于本地测试。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-5.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr">https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr</a><br>提取码：6qsr<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>随着机器学习思想的火热传播，通过数据预先训练被认为是一种有效提高系统性能的方法。本赛题基于稳态视觉诱发电位脑-机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续3.5-4.5s，开始0.5s为目标提示阶段，屏幕中会出现一个红块提示目标位置并持续0.5s。之后3-4s为刺激阶段，刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。</p><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。</p><p>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。</p><p>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。</p><p>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。</p><p>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug">https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug</a><br>提取码：i3ug<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -1531,6 +1537,27 @@
       <url>/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
       
         <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于运动想象的BCI（Motor Imagery BCI, MI-BCI）是BCI的主要范式之一，通过检测识别用户MI产生的EEG来判断用户意图，进而实现人脑与外部设备之间的直接通信与控制。用户在运动想象的过程中，大脑皮层会产生两种变化明显的节律信号，分别是8-15Hz的Mu节律信号和 18-24Hz 的Beta节律信号。同时，大脑皮层对侧运动感觉区的脑电节律能量会明显降低，而同侧运动感觉区的脑电节律能量增大，这种现象称为事件相关去同步（Event Related Desynchronization，ERD）&#x2F;事件相关同步（Event Related Synchronization，ERS）。<br>并且不同部位的躯体运动想象与该躯体对应的感觉运动皮层 ERD&#x2F;ERS 现象有关，即 ERD&#x2F;ERS 现象有空间分布的特性。正是因为运动想象脑电信号空间分布的特性，构成了解码运动想象思维信号的生理基础，采用合适的特征提取算法就可以较好地识别患者的运动意图。<br>下图展示了对某位被试运动想象产生的脑电信号，选择 8-15Hz 和 18-24Hz 的频带范围作为 ERD&#x2F;ERS 特定频带，分别计算出的 C3、C4 通道脑电数据的左手和右手的想象能量。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>下图展示了某位受试在进行运动想象时，用32导电极帽采集的各通道的部分脑电数据。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-4.png"><br>典型算法</p><p>PSD（功率谱估计）<br>功率谱估计是脑电信号频域分析的典型方法之一，把幅度随时间变化的脑电信号变换为脑电功率随频率变化的谱图，从而可以直观地观察到脑电节律的分布与变化情况。经典功率谱估计是在较长的数据中截取一段有限长的数据做分析，根据截取的样本估计出整体的功率谱。基本思想就是把一长度为N的数据分成L段，每段M个数据，分段数据先于窗函数W(n)相乘，分别计算出每一段的功率谱，最后叠加求取平均值作为最终功率谱估计。<br>算法过程：使用Cz、C3和C4这3个导联的数据，通过Cz消除C3、C4的相关性，以8-15Hz频段C3、C4导联的功率谱差值作为特征向量，并结合LDA进行分类。<br>用Welch功率谱密度估计法对C3和C4的EEG数据进行平均功率谱分析，分别得到进行左手MI的EEG平均功率谱和进行右手MI的EEG平均功率谱。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"></p><p>参考文献<br>Herman P, Prasad G, Mcginnity T M, et al. Comparative Analysis of Spectral Approaches to Feature Extraction for EEG-Based Motor Imagery Classification[J]. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2008, 16(4):317-326.</p><p>LDA<br>LDA的目标是训练一个超平面，然后依据选定的类来划分信息，一般是选定两类来进行分类。基本原理如下图所示。向量组取决于超平面的交叉，方向由向量组确定。通过寻找预测两类源的最优值以及减小类内的修正就可以找到超平面。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-6.png"><br>其中，假设是维特征向量，，相应的基向量为，则线性判别函数的一般形式为：</p><p>其中，是权向量（也称投影矩阵），是阈值，是分类器的输出。</p><p>参考文献<br>Keirn Z A, Aunon J I. A new mode of communication between man and his surroundings[J]. IEEE Transactions on Biomedical Engineering, 1990, 37(12):1209-1214.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开源数据集 </category>
+          
+          <category> 脑机接口 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2019年脑机接口大赛——运动想象有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>运动想象是一种自发可控的脑电行为，是更加自然、更加实用的人机接口方式，使用者仅仅通过“想象”即可实现控制。近些年，基于运动想象的脑机接口已经在医疗康复、军事、娱乐等方面发挥重要作用。本赛题希望通过更高的识别性能以帮助运动想象脑-机接口获得更为广泛的运用。<br>本赛题基于多类运动想象脑机接口的EEG数据，测试不同算法在有限训练数据条件下对运动想象脑电模式的识别性能，并根据多名受试者测试数据中的信息传输率（Information transfer rate，ITR）确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>本实验原始EEG数据由博睿康64导联设备采集（仅包含59个导联的脑电数据，60-64导联无效），采样率为1000Hz，数据统一进行50Hz陷波处理。一次完整实验为一个record，一名被试分3天完成多个record；实验数据以record为单位，每个record中均为连续采集EEG数据。每个record包含2个block（睁眼1min、闭眼1min）和5个session，session与session之间不少于1.5分钟的休息时间；每个session包括20*N个trial（每类运动想象任务20个trial，N：运动想象任务类别数，如N为2表示任务为左手运动想象和右手运动想象两类，如N为3表示任务为左手运动想象、右手运动想象、双脚运动想象三类），每个record过程如图1所示。 每个trial包含1.5s提示、4s运动想象任务、2s休息，事件标签开始于0时刻，如图2所示。以上不同任务相对应的标签信息如表1所示。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png" alt="单个trial运动想象流程图"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>同步有训练集运动想象赛题，提供训练集（每个被试的训练数据包含2个block{睁眼1min、闭眼1min}和3个运动想象任务session），训练集数据标识了事件时刻、事件类型等建模关键信息。<br>每个被试的测试数据和训练数据来自同一个record，通过被试ID与训练数据对应。每个被试对应两组测试数据，每组测试数据包含20*N个trial（三类每组60个，两类每组40个）。测试数据经数据模型封装后，由参赛者通过赛题框架接口调取。</p><p>BXXOOT 、BXXOOE 、TXXOOT 、TXXOOE, XX对应人员编号，OO对应数据编号，数据集按照题库中人员和数据编号统一命名，最终的取值，由专家组抽签得到。以上B0101T等仅做示范，比赛中可能出现B0801T等其他数据，参赛队员根据赛题给出的训练集对应建立模型即可。<br>B开头数据为二类数据，T开头数据为三类数据。B0101E.mat 等删除线数据集，比赛时通过系统获得。数据集由专家组抽签选取，部分数据（包括测试数据）将公开用于本地测试。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-5.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr">https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr</a><br>提取码：6qsr<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -1674,35 +1701,6 @@
     
     
     <entry>
-      <title>Hexo博客文章加密（尚未解决）</title>
-      <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/"/>
-      <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/</url>
-      
-        <content type="html"><![CDATA[<h2 id="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"><a href="#目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。" class="headerlink" title="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"></a>目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。</h2><p>参考资料：</p><ol><li><code>matery</code>主题自带的加密方法<br><a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-4">Hexo博客主题之hexo-theme-matery的介绍 | 闪烁之狐 (blinkfox.com)</a></li><li><code>hexo-blog-encrypt</code>插件加密方法<br><a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt&#x2F;ReadMe.zh.md at master · D0n9X1n&#x2F;hexo-blog-encrypt (github.com)</a></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 前端 </category>
-          
-          <category> Hexo建站 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> 加密 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hexo主题Matery的介绍与相关配置</title>
       <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/"/>
       <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</url>
@@ -1724,6 +1722,35 @@
             <tag> Hexo </tag>
             
             <tag> matery </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo博客文章加密（尚未解决）</title>
+      <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/"/>
+      <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/</url>
+      
+        <content type="html"><![CDATA[<h2 id="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"><a href="#目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。" class="headerlink" title="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"></a>目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。</h2><p>参考资料：</p><ol><li><code>matery</code>主题自带的加密方法<br><a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-4">Hexo博客主题之hexo-theme-matery的介绍 | 闪烁之狐 (blinkfox.com)</a></li><li><code>hexo-blog-encrypt</code>插件加密方法<br><a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt&#x2F;ReadMe.zh.md at master · D0n9X1n&#x2F;hexo-blog-encrypt (github.com)</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> Hexo建站 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 加密 </tag>
             
         </tags>
       
