@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>信号复杂性的评估方法--各种熵</title>
+      <link href="/2024/03/13/2-ke-yan-lun-wen/xin-hao-fu-za-xing-de-ping-gu-fang-fa-ge-chong-shang/"/>
+      <url>/2024/03/13/2-ke-yan-lun-wen/xin-hao-fu-za-xing-de-ping-gu-fang-fa-ge-chong-shang/</url>
+      
+        <content type="html"><![CDATA[<h2 id="信号复杂性的评估方法–各种熵"><a href="#信号复杂性的评估方法–各种熵" class="headerlink" title="信号复杂性的评估方法–各种熵"></a>信号复杂性的评估方法–各种熵</h2><h3 id="一、熵-Entropy"><a href="#一、熵-Entropy" class="headerlink" title="一、熵 (Entropy)"></a>一、熵 (Entropy)</h3><p>熵是衡量系统混乱程度的物理量，在热力学中，它代表了系统状态的无序程度。 在信息论中，熵被用来衡量信息的不确定性或信息量。 信息熵 (Information Entropy)是熵在信息论中的应用，由克劳德·香农提出，用于量化信息中包含的不确定性，很多情况下会把信息熵简称为熵。</p><p>这些熵值（相对熵、KL散度、交叉熵、模糊熵、样本熵、近似熵）都是用来表征信号序列复杂程度的无量纲指标，熵值越大代表信号复杂度越大。 信号复杂程度的表征在机械设备状态监测、故障诊断以及心率、血压信号检测中都十分有用；能够抵抗环境干扰的影响，广泛应用于特征提取的领域（如生物医学信号处理）当中。</p><p>对于一个离散随机变量 \(X\)，其概率分布为 \(P(X)\)，信息熵 \(H(X)\) 可以表示为\(X\)所有可能值的概率分布的函数，定义为：<br>\[H(X) &#x3D; -\sum_{i} P(x_i) \log_b P(x_i)\]<br>其中，\(x_i\) 是 \(X\) 的第 \(i\) 个可能值，\(b\) 是对数的底，常见的 \(b\) 为 2 或自然底数 \(e\)，分别对应比特和奈特作为信息的单位。</p><h3 id="二、各种熵的定义"><a href="#二、各种熵的定义" class="headerlink" title="二、各种熵的定义"></a>二、各种熵的定义</h3><h4 id="1、相对熵-Relative-Entropy-x2F-KL散度-Kullback-Leibler-Divergence"><a href="#1、相对熵-Relative-Entropy-x2F-KL散度-Kullback-Leibler-Divergence" class="headerlink" title="1、相对熵 (Relative Entropy) &#x2F; KL散度 (Kullback-Leibler Divergence)"></a>1、相对熵 (Relative Entropy) &#x2F; KL散度 (Kullback-Leibler Divergence)</h4><p>相对熵，也称为KL散度，是衡量两个概率分布P和Q差异的一种方法。它是非对称的，表示在同一个随机变量上用Q来近似P时损失的信息量。其公式表达了从P到Q的不精确度量。</p><p>对于两个离散概率分布 \(P(X)\) 和 \(Q(X)\) 上的随机变量 \(X\)，KL散度定义为：<br>\[D_{KL}(P || Q) &#x3D; \sum_{i} P(x_i) \log \frac{P(x_i)}{Q(x_i)}\]<br>这里，\(D_{KL}(P || Q)\) 不是对称的，即 \(D_{KL}(P || Q) \neq D_{KL}(Q || P)\)。</p><h4 id="2、交叉熵-Cross-Entropy"><a href="#2、交叉熵-Cross-Entropy" class="headerlink" title="2、交叉熵 (Cross Entropy)"></a>2、交叉熵 (Cross Entropy)</h4><p>交叉熵是在分类问题中常用的一个概念，用于衡量两个概率分布之间的差异，特别是在机器学习的分类任务中，用于衡量实际输出与期望输出的差异。对于两个概率分布P和Q，交叉熵的计算包含了P分布的熵以及P分布相对于Q分布的KL散度。</p><p>对于两个离散概率分布 \(P(X)\) 和 \(Q(X)\)，交叉熵 \(H(P, Q)\) 定义为：<br>\[H(P, Q) &#x3D; -\sum_{i} P(x_i) \log Q(x_i)\]<br>交叉熵衡量的是，在真实分布为 \(P\) 的情况下，使用分布 \(Q\) 来编码事件所需的平均比特数。</p><h4 id="3、近似熵-Approximate-Entropy，ApEn"><a href="#3、近似熵-Approximate-Entropy，ApEn" class="headerlink" title="3、近似熵 (Approximate Entropy，ApEn)"></a>3、近似熵 (Approximate Entropy，ApEn)</h4><p>近似熵由 Steven M. Pincus 于 1991年从衡量信号序列复杂性的角度提出的[1]。 近似熵是衡量时间序列数据复杂度的一种方法，用于量化序列中新模式出现的概率，与样本熵相似但计算方式有所不同。近似熵较高意味着序列包含更多的不可预测性。</p><p>近似熵公式为：<br>\[ApEn(m,r)&#x3D;\phi^{m}(r)-\phi^{m+1}(r)\]</p><p>参数选择：</p><ul><li>\(m\) 是时间序列中相比较的数据点的数量，通常选择m&#x3D;2；</li><li>\(r\) 是相似度容忍度，\(r\)在0.1和0.25 \(SD(x)\)(\(SD(x)\)是序列的标准差)之间， ApEn有比较合理的统计特性；</li><li>\(N\) 是时间序列的总数据点数，一般输入点数要控制在100到5000这个范围内。</li></ul><p>推导过程：<br><img src="/../../images/2-%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/%E4%BF%A1%E5%8F%B7%E5%A4%8D%E6%9D%82%E6%80%A7%E7%9A%84%E8%AF%84%E4%BC%B0%E6%96%B9%E6%B3%95--%E5%90%84%E7%A7%8D%E7%86%B5-1.jpg"></p><h4 id="4、样本熵-Sample-Entropy，SamEn"><a href="#4、样本熵-Sample-Entropy，SamEn" class="headerlink" title="4、样本熵 (Sample Entropy，SamEn)"></a>4、样本熵 (Sample Entropy，SamEn)</h4><p>样本熵（Sample Entropy）是Richman等人提出的一种与近似熵不同的不计数自身匹配的统计量[3]，是对近似熵算法的改进。 样本熵是一种用于量化时间序列复杂性的指标，与模糊熵类似，但在计算过程中不考虑序列中重复模式的自匹配，因此它对数据长度较不敏感，适用于分析较短的数据序列。</p><p>样本熵定义为：</p><p>$$<br>SampEn(m,r)&#x3D;lnB^{m}(r)-lnA^{m}(r)<br>$$</p><p>参数选择：</p><ul><li>\( m \) 是时间序列中相比较的数据点的数量，通常m取1或者2，且取m&#x3D;2更为多见；</li><li>\( r \) 是相似度容忍度，通常\(r\)在0.1和0.25 \(SD(x)\)之间。</li></ul><p>推导过程：<br><img src="/../../images/2-%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/%E4%BF%A1%E5%8F%B7%E5%A4%8D%E6%9D%82%E6%80%A7%E7%9A%84%E8%AF%84%E4%BC%B0%E6%96%B9%E6%B3%95--%E5%90%84%E7%A7%8D%E7%86%B5-2.jpg"></p><h4 id="5、模糊熵-Fuzzy-Entropy-FuzzyEn"><a href="#5、模糊熵-Fuzzy-Entropy-FuzzyEn" class="headerlink" title="5、模糊熵 (Fuzzy Entropy, FuzzyEn)"></a>5、模糊熵 (Fuzzy Entropy, FuzzyEn)</h4><p>模糊熵（Fuzzy Entropy）是陈伟婷[5]在2007年提出的，初衷是用于肌电型号处理中，不过其后在故障诊断、图像处理等领域也有着广泛的应用。</p><p>模糊熵表示为：<br>\[ FuzzyEn(m,n,r)&#x3D;ln\phi^{m}(n,r)-ln\phi^{m+1}(n,r) \]</p><p>参数选择：</p><ul><li>\(m\) 是时间序列中相比较的数据点的数量，通常选择m&#x3D;2；</li><li>\(r\) 是模糊相似度阈值，\(r\)在0.1和0.25 \(SD(x)\)(\(SD(x)\)是序列的标准差)之间；</li><li>\(n\)  n 决定了相似容限边界的梯度，n 越大则梯度越大，n 在模糊熵向量间相似性的计算过程中起着权重的作用。为了捕获尽量多的细节信息，陈伟婷建议计算时取较小的整数值，如2或3等。</li></ul><p>推导过程：<br><img src="/../../images/2-%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/%E4%BF%A1%E5%8F%B7%E5%A4%8D%E6%9D%82%E6%80%A7%E7%9A%84%E8%AF%84%E4%BC%B0%E6%96%B9%E6%B3%95--%E5%90%84%E7%A7%8D%E7%86%B5-3.jpg"></p><h4 id="6、排列熵-Permutation-Entropy"><a href="#6、排列熵-Permutation-Entropy" class="headerlink" title="6、排列熵 (Permutation Entropy)"></a>6、排列熵 (Permutation Entropy)</h4><p>排列熵（Permutation Entropy, PE）是由Bandt和Pompe[7]提出的一种检测时间序列随机性和动力学突变行为的方法，具有计算简单、快速，抗噪能力强，适合在线监测等优点，已经被广泛应用于肌电信号和心率信号分析，气温复杂度以及机械故障检测等。</p><h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><p>以下为两个github代码仓库，提供了部分熵的python实现。</p><h4 id="1、pyEntropy"><a href="#1、pyEntropy" class="headerlink" title="1、pyEntropy"></a>1、pyEntropy</h4><p><a href="https://github.com/nikdon/pyEntropy">nikdon&#x2F;pyEntropy: Entropy for Python (github.com)</a></p><p>包括：</p><pre class="line-numbers language-terminal"><code class="language-terminal">Shannon Entropy shannon_entropySample Entropy sample_entropyMultiscale Entropy multiscale_entropyComposite Multiscale Entropy composite_multiscale_entropyPermutation Entropy permutation_entropyMultiscale Permutation Entropy multiscale_permutation_entropyWeighted Permutation Entropy weighted_permutation_entropy<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="2、antropy"><a href="#2、antropy" class="headerlink" title="2、antropy"></a>2、antropy</h4><p><a href="https://github.com/raphaelvallat/antropy">raphaelvallat&#x2F;antropy: AntroPy: entropy and complexity of (EEG) time-series in Python (github.com)</a></p><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np<span class="token keyword">import</span> antropy <span class="token keyword">as</span> antnp<span class="token punctuation">.</span>random<span class="token punctuation">.</span>seed<span class="token punctuation">(</span><span class="token number">1234567</span><span class="token punctuation">)</span>x <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>normal<span class="token punctuation">(</span>size<span class="token operator">=</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># Permutation entropy</span><span class="token keyword">print</span><span class="token punctuation">(</span>ant<span class="token punctuation">.</span>perm_entropy<span class="token punctuation">(</span>x<span class="token punctuation">,</span> normalize<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># Spectral entropy</span><span class="token keyword">print</span><span class="token punctuation">(</span>ant<span class="token punctuation">.</span>spectral_entropy<span class="token punctuation">(</span>x<span class="token punctuation">,</span> sf<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> method<span class="token operator">=</span><span class="token string">'welch'</span><span class="token punctuation">,</span> normalize<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># Singular value decomposition entropy</span><span class="token keyword">print</span><span class="token punctuation">(</span>ant<span class="token punctuation">.</span>svd_entropy<span class="token punctuation">(</span>x<span class="token punctuation">,</span> normalize<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># Approximate entropy</span><span class="token keyword">print</span><span class="token punctuation">(</span>ant<span class="token punctuation">.</span>app_entropy<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># Sample entropy</span><span class="token keyword">print</span><span class="token punctuation">(</span>ant<span class="token punctuation">.</span>sample_entropy<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># Hjorth mobility and complexity</span><span class="token keyword">print</span><span class="token punctuation">(</span>ant<span class="token punctuation">.</span>hjorth_params<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># Number of zero-crossings</span><span class="token keyword">print</span><span class="token punctuation">(</span>ant<span class="token punctuation">.</span>num_zerocross<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># Lempel-Ziv complexity</span><span class="token keyword">print</span><span class="token punctuation">(</span>ant<span class="token punctuation">.</span>lziv_complexity<span class="token punctuation">(</span><span class="token string">'01111000011001'</span><span class="token punctuation">,</span> normalize<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="四、参考资料"><a href="#四、参考资料" class="headerlink" title="四、参考资料"></a>四、参考资料</h3><ul><li><a href="https://www.zhihu.com/question/266285555">模糊熵、样本熵、近似熵都是什么？反映了什么？ - 知乎 (zhihu.com)</a></li><li><a href="https://www.bilibili.com/video/BV1Wq4y1L7Tu/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=f7d11d40abadd693d84678b18a1f260d">一个视频彻底搞懂交叉熵、信息熵、相对熵、KL散度、交叉熵损失、交叉熵损失函数、softmax函数、softmax求概率、各种熵的公式_哔哩哔哩_bilibili</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 科研论文 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 科研论文 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>开源自动驾驶驴车Donkey-Car项目</title>
       <link href="/2024/01/02/12-xiang-mu-kai-fa/kai-yuan-zi-dong-jia-shi-lu-che-donkey-car-xiang-mu/"/>
       <url>/2024/01/02/12-xiang-mu-kai-fa/kai-yuan-zi-dong-jia-shi-lu-che-donkey-car-xiang-mu/</url>
@@ -632,9 +657,9 @@
       
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> 驱动安装 </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
       
@@ -659,9 +684,9 @@
       
         <tags>
             
-            <tag> 桌面快捷方式 </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> 桌面快捷方式 </tag>
             
         </tags>
       
@@ -1528,33 +1553,6 @@
     
     
     <entry>
-      <title>使用sphinx自动生成Python项目文档</title>
-      <link href="/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-sheng-cheng-python-xiang-mu-wen-dang/"/>
-      <url>/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-sheng-cheng-python-xiang-mu-wen-dang/</url>
-      
-        <content type="html"><![CDATA[<h2 id="使用sphinx自动Python项目文档"><a href="#使用sphinx自动Python项目文档" class="headerlink" title="使用sphinx自动Python项目文档"></a>使用sphinx自动Python项目文档</h2><h3 id="一、sphinx简介"><a href="#一、sphinx简介" class="headerlink" title="一、sphinx简介"></a>一、sphinx简介</h3><p>Sphinx能够轻易地创建智慧和优雅的文档，出自Georg Brandl之手，在BSD许可证下授权。<br>它能够把一组 reStructuredText 格式的文件转换成各种输出格式，而且自动地生成交叉引用，生成目录等。<br>也就是说，如果有一个目录，里面包含一堆reST格式的文档（可能子目录里面也同样存在reST格式的文档），<br>Sphinx能够生成一个漂亮的组织结构以及便于浏览和导航的HTML 文件（这些文件在其他的文件夹中）。<br>当然对于同样的来源文件（reST格式），它也能够生成一个能够被编译（生成）PDF版本的LaTeX格式的文件。</p><h3 id="二、rst文件"><a href="#二、rst文件" class="headerlink" title="二、rst文件"></a>二、rst文件</h3><p>rst(ReStructuredText) 是一种用于文本数据的文件格式，主要作为 Python 编程语言技术文档的描述语言。<br>其旨在为 Python 创建一组类似于 Java 的 Javadoc的功能说明文档；<br>Docutils 可以从从 Python 程序中提取注释和信息，并将它们格式化为各种形式的程序文档，rst就是其中的一种。</p><p>rst一般组织在python源文件的doc&#x2F;docs目录下，可以通过sphinx工具将rst文件转化为html文件易于阅读。<br>sphinx可以通过pip进行安装，可执行文件在python安装目录下的Scripts。<br>安装过Anaconda的sphinx已经安装，可以直接打开Anaconda的命令行执行。</p><h3 id="三、安装sphinx-Window"><a href="#三、安装sphinx-Window" class="headerlink" title="三、安装sphinx(Window)"></a>三、安装sphinx(Window)</h3><pre class="line-numbers language-terminal"><code class="language-terminal">pip install sphinxpip install sphinx_rtd_them<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="四、生成文档"><a href="#四、生成文档" class="headerlink" title="四、生成文档"></a>四、生成文档</h3><pre class="line-numbers language-terminal"><code class="language-terminal">sphinx-build -b html docs build# 进入源文件目录（docs的上级目录），docs是rst所在的文件夹# build是输出html的目录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="五、使用make-bat批处理文件"><a href="#五、使用make-bat批处理文件" class="headerlink" title="五、使用make.bat批处理文件"></a>五、使用make.bat批处理文件</h3><h4 id="1、配置conf-py文件"><a href="#1、配置conf-py文件" class="headerlink" title="1、配置conf.py文件"></a>1、配置conf.py文件</h4><p>主要修改的参数如下：</p><pre class="line-numbers language-terminal"><code class="language-terminal">sys.path.append(os.path.relpath('..'))# 此处采用的是相对路径，就是项目相对于doc的位置<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h4 id="2、执行-make-bat-html"><a href="#2、执行-make-bat-html" class="headerlink" title="2、执行 .\make.bat html"></a>2、执行 .\make.bat html</h4><pre class="line-numbers language-terminal"><code class="language-terminal">.\make.bat html<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Python开发 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Python开发 </tag>
-            
-            <tag> sphinx </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>傅里叶变换的本质与Python代码实现</title>
       <link href="/2022/05/06/4-python-kai-fa/fu-li-xie-bian-huan-de-ben-zhi-yu-python-dai-ma-shi-xian/"/>
       <url>/2022/05/06/4-python-kai-fa/fu-li-xie-bian-huan-de-ben-zhi-yu-python-dai-ma-shi-xian/</url>
@@ -1574,6 +1572,33 @@
             <tag> Python开发 </tag>
             
             <tag> 傅里叶变换 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用sphinx自动生成Python项目文档</title>
+      <link href="/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-sheng-cheng-python-xiang-mu-wen-dang/"/>
+      <url>/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-sheng-cheng-python-xiang-mu-wen-dang/</url>
+      
+        <content type="html"><![CDATA[<h2 id="使用sphinx自动Python项目文档"><a href="#使用sphinx自动Python项目文档" class="headerlink" title="使用sphinx自动Python项目文档"></a>使用sphinx自动Python项目文档</h2><h3 id="一、sphinx简介"><a href="#一、sphinx简介" class="headerlink" title="一、sphinx简介"></a>一、sphinx简介</h3><p>Sphinx能够轻易地创建智慧和优雅的文档，出自Georg Brandl之手，在BSD许可证下授权。<br>它能够把一组 reStructuredText 格式的文件转换成各种输出格式，而且自动地生成交叉引用，生成目录等。<br>也就是说，如果有一个目录，里面包含一堆reST格式的文档（可能子目录里面也同样存在reST格式的文档），<br>Sphinx能够生成一个漂亮的组织结构以及便于浏览和导航的HTML 文件（这些文件在其他的文件夹中）。<br>当然对于同样的来源文件（reST格式），它也能够生成一个能够被编译（生成）PDF版本的LaTeX格式的文件。</p><h3 id="二、rst文件"><a href="#二、rst文件" class="headerlink" title="二、rst文件"></a>二、rst文件</h3><p>rst(ReStructuredText) 是一种用于文本数据的文件格式，主要作为 Python 编程语言技术文档的描述语言。<br>其旨在为 Python 创建一组类似于 Java 的 Javadoc的功能说明文档；<br>Docutils 可以从从 Python 程序中提取注释和信息，并将它们格式化为各种形式的程序文档，rst就是其中的一种。</p><p>rst一般组织在python源文件的doc&#x2F;docs目录下，可以通过sphinx工具将rst文件转化为html文件易于阅读。<br>sphinx可以通过pip进行安装，可执行文件在python安装目录下的Scripts。<br>安装过Anaconda的sphinx已经安装，可以直接打开Anaconda的命令行执行。</p><h3 id="三、安装sphinx-Window"><a href="#三、安装sphinx-Window" class="headerlink" title="三、安装sphinx(Window)"></a>三、安装sphinx(Window)</h3><pre class="line-numbers language-terminal"><code class="language-terminal">pip install sphinxpip install sphinx_rtd_them<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="四、生成文档"><a href="#四、生成文档" class="headerlink" title="四、生成文档"></a>四、生成文档</h3><pre class="line-numbers language-terminal"><code class="language-terminal">sphinx-build -b html docs build# 进入源文件目录（docs的上级目录），docs是rst所在的文件夹# build是输出html的目录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="五、使用make-bat批处理文件"><a href="#五、使用make-bat批处理文件" class="headerlink" title="五、使用make.bat批处理文件"></a>五、使用make.bat批处理文件</h3><h4 id="1、配置conf-py文件"><a href="#1、配置conf-py文件" class="headerlink" title="1、配置conf.py文件"></a>1、配置conf.py文件</h4><p>主要修改的参数如下：</p><pre class="line-numbers language-terminal"><code class="language-terminal">sys.path.append(os.path.relpath('..'))# 此处采用的是相对路径，就是项目相对于doc的位置<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h4 id="2、执行-make-bat-html"><a href="#2、执行-make-bat-html" class="headerlink" title="2、执行 .\make.bat html"></a>2、执行 .\make.bat html</h4><pre class="line-numbers language-terminal"><code class="language-terminal">.\make.bat html<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python开发 </tag>
+            
+            <tag> sphinx </tag>
             
         </tags>
       
@@ -1665,33 +1690,6 @@
     
     
     <entry>
-      <title>如何将要Win10电脑升级到Win11</title>
-      <link href="/2022/05/03/9-ban-gong-ji-qiao/ru-he-jiang-yao-win10-dian-nao-sheng-ji-dao-win11/"/>
-      <url>/2022/05/03/9-ban-gong-ji-qiao/ru-he-jiang-yao-win10-dian-nao-sheng-ji-dao-win11/</url>
-      
-        <content type="html"><![CDATA[<h2 id="如何将要Win10电脑升级到Win11"><a href="#如何将要Win10电脑升级到Win11" class="headerlink" title="如何将要Win10电脑升级到Win11"></a>如何将要Win10电脑升级到Win11</h2><h3 id="1、检查电脑是否满足升级要求"><a href="#1、检查电脑是否满足升级要求" class="headerlink" title="1、检查电脑是否满足升级要求"></a>1、检查电脑是否满足升级要求</h3><p>MicroSoft提供了PCHealthCheck（电脑健康状况检查）软件，检查电脑硬件是否满足升级需求。</p><p><img src="/../../images/9-%E5%8A%9E%E5%85%AC%E6%8A%80%E5%B7%A7/%E5%A6%82%E4%BD%95%E5%B0%86%E8%A6%81Win10%E7%94%B5%E8%84%91%E5%8D%87%E7%BA%A7%E5%88%B0Win11-1.png"></p><h3 id="2、开启TPM2-0"><a href="#2、开启TPM2-0" class="headerlink" title="2、开启TPM2.0"></a>2、开启TPM2.0</h3><p>如果已经开启，则跳过该步骤。<br>对于不同型号的电脑，开启方法不同。比如dell，可以去网上百度开启方法。<br>如图所示，即为满足升级要求。<br><img src="/../../images/9-%E5%8A%9E%E5%85%AC%E6%8A%80%E5%B7%A7/%E5%A6%82%E4%BD%95%E5%B0%86%E8%A6%81Win10%E7%94%B5%E8%84%91%E5%8D%87%E7%BA%A7%E5%88%B0Win11-2.png"></p><h3 id="3、使用Win11安装助手进行在线安装"><a href="#3、使用Win11安装助手进行在线安装" class="headerlink" title="3、使用Win11安装助手进行在线安装"></a>3、使用Win11安装助手进行在线安装</h3><p>Win11安装助手下载链接为：<a href="https://www.microsoft.com/zh-cn/software-download/windows11">Download Win11安装助手</a><br><img src="/../../images/9-%E5%8A%9E%E5%85%AC%E6%8A%80%E5%B7%A7/%E5%A6%82%E4%BD%95%E5%B0%86%E8%A6%81Win10%E7%94%B5%E8%84%91%E5%8D%87%E7%BA%A7%E5%88%B0Win11-3.png"></p><h3 id="备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为："><a href="#备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为：" class="headerlink" title="备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为："></a>备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为：</h3><p>链接：<a href="https://pan.baidu.com/s/13VLmh2zw8JHDcigOvtI4xQ?pwd=dnaa">https://pan.baidu.com/s/13VLmh2zw8JHDcigOvtI4xQ?pwd=dnaa</a><br>提取码：dnaa<br>–来自百度网盘超级会员V4的分享</p><p>$$</p><p>$$</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 办公技巧 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 办公技巧 </tag>
-            
-            <tag> Win11 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Window平台在虚拟机VMware中配置Ubuntu20（后续完善）</title>
       <link href="/2022/05/03/9-ban-gong-ji-qiao/window-ping-tai-zai-xu-ni-ji-vmware-zhong-pei-zhi-ubuntu20/"/>
       <url>/2022/05/03/9-ban-gong-ji-qiao/window-ping-tai-zai-xu-ni-ji-vmware-zhong-pei-zhi-ubuntu20/</url>
@@ -1713,6 +1711,33 @@
             <tag> VMware </tag>
             
             <tag> Ubuntu20 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何将要Win10电脑升级到Win11</title>
+      <link href="/2022/05/03/9-ban-gong-ji-qiao/ru-he-jiang-yao-win10-dian-nao-sheng-ji-dao-win11/"/>
+      <url>/2022/05/03/9-ban-gong-ji-qiao/ru-he-jiang-yao-win10-dian-nao-sheng-ji-dao-win11/</url>
+      
+        <content type="html"><![CDATA[<h2 id="如何将要Win10电脑升级到Win11"><a href="#如何将要Win10电脑升级到Win11" class="headerlink" title="如何将要Win10电脑升级到Win11"></a>如何将要Win10电脑升级到Win11</h2><h3 id="1、检查电脑是否满足升级要求"><a href="#1、检查电脑是否满足升级要求" class="headerlink" title="1、检查电脑是否满足升级要求"></a>1、检查电脑是否满足升级要求</h3><p>MicroSoft提供了PCHealthCheck（电脑健康状况检查）软件，检查电脑硬件是否满足升级需求。</p><p><img src="/../../images/9-%E5%8A%9E%E5%85%AC%E6%8A%80%E5%B7%A7/%E5%A6%82%E4%BD%95%E5%B0%86%E8%A6%81Win10%E7%94%B5%E8%84%91%E5%8D%87%E7%BA%A7%E5%88%B0Win11-1.png"></p><h3 id="2、开启TPM2-0"><a href="#2、开启TPM2-0" class="headerlink" title="2、开启TPM2.0"></a>2、开启TPM2.0</h3><p>如果已经开启，则跳过该步骤。<br>对于不同型号的电脑，开启方法不同。比如dell，可以去网上百度开启方法。<br>如图所示，即为满足升级要求。<br><img src="/../../images/9-%E5%8A%9E%E5%85%AC%E6%8A%80%E5%B7%A7/%E5%A6%82%E4%BD%95%E5%B0%86%E8%A6%81Win10%E7%94%B5%E8%84%91%E5%8D%87%E7%BA%A7%E5%88%B0Win11-2.png"></p><h3 id="3、使用Win11安装助手进行在线安装"><a href="#3、使用Win11安装助手进行在线安装" class="headerlink" title="3、使用Win11安装助手进行在线安装"></a>3、使用Win11安装助手进行在线安装</h3><p>Win11安装助手下载链接为：<a href="https://www.microsoft.com/zh-cn/software-download/windows11">Download Win11安装助手</a><br><img src="/../../images/9-%E5%8A%9E%E5%85%AC%E6%8A%80%E5%B7%A7/%E5%A6%82%E4%BD%95%E5%B0%86%E8%A6%81Win10%E7%94%B5%E8%84%91%E5%8D%87%E7%BA%A7%E5%88%B0Win11-3.png"></p><h3 id="备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为："><a href="#备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为：" class="headerlink" title="备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为："></a>备注：为了方便使用，本教程已经提前将所需软件进行下载，下载链接为：</h3><p>链接：<a href="https://pan.baidu.com/s/13VLmh2zw8JHDcigOvtI4xQ?pwd=dnaa">https://pan.baidu.com/s/13VLmh2zw8JHDcigOvtI4xQ?pwd=dnaa</a><br>提取码：dnaa<br>–来自百度网盘超级会员V4的分享</p><p>$$</p><p>$$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 办公技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 办公技巧 </tag>
+            
+            <tag> Win11 </tag>
             
         </tags>
       
@@ -1844,27 +1869,6 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——P300ERP有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/</url>
-      
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>本赛题基于P300电位脑-机接口数据，测试不同算法的识别性能。并根据测试数据中的正确率(Accuracy)和信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激界面由当前字符和36个字符组成的字符矩阵组成。本实验中，我们将代表当前字符编号的时间标签称为“大标签”，将代表字符矩阵行列编号的时间标签称为“小标签”。<br>每个试次中被试注视一个字符，以大标签作为起始，大标签出现后1s字符矩阵开始以行或列为单位随机地闪烁，每行&#x2F;列闪烁时长175ms，闪烁开始时刻出现代表当前闪烁行&#x2F;列编号的小标签，所有行和列闪烁一次称为一轮(共12行&#x2F;列)，每个字符6轮，总计72个小标签。即每个试次的时长为1+0.175126&#x3D;13.6秒。<br>大标签：包含26个字母和10个数字，共36种。在训练数据集中，字符与大标签的对应关系如下表，在测试数据集中，大标签统一为“100”，需要参赛者根据识别算法，计算出正确的大标签并报告。</p><p>小标签：包含6行6列，共12种，由数字1到12表示。其中数字1到6代表第1至6列，数字7到12代表第1至6行。<br>特别说明的是，每个字符的最后一个（第72个）小标签闪烁之后475ms，下一个字符的大标签刺激就会出现；即如果使用最后一个小标签的数据，可能需要截取到下一个字符的大标签出现之后的信息，需要参赛人员注意。报告超时的说明，具体见算法规范部分。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含5个字符的刺激试次。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的标签信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx">https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx</a><br>提取码：6btx<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开源数据集 </category>
-          
-          <category> 脑机接口 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2019年脑机接口大赛——SSVEP干电极有训练数据集</title>
       <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/"/>
       <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/</url>
@@ -1886,11 +1890,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——P300ERP有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>本赛题基于P300电位脑-机接口数据，测试不同算法的识别性能。并根据测试数据中的正确率(Accuracy)和信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激界面由当前字符和36个字符组成的字符矩阵组成。本实验中，我们将代表当前字符编号的时间标签称为“大标签”，将代表字符矩阵行列编号的时间标签称为“小标签”。<br>每个试次中被试注视一个字符，以大标签作为起始，大标签出现后1s字符矩阵开始以行或列为单位随机地闪烁，每行&#x2F;列闪烁时长175ms，闪烁开始时刻出现代表当前闪烁行&#x2F;列编号的小标签，所有行和列闪烁一次称为一轮(共12行&#x2F;列)，每个字符6轮，总计72个小标签。即每个试次的时长为1+0.175126&#x3D;13.6秒。<br>大标签：包含26个字母和10个数字，共36种。在训练数据集中，字符与大标签的对应关系如下表，在测试数据集中，大标签统一为“100”，需要参赛者根据识别算法，计算出正确的大标签并报告。</p><p>小标签：包含6行6列，共12种，由数字1到12表示。其中数字1到6代表第1至6列，数字7到12代表第1至6行。<br>特别说明的是，每个字符的最后一个（第72个）小标签闪烁之后475ms，下一个字符的大标签刺激就会出现；即如果使用最后一个小标签的数据，可能需要截取到下一个字符的大标签出现之后的信息，需要参赛人员注意。报告超时的说明，具体见算法规范部分。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含5个字符的刺激试次。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的标签信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx">https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx</a><br>提取码：6btx<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -1912,6 +1916,27 @@
       <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/</url>
       
         <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>随着机器学习思想的火热传播，通过数据预先训练被认为是一种有效提高系统性能的方法。本赛题基于稳态视觉诱发电位脑-机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续3.5-4.5s，开始0.5s为目标提示阶段，屏幕中会出现一个红块提示目标位置并持续0.5s。之后3-4s为刺激阶段，刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。</p><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。</p><p>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。</p><p>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。</p><p>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。</p><p>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug">https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug</a><br>提取码：i3ug<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开源数据集 </category>
+          
+          <category> 脑机接口 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -1970,11 +1995,11 @@
     
     
     <entry>
-      <title>MI-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
+      <title>P300-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/p300-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/p300-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
       
-        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于运动想象的BCI（Motor Imagery BCI, MI-BCI）是BCI的主要范式之一，通过检测识别用户MI产生的EEG来判断用户意图，进而实现人脑与外部设备之间的直接通信与控制。用户在运动想象的过程中，大脑皮层会产生两种变化明显的节律信号，分别是8-15Hz的Mu节律信号和 18-24Hz 的Beta节律信号。同时，大脑皮层对侧运动感觉区的脑电节律能量会明显降低，而同侧运动感觉区的脑电节律能量增大，这种现象称为事件相关去同步（Event Related Desynchronization，ERD）&#x2F;事件相关同步（Event Related Synchronization，ERS）。<br>并且不同部位的躯体运动想象与该躯体对应的感觉运动皮层 ERD&#x2F;ERS 现象有关，即 ERD&#x2F;ERS 现象有空间分布的特性。正是因为运动想象脑电信号空间分布的特性，构成了解码运动想象思维信号的生理基础，采用合适的特征提取算法就可以较好地识别患者的运动意图。<br>下图展示了对某位被试运动想象产生的脑电信号，选择 8-15Hz 和 18-24Hz 的频带范围作为 ERD&#x2F;ERS 特定频带，分别计算出的 C3、C4 通道脑电数据的左手和右手的想象能量。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>下图展示了某位受试在进行运动想象时，用32导电极帽采集的各通道的部分脑电数据。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-4.png"><br>典型算法</p><p>PSD（功率谱估计）<br>功率谱估计是脑电信号频域分析的典型方法之一，把幅度随时间变化的脑电信号变换为脑电功率随频率变化的谱图，从而可以直观地观察到脑电节律的分布与变化情况。经典功率谱估计是在较长的数据中截取一段有限长的数据做分析，根据截取的样本估计出整体的功率谱。基本思想就是把一长度为N的数据分成L段，每段M个数据，分段数据先于窗函数W(n)相乘，分别计算出每一段的功率谱，最后叠加求取平均值作为最终功率谱估计。<br>算法过程：使用Cz、C3和C4这3个导联的数据，通过Cz消除C3、C4的相关性，以8-15Hz频段C3、C4导联的功率谱差值作为特征向量，并结合LDA进行分类。<br>用Welch功率谱密度估计法对C3和C4的EEG数据进行平均功率谱分析，分别得到进行左手MI的EEG平均功率谱和进行右手MI的EEG平均功率谱。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"></p><p>参考文献<br>Herman P, Prasad G, Mcginnity T M, et al. Comparative Analysis of Spectral Approaches to Feature Extraction for EEG-Based Motor Imagery Classification[J]. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2008, 16(4):317-326.</p><p>LDA<br>LDA的目标是训练一个超平面，然后依据选定的类来划分信息，一般是选定两类来进行分类。基本原理如下图所示。向量组取决于超平面的交叉，方向由向量组确定。通过寻找预测两类源的最优值以及减小类内的修正就可以找到超平面。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-6.png"><br>其中，假设是维特征向量，，相应的基向量为，则线性判别函数的一般形式为：</p><p>其中，是权向量（也称投影矩阵），是阈值，是分类器的输出。</p><p>参考文献<br>Keirn Z A, Aunon J I. A new mode of communication between man and his surroundings[J]. IEEE Transactions on Biomedical Engineering, 1990, 37(12):1209-1214.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于P300的BCI系统是目前最常用的头皮脑电BCI系统之一，该系统以ERP（event-related potential）中P300电位作为目标信号。P300电位是与大脑决策过程相关的ERP成分，反映着大脑对外界刺激的评价与分类过程。实验中，通常利用oddball范式诱发P300电位。从EEG上看，P300是在大脑接收目标刺激后大概250-500ms内出现的正向偏移电位。<br>下图展示了通过oddball范式为正常站立状态下受试者呈现Non-target(80%)和target(20%)视觉闪烁刺激时，在Pz导联处检测到的ERP时域波形图。在图中，我们可以清晰的看到：相较于Non-target，在target刺激呈现后400ms处出现明显的正向偏移电位，即P300电位，且顶叶脑区激活程度增强。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br>P300-BCI进行目标识别的原理简单来说就是基于oddball范式对刺激呈现进行时间编码，并检测每个时间间隔内脑电信号中是否出现P300诱发电位。如在1988年，Farwell和Donchin基于行列闪烁编码范式设计了6*6矩阵键盘（共36指令）的P300 speller系统中，通过确定诱发出P300的行闪烁和列闪烁时间定位目标指令，再基于检测到的目标指令，系统给出相应字符的输出。</p><p>几种典型算法<br>由于P300 BCI具有显著的时域特征，在目前的P300-BCI研究中，多采用基于检测P300诱发电位的出现与否对信号进行检测。根据脑电图特征判断P300诱发电位的存在与否，可以认为是一个具有判别函数的二元分类问题，其决策超平面定义为:<br>w⋅f (x) + b &#x3D; 0<br>其中x是特征向量f(⋅)是一个转换函数,w是一个分类的权重向量，b是偏差项。对于非线性可分离问题，f(⋅)可以表示将特征映射到更高维空间的核转换，以尝试创建线性可分集。对于线性方法, f (x) &#x3D; x。目前常用的解码算法都是通过解决w和b来实现的。<br>因为假设P300是针对n个行&#x2F;列之一的增强引出的，且P300响应对于行&#x2F;列刺激是不变的，所得到的分类被视为各行以及列的得分特征向量之和的最大值：</p><p>通过分别为目标和非目标刺激分配+1和-1的类标签，该设计选择与训练的超平面具有最大正距离的脑电响应。这理想地类似于选择强烈表示的由训练数据定义的特征P300的响应。预测字符位于矩阵中预测的行和列的交点处。因为等式（2）和（3）对于恒定偏置项b是不变的，所以不需要计算它。<br>参考文献<br>Krusienski D J , Sellers E W , Cabestaing F , et al. A comparison of classification techniques for the P300 speller[J]. Journal of Neural Engineering, 2006, 3(4):299.</p><p>LDA<br>线性判别分析（Linear Discriminant Analysis，LDA）是P300 speller中常用的典型分类方法，具有计算量低、分类效果良好等特点。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>LDA通过将高维样本数据投影至低维空间，保证样本数据在该空间中有最大类间距离和最小类内距离，其目标函数可表示为下式</p><p>其中，为类间散度矩阵，为类内散度矩阵。通过求解最大的个特征值和对应的个特征向量,得到投影矩阵；<br>参考文献<br>Blankertz B , Lemm S , Treder M , et al. Single-trial analysis and classification of ERP components — A tutorial[J]. Neuroimage, 2011, 56(2):814-825.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -1991,11 +2016,11 @@
     
     
     <entry>
-      <title>P300-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/p300-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/p300-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
+      <title>MI-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
       
-        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于P300的BCI系统是目前最常用的头皮脑电BCI系统之一，该系统以ERP（event-related potential）中P300电位作为目标信号。P300电位是与大脑决策过程相关的ERP成分，反映着大脑对外界刺激的评价与分类过程。实验中，通常利用oddball范式诱发P300电位。从EEG上看，P300是在大脑接收目标刺激后大概250-500ms内出现的正向偏移电位。<br>下图展示了通过oddball范式为正常站立状态下受试者呈现Non-target(80%)和target(20%)视觉闪烁刺激时，在Pz导联处检测到的ERP时域波形图。在图中，我们可以清晰的看到：相较于Non-target，在target刺激呈现后400ms处出现明显的正向偏移电位，即P300电位，且顶叶脑区激活程度增强。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br>P300-BCI进行目标识别的原理简单来说就是基于oddball范式对刺激呈现进行时间编码，并检测每个时间间隔内脑电信号中是否出现P300诱发电位。如在1988年，Farwell和Donchin基于行列闪烁编码范式设计了6*6矩阵键盘（共36指令）的P300 speller系统中，通过确定诱发出P300的行闪烁和列闪烁时间定位目标指令，再基于检测到的目标指令，系统给出相应字符的输出。</p><p>几种典型算法<br>由于P300 BCI具有显著的时域特征，在目前的P300-BCI研究中，多采用基于检测P300诱发电位的出现与否对信号进行检测。根据脑电图特征判断P300诱发电位的存在与否，可以认为是一个具有判别函数的二元分类问题，其决策超平面定义为:<br>w⋅f (x) + b &#x3D; 0<br>其中x是特征向量f(⋅)是一个转换函数,w是一个分类的权重向量，b是偏差项。对于非线性可分离问题，f(⋅)可以表示将特征映射到更高维空间的核转换，以尝试创建线性可分集。对于线性方法, f (x) &#x3D; x。目前常用的解码算法都是通过解决w和b来实现的。<br>因为假设P300是针对n个行&#x2F;列之一的增强引出的，且P300响应对于行&#x2F;列刺激是不变的，所得到的分类被视为各行以及列的得分特征向量之和的最大值：</p><p>通过分别为目标和非目标刺激分配+1和-1的类标签，该设计选择与训练的超平面具有最大正距离的脑电响应。这理想地类似于选择强烈表示的由训练数据定义的特征P300的响应。预测字符位于矩阵中预测的行和列的交点处。因为等式（2）和（3）对于恒定偏置项b是不变的，所以不需要计算它。<br>参考文献<br>Krusienski D J , Sellers E W , Cabestaing F , et al. A comparison of classification techniques for the P300 speller[J]. Journal of Neural Engineering, 2006, 3(4):299.</p><p>LDA<br>线性判别分析（Linear Discriminant Analysis，LDA）是P300 speller中常用的典型分类方法，具有计算量低、分类效果良好等特点。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>LDA通过将高维样本数据投影至低维空间，保证样本数据在该空间中有最大类间距离和最小类内距离，其目标函数可表示为下式</p><p>其中，为类间散度矩阵，为类内散度矩阵。通过求解最大的个特征值和对应的个特征向量,得到投影矩阵；<br>参考文献<br>Blankertz B , Lemm S , Treder M , et al. Single-trial analysis and classification of ERP components — A tutorial[J]. Neuroimage, 2011, 56(2):814-825.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于运动想象的BCI（Motor Imagery BCI, MI-BCI）是BCI的主要范式之一，通过检测识别用户MI产生的EEG来判断用户意图，进而实现人脑与外部设备之间的直接通信与控制。用户在运动想象的过程中，大脑皮层会产生两种变化明显的节律信号，分别是8-15Hz的Mu节律信号和 18-24Hz 的Beta节律信号。同时，大脑皮层对侧运动感觉区的脑电节律能量会明显降低，而同侧运动感觉区的脑电节律能量增大，这种现象称为事件相关去同步（Event Related Desynchronization，ERD）&#x2F;事件相关同步（Event Related Synchronization，ERS）。<br>并且不同部位的躯体运动想象与该躯体对应的感觉运动皮层 ERD&#x2F;ERS 现象有关，即 ERD&#x2F;ERS 现象有空间分布的特性。正是因为运动想象脑电信号空间分布的特性，构成了解码运动想象思维信号的生理基础，采用合适的特征提取算法就可以较好地识别患者的运动意图。<br>下图展示了对某位被试运动想象产生的脑电信号，选择 8-15Hz 和 18-24Hz 的频带范围作为 ERD&#x2F;ERS 特定频带，分别计算出的 C3、C4 通道脑电数据的左手和右手的想象能量。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>下图展示了某位受试在进行运动想象时，用32导电极帽采集的各通道的部分脑电数据。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-4.png"><br>典型算法</p><p>PSD（功率谱估计）<br>功率谱估计是脑电信号频域分析的典型方法之一，把幅度随时间变化的脑电信号变换为脑电功率随频率变化的谱图，从而可以直观地观察到脑电节律的分布与变化情况。经典功率谱估计是在较长的数据中截取一段有限长的数据做分析，根据截取的样本估计出整体的功率谱。基本思想就是把一长度为N的数据分成L段，每段M个数据，分段数据先于窗函数W(n)相乘，分别计算出每一段的功率谱，最后叠加求取平均值作为最终功率谱估计。<br>算法过程：使用Cz、C3和C4这3个导联的数据，通过Cz消除C3、C4的相关性，以8-15Hz频段C3、C4导联的功率谱差值作为特征向量，并结合LDA进行分类。<br>用Welch功率谱密度估计法对C3和C4的EEG数据进行平均功率谱分析，分别得到进行左手MI的EEG平均功率谱和进行右手MI的EEG平均功率谱。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"></p><p>参考文献<br>Herman P, Prasad G, Mcginnity T M, et al. Comparative Analysis of Spectral Approaches to Feature Extraction for EEG-Based Motor Imagery Classification[J]. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2008, 16(4):317-326.</p><p>LDA<br>LDA的目标是训练一个超平面，然后依据选定的类来划分信息，一般是选定两类来进行分类。基本原理如下图所示。向量组取决于超平面的交叉，方向由向量组确定。通过寻找预测两类源的最优值以及减小类内的修正就可以找到超平面。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-6.png"><br>其中，假设是维特征向量，，相应的基向量为，则线性判别函数的一般形式为：</p><p>其中，是权向量（也称投影矩阵），是阈值，是分类器的输出。</p><p>参考文献<br>Keirn Z A, Aunon J I. A new mode of communication between man and his surroundings[J]. IEEE Transactions on Biomedical Engineering, 1990, 37(12):1209-1214.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
