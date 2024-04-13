@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="傅里叶变换的本质与Python代码实现, 哈哈哈哈哈">
+    <meta name="keywords" content="在VSCode中运行调试Python项目, 哈哈哈哈哈">
     <meta name="description" content="虎年大吉">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>傅里叶变换的本质与Python代码实现 | BITBCI</title>
+    <title>在VSCode中运行调试Python项目 | BITBCI</title>
     <link rel="icon" type="image/png" href="/logo-200x200.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -355,12 +355,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">傅里叶变换的本质与Python代码实现</h1>
+                    <h1 class="description center-align post-title">在VSCode中运行调试Python项目</h1>
                 </div>
             </div>
         </div>
@@ -476,12 +476,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Python%E5%BC%80%E5%8F%91/">
-                                <span class="chip bg-color">Python开发</span>
+                            <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/">
+                                <span class="chip bg-color">项目开发</span>
                             </a>
                         
-                            <a href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
-                                <span class="chip bg-color">傅里叶变换</span>
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
                             </a>
                         
                     </div>
@@ -492,8 +492,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Python%E5%BC%80%E5%8F%91/" class="post-category">
-                                Python开发
+                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" class="post-category">
+                                项目开发
                             </a>
                         
                     </div>
@@ -505,28 +505,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-06
+                    2024-04-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-15
+                    2024-04-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    520
+                    771
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -546,80 +546,80 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、连续傅里叶变换"><a href="#一、连续傅里叶变换" class="headerlink" title="一、连续傅里叶变换"></a>一、连续傅里叶变换</h2><p>关于傅里叶变换的直观理解，大家可以移步B站UP主“3Blue1Brown”视频，这个视频讲解的很清楚。</p>
-<div class="bilibili">
-    <iframe class="bilibili" src="https://player.bilibili.com/player.html?aid=62763042&bvid=BV1vt411N7Ti&cid=121886213&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
+                <h2 id="一、Python项目调试流程"><a href="#一、Python项目调试流程" class="headerlink" title="一、Python项目调试流程"></a>一、Python项目调试流程</h2><p>此前，Python开发工作基本是在PyCharm中进行的，但是近些年来PyCharm专业版的价格越来越高（且臃肿占内存），而VSCode是一个免费的轻量级代码编辑器。</p>
+<p>近些天，准备研究一下VSCode中Python项目的开发流程，之后会逐步迁移Python项目到VSCode中。</p>
+<h3 id="1、安装Python解释器和VSCode"><a href="#1、安装Python解释器和VSCode" class="headerlink" title="1、安装Python解释器和VSCode"></a>1、安装<code>Python</code>解释器和<code>VSCode</code></h3><p><code>Python</code>是一种高级编程语言，常用于数据分析、人工智能等领域。下载地址为<a target="_blank" rel="noopener" href="https://www.python.org/">Python.org</a></p>
+<p><code>VSCode</code> 是一个轻量级的代码编辑器，支持多种编程语言，包括C#。下载地址为<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code - Code Editing. Redefined</a></p>
+<h3 id="2、创建项目文件夹"><a href="#2、创建项目文件夹" class="headerlink" title="2、创建项目文件夹"></a>2、创建项目文件夹</h3><p>在<code>VSCodeWorkSpace</code>路径下新建<code>myFirstPython</code>项目文件夹，使用VSCode打开该文件夹。</p>
+<h3 id="3、安装Python插件"><a href="#3、安装Python插件" class="headerlink" title="3、安装Python插件"></a>3、安装Python插件</h3><p>在VSCode中运行Python项目，首先需要安装Python插件。</p>
+<p>打开VSCode，点击左侧的“Extensions”图标，搜索“Python”插件并安装。</p>
+<h3 id="4、配置Python解释器"><a href="#4、配置Python解释器" class="headerlink" title="4、配置Python解释器"></a>4、配置Python解释器</h3><p>使用快捷键<code>Ctrl+Shift+P</code>打开命令面板，输入<code>Python: Select Interpreter</code>，选择Python解释器。</p>
+<h3 id="5、配置调试环境"><a href="#5、配置调试环境" class="headerlink" title="5、配置调试环境"></a>5、配置调试环境</h3><p>使用快捷键<code>Ctrl+Shift+P</code>打开命令面板，输入<code>Debug: Open launch.json</code>，按照向导进行配置。</p>
+<p>接下来，回到资源管理器，可以看到<code>.vscode</code>文件夹下生成了<code>launch.json</code>文件。</p>
+<p><code>launch.json</code>文件是VSCode用来配置调试和任务的文件，可以根据需要进行修改。</p>
+<p><code>launch.json</code>文件内容为</p>
+<pre class="line-numbers language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"0.2.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"configurations"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Python: Current File"</span><span class="token punctuation">,</span>
+            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"python"</span><span class="token punctuation">,</span>
+            <span class="token property">"request"</span><span class="token operator">:</span> <span class="token string">"launch"</span><span class="token punctuation">,</span>
+            <span class="token property">"program"</span><span class="token operator">:</span> <span class="token string">"$&amp;#123;file&amp;#125;"</span><span class="token punctuation">,</span>
+            <span class="token property">"console"</span><span class="token operator">:</span> <span class="token string">"integratedTerminal"</span>
+        &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">]</span>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="6、运行和调试"><a href="#6、运行和调试" class="headerlink" title="6、运行和调试"></a>6、运行和调试</h3><p>在<code>myFirstPython</code>文件夹下新建一个Python文件，例如<code>firstPython.py</code>，输入以下代码：</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># utf-8</span>
+<span class="token keyword">import</span> sys
 
 
-<p>傅里叶变换的公式为：</p>
-<p><img src="/../../images/4-Python%E5%BC%80%E5%8F%91/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E6%9C%AC%E8%B4%A8%E4%B8%8EPython%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-1.png"></p>
-<p><img src="/../../images/4-Python%E5%BC%80%E5%8F%91/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E6%9C%AC%E8%B4%A8%E4%B8%8EPython%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-2.png"></p>
-<p>数字频率f与角频率ω之间的关系：</p>
-<pre class="line-numbers language-python"><code class="language-python">ω <span class="token operator">=</span> f <span class="token operator">/</span> fs <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>pi
+<span class="token keyword">class</span> <span class="token class-name">MyFirstClass</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+
+    <span class="token keyword">def</span> <span class="token function">say_hello</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> f<span class="token string">"Hello, &amp;#123;self.name&amp;#125;!"</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        my_class <span class="token operator">=</span> MyFirstClass<span class="token punctuation">(</span><span class="token string">"World"</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>my_class<span class="token punctuation">.</span>say_hello<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token string">"An error occurred: &amp;#123;e&amp;#125;"</span><span class="token punctuation">)</span>
+    
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    
+    <span class="token comment" spellcheck="true"># 输出当前使用的python版本</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>version<span class="token punctuation">)</span>
+    
+    <span class="token comment" spellcheck="true"># 输出当前使用的Python路径</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Python executable path:"</span><span class="token punctuation">,</span> sys<span class="token punctuation">.</span>executable<span class="token punctuation">)</span>
+    
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>进入运行和调试界面，点击<code>Run and Debug</code>按钮，点击<code>开始调试</code>按钮（也可以使用<code>F5</code>快捷键），即可运行和调试Python项目。</p>
+<p>可以在代码的任意地方设置断点，调试时会在断点处暂停，可以查看变量的值。</p>
+<p>同时，也可以在调试过程中修改变量的值，以便更好地调试程序。</p>
+<p>还有一种运行方式是安装插件<code>Code Runner</code>，这样就可以使用<code>Ctrl+Alt+N</code>（或者右上角的运行按钮）运行C#程序。<br>不过这种方法无法进行调试，只能运行程序，不推荐使用。</p>
+<h2 id="二、如何系统默认的Python版本与pip版本"><a href="#二、如何系统默认的Python版本与pip版本" class="headerlink" title="二、如何系统默认的Python版本与pip版本"></a>二、如何系统默认的Python版本与pip版本</h2><p>以win11系统为例。</p>
+<p>一般来说，在环境变量中配置的Python路径最上面的为系统默认使用的Python。</p>
+<h3 id="1、查看Python版本"><a href="#1、查看Python版本" class="headerlink" title="1、查看Python版本"></a>1、查看Python版本</h3><pre class="line-numbers language-terminal"><code class="language-terminal">python -V
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>其中fs为采样率</p>
-<h2 id="二、离散傅里叶变换"><a href="#二、离散傅里叶变换" class="headerlink" title="二、离散傅里叶变换"></a>二、离散傅里叶变换</h2><p>该部分后续补充</p>
-<h2 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># encoding:utf-8</span>
-<span class="token triple-quoted-string string">"""
-__time__    : 2022/4/10 17:10
-__author__  : LIU SIYU
-__email__   :18811379768@163.com
-__address__ :Beijing Institute of Technology
-"""</span>
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">from</span> scipy<span class="token punctuation">.</span>fftpack <span class="token keyword">import</span> fft<span class="token punctuation">,</span> ifft
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-<span class="token keyword">from</span> matplotlib<span class="token punctuation">.</span>pylab <span class="token keyword">import</span> mpl
-
-mpl<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'SimHei'</span><span class="token punctuation">]</span>  <span class="token comment" spellcheck="true"># 显示中文</span>
-mpl<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'axes.unicode_minus'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">False</span>  <span class="token comment" spellcheck="true"># 显示负号</span>
-
-<span class="token comment" spellcheck="true"># 采样点选择1400个，因为设置的信号频率分量最高为600赫兹，根据采样定理知采样频率要大于信号频率2倍，所以这里设置采样频率为1400赫兹（即一秒内有1400个采样点，一样意思的）</span>
-fs <span class="token operator">=</span> <span class="token number">1400</span>  <span class="token comment" spellcheck="true"># 信号采样率为fs，1400Hz</span>
-x <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> fs<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 设置需要采样的信号，频率分量有200，400和600</span>
-y <span class="token operator">=</span> <span class="token number">7</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>pi <span class="token operator">*</span> <span class="token number">200</span> <span class="token operator">*</span> x<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">5</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>pi <span class="token operator">*</span> <span class="token number">400</span> <span class="token operator">*</span> x<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>pi <span class="token operator">*</span> <span class="token number">600</span> <span class="token operator">*</span> x<span class="token punctuation">)</span>
-
-fft_y <span class="token operator">=</span> fft<span class="token punctuation">(</span>y<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 快速傅里叶变换</span>
-
-N <span class="token operator">=</span> <span class="token number">1400</span>
-x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>N<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 频率个数</span>
-half_x <span class="token operator">=</span> x<span class="token punctuation">[</span>range<span class="token punctuation">(</span>int<span class="token punctuation">(</span>N <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment" spellcheck="true"># 取一半区间</span>
-half_w <span class="token operator">=</span> half_x <span class="token operator">/</span> fs <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>pi<span class="token punctuation">)</span>
-
-abs_y <span class="token operator">=</span> np<span class="token punctuation">.</span>abs<span class="token punctuation">(</span>fft_y<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 取复数的绝对值，即复数的模(双边频谱)</span>
-angle_y <span class="token operator">=</span> np<span class="token punctuation">.</span>angle<span class="token punctuation">(</span>fft_y<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 取复数的角度</span>
-normalization_y <span class="token operator">=</span> abs_y <span class="token operator">/</span> N  <span class="token comment" spellcheck="true"># 归一化处理（双边频谱）</span>
-normalization_half_y <span class="token operator">=</span> normalization_y<span class="token punctuation">[</span>range<span class="token punctuation">(</span>int<span class="token punctuation">(</span>N <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment" spellcheck="true"># 由于对称性，只取一半区间（单边频谱）</span>
-
-plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">231</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'原始波形'</span><span class="token punctuation">)</span>
-
-plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">232</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> fft_y<span class="token punctuation">,</span> <span class="token string">'black'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'双边振幅谱(未求振幅绝对值)'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'black'</span><span class="token punctuation">)</span>
-
-plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">233</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> abs_y<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'双边振幅谱(未归一化)'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'red'</span><span class="token punctuation">)</span>
-
-plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">234</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> angle_y<span class="token punctuation">,</span> <span class="token string">'violet'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'双边相位谱(未归一化)'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'violet'</span><span class="token punctuation">)</span>
-
-plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">235</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> normalization_y<span class="token punctuation">,</span> <span class="token string">'g'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'双边振幅谱(归一化)'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'green'</span><span class="token punctuation">)</span>
-
-plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">236</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>half_w<span class="token punctuation">,</span> normalization_half_y<span class="token punctuation">,</span> <span class="token string">'blue'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'单边振幅谱(归一化)'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'blue'</span><span class="token punctuation">)</span>
-
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2、查看pip版本"><a href="#2、查看pip版本" class="headerlink" title="2、查看pip版本"></a>2、查看pip版本</h3><pre class="line-numbers language-terminal"><code class="language-terminal">pip -V
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="三、VSCode中常用快捷键"><a href="#三、VSCode中常用快捷键" class="headerlink" title="三、VSCode中常用快捷键"></a>三、VSCode中常用快捷键</h2><ul>
+<li><code>F5</code>：开始调试。</li>
+<li><code>Ctrl+Alt+N</code>：运行程序。</li>
+<li><code>Ctrl+,</code>：打开设置。</li>
+<li><code>Ctrl+Shift+P</code>：打开命令面板。</li>
+<li><code>Ctrl+~</code>：打开终端。</li>
+<li><code>Ctrl+Shift+Y</code>：打开调试控制台。</li>
+</ul>
 
                 
             </div>
@@ -646,7 +646,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bitbci.github.io/2022/05/06/4-python-kai-fa/fu-li-xie-bian-huan-de-ben-zhi-yu-python-dai-ma-shi-xian/">https://bitbci.github.io/2022/05/06/4-python-kai-fa/fu-li-xie-bian-huan-de-ben-zhi-yu-python-dai-ma-shi-xian/</a>
+                    <a href="https://bitbci.github.io/2024/04/13/12-xiang-mu-kai-fa/zai-vscode-zhong-yun-xing-diao-shi-python-xiang-mu/">https://bitbci.github.io/2024/04/13/12-xiang-mu-kai-fa/zai-vscode-zhong-yun-xing-diao-shi-python-xiang-mu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -684,12 +684,12 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Python%E5%BC%80%E5%8F%91/">
-                                    <span class="chip bg-color">Python开发</span>
+                                <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/">
+                                    <span class="chip bg-color">项目开发</span>
                                 </a>
                             
-                                <a href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
-                                    <span class="chip bg-color">傅里叶变换</span>
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
                                 </a>
                             
                         </div>
@@ -733,17 +733,18 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-sheng-cheng-python-xiang-mu-wen-dang/">
+                <a href="/2024/04/13/12-xiang-mu-kai-fa/zai-vscode-zhong-yun-xing-diao-shi-python-xiang-mu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="使用sphinx自动生成Python项目文档">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="在VSCode中运行调试Python项目">
                         
-                        <span class="card-title">使用sphinx自动生成Python项目文档</span>
+                        <span class="card-title">在VSCode中运行调试Python项目</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -753,30 +754,31 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python%E5%BC%80%E5%8F%91/" class="post-category">
-                                    Python开发
+                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" class="post-category">
+                                    项目开发
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">Python开发</span>
+                    <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">项目开发</span>
                     </a>
                     
-                    <a href="/tags/sphinx/">
-                        <span class="chip bg-color">sphinx</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
                 </div>
@@ -790,13 +792,13 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/04/12-xiang-mu-kai-fa/pid-kong-zhi-suan-fa-ji-python-shi-xian/">
+                <a href="/2024/04/13/12-xiang-mu-kai-fa/zai-vscode-zhong-yun-xing-diao-shi-csharp-xiang-mu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="PID控制算法及Python实现">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="在VSCode中运行调试C#项目">
                         
-                        <span class="card-title">PID控制算法及Python实现</span>
+                        <span class="card-title">在VSCode中运行调试C#项目</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -807,7 +809,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-13
                             </span>
                         <span class="publish-author">
                             
@@ -824,16 +826,12 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">控制算法</span>
+                    <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">项目开发</span>
                     </a>
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/PID/">
-                        <span class="chip bg-color">PID</span>
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C#</span>
                     </a>
                     
                 </div>
