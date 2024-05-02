@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>萤石摄像头实时视频获取</title>
+      <link href="/2024/05/02/12-xiang-mu-kai-fa/ying-shi-she-xiang-tou-shi-shi-shi-pin-huo-qu/"/>
+      <url>/2024/05/02/12-xiang-mu-kai-fa/ying-shi-she-xiang-tou-shi-shi-shi-pin-huo-qu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="萤石摄像头实时视频获取"><a href="#萤石摄像头实时视频获取" class="headerlink" title="萤石摄像头实时视频获取"></a>萤石摄像头实时视频获取</h2><h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><p>萤石摄像头是一款海康威视旗下的智能家居摄像头，可以实现远程监控、实时视频获取等功能。</p><p>本文介绍如何通过萤石云平台实现摄像头实时视频获取。</p><p>本文测试使用的摄像头型号为萤石CS-C6，版本号为8C4WF。</p><h3 id="二、配置过程"><a href="#二、配置过程" class="headerlink" title="二、配置过程"></a>二、配置过程</h3><ol><li><strong>注册账号</strong></li></ol><p>首先需要在<a href="https://open.ys7.com/cn/s/index">萤石开放平台</a>注册账号，然后登录账号。</p><ol start="2"><li><strong>添加设备</strong></li></ol><p>手机端在应用市场搜索<code>萤石云视频</code>APP，登录账号后，点击“添加设备”，选择“摄像头”，然后按照提示操作将摄像头添加到账号中。</p><p>操作方法和主流的摄像头添加方式类似，具体操作步骤请参考官方文档，这部分比较简单，不再赘述。</p><ol start="3"><li><strong>电脑端软件</strong></li></ol><p>同样，萤石云平台提供了电脑端软件，可以在<a href="https://service.ezviz.com/download">下载中心 - 萤石服务中心 - 萤石官网 - EZVIZ</a>下载安装。</p><p>电脑端软件名称为<code>萤石工作室</code>。</p><p>电脑端软件提供了更多的功能，如实时视频获取、录像、截图等，这些功能比较实用，在实验过程中可以使用。</p><ol start="4"><li><strong>实时视频获取</strong></li></ol><ul><li>首先，需要关闭视频加密功能，否则无法获取实时视频。在手机APP中可以操作，随着APP版本的更新，操作方式可能有所不同，具体操作请参考官方文档或者百度。</li><li>接下来，需要在APP中开启RTSP流，这样就可以通过RTSP协议在本地获取实时视频。</li><li>萤石官方其实也提供了一些在线直播源，包括HLS、FLV、RTMP等，可以根据自己的需求选择合适的方式。可以在萤石开放平台的<a href="https://open.ys7.com/console/setnormallive.html?serial=G44390110&channelNo=1">萤石开放平台-提供持续稳定的以音视频为主的全场景、多功能综合性服务 (ys7.com)</a>中查看。</li><li>这里我们比较推荐使用RTSP流，因为RTSP流是一种通用的视频流协议，支持多种播放器，比如VLC、PotPlayer等。</li><li><a href="https://potplayer.daum.net/?lang=zh_CN">PotPlayer</a>播放RTSP流的方法：打开PotPlayer，点击<code>文件</code>-&gt;<code>打开URL</code>，输入RTSP流地址，点击<code>播放</code>即可。</li><li>萤石摄像头的RTSP流地址格式为：</li></ul><pre class="line-numbers language-python3"><code class="language-python3">rtsp://admin:password@ip:port/h264/ch1/main/av_stream<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>其中：<br><code>password</code>是摄像头的登录密码，在摄像头底部可以查看，为<code>验证码</code>之后的6位编码；<br><code>ip</code>是摄像头的IP地址；<br><code>port</code>是RTSP端口号，默认为554；<br><code>h264</code>是视频编码格式，默认是<code>h264</code>，可以进行修改；<br><code>ch1</code>是通道号，一般为<code>ch1</code>；<br><code>main</code>是码流类型，默认为<code>main</code>，代表高清，可以修改为<code>sub</code>，代表低分辨率。</p><ul><li>使用Python可以通过<code>opencv</code>库获取RTSP流，具体代码如下：</li></ul><pre class="line-numbers language-python3"><code class="language-python3"># encoding:utf-8"""__time__    : 2024/5/1 17:36本地RTSPrtsp://admin:XXXXXX@192.168.1.110:554/h264/ch1/main/av_stream在线直播源可以在下面链接查找https://open.ys7.com/console/setnormallive.html?serial=G44390110&channelNo=1"""import threadingimport cv2class VideoCapture:    def __init__(self, url):        self.cap = cv2.VideoCapture(url)        if not self.cap.isOpened():            raise ValueError("Unable to open video source", url)        self.ret, self.frame = self.cap.read()        self.running = True        # 创建一个线程来读取视频        self.thread = threading.Thread(target=self.run, args=())        self.thread.start()    def run(self):        while self.running:            self.ret, self.frame = self.cap.read()    def read(self):        return self.ret, self.frame    def stop(self):        self.running = False        self.thread.join()        self.cap.release()def main():    # 创建一个可以调整大小的窗口，并设置初始大小    cv2.namedWindow('YSRealVideo', cv2.WINDOW_NORMAL)    cv2.resizeWindow('YSRealVideo', 1920, 1080)    cap = VideoCapture('rtsp://admin:XXXXXX@192.168.1.110:554/h264/ch1/mian/av_stream')  # 高分辨率    # cap = VideoCapture('rtsp://admin:XXXXXX@192.168.1.110:554/h264/ch1/sub/av_stream')  # 低分辨率    while cap.running:        ret, frame = cap.read()        if not ret:            break        cv2.imshow('YSRealVideo', frame)        if cv2.waitKey(1) & 0xFF == ord('q'):            break    cap.stop()    cv2.destroyAllWindows()if __name__ == '__main__':    main()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 萤石摄像头 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 项目开发 </tag>
+            
+            <tag> 萤石摄像头 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常用3D相机及其使用方法</title>
       <link href="/2024/04/28/12-xiang-mu-kai-fa/chang-yong-3d-xiang-ji-ji-qi-shi-yong-fang-fa/"/>
       <url>/2024/04/28/12-xiang-mu-kai-fa/chang-yong-3d-xiang-ji-ji-qi-shi-yong-fang-fa/</url>
@@ -155,9 +182,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 项目开发 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -2160,11 +2187,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP干电极有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>采集脑电数据通常采用湿电极，虽然信号信噪比高但使用过程繁琐耗时，而干电极具有方便使用的特点，同时具有可接受的信噪比，被认为是面向实际应用的手段。本赛题基于稳态视觉诱发电位脑机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含10个目标（数字0-9，对应结果编号1-10），刺激频率分别9.25~13.75Hz，间隔0.5Hz，每个目标相位相差0.5。实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。整个实验过程中，10个目标均同时闪烁。单个试次持续5s，开始屏幕中会出现一个绿块提示框在目标位置周围。从提示框出现时刻开始的5s为刺激阶段，刺激过程中，10个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在提示框出现的时刻。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E5%B9%B2%E7%94%B5%E6%9E%81%E2%80%94%E2%80%94%E5%AE%9E%E9%AA%8C%E8%8C%83%E5%BC%8F.png" alt="SSVEP干电极——实验范式"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E5%B9%B2%E7%94%B5%E6%9E%81%E2%80%94%E2%80%94%E5%8F%8D%E9%A6%88%E7%BB%93%E6%9E%9C%E3%80%81%E7%9B%AE%E6%A0%87%E9%A2%91%E7%8E%87%E3%80%81%E5%88%9D%E5%A7%8B%E7%9B%B8%E4%BD%8D%E5%AF%B9%E7%85%A7%E8%A1%A8.png" alt="SSVEP干电极——反馈结果、目标频率、初始相位对照表"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为采样率300Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E5%B9%B2%E7%94%B5%E6%9E%81%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%81%94%E7%BC%96%E5%8F%B7%E8%A1%A8.png" alt="SSVEP干电极——数据导联编号表"></p><p>X1,X2,X3无有效信号，CMF(Common Mode Follower)记录common-mode artifacts。</p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/15OpDsI_fOOY62nlzTctTgw?pwd=tx1n">https://pan.baidu.com/s/15OpDsI_fOOY62nlzTctTgw?pwd=tx1n</a><br>提取码：tx1n<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -2181,11 +2208,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——SSVEP干电极有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>采集脑电数据通常采用湿电极，虽然信号信噪比高但使用过程繁琐耗时，而干电极具有方便使用的特点，同时具有可接受的信噪比，被认为是面向实际应用的手段。本赛题基于稳态视觉诱发电位脑机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含10个目标（数字0-9，对应结果编号1-10），刺激频率分别9.25~13.75Hz，间隔0.5Hz，每个目标相位相差0.5。实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。整个实验过程中，10个目标均同时闪烁。单个试次持续5s，开始屏幕中会出现一个绿块提示框在目标位置周围。从提示框出现时刻开始的5s为刺激阶段，刺激过程中，10个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在提示框出现的时刻。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E5%B9%B2%E7%94%B5%E6%9E%81%E2%80%94%E2%80%94%E5%AE%9E%E9%AA%8C%E8%8C%83%E5%BC%8F.png" alt="SSVEP干电极——实验范式"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E5%B9%B2%E7%94%B5%E6%9E%81%E2%80%94%E2%80%94%E5%8F%8D%E9%A6%88%E7%BB%93%E6%9E%9C%E3%80%81%E7%9B%AE%E6%A0%87%E9%A2%91%E7%8E%87%E3%80%81%E5%88%9D%E5%A7%8B%E7%9B%B8%E4%BD%8D%E5%AF%B9%E7%85%A7%E8%A1%A8.png" alt="SSVEP干电极——反馈结果、目标频率、初始相位对照表"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为采样率300Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E5%B9%B2%E7%94%B5%E6%9E%81%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%81%94%E7%BC%96%E5%8F%B7%E8%A1%A8.png" alt="SSVEP干电极——数据导联编号表"></p><p>X1,X2,X3无有效信号，CMF(Common Mode Follower)记录common-mode artifacts。</p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/15OpDsI_fOOY62nlzTctTgw?pwd=tx1n">https://pan.baidu.com/s/15OpDsI_fOOY62nlzTctTgw?pwd=tx1n</a><br>提取码：tx1n<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -2413,35 +2440,6 @@
     
     
     <entry>
-      <title>Hexo博客文章加密（尚未解决）</title>
-      <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/"/>
-      <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/</url>
-      
-        <content type="html"><![CDATA[<h2 id="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"><a href="#目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。" class="headerlink" title="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"></a>目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。</h2><p>参考资料：</p><ol><li><code>matery</code>主题自带的加密方法<br><a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-4">Hexo博客主题之hexo-theme-matery的介绍 | 闪烁之狐 (blinkfox.com)</a></li><li><code>hexo-blog-encrypt</code>插件加密方法<br><a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt&#x2F;ReadMe.zh.md at master · D0n9X1n&#x2F;hexo-blog-encrypt (github.com)</a></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 前端 </category>
-          
-          <category> Hexo建站 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> 加密 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hexo主题Matery的介绍与相关配置</title>
       <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/"/>
       <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</url>
@@ -2463,6 +2461,35 @@
             <tag> Hexo </tag>
             
             <tag> matery </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo博客文章加密（尚未解决）</title>
+      <link href="/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/"/>
+      <url>/2022/04/13/11-wang-zhan-kai-fa/hexo-bo-ke-wen-zhang-jia-mi-shang-wei-jie-jue/</url>
+      
+        <content type="html"><![CDATA[<h2 id="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"><a href="#目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。" class="headerlink" title="目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。"></a>目前能够对文章进行加密，但是输入正确密码之后并不能进入文章。</h2><p>参考资料：</p><ol><li><code>matery</code>主题自带的加密方法<br><a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-4">Hexo博客主题之hexo-theme-matery的介绍 | 闪烁之狐 (blinkfox.com)</a></li><li><code>hexo-blog-encrypt</code>插件加密方法<br><a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt&#x2F;ReadMe.zh.md at master · D0n9X1n&#x2F;hexo-blog-encrypt (github.com)</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> Hexo建站 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 加密 </tag>
             
         </tags>
       
