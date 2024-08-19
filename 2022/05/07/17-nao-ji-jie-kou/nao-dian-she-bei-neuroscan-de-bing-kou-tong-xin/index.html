@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="脑电设备的并口通信及实时数据获取, 哈哈哈哈哈">
+    <meta name="keywords" content="脑电设备NeuroScan的并口通信, 哈哈哈哈哈">
     <meta name="description" content="虎年大吉">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>脑电设备的并口通信及实时数据获取 | BITBCI</title>
+    <title>脑电设备NeuroScan的并口通信 | BITBCI</title>
     <link rel="icon" type="image/png" href="/logo-200x200.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -355,12 +355,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">脑电设备的并口通信及实时数据获取</h1>
+                    <h1 class="description center-align post-title">脑电设备NeuroScan的并口通信</h1>
                 </div>
             </div>
         </div>
@@ -512,21 +512,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-07-15
+                    2024-08-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    9
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -546,46 +546,18 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="脑电设备的并口通信及实时数据获取"><a href="#脑电设备的并口通信及实时数据获取" class="headerlink" title="脑电设备的并口通信及实时数据获取"></a>脑电设备的并口通信及实时数据获取</h2><h3 id="一、并口简介"><a href="#一、并口简介" class="headerlink" title="一、并口简介"></a>一、并口简介</h3><ul>
-<li>本教程中的并口通信是在BP设备上实现的，完全符合BP设备的操作。<br>但是NeuroScan等其他脑电设备大都也采用并口通信，因此也具备一定的普适性。</li>
-<li>早期，并口、串口广泛应用于电脑中，但是近些年已经逐渐被淘汰。<br><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E8%84%91%E7%94%B5%E8%AE%BE%E5%A4%87%E7%9A%84%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1%E5%8F%8A%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96-1.jpg"></li>
-<li>但是，出于毫秒级的高时间精度要求，实验设备（比如脑电、磁共振、TMS等等）往往需要连接串口或并口。<br>这是由于USB设备无法保证时间精度（使用USB转换的串口并口通常会有上百毫秒的延迟）。</li>
-</ul>
-<p>（1）第一种情况，台式机主板具有插针</p>
-<p>只需要购买拓展线即可，比如“25孔并口＋9针串口 扩展线&#x2F;挡板(DB25 DB9)主板打印机接口25孔LPT”。</p>
-<p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E8%84%91%E7%94%B5%E8%AE%BE%E5%A4%87%E7%9A%84%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1%E5%8F%8A%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96-5.jpg"></p>
-<p>（2）第二种情况，台式机主板没有插针，但是有PCIe拓展接口</p>
-<p>可通过购买PCIe拓展板来拓展主板上的串口并口。</p>
-<p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E8%84%91%E7%94%B5%E8%AE%BE%E5%A4%87%E7%9A%84%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1%E5%8F%8A%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96-2.gif"><br><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E8%84%91%E7%94%B5%E8%AE%BE%E5%A4%87%E7%9A%84%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1%E5%8F%8A%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96-3.jpg"><br><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E8%84%91%E7%94%B5%E8%AE%BE%E5%A4%87%E7%9A%84%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1%E5%8F%8A%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96-4.gif"></p>
-<p>主板BIOS默认LPT端口为禁用，只要进主板的BIOS里设置启用即可。</p>
-<h3 id="二、安装驱动"><a href="#二、安装驱动" class="headerlink" title="二、安装驱动"></a>二、安装驱动</h3><ul>
-<li>并口驱动为小众驱动，当前大多数驱动软件（比如鲁大师）中并不能找到适配的驱动。<br>可以多找几个驱动软件试一试，比如驱动人生（测试电脑在驱动人生中找到了适配的驱动）、驱动精灵等。</li>
-<li>在淘宝购买PCIe拓展卡的时候也可以问卖家索要一下专门的驱动。</li>
-<li>驱动安装成功后，找到并口地址，记下来。</li>
-</ul>
-<p>在下文中用到的P.Out32(0xC100, label)中的第一个参数需要修改为并口的端口号，比如对于下面这台电脑就应该修改为3FF0（并口地址）。</p>
-<p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E8%84%91%E7%94%B5%E8%AE%BE%E5%A4%87%E7%9A%84%E5%B9%B6%E5%8F%A3%E9%80%9A%E4%BF%A1%E5%8F%8A%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96-6.png"></p>
-<p>硬件mark的发送需要调用动态链接库inpoutx64.dll（很明显这是一个64位电脑所使用的动态链接库），我们需要将该动态链接库与我们的函数放在同名文件夹，或者存储在C:\Windows\System32（某些电脑需要存储在这里才能调用）。</p>
-<h3 id="三、使用Python实现实时采集"><a href="#三、使用Python实现实时采集" class="headerlink" title="三、使用Python实现实时采集"></a>三、使用Python实现实时采集</h3><h4 id="（1）脑电实验中如何打mark？"><a href="#（1）脑电实验中如何打mark？" class="headerlink" title="（1）脑电实验中如何打mark？"></a>（1）脑电实验中如何打mark？</h4><p>Mark分为软件mark与硬件mark。</p>
-<ul>
-<li>软件mark: 软件mark就比较简单了，我们可以通过如下的代码块进行添加，只需要在需要打mark得地方调用该函数即可，label可以是字符串，整型。（我们将软件mark的函数加入到了脑电数据采集的类中，可以方便的调用。）</li>
-<li>硬件mark: 首先你所使用的脑电设备需要支持硬件mark，大多脑电采集设备硬件mark是通过并口发送的（比如BP， NeuroScan等），因此我们在这里只对并口mark进行讲解，有关串口mark可以自行上网搜索，实现较为容易。我们首先需要将硬件mark通过并口发送到脑电设备上，代码如下图所示，我们只需要方便的调用。在结束采集的时候需要调用一次collect_all_hard_mark函数来收集所有的硬件mark。</li>
-</ul>
-<h4 id="（2）在线采集的过程中，如何收集脑电数据与mark数据？"><a href="#（2）在线采集的过程中，如何收集脑电数据与mark数据？" class="headerlink" title="（2）在线采集的过程中，如何收集脑电数据与mark数据？"></a>（2）在线采集的过程中，如何收集脑电数据与mark数据？</h4><ul>
-<li>首先，为了便于调试，也便于手头没有脑电采集设备的同学进行学习，我们需要产生一个模拟脑电数据流，同时产生一个模拟的Mark流。关于如何使用pylsl发送数据，这部分我们在之前的教程中已经提及，此处不再重复。</li>
-<li>发送脑电数据与mark数据的代码存储在SendData_test.py中，运行此代码即可。</li>
-<li>接下来我们需要进行操作，来接收脑电数据以及mark，这部分代码均存储在mne_record_data.py中。</li>
-<li>核心代码为RecordData这个类，我们所需要的功能（比如硬件mark，软件mark，数据记录等）均在该类中，作为该类的一个操作方法，可以方便的进行调用。</li>
-<li>那么，我们如何使用RecordData这个类来进行数据采集呢？</li>
-<li>第一步：记录被试信息：使用被试信息作为记录文件的文件名</li>
-<li>第二步：数据采集：初始化RecordData类，创建一个线程，进行数据采集。在这部分，我们需要修改的参数有采样率sfreq，通道信息ch_names。</li>
-<li>第三步：打mark。软件mark使用add_soft_mark(‘soft_1’)，硬件mark使用send_hard_mark(2)。</li>
-<li>注意：在硬件mark在最后需要调用一下collect_all_hard_mark()这个操作方法。</li>
-<li>第四步：结束采集</li>
-<li>第五步：数据可视化</li>
-</ul>
-<h3 id="四、相关驱动及代码文件"><a href="#四、相关驱动及代码文件" class="headerlink" title="四、相关驱动及代码文件"></a>四、相关驱动及代码文件</h3><p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1rGlbmygIWQ1X7Gmag0sQuA?pwd=l5q0">https://pan.baidu.com/s/1rGlbmygIWQ1X7Gmag0sQuA?pwd=l5q0</a><br>提取码：l5q0<br>–来自百度网盘超级会员V4的分享</p>
-
+                <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码有误" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="a708dfcf26686b5e52ee908964c0b67cf5bb96bf17562eadda9334d95e154361">041c72d314b1af2641d5de2073586981b10251ffacbc4b84a6c283ee15f202582dd10767a1f612c7eed5b46d72aac293931b01df7ee1a9a7cf68f92dc7a6d494f187e3b048121391dd0e05ff4107b6443555e205e2febc2f36ea13fe9052ec0c7a3fab8285a99ca7bdf16f1b047476360cd4dafac7f691bd5332aed9f2512f80d4c7b6753db78eb636e1c07e3c0faaa9caee124756d8a9282a92db62952f5e5ed8a8e30d2638c4ef17a937be77b7cf9740a0c8e5397ee1748feb7d3b9b9e829e6c2569768bcbf57217548d0d586cee2c974303f126d2bd88809924aae572d5ca3afcb6bbcbf145efad8c7bf45d59cf3b6ffd0f231f4fd8eaca7ef6526e5001d1edc08368f5ed5dc83641802013eaf19b19159a5b27959f01a10e84a7c1b82ec794b8101a6bf63cbde826eb562344cbeb84dac416096a5e506d8767478e522a8429921ed672f97be585ce18dc14855ae2e1dcd62fc78ead2186afa5260355398a5015c7a9fafe54e3799fb9cf5b6ddaef6d67a73014d713a503b91c0f62a6ebf275d4f4d2e9da12efc440aad4dacb7de39b74740999fa59b47eedd451cfdd479512abdf93ce202b8daf69062bc21277d53375d3b2dcc136f9f297204e34b64401abd15e12d6f7733376612a79caf0a998274305871c5a799dc8606cadd682a20bb591efbb81ca1f6cb5b3e00f6cf5f46d33fbbab313cbdbb69ca4708e4fdf7fb2a4d06439d539b9750e907445f65ba25b371649adde81b95d5df08fb8f292ae0ff218f21af0e5560c384941dbac79f4a03bc3715a76c03cbadebe473ce8a7bd702da9459074f19f1fe0e02e8c3c6a48d9b5eedfe76404628a9a906964aeb437ae0b2af6df60e6be3b95bb626dc6ab4e65c185b2ea8247125a7b415be782c191e889bfd3d9d770b0814a6e3322f555c7f077a2f0a51a678e9f0e2101badc5426b47f5b1b6541dc205d07462e405cc77c455b149f5c2c99a223db02fc9ede29091b949dd87435e2d18c797f8dc003a595f937318e537d200131a49687174fc0a0804aa47da11ae06ac7406f861445b5bfad9134c45770f29c0eddb91541ec64b25b227c3306d00c263256faa81594a47e974fdd2c724550ee4feccefc581cac64c2b289ce019e9928b34cb6049cec707f681792f69bf122a4d89d9b455030b64760900ba06d9ebe18c31a45e9d6deca6accddb1fb20d81faab628a977f32fc3cc87536be5f6aa140a030026087daf2e390415a50cde03235c3570af37dafcdb2891be3060f455addbb1f0fe99019b5a9bd7555a862a07ed37d1b895ecdd91464d0c8a8460f969d743bacc6b5ca737f47f7b8c48e716b754173c6b091afa16b42d8281f896271dddbbdfaaf368f0738eca9a89ed680f2144321d23074079d7910bbb3d40596982d6ef1fc3d5b893902e2d97f2d5679cda0d9dddad8cc1815769c0f9aebdd2a4c42c3958b7378df1fc87dcbee0f9d710f31911f8aa73bbea370fe1c9da67211c266fadf446e5264c3e4d2f3087f166698d10f2763e5b7422b7ccfd7b404a2e443c41682f0ee046a88d5cd148fc29e3ee25e492ff02ab361ee586f4b3eb2b66fc0054f9027c40e8b3961a332d158ba44a1cb6b598eeddfe4ae34b376521eed73bfd31989a8f6628a6abfc8933b8cfe26123ae11fd220bdd209a1097eb421f1324c7a6077cfe680398763d4f1e0d0814c76be40ef55d83014854eb9efd735771ee94c9aa0656a048d8387bb85dc852b835e6f371adc9dc62dce43449c600219b4a2d17a06991c535bec618f2c2e84c9f5b7f4a550f7b32fbddf94073e3de4edd8c731404eb909d884a7cebb79d55381bda90f27b04ce4bdb787956400280fd6c98a3a30c3484b3d8e2c924c446f10705587acb886dd7aadceb6b895fed1ac4943b3881791f0b75437006cba4d5073d81463ec9c7635174f5f3f515150df3dbf9d3691e3576c443d3aecbe755e20a68940d40c867c2a69c33c429c155dbcd59aa5ff7460ac5e2268e44d80308f4226a1b712f074bfd375b10edf54c8c893c5ab871e5324b5dbaa92a71156203cd6747da756ba464637021c579479134dc9102c76d2a1aa24626b5d0ff7026189828ff9c1968e991f40e77fe30a74492dddece630c3f4f6527e8287ea03c487605d2a5223e358b25f59dcc0630db61a0f795af577f29c6551d39c1412c992a48b16e66842ca82a3bac5b3bae6eb1f3c415bdf3991758b8b5c681aa254595398ccb5d929ae546dc2017686e9dafe5a3d16f7e1c57fa41c0d0d1ee96b0401f67d2643b302aa740d97e9ab987b2efe9c48b63de11b5f70a61edbdcd4b2fc7637edc6126714a2959669e2c43ed031e93f1f61dc552eca615092a2522ca99032c0c1fd924fc3b4ab95e445730ab346bd6e658cdb7b10282fe62a58ce3e3db8b49fb2b5fe8a9179372e4691e03bd3ce74669965b0d81f6f483e946a4c77a8147372f51f7416c4ffd52809c3b0bbd7e8e52038126521b80bc54c1f432075b81878bb9b963a873990f405fceb42b4880da550ead352261719629cf585765f8c08527cebb73e89f2d79bca6c310900e6b1af9c802e11289a4c26c8cd73b143ac7d403fa043db3d43590c64389c5335534b585e897fa333618d53be67d5d5497eb7bc5d0f524d8252d767cf80f6f19341813695492f799a0934ce0986ef2ea300ba313d5a946ff6ea609bf4cf4a38c903605cf140f08c159ae9d75ed2ec3bb67962d2d7cfe1e218b2b8b6cb3594cb56aeb90464aad31e52ba22590262782473232c7f2b43fbc594124dd5cdb8b740d63b4cbc272ca436511314b01d6582b173489ad9b27a705826e2b0db58c6872e9374fb65e6e06e5c818e954d0f2c25e67b04fd6c6a901cf94b319e8afd03c5fd76c681ed3eb8e3e9bfc4d94d1a2f377624440fe03b4095f56ae0eb45d0485850f843843a5d85e2140a3221e9968f263d1a035b2ff0980bf6753cc9c49a0efe2064ba1369b14090b20d4fda4c3baff8e6489c5e00f4a64d9f03eb6c45beb8bf3c90791715d57989f026484b61c9bf12d852eea6bc686620503b503ff159d54b7d8e984ef320a7244ae95cdfc2882db627016aa9bba7bb94bac0f2051d1dae87583057ddac08c4f6462a1656c85b00196a5862b5201cfdc1f6d1d9f4240fbcedb831c62e2099f6abbccc3e45eb2e43f6c9fdeceffb1f386c8e93a012cb8cf4f232b730dd53f7a61b6da1a1a3795d777f14154c209dec775af46268025ed343e2c093fb128603552822651a66f1e738b8af0de882b5647bc390a1c86e9b687d6853a5f8382ac03a0f9e0d3fae809b1063a25a5ae3b51be90cc828f874f38c594805a2119a4cdc6bad754887d76c3db536f10ac5ac8b47a41ab380b8ffc4fc0f3a2c69e2be80194159b10455b811036d6d4db83ea93d9a455d42fa3e89559b5202400115024090b7df9c315a8f8ecd763e73bdddc1cea1af9ab228440d08d5a0f0e9e5adfab72c04202220beda5772cf5382b611a1f7ad02a309b79899c6824d18d63f31f5566f8f55e89a7c68598ee5d7855ed197278824d3a113c64fc2cdb75d8d17babd4ef69503ca53dc145b5355fde30d480f420cad2e05719d3ffd93d70e6c51916758a25128154bcbbcb915f3c198e7253995715bf6677e373915780bff0eb4e5ca55af200f44c4da28282dec66163dd54ac6e861659390df2b43f53890784ce30c5385c71ce4d218166eb94dd247d39f68be71b0ac3cf757945f0bec821d164a762eb4b62d39fa331b48d4f542bab72aef0cea312a1f4cf98bb750572b44d53e5fcf55925107e1083a2be801a5cd6a67f7f9346acd1e857ccaeab2cbaf9dfe5f688f6d4d3f8aee9391e8b1c4bdf7961ec88f437ba025ab6a619924eee3c6b385436a8f02a2d9b2f8653a5eb332f4ac7780cd8b3ab567333fb628bbd46a8882d96837b81cd8d54767ee8b5f2ff98af6601e9e8dce27ed4c3120459ef55b54aaf28d56bd0d81e162a57a4ed94de2120832db109618c804d7e2e66ed33b638d60b1fcbf1d0588d4465370d572a6dc618b7791232cbba59d52066743701a68ea7b131dc3f04cc13e4d109b3f0f4dc5e6191eba2290cd7b30045bd5f658f7e234f644dcd87bcde3deba231d8b2c3a6a4bc1aa1f242e717364e6fb1f2500847d508739a6c1b4c3e3fa70db12a70f259215212aa250df6b365e5b69307a59ac486492900b02d422e0f1fb46de3cb5a21487f41d588d3f45297b599f0ff6573e0ffdf50f4ad5679b31d55fcd65fcf6a25744bd79ff07090a901e191828382e313472f1c4a5831a2f13021df4d61add1dffaa898aeaecab4f8bc9b6b26538675022287d53cbf7e1be76624ca92e4614f49e2542d4f76ec722277aba5cf4f46047888ada02e7c1b90a08e8efcce4ebfc2a4586b9a53e508ded8d496d1e159339e622ba347b264c9dac32921dfccabd8c1c6497225c1eae525971db6daa0952ede0b99d52115e6e81e66d5280526a697ff4420e7adf7d61b78648c297a957535ddab1e7bc73cd2fb70b7aec85729e61b0e8b27d0e8e75357466286042076f6e26fec790a8c1b69f1010facdaee72a36ae78b4d4efb70002ea9040993152bb5a4245bdd000a1220db34979f4f1b28f6b87bc154fab15bcf4f654ba0f8a86439180cccc6b70be88560f7a27ce34f67030234feaf74998192a6d40e4d0962baaf1ad9f97a723ff5cc9fda6d5d7b1672a2d51d54ca865a8431e43f3f7f4e5355e3f3bd62ead12890ce6556cbb063fd2d793813135e1e67a4c4068ac4efb232c44441754cb87ae714da9c096590741f7ca6895cb1d32a077f32856a4163829b9cdc6725f74ec3b9a74284dce677733653c39bd3ec0404daf0fbb1e4ee88dbc9807549b035693c2ae1268c29f6693d4fcacdd4f10c404e305a422a102f29f2fd4d2e96bf11857556d16ccab34a9ef08e44480c95801031787a73647951653d5890caab0c63edcb4753b3d925bc7b96c87fab1321da29d460452dfc4e013cf80940f9ac1cbbb10d2300144d8fd108b95ac688181605f0fd40b11339c5cd1876cf8cc425e0f2cca7ab30b6abf43c73fe7774ffd5129a3f59d5fb0a9944009987ab1a10cfbaeaa181a6c89879e04bc8bbb36f8f0308e95e762bd77106705a328146ad66c9a42a4f041687e69d94746c6f9407349a25660d2cc227b699d15f84c6c1bce09dcb80e7f77733a2ecb69b5ade2ce31547d6be004a1138dce7cb3dfba3500e5efb6b010fb1ed31b6d0d1a21aac6f01f8318cca40258827927547faed468289b89b4862bf3aa2eb7fb58cc46e57034ffc0b1ff587c03bec6cb44dfb174c615bbcfd91cbc28a5b29130d814026c906b2b16411ee7e37d02e33582b0552a12cc26335b50d59553201ab56d1d44cd234a2a7afabb30bc2215df591ea2099def569fa91086651021835c3fbb62768a2fc55233749870ed2f70dd99e40340b09367a71fa05d110b713bf4d1c78c4730aee1c37bbac0e2b7f7be491a06d77b5a467e362acca64ba83a4bf9a2c9cf8751fbd7b70cfdeb594b4cea7572d4a06a7808fc1d27d6a6a7860b03ad6a9765e91c0733b7c5452c11ca87b4845766008906b8c7208cbb5530fac3cbe9fc6e6c82ac8a029296e0c91ce7080f5ca188ee3316b99a55375ea32aee602828fc6d4d48f84e9a1d68c41532cfa530da57437d4d3bd44d32599988f4c658ff63884f7322fd51e49f90a8996efbc18a2bf6413e1b4cc6096c2bb2984d15c60785e68a8fb95cff69085584fc6d7ea4a46f4b78a51edc1e5f4cc2fc4c9a38854e618b1e4b41daba923366a1b2c9e93a662d6bc57f84db64608f908d5fef039b959c1d94115d24649af439900d4b7e9f5fca8c56a1069ba1b9139242cee50d62491ea8330fdea0937516cc6926f62ced9936633e5351722c51d21ba3a8e70347a4a8efed46e525bb71fa9bc269a7a730499bd1ad576c1ec3e8967bef39a8e148f4cc8c7b1ece4fffa6b256135ca93e2f42f3001e45c549fdd5c662f08e3a7f0a6a12677be984c14bc37574632c39e24cdc10c57baca7f3dfadc4b83ce320b4386e8ef452facd22ca155f038f2340e192dcb2e6f74581655b33b9cf14e39a6fab922c774372d4c37a8e35b16521bb1e2cf1c9987a6c4c6ba5e60ca046584f5963d1ebaf514c2aeb4d9d580bf49b6e8327bf8716b1fceb5520a4e83cf5ca2ecab8f83e18f7418826e5601855b98e1d0e25a7360ae7eb940206b9e7025598da92133f16eb8154032b552ab511313c055f4586a9350e660b0cdf8b13ac671e423afc558bb8a751856c585dbdbef81b95ba5b2a09af16439b3b5c2a13748fdddf3a45ee01a0b64912e269def91681e7c9fcd7bc334a703a58ca2ccf2e4a5ae1cff30c6a73b9df9142e9b5a70cae72f19d89cf45fff4314c9f2fc00383ed2fec6ec03613eb074c2f0deb781a36e61324ad365dfcb0748f83d0d7bf9f57524e715cc7d712ca0a15e5443da7a640f4c08bec72ec8575300a87451632555725da748e863300df17da1687701ded1f0f24496ae9185fea6cb77a4fe253e3c0f571455cbf157ded76475ae9631307bf00920a5d27d23c90dda5fc731be384f28fcc42dc19e4665334279bc451c821be65703c23d73e11e2bd5ff77ab382cc752918452cf0f407d92807ac1f7d2be4f77b05d441c4e7953c6a9f9fcd10b8dbe0f8c29cbae80cf0fc0ef84c9ce00c4a25160292b1a686d61e187951175f62046e19b1a8dee6d625de72dced5b8b94cdb59b0e0f0a923807eaddf713f72c8ce3430102c296c5bf479b9741b8afdd8c75bf3c3c985b610539e0cc931b2ee7e5ef3c70db146901403722cc3e9f166da1e1bd7610f2d0b15daf5f8e32deb1ddb782d6e6a470c8308d758a8973eb7645e92e08bd213550571c642fd9c82eca755782c31e8f5197b6e6e5b8d5362bc1d59d07eec7a8ac9f9ff05e4fe009dab373fcd4a1fe959893602302838c65cc9e33e6549d14a5cf3b28fbdb8a78a08939af6f914c9fe3016061418014292fa5db862153761d0ae4df8ae1539309be266181504d94e8605de14818d30d96a811da25379fde48bafb9fbb5c5985dfa489289dd69c71e409d57e11b6e603444020d7e7aa55bd97a63a7ea041eebf7b54564f3cfd42169051a91ae552371d57d3d70df0e146f81042f251dc4742c71d64232aecd05f4d8408a6ed7279158ef4560c8027ea8d1808c253e7329506bf4cf093be0ab786cf47b8a3f12ea33727d9d5c8c2bf273ad972acd2bc0cd24ccde35eac4ae83ed8943f6f44adfb444b5f70b0fe5d80c175a1ec60384f454e290923f8a871c1efc17c3c3755efe3db57d79af150064b6aa1b2e99c6b2b1dc91e274527dc1038bf9a16b0f52035d4b2903ecaf88db8251442faf7505c50f5ad45fa61cb0b1c598248cd5b8b7c2114e0b755939b25e0192ea3dfeaa11958023a0207a7551f8aad1f445896df4df014a5afc4637dd84f2e8dd346a3b95dd6be9d61b1c57cf11c4915ea968ed9061bc07e7e3678d835ab8e8589dae7c4c349cf051296f3f4c972794588c8e0490a73c970c7956f9a6a277b0b108813e2872ba8af44747d795d1b17957cdcfc883aa9f5d6f88b7e8a2bb73fb30ac1e1ae4b2d1bd8ac1840d47bc0e716ad6fce9288292480ba3f1221f3ad4722e3ea7dbc776be5bd279b65b3f393e7add4d5c9d7f7d3fb1f2eb3ad2cbd9a0a6f3f0ffe7aafb6cf98d7f8597223302ded35c9393af6513e52c08fb4716b09305a6adf2350069f16fe082aa0c45d083d982a611b0a83c88db1232d6a70b14d2595a4e38a09aff4e0120d5a7ccf0f97b57fddac203b68995c215a7ca2b6d8594c2efa5702d1dcffb97a46b7ea53e1ae71909f613d4a8d993827dd3a7dec1b7059b5f61c8db3db4eeed2cd2eec9f6f9fff9b3889b9ae823a6063db1ea0b3259ad248b3ed1f4c120900b3889f44f272cfc5886a5e9f808ab8ca10c172d0fd7d9a77841dda100138e5682fa5952bef0ecd38bb25c0b51b6072e1b77440c402bbbf3c848e29d5ffad314abd857f1b3cde28f01a04fe9c8beca79fb91f293580a433ce248c3663916acfaf319afa6aa862202bd9c3829f56eb66de7c4c111231bf9df0a517e89a5f08350f5ed7fb031081c6fb5716847de56a6c13a936cf953cc8ee9e30e6bc88c35b7ac5128e9f31cd3bfcd0aacf00e5c46be7ab230e35e130c63bb19e34820d594e2372a64594c510c7cc4e6800ae42cab9f0e41f4d23e80a30bb1235b45d364313fd35aa9b75b5c46289f159796cc07f70be4d9affa3255e33eca3e96528a0177200ffd20592ba8a6e3a16c4251fa5a69d8a7c48e426414163ea0e10f958a5569dc29cec08630b71bec7e4e59af4cb3a52968ebcc6c3ebfa8a5b3dd8b595555d3ea0827326f6ed4bc4fc2c2f3771d80396885fd5c7644f34020a9f31cc6f37135e81ea0606d115870477c9de73eca389bcc83f815a12cb7313465993f5da758365ffcb39bdb0cc2e6c624204f953a8f11ba3f0a8557c01940203b956de14b194e3f0fed1147003df2a7088c0050311571a1ff7fea4408754026fcdbd11dcc27b0e9bba0c7ecb95f4136db2569193e37e12669b91d7eadd21481071160ac3bb69fab12e59758dc71c7be480acf20e68b4da0d3fafcaabf56811f1fe0aecb0f2a00ee917efdd1684e69248f84fb613868a3b556482b78b0196eebe094aef6f4ab933480e3f70673067ccea75b9d000cb9a34cb5d1de30ab1b59ec19e31b89792366324b505a1094c552540fd0c338301c2168b0dc28067198c926be0a538ca2699f357a7c271b8b22930f8c528c66478cb30a019d57457b47df5cd337231302f141e3c9b63528bebb99ccf2cf95e22c4db0009fe4d51f34a52eb7d4d9e12c7acd40abca222997d4ca3ae4bf8fcece9dd06cfbe3ea17d3d9d353756a6ad5380d4ce4623ba12d41919d27df13ec763767bf27081e4ad7bfc641df39f023e0d6a092e9e4a530954795581d340ab53d3b87980e2fa2f5ee108074b25fd4e9de4a40be71082a5509658590b96168d4c1acb8343cde79bcba9c168f50f8378c2d4441d6383b2c22d7430e3c5f724737ba66a341425e2b896cf3fc4a29681e69b2b6c16890b0bf8080d4747af15cd8323cf582ef3ede25fa973f2a2b4bfd8b873d2b23c1b95576425686cdec53aa90d777bcd044ced4ad858bf396337d003e72fe6bd7d350e28e454349a4c14ccb2c775682998900e9d1ef5603fcbf2b595d2dae43d5f09cc361c6a9711f9851a291a34308a6fc4324546aba2f484a7564989919bd794e7f5cf10cb7edf295619f353a7ad67b0fe057b1d60d9d22b06bb14eb17a51d234f6134537688cafed0b5c2c6d2248e753116f46713ef1291f9fa0ea1996acf4462b679f0d4671482a4ce2a2c8997603fb4dfbaa57658ff11ce8d54656741a41ba833303d799e16c7410158b375c87727e171426c5182632565460bd04f3632588c8c366fbd0e82b63bab98dd969ef0920d151ba1465b93c8a72c46fa577333cfce567286239be58a36b40d31c0e5cac1b1049d42357e29a478dbae6bc485298a755b6077631c8a8679de182693e05e4a7e2cf04c637d7e82f7e3a58cdf8f092180296ee4f23a7753620afbea844a86b7b19660b3cda05840de54256d239eff8c264308ec95c29e37f5df1b8b5b9290cc7d225c07c9f954dfbe5f19d1cca9c4358c65b83792908dad19149db0adf4071bfeb54426436486e491f87fcb9fcc3721a7e0edc8008b6d50acef50274ccccb3f8e2cee3337b59539bde73aa</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请在此处输入密码</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
                 
             </div>
             <hr/>
@@ -611,7 +583,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bitbci.github.io/2022/05/07/17-nao-ji-jie-kou/nao-dian-she-bei-de-bing-kou-tong-xin-ji-shi-shi-shu-ju-huo-qu/">https://bitbci.github.io/2022/05/07/17-nao-ji-jie-kou/nao-dian-she-bei-de-bing-kou-tong-xin-ji-shi-shi-shu-ju-huo-qu/</a>
+                    <a href="https://bitbci.github.io/2022/05/07/17-nao-ji-jie-kou/nao-dian-she-bei-neuroscan-de-bing-kou-tong-xin/">https://bitbci.github.io/2022/05/07/17-nao-ji-jie-kou/nao-dian-she-bei-neuroscan-de-bing-kou-tong-xin/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -984,7 +956,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">64k</span>&nbsp;字
+                class="white-color">62.8k</span>&nbsp;字
             
             
             
