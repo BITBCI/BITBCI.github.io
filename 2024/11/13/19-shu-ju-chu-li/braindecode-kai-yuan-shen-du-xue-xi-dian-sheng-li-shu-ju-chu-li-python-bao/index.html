@@ -520,21 +520,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-11-13
+                    2024-11-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    3.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    13 分
                 </div>
                 
 
@@ -711,6 +711,57 @@
 </li>
 </ul>
 <p>这些示例提供了Braindecode库在不同场景下的应用，从基础的模型构建到高级的神经网络训练策略，以及如何在真实世界的数据集上应用这些技术。</p>
+<h2 id="五-其他资源——SSVEP解码深度学习算法仓库-DL-Classifier"><a href="#五-其他资源——SSVEP解码深度学习算法仓库-DL-Classifier" class="headerlink" title="五. 其他资源——SSVEP解码深度学习算法仓库 DL_Classifier"></a>五. 其他资源——SSVEP解码深度学习算法仓库 <code>DL_Classifier</code></h2><h3 id="1-DL-Classifier简介"><a href="#1-DL-Classifier简介" class="headerlink" title="1. DL_Classifier简介"></a>1. <a target="_blank" rel="noopener" href="https://github.com/YuDongPan/DL_Classifier/">DL_Classifier</a>简介</h3><p>稳态视觉诱发电位（SSVEP）是指当受试者持续注视以固定频率闪烁或翻转的刺激时，在大脑的枕叶-额叶区域中诱发的与刺激频率相关的电生理信号。与P300、运动意向（MI）等EEG信号相比，SSVEP具有更高的信噪比，可以产生更高的ITR，使其成为长期以来最具潜力的EEG范式之一。然而，传统的信号处理算法在解码SSVEP信号时依赖于手动特征提取，在各种极端情况下（数据长度短、刺激数量大、校准数据量小）表现不佳，无法满足行业的实际需求。深度学习技术是人工智能的主要分支之一，已经在计算机视觉、自然语言处理、推荐系统等各个领域的研究中得到应用。由于其强大的特征表达能力和极高的灵活性，它颠覆了这些领域的算法设计思想，并取得了显著的成果。</p>
+<p>近年来，深度学习技术逐渐受到BCI领域研究人员的青睐。<a target="_blank" rel="noopener" href="https://github.com/YuDongPan/DL_Classifier/">DL_Classifier</a>提供了用于复现SSVEP信号的基于深度学习的识别方法。复现的方法包括EEGNet [1]-[2]、C-CNN [3]、FBtCNN [4]、ConvCA [5]、SSVEPNet [6]、SSVEPformer [7]和DDGCNN [8]，并使用了一个12类公共数据集 [9] 进行评估。</p>
+<p>DL_Classifier 的仓库为：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">https://github.com/YuDongPan/DL_Classifier/
+https://github.com/LSYhhhh/DL_Classifier
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="2-模型介绍"><a href="#2-模型介绍" class="headerlink" title="2. 模型介绍"></a>2. 模型介绍</h3><ul>
+<li><p><strong>EEGNet</strong>: EEGNet是一种专门设计用于处理EEG信号数据的卷积神经网络模型，它接收时间域EEG数据作为网络输入。EEGNet由4层组成。第一层是卷积层，用于模拟对每个通道进行带通滤波。第二层是空间滤波层，用于对每个通道的数据进行加权，通过深度卷积实现。第三层是用于提取类别信息的单独卷积层。第四层是用于分类的全连接层。自提出以来，EEGNet已被用于各种EEG任务，如运动意向、P300、SSVEP等。<br><img src="/../../images/19-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/EEGNet.jpg" alt="image"></p>
+</li>
+<li><p><strong>CCNN</strong>: CCNN也是一种卷积神经网络模型。不同的是，C-CNN使用富含幅度和相位信息的频域数据作为网络输入。值得注意的是，为了获得网络的输入，CCNN使用基于填充的FFT算法，可以在任何数据长度下获得220个数据点，包括110个实部数据和110个虚部数据。CCNN网络结构由两个卷积层和一个全连接层组成。第一个卷积层是空间滤波层，第二个卷积层是时间滤波层，全连接层用于分类。CCNN的出现表明，频谱数据有助于SSVEP分类。<br><img src="/../../images/19-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/CCNN.jpg" alt="image"></p>
+</li>
+<li><p><strong>FBtCNN</strong>: 在频域输入范式下，短时窗口下的特征可能不明显，每个通道的时间差异可能被忽略。考虑到谐波信息中嵌入了大量有关频率识别的有效信息，研究人员提出了一种基于滤波器组技术的CNN架构，称为FBtCNN。FBtCNN使用时间域信号作为网络输入，并使用滤波器组来融合来自不同频段的特征信息，以提高网络的分类性能。<br><img src="/../../images/19-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/FBtCNN.png" alt="image"></p>
+</li>
+<li><p><strong>ConvCA</strong>: 来自不同电极通道的SSVEP信号之间存在非线性关系，多通道EEG信号的线性组合可能不是分类SSVEP的最准确解决方案。为了进一步提高SSVEP-BCI的性能，研究人员提出了一种基于CNN的非线性相关性分析网络，称为ConvCA。ConvCA有两个分支，一个是信号网络，将多通道EEG信号降级为单通道EEG信号，另一个是参考网络，将多通道参考信号解释为单通道参考信号。ConvCA通过分析信号网络输出和参考网络输出之间的相关性来完成SSVEP的分类过程。<br><img src="/../../images/19-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/ConvCA.png" alt="image"></p>
+</li>
+<li><p><strong>SSVEPNet</strong>: SSVEPNet是卷积神经网络和长短期记忆网络的混合网络模型，接受时间域数据作为网络输入。SSVEPNet由三部分组成：卷积神经网络、长短期记忆网络和全连接网络。其中，CNN用于提取EEG的时空特征，双向LSTM用于基于时空特征之间的依赖关系进行编码，由三个全连接层组成的全连接网络用于最终分类。此外，为了在网络训练过程中抑制可能的过拟合，网络实现过程中结合了谱归一化和基于标签的平滑技术，进一步提高了模型的泛化能力。SSVEPNet即使只有少量校准数据，仍然可以实现非常好的分类性能，并且这一特性已在4类、12类和40类数据集上得到验证。<br><img src="/../../images/19-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/SSVEPNet.jpg" alt="image"></p>
+</li>
+<li><p><strong>SSVEPformer</strong>: 基于注意力机制的Transformer已经应用于CV和NLP等多个领域，并取得了引起全球关注的显著成果。近年来，Transformer逐渐被引入到EEG信号的解码和分析中，揭示了Transformer在SSVEP-BCI系统中的潜在应用。由于当前SSVEP解码算法对大量受试者校准数据的依赖，研究人员提出了基于Transformer的SSVEP分类网络SSVEPformer，以实现零校准高性能网络。SSVEPformer和C-CNN的网络输入保持一致，使用频域信号作为输入，并结合CNN和MLP网络完成Transformer的特征编码和注意力学习过程。SSVEPformer可以在跨受试者实验中实现显著的分类性能，明显优于其他分类网络。此外，结合滤波器组技术，研究人员提出了网络的改进版本FB-SSVEPformer，以进一步增强网络性能。<br><img src="/../../images/19-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/SSVEPformer.png" alt="image"></p>
+</li>
+<li><p><strong>DDGCNN</strong>: 在多通道EEG分类过程中，多通道脑电图（EEG）数据的处理由于其非欧几里得特性而引入了挑战，需要考虑通道间的拓扑关系，因此需要考虑通道间的拓扑关系。研究人员引入了用于SSVEP EEG信号分类的动态分解图卷积神经网络（DDGCNN）。DDGCNN结合了逐层动态图，以解决图卷积网络（GCN）中的过度平滑问题，采用密集连接机制来减轻梯度消失问题。此外，DDGCNN通过图动态融合增强了GCN中固有的传统线性变换，从而提高了特征提取和自适应聚合能力。实验结果表明，DDGCNN在学习和提取EEG拓扑结构特征方面的有效性。<br><img src="/../../images/19-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/DDGCNN.png" alt="image"></p>
+</li>
+</ul>
+<h3 id="3-代码运行环境"><a href="#3-代码运行环境" class="headerlink" title="3. 代码运行环境"></a>3. 代码运行环境</h3><ul>
+<li>设置虚拟环境，使用python 3.8或更新版本</li>
+<li>安装依赖</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash">pip <span class="token function">install</span> -r Resource/requirements.txt
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>编辑配置文件（etc&#x2F;config.yaml），选择要运行的算法。</li>
+<li>编辑配置文件，设置训练过程的参数和算法的特定超参数。</li>
+<li>运行 <code>python Classifier_Test.py</code></li>
+</ul>
+<h3 id="4-参考文献"><a href="#4-参考文献" class="headerlink" title="4. 参考文献"></a>4. 参考文献</h3><pre class="line-numbers language-bibtex"><code class="language-bibtex">[1] Lawhern V J, Solon A J, Waytowich N R, et al. EEGNet: a compact convolutional neural network for EEG-based brain–computer interfaces[J]. Journal of neural engineering, 2018, 15(5): 056013. <a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1741-2552/aace8c/meta">https://iopscience.iop.org/article/10.1088/1741-2552/aace8c/meta</a>
+
+[2] Waytowich N, Lawhern V J, Garcia J O, et al. Compact convolutional neural networks for classification of asynchronous steady-state visual evoked potentials[J]. Journal of neural engineering, 2018, 15(6): 066031. <a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1741-2552/aae5d8/meta">https://iopscience.iop.org/article/10.1088/1741-2552/aae5d8/meta</a>
+
+[3] Ravi A, Beni N H, Manuel J, et al. Comparing user-dependent and user-independent training of CNN for SSVEP BCI[J]. Journal of neural engineering, 2020, 17(2): 026028. <a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1741-2552/ab6a67/meta">https://iopscience.iop.org/article/10.1088/1741-2552/ab6a67/meta</a>
+
+[4] Ding W, Shan J, Fang B, et al. Filter bank convolutional neural network for short time-window steady-state visual evoked potential classification[J]. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2021, 29: 2615-2624. <a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/9632600/">https://ieeexplore.ieee.org/abstract/document/9632600/</a>
+
+[5] Li Y, Xiang J, Kesavadas T. Convolutional correlation analysis for enhancing the performance of SSVEP-based brain-computer interface[J]. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2020, 28(12): 2681-2690. <a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/9261605/">https://ieeexplore.ieee.org/abstract/document/9261605/</a>
+
+[6] Pan Y, Chen J, Zhang Y, et al. An efficient CNN-LSTM network with spectral normalization and label smoothing technologies for SSVEP frequency recognition[J]. Journal of Neural Engineering, 2022, 19(5): 056014. <a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1741-2552/ac8dc5/meta">https://iopscience.iop.org/article/10.1088/1741-2552/ac8dc5/meta</a>
+
+[7] Chen J, Zhang Y, Pan Y, et al. A Transformer-based deep neural network model for SSVEP classification[J]. Neural Networks, 2023, 164: 521-534. <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0893608023002319">https://www.sciencedirect.com/science/article/abs/pii/S0893608023002319</a>
+
+[8] Zhang S, An D, Liu J, et al. Dynamic decomposition graph convolutional neural network for SSVEP-based brain–computer interface[J]. Neural Networks, 2024, 172: 106075.<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0893608023007360">https://www.sciencedirect.com/science/article/abs/pii/S0893608023007360</a>
+
+[9] Nakanishi M, Wang Y, Wang Y T, et al. A comparison study of canonical correlation analysis based methods for detecting steady-state visual evoked potentials[J]. PloS one, 2015, 10(10): e0140703. <a target="_blank" rel="noopener" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0140703">https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0140703</a>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -832,18 +883,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/11/13/19-shu-ju-chu-li/braindecode-kai-yuan-shen-du-xue-xi-dian-sheng-li-shu-ju-chu-li-python-bao/">
+                <a href="/2024/11/14/19-shu-ju-chu-li/neurokit-kai-yuan-duo-mo-tai-dian-sheng-li-shu-ju-chu-li-python-bao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Braindecode——开源深度学习电生理数据处理Python包">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Neurokit———开源多模态电生理数据处理Python包">
                         
-                        <span class="card-title">Braindecode——开源深度学习电生理数据处理Python包</span>
+                        <span class="card-title">Neurokit———开源多模态电生理数据处理Python包</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -853,9 +903,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-11-13
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-11-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -868,7 +918,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -884,8 +933,8 @@
                         <span class="chip bg-color">EEG</span>
                     </a>
                     
-                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">深度学习</span>
+                    <a href="/tags/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%94%B5%E7%94%9F%E7%90%86/">
+                        <span class="chip bg-color">多模态电生理</span>
                     </a>
                     
                 </div>
@@ -1128,7 +1177,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">65.8k</span>&nbsp;字
+                class="white-color">68.5k</span>&nbsp;字
             
             
             
