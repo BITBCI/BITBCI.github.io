@@ -1880,9 +1880,9 @@
       
         <tags>
             
-            <tag> 驱动安装 </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> 驱动安装 </tag>
             
         </tags>
       
@@ -1907,9 +1907,9 @@
       
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> 桌面快捷方式 </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
       
@@ -2886,33 +2886,6 @@
     
     
     <entry>
-      <title>如何使用PS修复照片反光区域</title>
-      <link href="/2022/05/03/9-ban-gong-ji-qiao/psrepair/"/>
-      <url>/2022/05/03/9-ban-gong-ji-qiao/psrepair/</url>
-      
-        <content type="html"><![CDATA[<h1 id="如何使用PS修复照片反光区域"><a href="#如何使用PS修复照片反光区域" class="headerlink" title="如何使用PS修复照片反光区域"></a>如何使用PS修复照片反光区域</h1><iframe class="bilibili" src="//player.bilibili.com/player.html?aid=212464091&bvid=BV1xa411t7JK&cid=553318499&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
-      
-      
-      <categories>
-          
-          <category> 办公技巧 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> PS </tag>
-            
-            <tag> 办公技巧 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Window平台在虚拟机VMware中配置Ubuntu20（后续完善）</title>
       <link href="/2022/05/03/9-ban-gong-ji-qiao/window-ping-tai-zai-xu-ni-ji-vmware-zhong-pei-zhi-ubuntu20/"/>
       <url>/2022/05/03/9-ban-gong-ji-qiao/window-ping-tai-zai-xu-ni-ji-vmware-zhong-pei-zhi-ubuntu20/</url>
@@ -2934,6 +2907,33 @@
             <tag> VMware </tag>
             
             <tag> Ubuntu20 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何使用PS修复照片反光区域</title>
+      <link href="/2022/05/03/9-ban-gong-ji-qiao/psrepair/"/>
+      <url>/2022/05/03/9-ban-gong-ji-qiao/psrepair/</url>
+      
+        <content type="html"><![CDATA[<h1 id="如何使用PS修复照片反光区域"><a href="#如何使用PS修复照片反光区域" class="headerlink" title="如何使用PS修复照片反光区域"></a>如何使用PS修复照片反光区域</h1><iframe class="bilibili" src="//player.bilibili.com/player.html?aid=212464091&bvid=BV1xa411t7JK&cid=553318499&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
+      
+      
+      <categories>
+          
+          <category> 办公技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 办公技巧 </tag>
+            
+            <tag> PS </tag>
             
         </tags>
       
@@ -3071,11 +3071,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——P300ERP无训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-wu-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-wu-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——SSVEP有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>本赛题基于P300电位脑-机接口数据，测试不同算法的识别性能。并根据测试数据中的正确率(Accuracy)和信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激界面由当前字符和36个字符组成的字符矩阵组成。本实验中，我们将代表当前字符编号的时间标签称为“大标签”，将代表字符矩阵行列编号的时间标签称为“小标签”。<br>每个试次中被试注视一个字符，以大标签作为起始，大标签出现后1s字符矩阵开始以行或列为单位随机地闪烁，每行&#x2F;列闪烁时长175ms，闪烁开始时刻出现代表当前闪烁行&#x2F;列编号的小标签，所有行和列闪烁一次称为一轮(共12行&#x2F;列)，每个字符6轮，总计72个小标签。即每个试次的时长为1+0.175126&#x3D;13.6秒。<br>大标签：包含26个字母和10个数字，共36种。在训练数据集中，字符与大标签的对应关系如下表，在测试数据集中，大标签统一为“100”，需要参赛者根据识别算法，计算出正确的大标签并报告。</p><p>小标签：包含6行6列，共12种，由数字1到12表示。其中数字1到6代表第1至6列，数字7到12代表第1至6行。<br>特别说明的是，每个字符的最后一个（第72个）小标签闪烁之后475ms，下一个字符的大标签刺激就会出现；即如果使用最后一个小标签的数据，可能需要截取到下一个字符的大标签出现之后的信息，需要参赛人员注意。报告超时的说明，具体见算法规范部分。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含10个字符的刺激试次。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的标签信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1A_fLxDZhzonCAA5U58UeiQ?pwd=1jsg">https://pan.baidu.com/s/1A_fLxDZhzonCAA5U58UeiQ?pwd=1jsg</a><br>提取码：1jsg<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>随着机器学习思想的火热传播，通过数据预先训练被认为是一种有效提高系统性能的方法。本赛题基于稳态视觉诱发电位脑-机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续3.5-4.5s，开始0.5s为目标提示阶段，屏幕中会出现一个红块提示目标位置并持续0.5s。之后3-4s为刺激阶段，刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。</p><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。</p><p>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。</p><p>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。</p><p>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。</p><p>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug">https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug</a><br>提取码：i3ug<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -3092,11 +3092,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——P300ERP有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——P300ERP无训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-wu-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-wu-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>本赛题基于P300电位脑-机接口数据，测试不同算法的识别性能。并根据测试数据中的正确率(Accuracy)和信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激界面由当前字符和36个字符组成的字符矩阵组成。本实验中，我们将代表当前字符编号的时间标签称为“大标签”，将代表字符矩阵行列编号的时间标签称为“小标签”。<br>每个试次中被试注视一个字符，以大标签作为起始，大标签出现后1s字符矩阵开始以行或列为单位随机地闪烁，每行&#x2F;列闪烁时长175ms，闪烁开始时刻出现代表当前闪烁行&#x2F;列编号的小标签，所有行和列闪烁一次称为一轮(共12行&#x2F;列)，每个字符6轮，总计72个小标签。即每个试次的时长为1+0.175126&#x3D;13.6秒。<br>大标签：包含26个字母和10个数字，共36种。在训练数据集中，字符与大标签的对应关系如下表，在测试数据集中，大标签统一为“100”，需要参赛者根据识别算法，计算出正确的大标签并报告。</p><p>小标签：包含6行6列，共12种，由数字1到12表示。其中数字1到6代表第1至6列，数字7到12代表第1至6行。<br>特别说明的是，每个字符的最后一个（第72个）小标签闪烁之后475ms，下一个字符的大标签刺激就会出现；即如果使用最后一个小标签的数据，可能需要截取到下一个字符的大标签出现之后的信息，需要参赛人员注意。报告超时的说明，具体见算法规范部分。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含5个字符的刺激试次。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的标签信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx">https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx</a><br>提取码：6btx<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>本赛题基于P300电位脑-机接口数据，测试不同算法的识别性能。并根据测试数据中的正确率(Accuracy)和信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激界面由当前字符和36个字符组成的字符矩阵组成。本实验中，我们将代表当前字符编号的时间标签称为“大标签”，将代表字符矩阵行列编号的时间标签称为“小标签”。<br>每个试次中被试注视一个字符，以大标签作为起始，大标签出现后1s字符矩阵开始以行或列为单位随机地闪烁，每行&#x2F;列闪烁时长175ms，闪烁开始时刻出现代表当前闪烁行&#x2F;列编号的小标签，所有行和列闪烁一次称为一轮(共12行&#x2F;列)，每个字符6轮，总计72个小标签。即每个试次的时长为1+0.175126&#x3D;13.6秒。<br>大标签：包含26个字母和10个数字，共36种。在训练数据集中，字符与大标签的对应关系如下表，在测试数据集中，大标签统一为“100”，需要参赛者根据识别算法，计算出正确的大标签并报告。</p><p>小标签：包含6行6列，共12种，由数字1到12表示。其中数字1到6代表第1至6列，数字7到12代表第1至6行。<br>特别说明的是，每个字符的最后一个（第72个）小标签闪烁之后475ms，下一个字符的大标签刺激就会出现；即如果使用最后一个小标签的数据，可能需要截取到下一个字符的大标签出现之后的信息，需要参赛人员注意。报告超时的说明，具体见算法规范部分。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含10个字符的刺激试次。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的标签信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1A_fLxDZhzonCAA5U58UeiQ?pwd=1jsg">https://pan.baidu.com/s/1A_fLxDZhzonCAA5U58UeiQ?pwd=1jsg</a><br>提取码：1jsg<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -3134,11 +3134,32 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——P300ERP有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-you-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>本赛题基于P300电位脑-机接口数据，测试不同算法的识别性能。并根据测试数据中的正确率(Accuracy)和信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激界面由当前字符和36个字符组成的字符矩阵组成。本实验中，我们将代表当前字符编号的时间标签称为“大标签”，将代表字符矩阵行列编号的时间标签称为“小标签”。<br>每个试次中被试注视一个字符，以大标签作为起始，大标签出现后1s字符矩阵开始以行或列为单位随机地闪烁，每行&#x2F;列闪烁时长175ms，闪烁开始时刻出现代表当前闪烁行&#x2F;列编号的小标签，所有行和列闪烁一次称为一轮(共12行&#x2F;列)，每个字符6轮，总计72个小标签。即每个试次的时长为1+0.175126&#x3D;13.6秒。<br>大标签：包含26个字母和10个数字，共36种。在训练数据集中，字符与大标签的对应关系如下表，在测试数据集中，大标签统一为“100”，需要参赛者根据识别算法，计算出正确的大标签并报告。</p><p>小标签：包含6行6列，共12种，由数字1到12表示。其中数字1到6代表第1至6列，数字7到12代表第1至6行。<br>特别说明的是，每个字符的最后一个（第72个）小标签闪烁之后475ms，下一个字符的大标签刺激就会出现；即如果使用最后一个小标签的数据，可能需要截取到下一个字符的大标签出现之后的信息，需要参赛人员注意。报告超时的说明，具体见算法规范部分。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含5个字符的刺激试次。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的标签信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx">https://pan.baidu.com/s/1_oef_k1GVv2LmaXnKC-Rtw?pwd=6btx</a><br>提取码：6btx<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开源数据集 </category>
+          
+          <category> 脑机接口 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2019年脑机接口大赛——运动想象有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>运动想象是一种自发可控的脑电行为，是更加自然、更加实用的人机接口方式，使用者仅仅通过“想象”即可实现控制。近些年，基于运动想象的脑机接口已经在医疗康复、军事、娱乐等方面发挥重要作用。本赛题希望通过更高的识别性能以帮助运动想象脑-机接口获得更为广泛的运用。<br>本赛题基于多类运动想象脑机接口的EEG数据，测试不同算法在有限训练数据条件下对运动想象脑电模式的识别性能，并根据多名受试者测试数据中的信息传输率（Information transfer rate，ITR）确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>本实验原始EEG数据由博睿康64导联设备采集（仅包含59个导联的脑电数据，60-64导联无效），采样率为1000Hz，数据统一进行50Hz陷波处理。一次完整实验为一个record，一名被试分3天完成多个record；实验数据以record为单位，每个record中均为连续采集EEG数据。每个record包含2个block（睁眼1min、闭眼1min）和5个session，session与session之间不少于1.5分钟的休息时间；每个session包括20*N个trial（每类运动想象任务20个trial，N：运动想象任务类别数，如N为2表示任务为左手运动想象和右手运动想象两类，如N为3表示任务为左手运动想象、右手运动想象、双脚运动想象三类），每个record过程如图1所示。 每个trial包含1.5s提示、4s运动想象任务、2s休息，事件标签开始于0时刻，如图2所示。以上不同任务相对应的标签信息如表1所示。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png" alt="单个trial运动想象流程图"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>同步有训练集运动想象赛题，提供训练集（每个被试的训练数据包含2个block{睁眼1min、闭眼1min}和3个运动想象任务session），训练集数据标识了事件时刻、事件类型等建模关键信息。<br>每个被试的测试数据和训练数据来自同一个record，通过被试ID与训练数据对应。每个被试对应两组测试数据，每组测试数据包含20*N个trial（三类每组60个，两类每组40个）。测试数据经数据模型封装后，由参赛者通过赛题框架接口调取。</p><p>BXXOOT 、BXXOOE 、TXXOOT 、TXXOOE, XX对应人员编号，OO对应数据编号，数据集按照题库中人员和数据编号统一命名，最终的取值，由专家组抽签得到。以上B0101T等仅做示范，比赛中可能出现B0801T等其他数据，参赛队员根据赛题给出的训练集对应建立模型即可。<br>B开头数据为二类数据，T开头数据为三类数据。B0101E.mat 等删除线数据集，比赛时通过系统获得。数据集由专家组抽签选取，部分数据（包括测试数据）将公开用于本地测试。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-5.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr">https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr</a><br>提取码：6qsr<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -3176,32 +3197,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>随着机器学习思想的火热传播，通过数据预先训练被认为是一种有效提高系统性能的方法。本赛题基于稳态视觉诱发电位脑-机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续3.5-4.5s，开始0.5s为目标提示阶段，屏幕中会出现一个红块提示目标位置并持续0.5s。之后3-4s为刺激阶段，刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。</p><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。</p><p>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。</p><p>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。</p><p>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。</p><p>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug">https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug</a><br>提取码：i3ug<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开源数据集 </category>
-          
-          <category> 脑机接口 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2019年脑机接口大赛——运动想象有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/</url>
-      
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>运动想象是一种自发可控的脑电行为，是更加自然、更加实用的人机接口方式，使用者仅仅通过“想象”即可实现控制。近些年，基于运动想象的脑机接口已经在医疗康复、军事、娱乐等方面发挥重要作用。本赛题希望通过更高的识别性能以帮助运动想象脑-机接口获得更为广泛的运用。<br>本赛题基于多类运动想象脑机接口的EEG数据，测试不同算法在有限训练数据条件下对运动想象脑电模式的识别性能，并根据多名受试者测试数据中的信息传输率（Information transfer rate，ITR）确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>本实验原始EEG数据由博睿康64导联设备采集（仅包含59个导联的脑电数据，60-64导联无效），采样率为1000Hz，数据统一进行50Hz陷波处理。一次完整实验为一个record，一名被试分3天完成多个record；实验数据以record为单位，每个record中均为连续采集EEG数据。每个record包含2个block（睁眼1min、闭眼1min）和5个session，session与session之间不少于1.5分钟的休息时间；每个session包括20*N个trial（每类运动想象任务20个trial，N：运动想象任务类别数，如N为2表示任务为左手运动想象和右手运动想象两类，如N为3表示任务为左手运动想象、右手运动想象、双脚运动想象三类），每个record过程如图1所示。 每个trial包含1.5s提示、4s运动想象任务、2s休息，事件标签开始于0时刻，如图2所示。以上不同任务相对应的标签信息如表1所示。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png" alt="单个trial运动想象流程图"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>同步有训练集运动想象赛题，提供训练集（每个被试的训练数据包含2个block{睁眼1min、闭眼1min}和3个运动想象任务session），训练集数据标识了事件时刻、事件类型等建模关键信息。<br>每个被试的测试数据和训练数据来自同一个record，通过被试ID与训练数据对应。每个被试对应两组测试数据，每组测试数据包含20*N个trial（三类每组60个，两类每组40个）。测试数据经数据模型封装后，由参赛者通过赛题框架接口调取。</p><p>BXXOOT 、BXXOOE 、TXXOOT 、TXXOOE, XX对应人员编号，OO对应数据编号，数据集按照题库中人员和数据编号统一命名，最终的取值，由专家组抽签得到。以上B0101T等仅做示范，比赛中可能出现B0801T等其他数据，参赛队员根据赛题给出的训练集对应建立模型即可。<br>B开头数据为二类数据，T开头数据为三类数据。B0101E.mat 等删除线数据集，比赛时通过系统获得。数据集由专家组抽签选取，部分数据（包括测试数据）将公开用于本地测试。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-5.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr">https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr</a><br>提取码：6qsr<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -3440,9 +3440,9 @@
       
         <tags>
             
-            <tag> 办公技巧 </tag>
-            
             <tag> 免费商用字体 </tag>
+            
+            <tag> 办公技巧 </tag>
             
             <tag> 版权问题 </tag>
             

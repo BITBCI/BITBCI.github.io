@@ -670,13 +670,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/05/03/9-ban-gong-ji-qiao/window-ping-tai-zai-xu-ni-ji-vmware-zhong-pei-zhi-ubuntu20/">
+                <a href="/2022/05/03/9-ban-gong-ji-qiao/psrepair/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Window平台在虚拟机VMware中配置Ubuntu20（后续完善）">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="如何使用PS修复照片反光区域">
                         
-                        <span class="card-title">Window平台在虚拟机VMware中配置Ubuntu20（后续完善）</span>
+                        <span class="card-title">如何使用PS修复照片反光区域</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -708,12 +708,8 @@
                         <span class="chip bg-color">办公技巧</span>
                     </a>
                     
-                    <a href="/tags/VMware/">
-                        <span class="chip bg-color">VMware</span>
-                    </a>
-                    
-                    <a href="/tags/Ubuntu20/">
-                        <span class="chip bg-color">Ubuntu20</span>
+                    <a href="/tags/PS/">
+                        <span class="chip bg-color">PS</span>
                     </a>
                     
                 </div>
@@ -783,43 +779,6 @@
 
 </div>
 
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + '来源: BITBCI<br />'
-            + '文章作者: BITBCI<br />'
-            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
 
 
 <!-- 代码块功能依赖 -->
