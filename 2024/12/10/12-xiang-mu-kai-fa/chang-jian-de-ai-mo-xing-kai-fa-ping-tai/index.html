@@ -505,21 +505,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-24
+                    2024-12-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-24
+                    2024-12-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    839
+                    1k
                 </div>
                 
 
@@ -550,7 +550,7 @@
 <p>为了提高开发效率，IT公司在深度学习库的基础上，开发了一系列的AI模型开发平台，包含了深度学习模型开发、训练、部署、应用的全流程，同时开源了包含图像、语音、NLP等领域的预训练模型。</p>
 <p>通过使用这些开源平台和开源模型，可以大幅度提高开发效率。</p>
 <p>国外平台：OpenVINO（英特尔）、TensorRT（英伟达）、Mediapipe（谷歌）、Azure AI（微软）</p>
-<p>国内平台：百度AI开放平台、讯飞开放平台、腾讯AI开放平台</p>
+<p>国内平台：<a target="_blank" rel="noopener" href="https://openmmlab.com/">OpenMMLab</a>、百度AI开放平台、讯飞开放平台、腾讯AI开放平台</p>
 <h3 id="二、OpenVINO（英特尔）"><a href="#二、OpenVINO（英特尔）" class="headerlink" title="二、OpenVINO（英特尔）"></a>二、OpenVINO（英特尔）</h3><p>OpenVINO官网为<a target="_blank" rel="noopener" href="https://www.intel.cn/content/www/cn/zh/developer/tools/openvino-toolkit/overview.html">英特尔® 发行版 OpenVINO™ 工具套件 (intel.cn)</a>；开发文档为<a target="_blank" rel="noopener" href="https://docs.openvino.ai/2022.3/tutorials.html">Interactive Tutorials (Python) — OpenVINO™ documentation — Version(2022.3)</a>，开发文档中有许多demo。</p>
 <p>可以通过<code>pip install openvino</code>进行安装。</p>
 <p>支持Pytorch、Tensorflow、PaddlePaddle等深度学习库。</p>
@@ -565,11 +565,15 @@
 <p>此外，Ultralytics 还提供了 <strong>Ultralytics HUB</strong>，这是一个云培训平台，用户可以在上面上传图像数据集，选择或创建 ML 模型进行训练，并将模型部署到现实世界中¹。</p>
 <p>其中价值较大的是<strong>Ultralytics YOLO</strong>，提供了目标检测、实例分割、分类、人体关键点检测等功能。</p>
 <p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E5%B8%B8%E8%A7%81%E7%9A%84AI%E6%A8%A1%E5%9E%8B%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0-2.png"></p>
-<h3 id="四、其他平台"><a href="#四、其他平台" class="headerlink" title="四、其他平台"></a>四、其他平台</h3><p>国内平台，比如<a target="_blank" rel="noopener" href="https://ai.baidu.com/">百度AI开放平台</a>、<a target="_blank" rel="noopener" href="https://www.xfyun.cn/">讯飞开放平台</a>、<a target="_blank" rel="noopener" href="https://ai.qq.com/">腾讯 AI 开放平台</a>，一般只提供API，在有网络的情况下还是可以使用的，此外对于快速搭建产品原型也很有帮助。</p>
+<h3 id="四、OpenMMLab"><a href="#四、OpenMMLab" class="headerlink" title="四、OpenMMLab"></a>四、OpenMMLab</h3><p><a target="_blank" rel="noopener" href="https://openmmlab.com/">OpenMMLab</a> 是一个开源的算法体系，旨在为计算机视觉领域的重要方向创建统一且开源的代码库。该项目由 MMLab（香港中文大学多媒体实验室）和商汤科技于2018年年中联合启动。</p>
+<p>目前已陆续开源30多个视觉算法库，实现了300多种算法，并包含2000+预训练模型，涵盖2D&#x2F;3D目标检测、语义分割、视频理解、姿态分析等多个方向。 </p>
+<p>OpenMMLab 的目标是推进可复现算法生态的建立，为计算机视觉领域的学术研究和工业应用提供支持。</p>
+<p>最大的优势是算法的模块化，可以用来快速搭建自己的模型。</p>
+<h3 id="五、其他平台"><a href="#五、其他平台" class="headerlink" title="五、其他平台"></a>五、其他平台</h3><p>国内平台，比如<a target="_blank" rel="noopener" href="https://ai.baidu.com/">百度AI开放平台</a>、<a target="_blank" rel="noopener" href="https://www.xfyun.cn/">讯飞开放平台</a>、<a target="_blank" rel="noopener" href="https://ai.qq.com/">腾讯 AI 开放平台</a>，一般只提供API，在有网络的情况下还是可以使用的，此外对于快速搭建产品原型也很有帮助。</p>
 <p>其中百度AI开放平台和讯飞开放平台的在线语音识别与合成API较为好用。</p>
 <p><a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/ai">Azure AI（微软）</a>也是提供了在线API。</p>
 <p>TensorRT（英伟达）现价段开发文档不全，部署较为困难，不推荐使用。</p>
-<h3 id="五、参考例程"><a href="#五、参考例程" class="headerlink" title="五、参考例程"></a>五、参考例程</h3><ul>
+<h3 id="六、参考例程"><a href="#六、参考例程" class="headerlink" title="六、参考例程"></a>六、参考例程</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/WangQvQ/Ultralytics-PySide6">WangQvQ&#x2F;Ultralytics-PySide6: # YOLOv8-PySide — 基于 ultralytics 8.1.0 发行版优化 (github.com)</a></li>
 </ul>
 <p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E5%B8%B8%E8%A7%81%E7%9A%84AI%E6%A8%A1%E5%9E%8B%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0-3.png"></p>
@@ -602,7 +606,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bitbci.github.io/2024/04/24/12-xiang-mu-kai-fa/chang-jian-de-ai-mo-xing-kai-fa-ping-tai/">https://bitbci.github.io/2024/04/24/12-xiang-mu-kai-fa/chang-jian-de-ai-mo-xing-kai-fa-ping-tai/</a>
+                    <a href="https://bitbci.github.io/2024/12/10/12-xiang-mu-kai-fa/chang-jian-de-ai-mo-xing-kai-fa-ping-tai/">https://bitbci.github.io/2024/12/10/12-xiang-mu-kai-fa/chang-jian-de-ai-mo-xing-kai-fa-ping-tai/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -689,17 +693,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/04/28/12-xiang-mu-kai-fa/chang-yong-3d-xiang-ji-ji-qi-shi-yong-fang-fa/">
+                <a href="/2024/12/10/12-xiang-mu-kai-fa/chang-jian-de-ai-mo-xing-kai-fa-ping-tai/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="常用3D相机及其使用方法">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="常见的AI模型开发平台">
                         
-                        <span class="card-title">常用3D相机及其使用方法</span>
+                        <span class="card-title">常见的AI模型开发平台</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -709,21 +714,22 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-12-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/3D%E7%9B%B8%E6%9C%BA/" class="post-category">
-                                    3D相机
+                            <a href="/categories/AI%E6%A8%A1%E5%9E%8B/" class="post-category">
+                                    AI模型
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -731,8 +737,8 @@
                         <span class="chip bg-color">项目开发</span>
                     </a>
                     
-                    <a href="/tags/3D%E7%9B%B8%E6%9C%BA/">
-                        <span class="chip bg-color">3D相机</span>
+                    <a href="/tags/AI%E6%A8%A1%E5%9E%8B/">
+                        <span class="chip bg-color">AI模型</span>
                     </a>
                     
                 </div>
@@ -746,13 +752,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/20/2-ke-yan-lun-wen/zhi-ming-xue-zhu-qi-kan-chu-ban-shang/">
+                <a href="/2024/11/25/12-xiang-mu-kai-fa/cursor-ruan-jian-pei-zhi-yu-shi-yong-ji-qiao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="知名学术期刊出版商">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Cursor软件配置与使用技巧">
                         
-                        <span class="card-title">知名学术期刊出版商</span>
+                        <span class="card-title">Cursor软件配置与使用技巧</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -763,18 +769,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-11-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" class="post-category">
-                                    科研论文
-                                </a>
-                            
-                            <a href="/categories/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/%E5%AD%A6%E6%9C%AF%E6%9C%9F%E5%88%8A%E5%87%BA%E7%89%88%E5%95%86/" class="post-category">
-                                    学术期刊出版商
+                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" class="post-category">
+                                    项目开发
                                 </a>
                             
                             
@@ -784,8 +786,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/">
-                        <span class="chip bg-color">科研论文</span>
+                    <a href="/tags/Cursor/">
+                        <span class="chip bg-color">Cursor</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">软件配置</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+                        <span class="chip bg-color">使用技巧</span>
                     </a>
                     
                 </div>
@@ -934,7 +944,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">74.2k</span>&nbsp;字
+                class="white-color">74.6k</span>&nbsp;字
             
             
             

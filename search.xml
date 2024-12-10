@@ -4,11 +4,38 @@
   
     
     <entry>
+      <title>常见的AI模型开发平台</title>
+      <link href="/2024/12/10/12-xiang-mu-kai-fa/chang-jian-de-ai-mo-xing-kai-fa-ping-tai/"/>
+      <url>/2024/12/10/12-xiang-mu-kai-fa/chang-jian-de-ai-mo-xing-kai-fa-ping-tai/</url>
+      
+        <content type="html"><![CDATA[<h2 id="常见的AI模型开发平台"><a href="#常见的AI模型开发平台" class="headerlink" title="常见的AI模型开发平台"></a>常见的AI模型开发平台</h2><h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><p>近些年来，各大IT公司在人工智能领域投入了大量的开发，开源了Pytorch、Tensorflow、PaddlePaddle等深度学习库。</p><p>为了提高开发效率，IT公司在深度学习库的基础上，开发了一系列的AI模型开发平台，包含了深度学习模型开发、训练、部署、应用的全流程，同时开源了包含图像、语音、NLP等领域的预训练模型。</p><p>通过使用这些开源平台和开源模型，可以大幅度提高开发效率。</p><p>国外平台：OpenVINO（英特尔）、TensorRT（英伟达）、Mediapipe（谷歌）、Azure AI（微软）</p><p>国内平台：<a href="https://openmmlab.com/">OpenMMLab</a>、百度AI开放平台、讯飞开放平台、腾讯AI开放平台</p><h3 id="二、OpenVINO（英特尔）"><a href="#二、OpenVINO（英特尔）" class="headerlink" title="二、OpenVINO（英特尔）"></a>二、OpenVINO（英特尔）</h3><p>OpenVINO官网为<a href="https://www.intel.cn/content/www/cn/zh/developer/tools/openvino-toolkit/overview.html">英特尔® 发行版 OpenVINO™ 工具套件 (intel.cn)</a>；开发文档为<a href="https://docs.openvino.ai/2022.3/tutorials.html">Interactive Tutorials (Python) — OpenVINO™ documentation — Version(2022.3)</a>，开发文档中有许多demo。</p><p>可以通过<code>pip install openvino</code>进行安装。</p><p>支持Pytorch、Tensorflow、PaddlePaddle等深度学习库。</p><h3 id="二、Mediapipe（谷歌）"><a href="#二、Mediapipe（谷歌）" class="headerlink" title="二、Mediapipe（谷歌）"></a>二、Mediapipe（谷歌）</h3><p>MediaPipe 是一款由 Google Research 开发并开源的多媒体机器学习模型应用框架。在谷歌，一系列重要产品，如Google Lens、ARCore、Google Home都已深度整合了 MediaPipe。</p><p>MediaPipe 不仅可以被部署在服务器端，更可以在多个移动端 （安卓和苹果 iOS）和嵌入式平台（Google Coral 和树莓派）中作为设备端机器学习推理 （On-device Machine Learning Inference）框架。</p><p>Mediapipe官网为<a href="https://mediapipe-studio.webapps.google.com/home">MediaPipe Studio (google.com)</a>，官网提供了有许多demo，开发过程特别简单。</p><p>可以通过<code>pip install mediapipe</code>进行安装。</p><p>支持Tensorflow更多一些，其他的深度学习库也支持。</p><p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E5%B8%B8%E8%A7%81%E7%9A%84AI%E6%A8%A1%E5%9E%8B%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0-1.png"></p><h3 id="三、Ultralytics"><a href="#三、Ultralytics" class="headerlink" title="三、Ultralytics"></a>三、Ultralytics</h3><p><a href="https://docs.ultralytics.com/">Ultralytics</a> 是一家专注于视觉人工智能领域的公司，致力于将图像转化为有用的人工智能见解。他们提供了一个无代码平台，用户可以通过简单的拖放操作来训练和部署强大的人工智能模型。。</p><p>Ultralytics 的核心产品是 <strong>Ultralytics YOLO</strong>，这是一个智能工具，它能够进行图像分类、物体检测和实例分割。该公司比喻这个工具就像哈佛大学的学生——高智商，永远渴望学习。只需创建课程表，它就能成长¹。</p><p>此外，Ultralytics 还提供了 <strong>Ultralytics HUB</strong>，这是一个云培训平台，用户可以在上面上传图像数据集，选择或创建 ML 模型进行训练，并将模型部署到现实世界中¹。</p><p>其中价值较大的是<strong>Ultralytics YOLO</strong>，提供了目标检测、实例分割、分类、人体关键点检测等功能。</p><p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E5%B8%B8%E8%A7%81%E7%9A%84AI%E6%A8%A1%E5%9E%8B%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0-2.png"></p><h3 id="四、OpenMMLab"><a href="#四、OpenMMLab" class="headerlink" title="四、OpenMMLab"></a>四、OpenMMLab</h3><p><a href="https://openmmlab.com/">OpenMMLab</a> 是一个开源的算法体系，旨在为计算机视觉领域的重要方向创建统一且开源的代码库。该项目由 MMLab（香港中文大学多媒体实验室）和商汤科技于2018年年中联合启动。</p><p>目前已陆续开源30多个视觉算法库，实现了300多种算法，并包含2000+预训练模型，涵盖2D&#x2F;3D目标检测、语义分割、视频理解、姿态分析等多个方向。 </p><p>OpenMMLab 的目标是推进可复现算法生态的建立，为计算机视觉领域的学术研究和工业应用提供支持。</p><p>最大的优势是算法的模块化，可以用来快速搭建自己的模型。</p><h3 id="五、其他平台"><a href="#五、其他平台" class="headerlink" title="五、其他平台"></a>五、其他平台</h3><p>国内平台，比如<a href="https://ai.baidu.com/">百度AI开放平台</a>、<a href="https://www.xfyun.cn/">讯飞开放平台</a>、<a href="https://ai.qq.com/">腾讯 AI 开放平台</a>，一般只提供API，在有网络的情况下还是可以使用的，此外对于快速搭建产品原型也很有帮助。</p><p>其中百度AI开放平台和讯飞开放平台的在线语音识别与合成API较为好用。</p><p><a href="https://www.microsoft.com/zh-cn/ai">Azure AI（微软）</a>也是提供了在线API。</p><p>TensorRT（英伟达）现价段开发文档不全，部署较为困难，不推荐使用。</p><h3 id="六、参考例程"><a href="#六、参考例程" class="headerlink" title="六、参考例程"></a>六、参考例程</h3><ul><li><a href="https://github.com/WangQvQ/Ultralytics-PySide6">WangQvQ&#x2F;Ultralytics-PySide6: # YOLOv8-PySide — 基于 ultralytics 8.1.0 发行版优化 (github.com)</a></li></ul><p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E5%B8%B8%E8%A7%81%E7%9A%84AI%E6%A8%A1%E5%9E%8B%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0-3.png"></p><ul><li><a href="https://github.com/Jai-wei/YOLOv8-PySide6-GUI/tree/main">Jai-wei&#x2F;YOLOv8-PySide6-GUI: YoloSide - YOLOv8 GUI By PySide6 (github.com)</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI模型 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 项目开发 </tag>
+            
+            <tag> AI模型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Cursor软件配置与使用技巧</title>
       <link href="/2024/11/25/12-xiang-mu-kai-fa/cursor-ruan-jian-pei-zhi-yu-shi-yong-ji-qiao/"/>
       <url>/2024/11/25/12-xiang-mu-kai-fa/cursor-ruan-jian-pei-zhi-yu-shi-yong-ji-qiao/</url>
       
-        <content type="html"><![CDATA[<h1 id="Cursor-软件配置与使用技巧"><a href="#Cursor-软件配置与使用技巧" class="headerlink" title="Cursor 软件配置与使用技巧"></a>Cursor 软件配置与使用技巧</h1><h2 id="一、Cursor-简介"><a href="#一、Cursor-简介" class="headerlink" title="一、Cursor 简介"></a>一、Cursor 简介</h2><p><a href="https://www.cursor.com/">Cursor</a> 是一个基于 VSCode 的集成了 GPT4、Claude 3.5 等先进 LLM 的 IDE。Cursor 兼容了 VSCode 的全部功能，并且在此基础上，增加了 AI 辅助编程的功能。与 VSCode 一样，Cursor 支持多种编程语言，包括 Python、JavaScript、TypeScript、Go、Rust 等。</p><h2 id="二、AI-辅助编程的重要性"><a href="#二、AI-辅助编程的重要性" class="headerlink" title="二、AI 辅助编程的重要性"></a>二、AI 辅助编程的重要性</h2><h3 id="AI-辅助编程-≠-与大模型对话（或者给大模型下命令）！！！！"><a href="#AI-辅助编程-≠-与大模型对话（或者给大模型下命令）！！！！" class="headerlink" title="AI 辅助编程 ≠ 与大模型对话（或者给大模型下命令）！！！！"></a>AI 辅助编程 ≠ 与大模型对话（或者给大模型下命令）！！！！</h3><p>目前来说，很多开发人员在编写代码时，是基于搜索引擎或者与大模型对话来完成代码的编写。并没有充分利用大模型的能力，只是把大模型当作一个搜索引擎来使用。</p><p>很多学生开发者，在编写代码时，甚至不和大模型对话，仅仅是不断重复给大模型下命令，让大模型给出代码。这是一种效率很低的方式。</p><p>在大模型快速发展的今天，率先掌握大模型编程的技巧，可以大大提高开发效率，提升个人竞争力。</p><p>AI 辅助编程的三个阶段：</p><ol><li>给大模型下命令</li><li>与大模型对话</li><li>在用户开发经验与本地知识库的基础上，使用大模型辅助编程</li></ol><h2 id="三、Cursor-的安装与基础配置"><a href="#三、Cursor-的安装与基础配置" class="headerlink" title="三、Cursor 的安装与基础配置"></a>三、Cursor 的安装与基础配置</h2><h3 id="1-安装-Cursor"><a href="#1-安装-Cursor" class="headerlink" title="1. 安装 Cursor"></a>1. 安装 Cursor</h3><p>Cursor 的安装很简单，直接在 <a href="https://www.cursor.com/">Cursor 官网</a> 下载安装即可。</p><h3 id="2-Cursor-的-UI-配置"><a href="#2-Cursor-的-UI-配置" class="headerlink" title="2. Cursor 的 UI 配置"></a>2. Cursor 的 UI 配置</h3><p>Cursor 的导航栏位置默认为横向，但是 VSCode 的导航栏位置默认为纵向，因此习惯了 VSCode 的开发人员可能会不习惯。</p><p>调整方法：</p><ol><li>使用快捷键 <code>Ctrl + Shift + P</code> 打开命令面板</li><li>输入 <code>VS Code Settings</code>，打开 VSCode 的设置</li><li>搜索到 <code>workbench.activityBar.orientation</code> ，设置为 <code>vertical</code></li><li>重启 Cursor</li></ol><h3 id="3-Cursor-的-LLM-配置"><a href="#3-Cursor-的-LLM-配置" class="headerlink" title="3. Cursor 的 LLM 配置"></a>3. Cursor 的 LLM 配置</h3><p>点击右上角的设置，即可配置 LLM 模型。</p><p>Cursor 内置了很多 LLMs，包括最先进的 GPT4s、Claude3.5s 和 openai 最新发布的推理模型 o1-preview 和 o1-mini。</p><p>平时用的最多的还是 Claude3.5 和 GPT4，代码能力与语言能力都很强。</p><h2 id="四、Cursor-的使用技巧"><a href="#四、Cursor-的使用技巧" class="headerlink" title="四、Cursor 的使用技巧"></a>四、Cursor 的使用技巧</h2><p>Cursor 中有四个最为常用的快捷键，分别对应四种常用操作：</p><ol><li><code>Tab</code>：编程时的自动填充</li><li><code>Ctrl + K</code>：编辑当前代码文件</li><li><code>Ctrl + L</code>：回答用户关于代码或整个项目的问题，也可以编辑代码（功能更全面）</li><li><code>Ctrl + I</code>：编辑整个项目代码（跨文件编辑代码）</li></ol><h3 id="1-使用-Tab-键自动填充"><a href="#1-使用-Tab-键自动填充" class="headerlink" title="1. 使用 Tab 键自动填充"></a>1. 使用 <code>Tab</code> 键自动填充</h3><p>该功能较为简单，不再赘述。</p><h3 id="2-使用-Ctrl-K-行内对话"><a href="#2-使用-Ctrl-K-行内对话" class="headerlink" title="2. 使用 Ctrl + K 行内对话"></a>2. 使用 <code>Ctrl + K</code> 行内对话</h3><p>在代码空白处或者选中代码块，按下 <code>Ctrl + K</code>，即可在聊天框内提出需求，Cursor 会根据需求自动生成代码，然后用户可以选择 <code>Accept</code> 或者 <code>Reject</code>。</p><h3 id="3-使用-Ctrl-L-进入聊天界面（最为常用）"><a href="#3-使用-Ctrl-L-进入聊天界面（最为常用）" class="headerlink" title="3. 使用 Ctrl + L 进入聊天界面（最为常用）"></a>3. 使用 <code>Ctrl + L</code> 进入聊天界面（最为常用）</h3><p>在代码空白处，按下 <code>Ctrl + L</code>，即可进入聊天界面。</p><p>用户可以通过输入 <code>@file</code> 引用不同的代码文件。</p><p>用户也可以通过输入 <code>@Codebase </code> 引用整个项目。</p><h3 id="4-使用-Ctrl-I-开发整个项目"><a href="#4-使用-Ctrl-I-开发整个项目" class="headerlink" title="4. 使用 Ctrl + I 开发整个项目"></a>4. 使用 <code>Ctrl + I</code> 开发整个项目</h3><p><code>Ctrl+I</code> 是专为整个项目设计的，可以通过和模型对话来开发整个项目，在对话中可以帮助用户创建文件、删除文件、同时编辑多个文件等功能。</p><h3 id="5-使用外部知识库"><a href="#5-使用外部知识库" class="headerlink" title="5. 使用外部知识库"></a>5. 使用外部知识库</h3><p>使用外部知识库，可以作为项目开发时的参考文档。</p><p>设置方法：</p><ol><li>使用快捷键 <code>Ctrl + Shift + J</code> 进入 Cursor 设置界面</li><li>点击 <code>Features</code> 选项卡</li><li>在 <code>Docs</code> 选项卡中填入外部开发文档的链接</li></ol><p>在使用 <code>Ctrl + L</code> 进入聊天界面时，输入 <code>@docs</code>，即可引用外部知识库中的内容。</p><h3 id="6-使用提示词"><a href="#6-使用提示词" class="headerlink" title="6. 使用提示词"></a>6. 使用提示词</h3><p>Cursor 设置中，可以设置提示词。</p><p>其实，很多情况下，Cursor 的默认提示词已经足够使用，不需要用户自己设置。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Cursor-软件配置与使用技巧"><a href="#Cursor-软件配置与使用技巧" class="headerlink" title="Cursor 软件配置与使用技巧"></a>Cursor 软件配置与使用技巧</h1><h2 id="一、Cursor-简介"><a href="#一、Cursor-简介" class="headerlink" title="一、Cursor 简介"></a>一、Cursor 简介</h2><p><a href="https://www.cursor.com/">Cursor</a> 是一个基于 VSCode 的集成了 GPT4、Claude 3.5 等先进 LLM 的 IDE。Cursor 兼容了 VSCode 的全部功能，并且在此基础上，增加了 AI 辅助编程的功能。与 VSCode 一样，Cursor 支持多种编程语言，包括 Python、JavaScript、TypeScript、Go、Rust 等。</p><h2 id="二、AI-辅助编程的重要性"><a href="#二、AI-辅助编程的重要性" class="headerlink" title="二、AI 辅助编程的重要性"></a>二、AI 辅助编程的重要性</h2><h3 id="AI-辅助编程-≠-与大模型对话（或者给大模型下命令）！！！！"><a href="#AI-辅助编程-≠-与大模型对话（或者给大模型下命令）！！！！" class="headerlink" title="AI 辅助编程 ≠ 与大模型对话（或者给大模型下命令）！！！！"></a>AI 辅助编程 ≠ 与大模型对话（或者给大模型下命令）！！！！</h3><p>目前来说，很多开发人员在编写代码时，是基于搜索引擎或者与大模型对话来完成代码的编写。并没有充分利用大模型的能力，只是把大模型当作一个搜索引擎来使用。</p><p>很多学生开发者，在编写代码时，甚至不和大模型对话，仅仅是不断重复给大模型下命令，让大模型给出代码。这是一种效率很低的方式。</p><p>在大模型快速发展的今天，率先掌握大模型编程的技巧，可以大大提高开发效率，提升个人竞争力。</p><p>AI 辅助编程的三个阶段：</p><ol><li>给大模型下命令</li><li>与大模型对话</li><li>在用户开发经验与本地知识库的基础上，使用大模型辅助编程</li></ol><h2 id="三、Cursor-的安装与基础配置"><a href="#三、Cursor-的安装与基础配置" class="headerlink" title="三、Cursor 的安装与基础配置"></a>三、Cursor 的安装与基础配置</h2><h3 id="1-安装-Cursor"><a href="#1-安装-Cursor" class="headerlink" title="1. 安装 Cursor"></a>1. 安装 Cursor</h3><p>Cursor 的安装很简单，直接在 <a href="https://www.cursor.com/">Cursor 官网</a> 下载安装即可。</p><h3 id="2-Cursor-的-UI-配置"><a href="#2-Cursor-的-UI-配置" class="headerlink" title="2. Cursor 的 UI 配置"></a>2. Cursor 的 UI 配置</h3><p>Cursor 的导航栏位置默认为横向，但是 VSCode 的导航栏位置默认为纵向，因此习惯了 VSCode 的开发人员可能会不习惯。</p><p>调整方法：</p><ol><li>使用快捷键 <code>Ctrl + Shift + P</code> 打开命令面板</li><li>输入 <code>VS Code Settings</code>，打开 VSCode 的设置</li><li>搜索到 <code>workbench.activityBar.orientation</code> ，设置为 <code>vertical</code></li><li>重启 Cursor</li></ol><h3 id="3-Cursor-的-LLM-配置"><a href="#3-Cursor-的-LLM-配置" class="headerlink" title="3. Cursor 的 LLM 配置"></a>3. Cursor 的 LLM 配置</h3><p>点击右上角的设置，即可配置 LLM 模型。</p><p>Cursor 内置了很多 LLMs，包括最先进的 GPT4s、Claude3.5s 和 openai 最新发布的推理模型 o1-preview 和 o1-mini。</p><p>平时用的最多的还是 Claude3.5 和 GPT4，代码能力与语言能力都很强。</p><h2 id="四、Cursor-的使用技巧"><a href="#四、Cursor-的使用技巧" class="headerlink" title="四、Cursor 的使用技巧"></a>四、Cursor 的使用技巧</h2><p>Cursor 中有四个最为常用的快捷键，分别对应四种常用操作：</p><ol><li><code>Tab</code>：编程时的自动填充</li><li><code>Ctrl + K</code>：编辑当前代码文件</li><li><code>Ctrl + L</code>：回答用户关于代码或整个项目的问题，也可以编辑代码（功能更全面）</li><li><code>Ctrl + I</code>：编辑整个项目代码（跨文件编辑代码）</li></ol><h3 id="1-使用-Tab-键自动填充"><a href="#1-使用-Tab-键自动填充" class="headerlink" title="1. 使用 Tab 键自动填充"></a>1. 使用 <code>Tab</code> 键自动填充</h3><p>该功能较为简单，不再赘述。</p><h3 id="2-使用-Ctrl-K-行内对话"><a href="#2-使用-Ctrl-K-行内对话" class="headerlink" title="2. 使用 Ctrl + K 行内对话"></a>2. 使用 <code>Ctrl + K</code> 行内对话</h3><p>在代码空白处或者选中代码块，按下 <code>Ctrl + K</code>，即可在聊天框内提出需求，Cursor 会根据需求自动生成代码，然后用户可以选择 <code>Accept</code> 或者 <code>Reject</code>。</p><h3 id="3-使用-Ctrl-L-进入聊天界面（最为常用）"><a href="#3-使用-Ctrl-L-进入聊天界面（最为常用）" class="headerlink" title="3. 使用 Ctrl + L 进入聊天界面（最为常用）"></a>3. 使用 <code>Ctrl + L</code> 进入聊天界面（最为常用）</h3><p>在代码空白处，按下 <code>Ctrl + L</code>，即可进入聊天界面。</p><p>用户可以通过输入 <code>@file</code> 引用不同的代码文件。</p><p>用户也可以通过输入 <code>@Codebase </code> 引用整个项目。</p><h3 id="4-使用-Ctrl-I-开发整个项目"><a href="#4-使用-Ctrl-I-开发整个项目" class="headerlink" title="4. 使用 Ctrl + I 开发整个项目"></a>4. 使用 <code>Ctrl + I</code> 开发整个项目</h3><p><code>Ctrl+I</code> 是专为整个项目设计的，可以通过和模型对话来开发整个项目，在对话中可以帮助用户创建文件、删除文件、同时编辑多个文件等功能。</p><h3 id="5-使用外部知识库"><a href="#5-使用外部知识库" class="headerlink" title="5. 使用外部知识库"></a>5. 使用外部知识库</h3><p>使用外部知识库，可以作为项目开发时的参考文档。</p><p>设置方法：</p><ol><li>使用快捷键 <code>Ctrl + Shift + J</code> 进入 Cursor 设置界面</li><li>点击 <code>Features</code> 选项卡</li><li>在 <code>Docs</code> 选项卡中填入外部开发文档的链接</li></ol><p>在使用 <code>Ctrl + L</code> 进入聊天界面时，输入 <code>@docs</code>，即可引用外部知识库中的内容。</p><h3 id="6-使用提示词"><a href="#6-使用提示词" class="headerlink" title="6. 使用提示词"></a>6. 使用提示词</h3><p>Cursor 设置中，可以设置提示词。</p><p>其实，很多情况下，Cursor 的默认提示词已经足够使用，不需要用户自己设置。</p><h2 id="五、Cursor-无限试用"><a href="#五、Cursor-无限试用" class="headerlink" title="五、Cursor 无限试用"></a>五、Cursor 无限试用</h2><p>Cursor 的免费试用次数有限，如果想要无限试用，可以使用 <a href="https://www.2925.com/login/">2925 无线邮</a> 注册新账号，然后使用新账号使用 Cursor。</p><p>但是，现在 Cursor 删除账号再登陆后，出现提示“Too many free trial accounts used on this machine.”的问题。这是因为 Cursor 的账号检测机制，检测到该账号登录电脑的机器码一致。可以通过修改电脑的机器码来解决，解决方法参考<a href="https://github.com/korykim/cursormate">Cursor 无限试用</a>。</p><p>也可以手动修改 Cursor 的配置文件，配置文件路径为 <code>C:\Users\lsy\AppData\Roaming\Cursor\User\globalStorage\storage.json</code>。<br>将下面的字段修改为随机字符串，即可解决该问题。</p><pre class="line-numbers language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>    <span class="token property">"telemetry.macMachineId"</span><span class="token operator">:</span> <span class="token string">"random_string_1"</span><span class="token punctuation">,</span>    <span class="token property">"telemetry.machineId"</span><span class="token operator">:</span> <span class="token string">"random_string_2"</span><span class="token punctuation">,</span>    <span class="token property">"telemetry.devDeviceId"</span><span class="token operator">:</span> <span class="token string">"random_string_3"</span>&amp;#<span class="token number">125</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>修改完之后可以将 <code>storage.json</code> 文件修改为只读，防止被修改。</p>]]></content>
       
       
       <categories>
@@ -984,33 +1011,6 @@
     
     
     <entry>
-      <title>常见的AI模型开发平台</title>
-      <link href="/2024/04/24/12-xiang-mu-kai-fa/chang-jian-de-ai-mo-xing-kai-fa-ping-tai/"/>
-      <url>/2024/04/24/12-xiang-mu-kai-fa/chang-jian-de-ai-mo-xing-kai-fa-ping-tai/</url>
-      
-        <content type="html"><![CDATA[<h2 id="常见的AI模型开发平台"><a href="#常见的AI模型开发平台" class="headerlink" title="常见的AI模型开发平台"></a>常见的AI模型开发平台</h2><h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><p>近些年来，各大IT公司在人工智能领域投入了大量的开发，开源了Pytorch、Tensorflow、PaddlePaddle等深度学习库。</p><p>为了提高开发效率，IT公司在深度学习库的基础上，开发了一系列的AI模型开发平台，包含了深度学习模型开发、训练、部署、应用的全流程，同时开源了包含图像、语音、NLP等领域的预训练模型。</p><p>通过使用这些开源平台和开源模型，可以大幅度提高开发效率。</p><p>国外平台：OpenVINO（英特尔）、TensorRT（英伟达）、Mediapipe（谷歌）、Azure AI（微软）</p><p>国内平台：百度AI开放平台、讯飞开放平台、腾讯AI开放平台</p><h3 id="二、OpenVINO（英特尔）"><a href="#二、OpenVINO（英特尔）" class="headerlink" title="二、OpenVINO（英特尔）"></a>二、OpenVINO（英特尔）</h3><p>OpenVINO官网为<a href="https://www.intel.cn/content/www/cn/zh/developer/tools/openvino-toolkit/overview.html">英特尔® 发行版 OpenVINO™ 工具套件 (intel.cn)</a>；开发文档为<a href="https://docs.openvino.ai/2022.3/tutorials.html">Interactive Tutorials (Python) — OpenVINO™ documentation — Version(2022.3)</a>，开发文档中有许多demo。</p><p>可以通过<code>pip install openvino</code>进行安装。</p><p>支持Pytorch、Tensorflow、PaddlePaddle等深度学习库。</p><h3 id="二、Mediapipe（谷歌）"><a href="#二、Mediapipe（谷歌）" class="headerlink" title="二、Mediapipe（谷歌）"></a>二、Mediapipe（谷歌）</h3><p>MediaPipe 是一款由 Google Research 开发并开源的多媒体机器学习模型应用框架。在谷歌，一系列重要产品，如Google Lens、ARCore、Google Home都已深度整合了 MediaPipe。</p><p>MediaPipe 不仅可以被部署在服务器端，更可以在多个移动端 （安卓和苹果 iOS）和嵌入式平台（Google Coral 和树莓派）中作为设备端机器学习推理 （On-device Machine Learning Inference）框架。</p><p>Mediapipe官网为<a href="https://mediapipe-studio.webapps.google.com/home">MediaPipe Studio (google.com)</a>，官网提供了有许多demo，开发过程特别简单。</p><p>可以通过<code>pip install mediapipe</code>进行安装。</p><p>支持Tensorflow更多一些，其他的深度学习库也支持。</p><p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E5%B8%B8%E8%A7%81%E7%9A%84AI%E6%A8%A1%E5%9E%8B%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0-1.png"></p><h3 id="三、Ultralytics"><a href="#三、Ultralytics" class="headerlink" title="三、Ultralytics"></a>三、Ultralytics</h3><p><a href="https://docs.ultralytics.com/">Ultralytics</a> 是一家专注于视觉人工智能领域的公司，致力于将图像转化为有用的人工智能见解。他们提供了一个无代码平台，用户可以通过简单的拖放操作来训练和部署强大的人工智能模型。。</p><p>Ultralytics 的核心产品是 <strong>Ultralytics YOLO</strong>，这是一个智能工具，它能够进行图像分类、物体检测和实例分割。该公司比喻这个工具就像哈佛大学的学生——高智商，永远渴望学习。只需创建课程表，它就能成长¹。</p><p>此外，Ultralytics 还提供了 <strong>Ultralytics HUB</strong>，这是一个云培训平台，用户可以在上面上传图像数据集，选择或创建 ML 模型进行训练，并将模型部署到现实世界中¹。</p><p>其中价值较大的是<strong>Ultralytics YOLO</strong>，提供了目标检测、实例分割、分类、人体关键点检测等功能。</p><p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E5%B8%B8%E8%A7%81%E7%9A%84AI%E6%A8%A1%E5%9E%8B%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0-2.png"></p><h3 id="四、其他平台"><a href="#四、其他平台" class="headerlink" title="四、其他平台"></a>四、其他平台</h3><p>国内平台，比如<a href="https://ai.baidu.com/">百度AI开放平台</a>、<a href="https://www.xfyun.cn/">讯飞开放平台</a>、<a href="https://ai.qq.com/">腾讯 AI 开放平台</a>，一般只提供API，在有网络的情况下还是可以使用的，此外对于快速搭建产品原型也很有帮助。</p><p>其中百度AI开放平台和讯飞开放平台的在线语音识别与合成API较为好用。</p><p><a href="https://www.microsoft.com/zh-cn/ai">Azure AI（微软）</a>也是提供了在线API。</p><p>TensorRT（英伟达）现价段开发文档不全，部署较为困难，不推荐使用。</p><h3 id="五、参考例程"><a href="#五、参考例程" class="headerlink" title="五、参考例程"></a>五、参考例程</h3><ul><li><a href="https://github.com/WangQvQ/Ultralytics-PySide6">WangQvQ&#x2F;Ultralytics-PySide6: # YOLOv8-PySide — 基于 ultralytics 8.1.0 发行版优化 (github.com)</a></li></ul><p><img src="/../../images/12-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E5%B8%B8%E8%A7%81%E7%9A%84AI%E6%A8%A1%E5%9E%8B%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0-3.png"></p><ul><li><a href="https://github.com/Jai-wei/YOLOv8-PySide6-GUI/tree/main">Jai-wei&#x2F;YOLOv8-PySide6-GUI: YoloSide - YOLOv8 GUI By PySide6 (github.com)</a></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> AI模型 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 项目开发 </tag>
-            
-            <tag> AI模型 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>知名学术期刊出版商</title>
       <link href="/2024/04/20/2-ke-yan-lun-wen/zhi-ming-xue-zhu-qi-kan-chu-ban-shang/"/>
       <url>/2024/04/20/2-ke-yan-lun-wen/zhi-ming-xue-zhu-qi-kan-chu-ban-shang/</url>
@@ -1434,9 +1434,9 @@
       
         <tags>
             
-            <tag> 脑机接口 </tag>
-            
             <tag> Python开发 </tag>
+            
+            <tag> 脑机接口 </tag>
             
         </tags>
       
@@ -1880,9 +1880,9 @@
       
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> 驱动安装 </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
       
@@ -1907,9 +1907,9 @@
       
         <tags>
             
-            <tag> 桌面快捷方式 </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> 桌面快捷方式 </tag>
             
         </tags>
       
@@ -1961,9 +1961,9 @@
       
         <tags>
             
-            <tag> OpenBCI硬件 </tag>
-            
             <tag> 脑机接口 </tag>
+            
+            <tag> OpenBCI硬件 </tag>
             
         </tags>
       
@@ -1988,9 +1988,9 @@
       
         <tags>
             
-            <tag> OpenBCI硬件 </tag>
-            
             <tag> 脑机接口 </tag>
+            
+            <tag> OpenBCI硬件 </tag>
             
         </tags>
       
@@ -2015,9 +2015,9 @@
       
         <tags>
             
-            <tag> OpenBCI硬件 </tag>
-            
             <tag> 脑机接口 </tag>
+            
+            <tag> OpenBCI硬件 </tag>
             
         </tags>
       
@@ -2246,9 +2246,9 @@
       
         <tags>
             
-            <tag> 脑机接口 </tag>
-            
             <tag> Python开发 </tag>
+            
+            <tag> 脑机接口 </tag>
             
         </tags>
       
@@ -2300,9 +2300,9 @@
       
         <tags>
             
-            <tag> 脑机接口 </tag>
-            
             <tag> Python开发 </tag>
+            
+            <tag> 脑机接口 </tag>
             
         </tags>
       
@@ -2886,6 +2886,33 @@
     
     
     <entry>
+      <title>如何使用PS修复照片反光区域</title>
+      <link href="/2022/05/03/9-ban-gong-ji-qiao/psrepair/"/>
+      <url>/2022/05/03/9-ban-gong-ji-qiao/psrepair/</url>
+      
+        <content type="html"><![CDATA[<h1 id="如何使用PS修复照片反光区域"><a href="#如何使用PS修复照片反光区域" class="headerlink" title="如何使用PS修复照片反光区域"></a>如何使用PS修复照片反光区域</h1><iframe class="bilibili" src="//player.bilibili.com/player.html?aid=212464091&bvid=BV1xa411t7JK&cid=553318499&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
+      
+      
+      <categories>
+          
+          <category> 办公技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PS </tag>
+            
+            <tag> 办公技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Window平台在虚拟机VMware中配置Ubuntu20（后续完善）</title>
       <link href="/2022/05/03/9-ban-gong-ji-qiao/window-ping-tai-zai-xu-ni-ji-vmware-zhong-pei-zhi-ubuntu20/"/>
       <url>/2022/05/03/9-ban-gong-ji-qiao/window-ping-tai-zai-xu-ni-ji-vmware-zhong-pei-zhi-ubuntu20/</url>
@@ -2907,33 +2934,6 @@
             <tag> VMware </tag>
             
             <tag> Ubuntu20 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>如何使用PS修复照片反光区域</title>
-      <link href="/2022/05/03/9-ban-gong-ji-qiao/psrepair/"/>
-      <url>/2022/05/03/9-ban-gong-ji-qiao/psrepair/</url>
-      
-        <content type="html"><![CDATA[<h1 id="如何使用PS修复照片反光区域"><a href="#如何使用PS修复照片反光区域" class="headerlink" title="如何使用PS修复照片反光区域"></a>如何使用PS修复照片反光区域</h1><iframe class="bilibili" src="//player.bilibili.com/player.html?aid=212464091&bvid=BV1xa411t7JK&cid=553318499&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
-      
-      
-      <categories>
-          
-          <category> 办公技巧 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 办公技巧 </tag>
-            
-            <tag> PS </tag>
             
         </tags>
       
@@ -3071,53 +3071,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/</url>
-      
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>随着机器学习思想的火热传播，通过数据预先训练被认为是一种有效提高系统性能的方法。本赛题基于稳态视觉诱发电位脑-机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续3.5-4.5s，开始0.5s为目标提示阶段，屏幕中会出现一个红块提示目标位置并持续0.5s。之后3-4s为刺激阶段，刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。</p><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。</p><p>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。</p><p>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。</p><p>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。</p><p>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug">https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug</a><br>提取码：i3ug<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开源数据集 </category>
-          
-          <category> 脑机接口 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2019年脑机接口大赛——P300ERP无训练数据集</title>
       <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-wu-xun-lian-shu-ju-ji/"/>
       <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-p300erp-wu-xun-lian-shu-ju-ji/</url>
       
         <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>本赛题基于P300电位脑-机接口数据，测试不同算法的识别性能。并根据测试数据中的正确率(Accuracy)和信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激界面由当前字符和36个字符组成的字符矩阵组成。本实验中，我们将代表当前字符编号的时间标签称为“大标签”，将代表字符矩阵行列编号的时间标签称为“小标签”。<br>每个试次中被试注视一个字符，以大标签作为起始，大标签出现后1s字符矩阵开始以行或列为单位随机地闪烁，每行&#x2F;列闪烁时长175ms，闪烁开始时刻出现代表当前闪烁行&#x2F;列编号的小标签，所有行和列闪烁一次称为一轮(共12行&#x2F;列)，每个字符6轮，总计72个小标签。即每个试次的时长为1+0.175126&#x3D;13.6秒。<br>大标签：包含26个字母和10个数字，共36种。在训练数据集中，字符与大标签的对应关系如下表，在测试数据集中，大标签统一为“100”，需要参赛者根据识别算法，计算出正确的大标签并报告。</p><p>小标签：包含6行6列，共12种，由数字1到12表示。其中数字1到6代表第1至6列，数字7到12代表第1至6行。<br>特别说明的是，每个字符的最后一个（第72个）小标签闪烁之后475ms，下一个字符的大标签刺激就会出现；即如果使用最后一个小标签的数据，可能需要截取到下一个字符的大标签出现之后的信息，需要参赛人员注意。报告超时的说明，具体见算法规范部分。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含10个字符的刺激试次。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的标签信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300ERP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1A_fLxDZhzonCAA5U58UeiQ?pwd=1jsg">https://pan.baidu.com/s/1A_fLxDZhzonCAA5U58UeiQ?pwd=1jsg</a><br>提取码：1jsg<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开源数据集 </category>
-          
-          <category> 脑机接口 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2019年脑机接口大赛——SSVEP干电极有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/</url>
-      
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>采集脑电数据通常采用湿电极，虽然信号信噪比高但使用过程繁琐耗时，而干电极具有方便使用的特点，同时具有可接受的信噪比，被认为是面向实际应用的手段。本赛题基于稳态视觉诱发电位脑机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含10个目标（数字0-9，对应结果编号1-10），刺激频率分别9.25~13.75Hz，间隔0.5Hz，每个目标相位相差0.5。实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。整个实验过程中，10个目标均同时闪烁。单个试次持续5s，开始屏幕中会出现一个绿块提示框在目标位置周围。从提示框出现时刻开始的5s为刺激阶段，刺激过程中，10个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在提示框出现的时刻。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E5%B9%B2%E7%94%B5%E6%9E%81%E2%80%94%E2%80%94%E5%AE%9E%E9%AA%8C%E8%8C%83%E5%BC%8F.png" alt="SSVEP干电极——实验范式"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E5%B9%B2%E7%94%B5%E6%9E%81%E2%80%94%E2%80%94%E5%8F%8D%E9%A6%88%E7%BB%93%E6%9E%9C%E3%80%81%E7%9B%AE%E6%A0%87%E9%A2%91%E7%8E%87%E3%80%81%E5%88%9D%E5%A7%8B%E7%9B%B8%E4%BD%8D%E5%AF%B9%E7%85%A7%E8%A1%A8.png" alt="SSVEP干电极——反馈结果、目标频率、初始相位对照表"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为采样率300Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E5%B9%B2%E7%94%B5%E6%9E%81%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%81%94%E7%BC%96%E5%8F%B7%E8%A1%A8.png" alt="SSVEP干电极——数据导联编号表"></p><p>X1,X2,X3无有效信号，CMF(Common Mode Follower)记录common-mode artifacts。</p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/15OpDsI_fOOY62nlzTctTgw?pwd=tx1n">https://pan.baidu.com/s/15OpDsI_fOOY62nlzTctTgw?pwd=tx1n</a><br>提取码：tx1n<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -3155,11 +3113,32 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——运动想象有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——SSVEP干电极有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-gan-dian-ji-you-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>运动想象是一种自发可控的脑电行为，是更加自然、更加实用的人机接口方式，使用者仅仅通过“想象”即可实现控制。近些年，基于运动想象的脑机接口已经在医疗康复、军事、娱乐等方面发挥重要作用。本赛题希望通过更高的识别性能以帮助运动想象脑-机接口获得更为广泛的运用。<br>本赛题基于多类运动想象脑机接口的EEG数据，测试不同算法在有限训练数据条件下对运动想象脑电模式的识别性能，并根据多名受试者测试数据中的信息传输率（Information transfer rate，ITR）确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>本实验原始EEG数据由博睿康64导联设备采集（仅包含59个导联的脑电数据，60-64导联无效），采样率为1000Hz，数据统一进行50Hz陷波处理。一次完整实验为一个record，一名被试分3天完成多个record；实验数据以record为单位，每个record中均为连续采集EEG数据。每个record包含2个block（睁眼1min、闭眼1min）和5个session，session与session之间不少于1.5分钟的休息时间；每个session包括20*N个trial（每类运动想象任务20个trial，N：运动想象任务类别数，如N为2表示任务为左手运动想象和右手运动想象两类，如N为3表示任务为左手运动想象、右手运动想象、双脚运动想象三类），每个record过程如图1所示。 每个trial包含1.5s提示、4s运动想象任务、2s休息，事件标签开始于0时刻，如图2所示。以上不同任务相对应的标签信息如表1所示。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png" alt="单个trial运动想象流程图"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>同步有训练集运动想象赛题，提供训练集（每个被试的训练数据包含2个block{睁眼1min、闭眼1min}和3个运动想象任务session），训练集数据标识了事件时刻、事件类型等建模关键信息。<br>每个被试的测试数据和训练数据来自同一个record，通过被试ID与训练数据对应。每个被试对应两组测试数据，每组测试数据包含20*N个trial（三类每组60个，两类每组40个）。测试数据经数据模型封装后，由参赛者通过赛题框架接口调取。</p><p>BXXOOT 、BXXOOE 、TXXOOT 、TXXOOE, XX对应人员编号，OO对应数据编号，数据集按照题库中人员和数据编号统一命名，最终的取值，由专家组抽签得到。以上B0101T等仅做示范，比赛中可能出现B0801T等其他数据，参赛队员根据赛题给出的训练集对应建立模型即可。<br>B开头数据为二类数据，T开头数据为三类数据。B0101E.mat 等删除线数据集，比赛时通过系统获得。数据集由专家组抽签选取，部分数据（包括测试数据）将公开用于本地测试。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-5.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr">https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr</a><br>提取码：6qsr<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>采集脑电数据通常采用湿电极，虽然信号信噪比高但使用过程繁琐耗时，而干电极具有方便使用的特点，同时具有可接受的信噪比，被认为是面向实际应用的手段。本赛题基于稳态视觉诱发电位脑机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含10个目标（数字0-9，对应结果编号1-10），刺激频率分别9.25~13.75Hz，间隔0.5Hz，每个目标相位相差0.5。实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。整个实验过程中，10个目标均同时闪烁。单个试次持续5s，开始屏幕中会出现一个绿块提示框在目标位置周围。从提示框出现时刻开始的5s为刺激阶段，刺激过程中，10个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在提示框出现的时刻。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E5%B9%B2%E7%94%B5%E6%9E%81%E2%80%94%E2%80%94%E5%AE%9E%E9%AA%8C%E8%8C%83%E5%BC%8F.png" alt="SSVEP干电极——实验范式"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E5%B9%B2%E7%94%B5%E6%9E%81%E2%80%94%E2%80%94%E5%8F%8D%E9%A6%88%E7%BB%93%E6%9E%9C%E3%80%81%E7%9B%AE%E6%A0%87%E9%A2%91%E7%8E%87%E3%80%81%E5%88%9D%E5%A7%8B%E7%9B%B8%E4%BD%8D%E5%AF%B9%E7%85%A7%E8%A1%A8.png" alt="SSVEP干电极——反馈结果、目标频率、初始相位对照表"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为采样率300Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E5%B9%B2%E7%94%B5%E6%9E%81%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%81%94%E7%BC%96%E5%8F%B7%E8%A1%A8.png" alt="SSVEP干电极——数据导联编号表"></p><p>X1,X2,X3无有效信号，CMF(Common Mode Follower)记录common-mode artifacts。</p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/15OpDsI_fOOY62nlzTctTgw?pwd=tx1n">https://pan.baidu.com/s/15OpDsI_fOOY62nlzTctTgw?pwd=tx1n</a><br>提取码：tx1n<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开源数据集 </category>
+          
+          <category> 脑机接口 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -3197,11 +3176,53 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——SSVEP无训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-wu-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——运动想象有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>SSVEP是指当受到一个固定频率的视觉刺激的时候，人的大脑视觉皮层会产生一个连续的与刺激频率有关（刺激频率的基频或倍频处）的响应。<br>实际应用中，通常对脑-机接口系统的易用性具有较高要求。某些应用场景下，难以获取足够的个体数据对脑-机接口系统预先训练，因此需要研究在无训练数据条件下的脑-机接口分析方法。<br>本项目基于稳态视觉诱发电位脑机接口数据，测试不同算法在缺乏预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续5-6s，包含3～4s的刺激阶段，以及2s的休息过程。刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。<br>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。<br>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。<br>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。<br>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。<br>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。<br>数据包具体格式参见下文程序接口中的系统结构图。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%97%A0%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4">https://pan.baidu.com/s/1aK9eKaFDP7sZfmGlRa6QbQ?pwd=5bv4</a><br>提取码：5bv4<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>运动想象是一种自发可控的脑电行为，是更加自然、更加实用的人机接口方式，使用者仅仅通过“想象”即可实现控制。近些年，基于运动想象的脑机接口已经在医疗康复、军事、娱乐等方面发挥重要作用。本赛题希望通过更高的识别性能以帮助运动想象脑-机接口获得更为广泛的运用。<br>本赛题基于多类运动想象脑机接口的EEG数据，测试不同算法在有限训练数据条件下对运动想象脑电模式的识别性能，并根据多名受试者测试数据中的信息传输率（Information transfer rate，ITR）确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>本实验原始EEG数据由博睿康64导联设备采集（仅包含59个导联的脑电数据，60-64导联无效），采样率为1000Hz，数据统一进行50Hz陷波处理。一次完整实验为一个record，一名被试分3天完成多个record；实验数据以record为单位，每个record中均为连续采集EEG数据。每个record包含2个block（睁眼1min、闭眼1min）和5个session，session与session之间不少于1.5分钟的休息时间；每个session包括20*N个trial（每类运动想象任务20个trial，N：运动想象任务类别数，如N为2表示任务为左手运动想象和右手运动想象两类，如N为3表示任务为左手运动想象、右手运动想象、双脚运动想象三类），每个record过程如图1所示。 每个trial包含1.5s提示、4s运动想象任务、2s休息，事件标签开始于0时刻，如图2所示。以上不同任务相对应的标签信息如表1所示。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png" alt="单个trial运动想象流程图"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>同步有训练集运动想象赛题，提供训练集（每个被试的训练数据包含2个block{睁眼1min、闭眼1min}和3个运动想象任务session），训练集数据标识了事件时刻、事件类型等建模关键信息。<br>每个被试的测试数据和训练数据来自同一个record，通过被试ID与训练数据对应。每个被试对应两组测试数据，每组测试数据包含20*N个trial（三类每组60个，两类每组40个）。测试数据经数据模型封装后，由参赛者通过赛题框架接口调取。</p><p>BXXOOT 、BXXOOE 、TXXOOT 、TXXOOE, XX对应人员编号，OO对应数据编号，数据集按照题库中人员和数据编号统一命名，最终的取值，由专家组抽签得到。以上B0101T等仅做示范，比赛中可能出现B0801T等其他数据，参赛队员根据赛题给出的训练集对应建立模型即可。<br>B开头数据为二类数据，T开头数据为三类数据。B0101E.mat 等删除线数据集，比赛时通过系统获得。数据集由专家组抽签选取，部分数据（包括测试数据）将公开用于本地测试。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-5.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr">https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr</a><br>提取码：6qsr<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开源数据集 </category>
+          
+          <category> 脑机接口 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2019年脑机接口大赛——SSVEP有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-ssvep-you-xun-lian-shu-ju-ji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>随着机器学习思想的火热传播，通过数据预先训练被认为是一种有效提高系统性能的方法。本赛题基于稳态视觉诱发电位脑-机接口数据，测试不同算法在拥有预训练数据条件下的识别性能。并根据多名受试者测试数据中的信息传输速率(Information transfer rate, ITR)确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>刺激范式包含40个目标，刺激频率分别8~15.8Hz，间隔0.2Hz。<br>实验数据以block为单位，每个block中均为连续采集EEG数据，其中包含数量不定、次序随机的刺激试次。单一block中，每种刺激试次的出现次数也不固定。单个试次持续3.5-4.5s，开始0.5s为目标提示阶段，屏幕中会出现一个红块提示目标位置并持续0.5s。之后3-4s为刺激阶段，刺激过程中，40个目标同时闪烁，每个目标的亮度按照其预定频率呈正弦变化，受试被要求严格注视提示的目标，从而在其EEG信号中产生稳态视觉诱发响应。每一个试次中，trigger被记录在刺激阶段启始位置。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>实验数据为降采样到250Hz的EEG数据，但并未经过其他滤波处理。在检测过程中，参赛者可根据自身算法选择合适的预处理滤波。</p><p>数据流采用模拟在线方式提供。每调用一次数据读取方法，可获得一个新数据包，数据包中包含一定长度的实验EEG数据，以及在该数据包记录过程中收到的trigger信息。</p><p>在同一block中，数据包按照时间顺序依次发送。当一个block中数据发送完毕后，最后一个数据包中将block终止标记blockEndFlag将被置为1。</p><p>若测试数据中包含多组block数据，则一组block数据发送完毕后，数据读取方法被再次调用时，将会开始下一组block数据的EEG，同时数据包内blockID也会随之更新。参赛算法可以根据blockID的变化确定数据包是否在同一个block之中。</p><p>而当所有实验数据发送完毕后，程序终止标记finishedFlag将被置为1。参赛算法检测到finishedFlag为1后，需要自行结束run()方法执行。</p><p>需要指出，由于实验数据来自真实EEG信号，每个block中最后一个数据包的长度可能不是一个定值，在算法开发过程中请特别注意。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug">https://pan.baidu.com/s/10dzv1q1q3vkQw5GLel0EPw?pwd=i3ug</a><br>提取码：i3ug<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开源数据集 </category>
+          
+          <category> 脑机接口 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SSVEP-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/ssvep-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/ssvep-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于稳态视觉诱发电位的BCI系统是目前最常用的头皮脑电BCI系统之一，该系统以稳态视觉诱发电位（Steady-state visual evoked potentials, SSVEP）作为目标信号。SSVEP是一种通过向受试者呈现以一定频率快速闪烁的刺激块，在头皮上记录到的与刺激频率倍频相同的稳态脑电响应。<br>下图展示了给某位受试呈现了以12Hz闪烁的刺激块时受试者脑电的频域和时域特性。在频域中，我们可以清楚地观察到在12,24,36和48Hz，也就是刺激频率的1倍频，2倍频，3倍频和4倍频处有明显的峰值，而在时域上也可以看到稳定的周期响应。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br>SSVEP BCI进行目标识别的原理简单地来说就是检测脑电信号中是否存在某些特定的频率成分。2002年，清华大学团队设计了一个控制光标二维移动的BCI系统，4个闪烁块按照不同频率闪烁，每个闪烁块编码不同的命令（上下左右），当用户希望控制光标向上，只需要注视对应的闪烁块（假设闪烁频率为12Hz），从而诱发对应频率的SSVEP信号，如果系统检测到12Hz的SSVEP响应，则判断用户在注视向上的光标，从而给出反馈。</p><p>几种典型算法</p><p>由于SSVEP具有显著的频域特征，在早年的SSVEP-BCI研究中，多采用基于功率谱方法（PSD）对信号进行检测，以下述参考文献为例，研究者对采集到的脑电数据进行频谱分析，通过提取频域能量峰值所在的频率点来对目标进行识别。但这种方法易受噪声干扰，性能有限，近年来越来越多的研究者将SSVEP的时域信息纳入到了分析中来。<br>参考文献<br>Ming Cheng, Xiaorong Gao, Shangkai Gao, Dingfeng Xu，Design and Implementation of a Brain-Computer Interface with High Transfer Rates. IEEE Transaction on Biomedical Engineering，VOL. 49, NO. 10, p1181－1186, 2002</p><p>CCA（典型相关分析）<br>CCA是一种度量两组信号之间线性相关性的多元统计方法，在SSVEP-BCI中取得了广泛的应用。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>CCA的目标是找到两个线性组合WX和WY，使得原有的多通道信号x1,x2,…,xn和y1,y2,…,yn相关系数最大。在实际应用时，x1,x2,…,xn为多通道的脑电信号，y1,y2,…,yn为参考信号，即刺激频率的倍频对应的正余弦波。对一段待分类的脑电数据来说，可以计算其与多个参考信号的典型相关系数，比较这些典型相关系数的大小，得到最大相关系数的参考信号对应的频率即为刺激频率。<br>参考文献<br>Bin G, Gao X, Yan Z, Hong B, Gao S: An online multi-channel SSVEP-based brain-computer interface using a canonical correlation analysis method. J Neural Eng; 2009 Aug;6(4):046002</p><p>Template-based CCA<br>上面所述的CCA方法采用正余弦信号作为参考信号，并未充分利用脑电本身的信息，于是出现了Template-based CCA 这一方法，它的基本思想和计算流程和传统CCA方法完全一样，差异在于，Template-based CCA 将之前记录的，已知刺激频率的脑电数据的叠平均信号作为模板，来估计空域滤波器，相较于传统CCA，叠平均得到的模板和空域滤波器可以更好的反映受试者的脑电特异性，因此具有更好的性能。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-4.png"><br>参考文献<br>Bin, G., Gao, X., Wang, Y., Li, Y., Hong, B., &amp; Gao, S. (2011). A high-speed BCI based on code modulation VEP. Journal of Neural Engineering, 8(2).</p><p>Filter-bank CCA</p><p>为了有效地利用SSVEP的基频和谐波信息，从而进一步提高识别精度，下述参考文献提出了基于滤波器组的典型相关分析方法（filter-bank CCA）。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"><br>该方法分为三步，首先是进行滤波器组分析，简单地说即是将脑电数据滤波到不同子带；然后是对每一个子带的数据做CCA得到典型相关系数；最后，通过将各个频带数据的典型相关系数进行加权求和，取和不同参考信号得到的加权和的最大值对应的频率为识别目标。<br>参考文献<br>Chen, X., Wang, Y., Gao, S., Jung, T., &amp; Gao, X. (2015). Filter bank canonical correlation analysis for implementing a high-speed SSVEP-based brain–computer interface. Journal of Neural Engineering, 12(4).</p><p>任务相关成分分析（Task-related Component Analysis, TRCA）<br>TRCA的主要思想是寻找一个线性组合，使得原始数据中与事件相关的频率成分在多次试验的可重复性最大，该方法在SSVEP目标识别中取得了很好的效果。<br>TRCA方法的具体实现方法如下。首先假设存在两种源信号：1）任务相关信号s(t); 2)任务无关信号 n(t)。因此，检测到的多通道EEG信号的线性模式可以表述为：<br>, j &#x3D; 1, 2, … , （3-1）<br>其中，j是通道编号，和是将原信号投影到EEG信号的系数。需要解决的问题是如何从观察信号的线性组合中恢复出任务相关信号。的线性组合可以表示为：<br>（3-2）<br>我们可以通过最大化试次之间协方差的方式求解这个问题。假设第h个试次的EEG信号和预测的任务相关成分分别为和，h &#x3D; 1,2, … ,。对应的时间范围是。这里，是每个任务试次的长度。而第和个试次之间的协方差可以被写作：<br>（3-3）<br>各个试次之间可能的组合可以表示为：</p><pre><code>（3-4）其中，矩阵可以被写作：（3-5）为了得到有限个解，的方差被限制为：（3-5）因此，我们可以把求解转化成以下问题：（3-7）</code></pre><p>其中，可以通过求解矩阵特征值的方式获得。</p><p>参考文献<br>Nakanishi, M., Wang, Y., Chen, X., Wang, Y., Gao, X., &amp; Jung, T. (2018). Enhancing Detection of SSVEPs for a High-Speed Brain Speller Using Task-Related Component Analysis. IEEE Transactions on Biomedical Engineering, 65(1), 104-112.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -3244,27 +3265,6 @@
       <url>/2022/04/20/kai-yuan-shu-ju-ji/p300-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
       
         <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于P300的BCI系统是目前最常用的头皮脑电BCI系统之一，该系统以ERP（event-related potential）中P300电位作为目标信号。P300电位是与大脑决策过程相关的ERP成分，反映着大脑对外界刺激的评价与分类过程。实验中，通常利用oddball范式诱发P300电位。从EEG上看，P300是在大脑接收目标刺激后大概250-500ms内出现的正向偏移电位。<br>下图展示了通过oddball范式为正常站立状态下受试者呈现Non-target(80%)和target(20%)视觉闪烁刺激时，在Pz导联处检测到的ERP时域波形图。在图中，我们可以清晰的看到：相较于Non-target，在target刺激呈现后400ms处出现明显的正向偏移电位，即P300电位，且顶叶脑区激活程度增强。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br>P300-BCI进行目标识别的原理简单来说就是基于oddball范式对刺激呈现进行时间编码，并检测每个时间间隔内脑电信号中是否出现P300诱发电位。如在1988年，Farwell和Donchin基于行列闪烁编码范式设计了6*6矩阵键盘（共36指令）的P300 speller系统中，通过确定诱发出P300的行闪烁和列闪烁时间定位目标指令，再基于检测到的目标指令，系统给出相应字符的输出。</p><p>几种典型算法<br>由于P300 BCI具有显著的时域特征，在目前的P300-BCI研究中，多采用基于检测P300诱发电位的出现与否对信号进行检测。根据脑电图特征判断P300诱发电位的存在与否，可以认为是一个具有判别函数的二元分类问题，其决策超平面定义为:<br>w⋅f (x) + b &#x3D; 0<br>其中x是特征向量f(⋅)是一个转换函数,w是一个分类的权重向量，b是偏差项。对于非线性可分离问题，f(⋅)可以表示将特征映射到更高维空间的核转换，以尝试创建线性可分集。对于线性方法, f (x) &#x3D; x。目前常用的解码算法都是通过解决w和b来实现的。<br>因为假设P300是针对n个行&#x2F;列之一的增强引出的，且P300响应对于行&#x2F;列刺激是不变的，所得到的分类被视为各行以及列的得分特征向量之和的最大值：</p><p>通过分别为目标和非目标刺激分配+1和-1的类标签，该设计选择与训练的超平面具有最大正距离的脑电响应。这理想地类似于选择强烈表示的由训练数据定义的特征P300的响应。预测字符位于矩阵中预测的行和列的交点处。因为等式（2）和（3）对于恒定偏置项b是不变的，所以不需要计算它。<br>参考文献<br>Krusienski D J , Sellers E W , Cabestaing F , et al. A comparison of classification techniques for the P300 speller[J]. Journal of Neural Engineering, 2006, 3(4):299.</p><p>LDA<br>线性判别分析（Linear Discriminant Analysis，LDA）是P300 speller中常用的典型分类方法，具有计算量低、分类效果良好等特点。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/P300-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>LDA通过将高维样本数据投影至低维空间，保证样本数据在该空间中有最大类间距离和最小类内距离，其目标函数可表示为下式</p><p>其中，为类间散度矩阵，为类内散度矩阵。通过求解最大的个特征值和对应的个特征向量,得到投影矩阵；<br>参考文献<br>Blankertz B , Lemm S , Treder M , et al. Single-trial analysis and classification of ERP components — A tutorial[J]. Neuroimage, 2011, 56(2):814-825.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开源数据集 </category>
-          
-          <category> 脑机接口 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>SSVEP-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/ssvep-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/ssvep-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于稳态视觉诱发电位的BCI系统是目前最常用的头皮脑电BCI系统之一，该系统以稳态视觉诱发电位（Steady-state visual evoked potentials, SSVEP）作为目标信号。SSVEP是一种通过向受试者呈现以一定频率快速闪烁的刺激块，在头皮上记录到的与刺激频率倍频相同的稳态脑电响应。<br>下图展示了给某位受试呈现了以12Hz闪烁的刺激块时受试者脑电的频域和时域特性。在频域中，我们可以清楚地观察到在12,24,36和48Hz，也就是刺激频率的1倍频，2倍频，3倍频和4倍频处有明显的峰值，而在时域上也可以看到稳定的周期响应。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br>SSVEP BCI进行目标识别的原理简单地来说就是检测脑电信号中是否存在某些特定的频率成分。2002年，清华大学团队设计了一个控制光标二维移动的BCI系统，4个闪烁块按照不同频率闪烁，每个闪烁块编码不同的命令（上下左右），当用户希望控制光标向上，只需要注视对应的闪烁块（假设闪烁频率为12Hz），从而诱发对应频率的SSVEP信号，如果系统检测到12Hz的SSVEP响应，则判断用户在注视向上的光标，从而给出反馈。</p><p>几种典型算法</p><p>由于SSVEP具有显著的频域特征，在早年的SSVEP-BCI研究中，多采用基于功率谱方法（PSD）对信号进行检测，以下述参考文献为例，研究者对采集到的脑电数据进行频谱分析，通过提取频域能量峰值所在的频率点来对目标进行识别。但这种方法易受噪声干扰，性能有限，近年来越来越多的研究者将SSVEP的时域信息纳入到了分析中来。<br>参考文献<br>Ming Cheng, Xiaorong Gao, Shangkai Gao, Dingfeng Xu，Design and Implementation of a Brain-Computer Interface with High Transfer Rates. IEEE Transaction on Biomedical Engineering，VOL. 49, NO. 10, p1181－1186, 2002</p><p>CCA（典型相关分析）<br>CCA是一种度量两组信号之间线性相关性的多元统计方法，在SSVEP-BCI中取得了广泛的应用。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>CCA的目标是找到两个线性组合WX和WY，使得原有的多通道信号x1,x2,…,xn和y1,y2,…,yn相关系数最大。在实际应用时，x1,x2,…,xn为多通道的脑电信号，y1,y2,…,yn为参考信号，即刺激频率的倍频对应的正余弦波。对一段待分类的脑电数据来说，可以计算其与多个参考信号的典型相关系数，比较这些典型相关系数的大小，得到最大相关系数的参考信号对应的频率即为刺激频率。<br>参考文献<br>Bin G, Gao X, Yan Z, Hong B, Gao S: An online multi-channel SSVEP-based brain-computer interface using a canonical correlation analysis method. J Neural Eng; 2009 Aug;6(4):046002</p><p>Template-based CCA<br>上面所述的CCA方法采用正余弦信号作为参考信号，并未充分利用脑电本身的信息，于是出现了Template-based CCA 这一方法，它的基本思想和计算流程和传统CCA方法完全一样，差异在于，Template-based CCA 将之前记录的，已知刺激频率的脑电数据的叠平均信号作为模板，来估计空域滤波器，相较于传统CCA，叠平均得到的模板和空域滤波器可以更好的反映受试者的脑电特异性，因此具有更好的性能。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-4.png"><br>参考文献<br>Bin, G., Gao, X., Wang, Y., Li, Y., Hong, B., &amp; Gao, S. (2011). A high-speed BCI based on code modulation VEP. Journal of Neural Engineering, 8(2).</p><p>Filter-bank CCA</p><p>为了有效地利用SSVEP的基频和谐波信息，从而进一步提高识别精度，下述参考文献提出了基于滤波器组的典型相关分析方法（filter-bank CCA）。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"><br>该方法分为三步，首先是进行滤波器组分析，简单地说即是将脑电数据滤波到不同子带；然后是对每一个子带的数据做CCA得到典型相关系数；最后，通过将各个频带数据的典型相关系数进行加权求和，取和不同参考信号得到的加权和的最大值对应的频率为识别目标。<br>参考文献<br>Chen, X., Wang, Y., Gao, S., Jung, T., &amp; Gao, X. (2015). Filter bank canonical correlation analysis for implementing a high-speed SSVEP-based brain–computer interface. Journal of Neural Engineering, 12(4).</p><p>任务相关成分分析（Task-related Component Analysis, TRCA）<br>TRCA的主要思想是寻找一个线性组合，使得原始数据中与事件相关的频率成分在多次试验的可重复性最大，该方法在SSVEP目标识别中取得了很好的效果。<br>TRCA方法的具体实现方法如下。首先假设存在两种源信号：1）任务相关信号s(t); 2)任务无关信号 n(t)。因此，检测到的多通道EEG信号的线性模式可以表述为：<br>, j &#x3D; 1, 2, … , （3-1）<br>其中，j是通道编号，和是将原信号投影到EEG信号的系数。需要解决的问题是如何从观察信号的线性组合中恢复出任务相关信号。的线性组合可以表示为：<br>（3-2）<br>我们可以通过最大化试次之间协方差的方式求解这个问题。假设第h个试次的EEG信号和预测的任务相关成分分别为和，h &#x3D; 1,2, … ,。对应的时间范围是。这里，是每个任务试次的长度。而第和个试次之间的协方差可以被写作：<br>（3-3）<br>各个试次之间可能的组合可以表示为：</p><pre><code>（3-4）其中，矩阵可以被写作：（3-5）为了得到有限个解，的方差被限制为：（3-5）因此，我们可以把求解转化成以下问题：（3-7）</code></pre><p>其中，可以通过求解矩阵特征值的方式获得。</p><p>参考文献<br>Nakanishi, M., Wang, Y., Chen, X., Wang, Y., Gao, X., &amp; Jung, T. (2018). Enhancing Detection of SSVEPs for a High-Speed Brain Speller Using Task-Related Component Analysis. IEEE Transactions on Biomedical Engineering, 65(1), 104-112.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -3440,9 +3440,9 @@
       
         <tags>
             
-            <tag> 免费商用字体 </tag>
-            
             <tag> 办公技巧 </tag>
+            
+            <tag> 免费商用字体 </tag>
             
             <tag> 版权问题 </tag>
             
