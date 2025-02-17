@@ -516,7 +516,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-12-10
+                    2025-02-17
                 </div>
                 
 
@@ -596,16 +596,16 @@
 <h3 id="6-使用提示词"><a href="#6-使用提示词" class="headerlink" title="6. 使用提示词"></a>6. 使用提示词</h3><p>Cursor 设置中，可以设置提示词。</p>
 <p>其实，很多情况下，Cursor 的默认提示词已经足够使用，不需要用户自己设置。</p>
 <h2 id="五、Cursor-无限试用"><a href="#五、Cursor-无限试用" class="headerlink" title="五、Cursor 无限试用"></a>五、Cursor 无限试用</h2><p>Cursor 的免费试用次数有限，如果想要无限试用，可以使用 <a target="_blank" rel="noopener" href="https://www.2925.com/login/">2925 无线邮</a> 注册新账号，然后使用新账号使用 Cursor。</p>
-<p>但是，现在 Cursor 删除账号再登陆后，出现提示“Too many free trial accounts used on this machine.”的问题。这是因为 Cursor 的账号检测机制，检测到该账号登录电脑的机器码一致。可以通过修改电脑的机器码来解决，解决方法参考<a target="_blank" rel="noopener" href="https://github.com/korykim/cursormate">Cursor 无限试用</a>。</p>
-<p>也可以手动修改 Cursor 的配置文件，配置文件路径为 <code>C:\Users\lsy\AppData\Roaming\Cursor\User\globalStorage\storage.json</code>。<br>将下面的字段修改为随机字符串，即可解决该问题。</p>
+<p>但是，现在 Cursor 删除账号再登陆后，出现提示“Too many free trial accounts used on this machine.”的问题。这是因为 Cursor 的账号检测机制，检测到该账号登录电脑的机器码一致。可以通过修改电脑的机器码来解决，解决方法如下：</p>
+<h3 id="1-删除-C-Users-bci-AppData-Roaming-Cursor-路径下的-machineid-文件"><a href="#1-删除-C-Users-bci-AppData-Roaming-Cursor-路径下的-machineid-文件" class="headerlink" title="1. 删除 C:\Users\bci\AppData\Roaming\Cursor 路径下的 machineid 文件"></a>1. 删除 <code>C:\Users\bci\AppData\Roaming\Cursor</code> 路径下的 machineid 文件</h3><h3 id="2-手动修改-Cursor-的配置文件"><a href="#2-手动修改-Cursor-的配置文件" class="headerlink" title="2. 手动修改 Cursor 的配置文件"></a>2. 手动修改 Cursor 的配置文件</h3><p>配置文件 <code>C:\Users\lsy\AppData\Roaming\Cursor\User\globalStorage\storage.json</code> 中的字段修改为随机字符串，即可解决该问题。</p>
 <pre class="line-numbers language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token property">"telemetry.macMachineId"</span><span class="token operator">:</span> <span class="token string">"random_string_1"</span><span class="token punctuation">,</span>
     <span class="token property">"telemetry.machineId"</span><span class="token operator">:</span> <span class="token string">"random_string_2"</span><span class="token punctuation">,</span>
-    <span class="token property">"telemetry.devDeviceId"</span><span class="token operator">:</span> <span class="token string">"random_string_3"</span>
+    <span class="token property">"telemetry.devDeviceId"</span><span class="token operator">:</span> <span class="token string">"random_string_3"</span><span class="token punctuation">,</span>
 &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>修改完之后可以将 <code>storage.json</code> 文件修改为只读，防止被修改。</p>
-
+<h3 id="3-重新登录-Cursor-账户即可"><a href="#3-重新登录-Cursor-账户即可" class="headerlink" title="3. 重新登录 Cursor 账户即可"></a>3. 重新登录 Cursor 账户即可</h3>
                 
             </div>
             <hr/>
@@ -958,7 +958,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2022-2024</span>
+                <span id="year">2022-2025</span>
             
 <!--            <span id="year">2022</span>-->
             <a href="/about" target="_blank">BITBCI</a>
