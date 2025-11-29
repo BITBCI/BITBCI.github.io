@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="常见的四大电生理分析工具包详解, 哈哈哈哈哈">
+    <meta name="keywords" content="常见的电生理分析工具包详解, 哈哈哈哈哈">
     <meta name="description" content="虎年大吉">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>常见的四大电生理分析工具包详解 | BITBCI</title>
+    <title>常见的电生理分析工具包详解 | BITBCI</title>
     <link rel="icon" type="image/png" href="/logo-200x200.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -355,12 +355,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">常见的四大电生理分析工具包详解</h1>
+                    <h1 class="description center-align post-title">常见的电生理分析工具包详解</h1>
                 </div>
             </div>
         </div>
@@ -531,14 +531,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    4 分
                 </div>
                 
 
@@ -558,8 +558,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在电生理信号分析领域,选择合适的工具包对于研究工作至关重要。本文将详细介绍四个主流的Python电生理分析工具包:MNE-Python、NeuroKit2、Braindecode和MEEGKIT。这些工具包各有特色,能够满足从信号预处理、特征提取到深度学习分析的多样化需求。</p>
-<p><img src="/../../images/19-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/electrophysiology-tools-banner.png"></p>
+                <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在电生理信号分析领域,选择合适的工具包对于研究工作至关重要。本文将详细介绍四个Python电生理分析工具包:MNE-Python、NeuroKit2、Braindecode和MEEGKIT。这些工具包各有特色,能够满足从信号预处理、特征提取到深度学习分析的多样化需求。</p>
 <h2 id="1-MNE-Python-全能型电生理分析工具"><a href="#1-MNE-Python-全能型电生理分析工具" class="headerlink" title="1. MNE-Python: 全能型电生理分析工具"></a>1. MNE-Python: 全能型电生理分析工具</h2><h3 id="1-1-概述"><a href="#1-1-概述" class="headerlink" title="1.1 概述"></a>1.1 概述</h3><p><a target="_blank" rel="noopener" href="https://mne.tools/stable/index.html">MNE-Python</a> 是最为全面和成熟的开源Python包,专门用于探索、可视化和分析人类神经电生理数据,包括MEG、EEG、sEEG、ECoG、NIRS等多种模态。</p>
 <h3 id="1-2-核心功能"><a href="#1-2-核心功能" class="headerlink" title="1.2 核心功能"></a>1.2 核心功能</h3><p><strong>信号处理与分析</strong></p>
 <ul>
@@ -593,38 +592,13 @@
 <li>时间泛化分析</li>
 <li>感受野估计(STRF编码模型)</li>
 </ul>
-<h3 id="1-3-安装与使用"><a href="#1-3-安装与使用" class="headerlink" title="1.3 安装与使用"></a>1.3 安装与使用</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 安装</span>
-pip install mne
-
-<span class="token comment" spellcheck="true"># 基本使用示例</span>
-<span class="token keyword">import</span> mne
-
-<span class="token comment" spellcheck="true"># 读取数据</span>
-raw <span class="token operator">=</span> mne<span class="token punctuation">.</span>io<span class="token punctuation">.</span>read_raw_fif<span class="token punctuation">(</span><span class="token string">'sample_data.fif'</span><span class="token punctuation">,</span> preload<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 滤波</span>
-raw<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>l_freq<span class="token operator">=</span><span class="token number">1.0</span><span class="token punctuation">,</span> h_freq<span class="token operator">=</span><span class="token number">40.0</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 查找事件</span>
-events <span class="token operator">=</span> mne<span class="token punctuation">.</span>find_events<span class="token punctuation">(</span>raw<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 创建epochs</span>
-epochs <span class="token operator">=</span> mne<span class="token punctuation">.</span>Epochs<span class="token punctuation">(</span>raw<span class="token punctuation">,</span> events<span class="token punctuation">,</span> tmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">0.2</span><span class="token punctuation">,</span> tmax<span class="token operator">=</span><span class="token number">0.5</span><span class="token punctuation">,</span> baseline<span class="token operator">=</span><span class="token punctuation">(</span>None<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 计算诱发响应</span>
-evoked <span class="token operator">=</span> epochs<span class="token punctuation">.</span>average<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 可视化</span>
-evoked<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="1-4-适用场景"><a href="#1-4-适用场景" class="headerlink" title="1.4 适用场景"></a>1.4 适用场景</h3><ul>
+<h3 id="1-3-适用场景"><a href="#1-3-适用场景" class="headerlink" title="1.3 适用场景"></a>1.3 适用场景</h3><ul>
 <li>大规模MEG&#x2F;EEG数据分析</li>
 <li>需要进行源空间重建的研究</li>
 <li>临床电生理数据分析</li>
 <li>多模态神经影像数据融合</li>
 <li>高级连接性分析</li>
 </ul>
-<h3 id="1-5-优势与特点"><a href="#1-5-优势与特点" class="headerlink" title="1.5 优势与特点"></a>1.5 优势与特点</h3><p>✅ 功能最全面,生态系统完善<br>✅ 文档详尽,社区活跃<br>✅ 支持多种数据格式<br>✅ 包含大量示例数据集<br>✅ 持续维护和更新  </p>
 <h2 id="2-NeuroKit2-神经生理信号处理的瑞士军刀"><a href="#2-NeuroKit2-神经生理信号处理的瑞士军刀" class="headerlink" title="2. NeuroKit2: 神经生理信号处理的瑞士军刀"></a>2. NeuroKit2: 神经生理信号处理的瑞士军刀</h2><h3 id="2-1-概述"><a href="#2-1-概述" class="headerlink" title="2.1 概述"></a>2.1 概述</h3><p><a target="_blank" rel="noopener" href="https://neuropsychology.github.io/NeuroKit/introduction.html">NeuroKit2</a> 是一个用户友好的Python工具包,专注于生物信号处理。它让没有深厚编程背景的研究人员和临床医生也能轻松分析生理数据。</p>
 <h3 id="2-2-核心功能"><a href="#2-2-核心功能" class="headerlink" title="2.2 核心功能"></a>2.2 核心功能</h3><p><strong>支持的信号类型</strong></p>
 <ul>
@@ -657,46 +631,6 @@ evoked<span class="token punctuation">.</span>plot<span class="token punctuation
 <li>信号分解(EMD)</li>
 <li>复杂度分析(熵、分形维度等)</li>
 </ul>
-<h3 id="2-3-安装与使用"><a href="#2-3-安装与使用" class="headerlink" title="2.3 安装与使用"></a>2.3 安装与使用</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 安装</span>
-pip install neurokit2
-<span class="token comment" spellcheck="true"># 或使用conda</span>
-conda install <span class="token operator">-</span>c conda<span class="token operator">-</span>forge neurokit2
-
-<span class="token comment" spellcheck="true"># 快速示例 - 仅需两行代码!</span>
-<span class="token keyword">import</span> neurokit2 <span class="token keyword">as</span> nk
-
-<span class="token comment" spellcheck="true"># 下载示例数据</span>
-data <span class="token operator">=</span> nk<span class="token punctuation">.</span>data<span class="token punctuation">(</span><span class="token string">"bio_eventrelated_100hz"</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 预处理数据(滤波、峰值检测等)</span>
-processed_data<span class="token punctuation">,</span> info <span class="token operator">=</span> nk<span class="token punctuation">.</span>bio_process<span class="token punctuation">(</span>
-    ecg<span class="token operator">=</span>data<span class="token punctuation">[</span><span class="token string">"ECG"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> 
-    rsp<span class="token operator">=</span>data<span class="token punctuation">[</span><span class="token string">"RSP"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> 
-    eda<span class="token operator">=</span>data<span class="token punctuation">[</span><span class="token string">"EDA"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> 
-    sampling_rate<span class="token operator">=</span><span class="token number">100</span>
-<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 计算相关特征</span>
-results <span class="token operator">=</span> nk<span class="token punctuation">.</span>bio_analyze<span class="token punctuation">(</span>processed_data<span class="token punctuation">,</span> sampling_rate<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># ECG分析示例</span>
-ecg <span class="token operator">=</span> nk<span class="token punctuation">.</span>ecg_simulate<span class="token punctuation">(</span>duration<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">,</span> sampling_rate<span class="token operator">=</span><span class="token number">250</span><span class="token punctuation">,</span> heart_rate<span class="token operator">=</span><span class="token number">70</span><span class="token punctuation">)</span>
-signals<span class="token punctuation">,</span> info <span class="token operator">=</span> nk<span class="token punctuation">.</span>ecg_process<span class="token punctuation">(</span>ecg<span class="token punctuation">,</span> sampling_rate<span class="token operator">=</span><span class="token number">250</span><span class="token punctuation">)</span>
-nk<span class="token punctuation">.</span>ecg_plot<span class="token punctuation">(</span>signals<span class="token punctuation">,</span> info<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># HRV分析</span>
-data <span class="token operator">=</span> nk<span class="token punctuation">.</span>data<span class="token punctuation">(</span><span class="token string">"bio_resting_8min_100hz"</span><span class="token punctuation">)</span>
-peaks<span class="token punctuation">,</span> info <span class="token operator">=</span> nk<span class="token punctuation">.</span>ecg_peaks<span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token string">"ECG"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> sampling_rate<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
-hrv_results <span class="token operator">=</span> nk<span class="token punctuation">.</span>hrv<span class="token punctuation">(</span>peaks<span class="token punctuation">,</span> sampling_rate<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> show<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="2-4-适用场景"><a href="#2-4-适用场景" class="headerlink" title="2.4 适用场景"></a>2.4 适用场景</h3><ul>
-<li>心理生理学研究</li>
-<li>情绪识别和分析</li>
-<li>压力评估</li>
-<li>临床生理监测</li>
-<li>教学和快速原型开发</li>
-</ul>
-<h3 id="2-5-优势与特点"><a href="#2-5-优势与特点" class="headerlink" title="2.5 优势与特点"></a>2.5 优势与特点</h3><p>✅ 极易上手,两行代码即可完成分析<br>✅ 文档友好,包含大量可视化示例<br>✅ 支持多种生理信号<br>✅ 内置信号模拟功能,便于测试<br>✅ 活跃的社区支持<br>✅ 适合初学者和非编程背景研究人员  </p>
 <h2 id="3-Braindecode-基于深度学习的脑电解码"><a href="#3-Braindecode-基于深度学习的脑电解码" class="headerlink" title="3. Braindecode: 基于深度学习的脑电解码"></a>3. Braindecode: 基于深度学习的脑电解码</h2><h3 id="3-1-概述"><a href="#3-1-概述" class="headerlink" title="3.1 概述"></a>3.1 概述</h3><p><a target="_blank" rel="noopener" href="https://braindecode.org/stable/index.html">Braindecode</a> 是一个专注于使用深度学习模型解码原始电生理数据的开源Python工具包。它连接了神经科学家和深度学习研究者之间的桥梁。</p>
 <h3 id="3-2-核心功能"><a href="#3-2-核心功能" class="headerlink" title="3.2 核心功能"></a>3.2 核心功能</h3><p><strong>数据处理</strong></p>
 <ul>
@@ -724,43 +658,7 @@ hrv_results <span class="token operator">=</span> nk<span class="token punctuati
 <li>特征图可视化</li>
 <li>性能评估图表</li>
 </ul>
-<h3 id="3-3-基本使用"><a href="#3-3-基本使用" class="headerlink" title="3.3 基本使用"></a>3.3 基本使用</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 安装</span>
-pip install braindecode
-
-<span class="token comment" spellcheck="true"># 基本使用流程</span>
-<span class="token keyword">from</span> braindecode<span class="token punctuation">.</span>datasets <span class="token keyword">import</span> MOABBDataset
-<span class="token keyword">from</span> braindecode<span class="token punctuation">.</span>models <span class="token keyword">import</span> ShallowFBCSPNet
-<span class="token keyword">from</span> braindecode<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> exponential_moving_standardize
-<span class="token keyword">from</span> braindecode <span class="token keyword">import</span> EEGClassifier
-
-<span class="token comment" spellcheck="true"># 加载数据集</span>
-dataset <span class="token operator">=</span> MOABBDataset<span class="token punctuation">(</span>dataset_name<span class="token operator">=</span><span class="token string">"BNCI2014001"</span><span class="token punctuation">,</span> subject_ids<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 创建模型</span>
-n_classes <span class="token operator">=</span> <span class="token number">4</span>
-n_chans <span class="token operator">=</span> dataset<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-input_window_samples <span class="token operator">=</span> <span class="token number">1000</span>
-
-model <span class="token operator">=</span> ShallowFBCSPNet<span class="token punctuation">(</span>
-    n_chans<span class="token punctuation">,</span>
-    n_classes<span class="token punctuation">,</span>
-    input_window_samples<span class="token operator">=</span>input_window_samples<span class="token punctuation">,</span>
-    final_conv_length<span class="token operator">=</span><span class="token string">'auto'</span><span class="token punctuation">,</span>
-<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 训练分类器</span>
-clf <span class="token operator">=</span> EEGClassifier<span class="token punctuation">(</span>
-    model<span class="token punctuation">,</span>
-    criterion<span class="token operator">=</span>torch<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>NLLLoss<span class="token punctuation">,</span>
-    optimizer<span class="token operator">=</span>torch<span class="token punctuation">.</span>optim<span class="token punctuation">.</span>AdamW<span class="token punctuation">,</span>
-    train_split<span class="token operator">=</span>None<span class="token punctuation">,</span>
-    batch_size<span class="token operator">=</span><span class="token number">64</span><span class="token punctuation">,</span>
-<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 训练模型</span>
-clf<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>dataset<span class="token punctuation">,</span> y<span class="token operator">=</span>None<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="3-4-适用场景"><a href="#3-4-适用场景" class="headerlink" title="3.4 适用场景"></a>3.4 适用场景</h3><ul>
+<h3 id="3-3-适用场景"><a href="#3-3-适用场景" class="headerlink" title="3.3 适用场景"></a>3.3 适用场景</h3><ul>
 <li>基于深度学习的BCI系统开发</li>
 <li>运动想象分类</li>
 <li>睡眠阶段分类</li>
@@ -768,7 +666,6 @@ clf<span class="token punctuation">.</span>fit<span class="token punctuation">(<
 <li>认知状态解码</li>
 <li>需要端到端学习的应用</li>
 </ul>
-<h3 id="3-5-优势与特点"><a href="#3-5-优势与特点" class="headerlink" title="3.5 优势与特点"></a>3.5 优势与特点</h3><p>✅ 专注于深度学习方法<br>✅ 提供预训练模型和标准架构<br>✅ 与PyTorch深度集成<br>✅ 支持多个公开数据集<br>✅ 适合深度学习研究人员<br>✅ 模型可解释性工具  </p>
 <h2 id="4-MEEGKIT-专业的去噪工具包"><a href="#4-MEEGKIT-专业的去噪工具包" class="headerlink" title="4. MEEGKIT: 专业的去噪工具包"></a>4. MEEGKIT: 专业的去噪工具包</h2><h3 id="4-1-概述"><a href="#4-1-概述" class="headerlink" title="4.1 概述"></a>4.1 概述</h3><p><a target="_blank" rel="noopener" href="https://nbara.github.io/python-meegkit/">MEEGKIT</a> 是一个专注于EEG和MEG信号去噪技术的Python工具包。它集合了多种先进的去噪和信号分离方法。</p>
 <h3 id="4-2-核心功能"><a href="#4-2-核心功能" class="headerlink" title="4.2 核心功能"></a>4.2 核心功能</h3><p><strong>去噪方法</strong></p>
 <ul>
@@ -791,42 +688,7 @@ clf<span class="token punctuation">.</span>fit<span class="token punctuation">(<
 <li>实时相位和幅度估计</li>
 <li>实用工具函数</li>
 </ul>
-<h3 id="4-3-安装与使用"><a href="#4-3-安装与使用" class="headerlink" title="4.3 安装与使用"></a>4.3 安装与使用</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 安装</span>
-pip install meegkit
-
-<span class="token comment" spellcheck="true"># ASR示例 - 伪迹子空间重建</span>
-<span class="token keyword">from</span> meegkit <span class="token keyword">import</span> asr
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-
-<span class="token comment" spellcheck="true"># 加载数据</span>
-eeg_data <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">64</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 1000个样本点, 64个通道</span>
-
-<span class="token comment" spellcheck="true"># 应用ASR去噪</span>
-asr_obj <span class="token operator">=</span> asr<span class="token punctuation">.</span>ASR<span class="token punctuation">(</span>sfreq<span class="token operator">=</span><span class="token number">250</span><span class="token punctuation">,</span> cutoff<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
-eeg_clean <span class="token operator">=</span> asr_obj<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>eeg_data<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># DSS示例 - 去噪源分离</span>
-<span class="token keyword">from</span> meegkit<span class="token punctuation">.</span>dss <span class="token keyword">import</span> dss_line
-
-<span class="token comment" spellcheck="true"># 去除工频噪声</span>
-eeg_clean<span class="token punctuation">,</span> _ <span class="token operator">=</span> dss_line<span class="token punctuation">(</span>
-    eeg_data<span class="token punctuation">,</span> 
-    fline<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true"># 工频频率</span>
-    sfreq<span class="token operator">=</span><span class="token number">250</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true"># 采样率</span>
-    nremove<span class="token operator">=</span><span class="token number">1</span>   <span class="token comment" spellcheck="true"># 移除成分数</span>
-<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># TRCA示例 - 用于SSVEP分析</span>
-<span class="token keyword">from</span> meegkit<span class="token punctuation">.</span>trca <span class="token keyword">import</span> TRCA
-
-<span class="token comment" spellcheck="true"># 创建TRCA对象</span>
-trca <span class="token operator">=</span> TRCA<span class="token punctuation">(</span>sfreq<span class="token operator">=</span><span class="token number">250</span><span class="token punctuation">,</span> filterbank<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-trca<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 预测</span>
-y_pred <span class="token operator">=</span> trca<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="4-4-适用场景"><a href="#4-4-适用场景" class="headerlink" title="4.4 适用场景"></a>4.4 适用场景</h3><ul>
+<h3 id="4-3-适用场景"><a href="#4-3-适用场景" class="headerlink" title="4.3 适用场景"></a>4.3 适用场景</h3><ul>
 <li>需要高质量信号去噪的研究</li>
 <li>SSVEP-BCI系统开发</li>
 <li>处理严重污染的EEG&#x2F;MEG数据</li>
@@ -834,139 +696,6 @@ y_pred <span class="token operator">=</span> trca<span class="token punctuation"
 <li>多通道信号源分离</li>
 <li>工频噪声去除</li>
 </ul>
-<h3 id="4-5-优势与特点"><a href="#4-5-优势与特点" class="headerlink" title="4.5 优势与特点"></a>4.5 优势与特点</h3><p>✅ 专注于去噪,方法专业且先进<br>✅ 包含多种最新的去噪算法<br>✅ 轻量级,易于集成<br>✅ 适合预处理流程<br>✅ 对严重伪迹有良好效果  </p>
-<h2 id="5-工具包对比与选择建议"><a href="#5-工具包对比与选择建议" class="headerlink" title="5. 工具包对比与选择建议"></a>5. 工具包对比与选择建议</h2><h3 id="5-1-功能对比表"><a href="#5-1-功能对比表" class="headerlink" title="5.1 功能对比表"></a>5.1 功能对比表</h3><table>
-<thead>
-<tr>
-<th>工具包</th>
-<th>主要用途</th>
-<th>学习曲线</th>
-<th>社区活跃度</th>
-<th>深度学习支持</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>MNE-Python</strong></td>
-<td>全能分析</td>
-<td>中等</td>
-<td>⭐⭐⭐⭐⭐</td>
-<td>⭐⭐⭐</td>
-</tr>
-<tr>
-<td><strong>NeuroKit2</strong></td>
-<td>生理信号</td>
-<td>简单</td>
-<td>⭐⭐⭐⭐</td>
-<td>⭐</td>
-</tr>
-<tr>
-<td><strong>Braindecode</strong></td>
-<td>深度学习</td>
-<td>较难</td>
-<td>⭐⭐⭐</td>
-<td>⭐⭐⭐⭐⭐</td>
-</tr>
-<tr>
-<td><strong>MEEGKIT</strong></td>
-<td>信号去噪</td>
-<td>中等</td>
-<td>⭐⭐⭐</td>
-<td>⭐</td>
-</tr>
-</tbody></table>
-<h3 id="5-2-选择建议"><a href="#5-2-选择建议" class="headerlink" title="5.2 选择建议"></a>5.2 选择建议</h3><p><strong>选择MNE-Python,如果你:</strong></p>
-<ul>
-<li>需要进行全面的MEG&#x2F;EEG数据分析</li>
-<li>需要源空间重建和定位</li>
-<li>进行多模态数据融合研究</li>
-<li>需要强大的统计分析功能</li>
-</ul>
-<p><strong>选择NeuroKit2,如果你:</strong></p>
-<ul>
-<li>主要分析外周生理信号(心电、皮电等)</li>
-<li>是初学者或非编程背景研究人员</li>
-<li>需要快速原型开发</li>
-<li>进行心理生理学研究</li>
-</ul>
-<p><strong>选择Braindecode,如果你:</strong></p>
-<ul>
-<li>专注于深度学习方法</li>
-<li>开发BCI解码算法</li>
-<li>需要端到端学习框架</li>
-<li>有深度学习背景</li>
-</ul>
-<p><strong>选择MEEGKIT,如果你:</strong></p>
-<ul>
-<li>数据质量差,需要强力去噪</li>
-<li>开发SSVEP-BCI系统</li>
-<li>需要实时信号处理</li>
-<li>专注于信号预处理</li>
-</ul>
-<h3 id="5-3-组合使用建议"><a href="#5-3-组合使用建议" class="headerlink" title="5.3 组合使用建议"></a>5.3 组合使用建议</h3><p>这些工具包并非互斥,实际上可以很好地配合使用:</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 典型工作流示例</span>
-<span class="token keyword">import</span> mne
-<span class="token keyword">import</span> neurokit2 <span class="token keyword">as</span> nk
-<span class="token keyword">from</span> meegkit <span class="token keyword">import</span> dss
-
-<span class="token comment" spellcheck="true"># 1. 使用MNE读取和初步处理</span>
-raw <span class="token operator">=</span> mne<span class="token punctuation">.</span>io<span class="token punctuation">.</span>read_raw_fif<span class="token punctuation">(</span><span class="token string">'data.fif'</span><span class="token punctuation">,</span> preload<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 2. 使用MEEGKIT进行高级去噪</span>
-data <span class="token operator">=</span> raw<span class="token punctuation">.</span>get_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
-data_clean<span class="token punctuation">,</span> _ <span class="token operator">=</span> dss<span class="token punctuation">.</span>dss_line<span class="token punctuation">(</span>data<span class="token punctuation">.</span>T<span class="token punctuation">,</span> fline<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span> sfreq<span class="token operator">=</span>raw<span class="token punctuation">.</span>info<span class="token punctuation">[</span><span class="token string">'sfreq'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 3. 将清洁数据放回MNE对象</span>
-raw<span class="token punctuation">.</span>_data <span class="token operator">=</span> data_clean<span class="token punctuation">.</span>T
-
-<span class="token comment" spellcheck="true"># 4. 使用NeuroKit2分析心电数据</span>
-ecg_signal <span class="token operator">=</span> raw<span class="token punctuation">.</span>get_data<span class="token punctuation">(</span>picks<span class="token operator">=</span><span class="token string">'ECG'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-ecg_clean <span class="token operator">=</span> nk<span class="token punctuation">.</span>ecg_clean<span class="token punctuation">(</span>ecg_signal<span class="token punctuation">,</span> sampling_rate<span class="token operator">=</span>raw<span class="token punctuation">.</span>info<span class="token punctuation">[</span><span class="token string">'sfreq'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="6-安装与环境配置"><a href="#6-安装与环境配置" class="headerlink" title="6. 安装与环境配置"></a>6. 安装与环境配置</h2><h3 id="6-1-推荐的Python环境"><a href="#6-1-推荐的Python环境" class="headerlink" title="6.1 推荐的Python环境"></a>6.1 推荐的Python环境</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 创建虚拟环境</span>
-conda create -n eeg_analysis python<span class="token operator">=</span>3.9
-conda activate eeg_analysis
-
-<span class="token comment" spellcheck="true"># 安装所有工具包</span>
-pip <span class="token function">install</span> mne
-pip <span class="token function">install</span> neurokit2
-pip <span class="token function">install</span> braindecode
-pip <span class="token function">install</span> meegkit
-
-<span class="token comment" spellcheck="true"># 安装常用依赖</span>
-pip <span class="token function">install</span> numpy scipy pandas matplotlib seaborn
-pip <span class="token function">install</span> scikit-learn jupyter
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="6-2-常见问题"><a href="#6-2-常见问题" class="headerlink" title="6.2 常见问题"></a>6.2 常见问题</h3><p><strong>Q: 这些工具包可以同时安装吗?</strong><br>A: 可以。它们之间没有冲突,可以在同一环境中共存。</p>
-<p><strong>Q: 我应该从哪个开始学习?</strong><br>A: 建议顺序: NeuroKit2(入门) → MNE-Python(进阶) → MEEGKIT&#x2F;Braindecode(专项)</p>
-<p><strong>Q: 支持GPU加速吗?</strong><br>A: Braindecode通过PyTorch支持GPU。MNE-Python的部分功能也支持。</p>
-<h2 id="7-学习资源"><a href="#7-学习资源" class="headerlink" title="7. 学习资源"></a>7. 学习资源</h2><h3 id="7-1-官方文档"><a href="#7-1-官方文档" class="headerlink" title="7.1 官方文档"></a>7.1 官方文档</h3><ul>
-<li>MNE-Python: <a target="_blank" rel="noopener" href="https://mne.tools/">https://mne.tools/</a></li>
-<li>NeuroKit2: <a target="_blank" rel="noopener" href="https://neuropsychology.github.io/NeuroKit/">https://neuropsychology.github.io/NeuroKit/</a></li>
-<li>Braindecode: <a target="_blank" rel="noopener" href="https://braindecode.org/">https://braindecode.org/</a></li>
-<li>MEEGKIT: <a target="_blank" rel="noopener" href="https://nbara.github.io/python-meegkit/">https://nbara.github.io/python-meegkit/</a></li>
-</ul>
-<h3 id="7-2-推荐教程"><a href="#7-2-推荐教程" class="headerlink" title="7.2 推荐教程"></a>7.2 推荐教程</h3><ul>
-<li>MNE-Python官方教程涵盖了从基础到高级的各个方面</li>
-<li>NeuroKit2提供了丰富的可视化示例</li>
-<li>Braindecode包含多个Jupyter Notebook教程</li>
-<li>MEEGKIT的Examples Gallery展示了各种去噪方法</li>
-</ul>
-<h3 id="7-3-相关论文"><a href="#7-3-相关论文" class="headerlink" title="7.3 相关论文"></a>7.3 相关论文</h3><p><strong>NeuroKit2:</strong></p>
-<ul>
-<li>Makowski, D., Pham, T., Lau, Z. J., et al. (2021). NeuroKit2: A Python toolbox for neurophysiological signal processing. <em>Behavior Research Methods</em>, 53(4), 1689–1696.</li>
-</ul>
-<p><strong>心率变异性分析:</strong></p>
-<ul>
-<li>Pham, T., Lau, Z. J., Chen, S. H. A., &amp; Makowski, D. (2021). Heart Rate Variability in Psychology: A Review of HRV Indices and an Analysis Tutorial. <em>Sensors</em>, 21(12), 3998.</li>
-</ul>
-<h2 id="8-总结"><a href="#8-总结" class="headerlink" title="8. 总结"></a>8. 总结</h2><p>电生理信号分析是一个多学科交叉的领域,不同的研究需求需要不同的工具支持。本文介绍的四个工具包各有特色:</p>
-<ul>
-<li><strong>MNE-Python</strong> 是功能最全面的选择,适合需要完整分析流程的研究</li>
-<li><strong>NeuroKit2</strong> 以用户友好著称,适合快速分析和教学</li>
-<li><strong>Braindecode</strong> 专注于深度学习,是AI驱动研究的首选</li>
-<li><strong>MEEGKIT</strong> 在信号去噪方面表现出色,是预处理的利器</li>
-</ul>
-<p>根据你的研究需求选择合适的工具,或者灵活组合使用,将能够显著提升研究效率和数据质量。这些开源工具的存在,为电生理研究提供了强大而便捷的分析手段。</p>
 <hr>
 <p><strong>参考资源:</strong></p>
 <ol>
@@ -977,9 +706,6 @@ pip <span class="token function">install</span> scikit-learn jupyter
 </ol>
 <p><strong>关键词:</strong> 电生理分析、Python、MNE、NeuroKit2、Braindecode、MEEGKIT、脑电分析、信号处理、深度学习、BCI</p>
 <hr>
-<blockquote>
-<p>如果觉得本文对你有帮助,欢迎分享和收藏!有任何问题欢迎在评论区讨论。</p>
-</blockquote>
 
                 
             </div>
@@ -1110,9 +836,9 @@ pip <span class="token function">install</span> scikit-learn jupyter
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="常见的四大电生理分析工具包详解">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="常见的电生理分析工具包详解">
                         
-                        <span class="card-title">常见的四大电生理分析工具包详解</span>
+                        <span class="card-title">常见的电生理分析工具包详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1371,7 +1097,7 @@ pip <span class="token function">install</span> scikit-learn jupyter
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">79.4k</span>&nbsp;字
+                class="white-color">77.7k</span>&nbsp;字
             
             
             
